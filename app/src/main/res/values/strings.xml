@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Status</string>
+    <string name="drawer_open">Status</string>
+    <string name="drawer_close">Status</string>
+    <string name="app_not_available">Status</string>
+
 </resources>

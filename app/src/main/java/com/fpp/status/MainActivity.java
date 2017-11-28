@@ -1,18 +1,28 @@
 package com.fpp.status;
 
-import android.graphics.Color;
 import android.os.Build;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.imageView)
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+
+
         /*------------------隐藏状态栏---------------------*/
         //完全隐藏状态栏
 //        View decorView = getWindow().getDecorView();
@@ -79,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         /*-------------------隐藏状态栏--------------------*/
 
 
-
     }
 
 
@@ -101,7 +110,14 @@ public class MainActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         }
     }
-
     /*-------------------隐藏状态栏--------------------*/
+    @OnClick(R.id.imageView)
+    public void onViewClicked() {
+        //
+        //
+        //
+    }
+
+
 
 }
