@@ -37,21 +37,21 @@ public class DLActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        mTitle = mDrawerTitle = getTitle();
+        mTitle = mDrawerTitle = getTitle();
 //        mPlanetTitles = getResources().getStringArray(R.array.planets_array);
-//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-//        // set a custom shadow that overlays the main content when the drawer opens
-//        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-//        // set up the drawer's list view with items and click listener
-//        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-//                R.layout.drawer_list_item, mPlanetTitles));
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        // set a custom shadow that overlays the main content when the drawer opens
+        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+        // set up the drawer's list view with items and click listener
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, mPlanetTitles));
 //        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-//        // enable ActionBar app icon to behave as action to toggle nav drawer
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
-//        getActionBar().setHomeButtonEnabled(true);
-//        // ActionBarDrawerToggle ties together the the proper interactions
-//        // between the sliding drawer and the action bar app icon
+        // enable ActionBar app icon to behave as action to toggle nav drawer
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
+        // ActionBarDrawerToggle ties together the the proper interactions
+        // between the sliding drawer and the action bar app icon
 //        mDrawerToggle = new ActionBarDrawerToggle(
 //                this,                  /* host Activity */
 //                mDrawerLayout,         /* DrawerLayout object */
