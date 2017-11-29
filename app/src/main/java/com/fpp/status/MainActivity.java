@@ -1,11 +1,15 @@
 package com.fpp.status;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.fpp.status.activity.PWActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -15,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.imageView)
     ImageView imageView;
+    @BindView(R.id.imageViewTwo)
+    ImageView imageViewTwo;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,15 +52,15 @@ public class MainActivity extends AppCompatActivity {
         最后再调用Window的setStatusBarColor()方法将状态栏设置成透明色就可以了。
         */
 
-//        if (Build.VERSION.SDK_INT >= 21) {
-//            View decorView = getWindow().getDecorView();
-//            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-//                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-//            decorView.setSystemUiVisibility(option);
-//            getWindow().setStatusBarColor(Color.TRANSPARENT);
-//        }
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         /*-------------------隐藏状态栏--------------------*/
 
         /*------------------隐藏状态栏---------------------*/
@@ -92,32 +99,38 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @OnClick({R.id.imageView, R.id.imageViewTwo})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.imageView:
+                intent = new Intent(this, DLActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.imageViewTwo:
+                intent = new Intent(this, PWActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
 
 
     /*------------------隐藏状态栏---------------------*/
+    //模拟爱奇艺播放视频时隐藏状态栏和导航栏
 
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && Build.VERSION.SDK_INT >= 19) {
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
-    }
+    //    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        if (hasFocus && Build.VERSION.SDK_INT >= 19) {
+//            View decorView = getWindow().getDecorView();
+//            decorView.setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+//        }
+//    }
     /*-------------------隐藏状态栏--------------------*/
-    @OnClick(R.id.imageView)
-    public void onViewClicked() {
-        Intent intent = new Intent(this,DLActivity.class);
-        startActivity(intent);
-    }
-
-
 
 }

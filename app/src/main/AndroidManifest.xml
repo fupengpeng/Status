@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DLActivity"></activity>
+        <activity android:name=".DLActivity" />
+        <activity
+            android:name=".activity.PWActivity"
+            android:label="@string/title_activity_pw"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
