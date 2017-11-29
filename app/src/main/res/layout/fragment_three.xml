@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fpp.status.fragment.ThreeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="55dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="ThreeFragment" />
+        <Button
+            android:id="@+id/btn_fragment_three"
+            android:text="点击ThreeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+    </LinearLayout>
+
+</FrameLayout>

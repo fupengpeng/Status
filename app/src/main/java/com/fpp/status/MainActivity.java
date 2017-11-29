@@ -1,5 +1,6 @@
 package com.fpp.status;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -113,9 +114,8 @@ public class MainActivity extends AppCompatActivity {
     /*-------------------隐藏状态栏--------------------*/
     @OnClick(R.id.imageView)
     public void onViewClicked() {
-        //
-        //
-        //
+        Intent intent = new Intent(this,DLActivity.class);
+        startActivity(intent);
     }
 
 
