@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.PWActivity;
 
 import butterknife.BindView;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.imageViewTwo)
     ImageView imageViewTwo;
     Intent intent;
+    @BindView(R.id.imageViewThree)
+    ImageView imageViewThree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.imageView, R.id.imageViewTwo})
+    @OnClick({R.id.imageView, R.id.imageViewTwo,R.id.imageViewThree})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imageView:
@@ -108,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.imageViewTwo:
                 intent = new Intent(this, PWActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.imageViewThree:
+                intent = new Intent(this, DHActivity.class);
                 startActivity(intent);
                 break;
         }
