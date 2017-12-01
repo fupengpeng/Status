@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.PWActivity;
+import com.fpp.status.activity.test.MoveActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,35 +26,37 @@ public class MainActivity extends AppCompatActivity {
     Intent intent;
     @BindView(R.id.imageViewThree)
     ImageView imageViewThree;
+    @BindView(R.id.imageViewFour)
+    ImageView imageViewFour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-
-
-        /*------------------隐藏状态栏---------------------*/
-        //完全隐藏状态栏
-//        View decorView = getWindow().getDecorView();
-//        int option = View.SYSTEM_UI_FLAG_FULLSCREEN;
-//        decorView.setSystemUiVisibility(option);
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
-        /*-------------------隐藏状态栏--------------------*/
-
-         /*------------------隐藏状态栏---------------------*/
-        /*
-        透明状态栏
-
-         首先需要注意，饿了么这样的效果是只有5.0及以上系统才支持，因此这里先进行了一层if判断，
-        只有系统版本大于或等于5.0的时候才会执行下面的代码。
-
-        接下来我们使用了SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN和SYSTEM_UI_FLAG_LAYOUT_STABLE，
-        注意两个Flag必须要结合在一起使用，表示会让应用的主体内容占用系统状态栏的空间，
-        最后再调用Window的setStatusBarColor()方法将状态栏设置成透明色就可以了。
-        */
+//
+//
+//
+//        /*------------------隐藏状态栏---------------------*/
+//        //完全隐藏状态栏
+////        View decorView = getWindow().getDecorView();
+////        int option = View.SYSTEM_UI_FLAG_FULLSCREEN;
+////        decorView.setSystemUiVisibility(option);
+////        ActionBar actionBar = getSupportActionBar();
+////        actionBar.hide();
+//        /*-------------------隐藏状态栏--------------------*/
+//
+//         /*------------------隐藏状态栏---------------------*/
+//        /*
+//        透明状态栏
+//
+//         首先需要注意，饿了么这样的效果是只有5.0及以上系统才支持，因此这里先进行了一层if判断，
+//        只有系统版本大于或等于5.0的时候才会执行下面的代码。
+//
+//        接下来我们使用了SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN和SYSTEM_UI_FLAG_LAYOUT_STABLE，
+//        注意两个Flag必须要结合在一起使用，表示会让应用的主体内容占用系统状态栏的空间，
+//        最后再调用Window的setStatusBarColor()方法将状态栏设置成透明色就可以了。
+//        */
 
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
@@ -64,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
         }
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        /*-------------------隐藏状态栏--------------------*/
-
-        /*------------------隐藏状态栏---------------------*/
-        /*
-         此时只是初次隐藏了，当屏幕点击之后，状态栏和导航栏就会恢复原状
-        */
+//        /*-------------------隐藏状态栏--------------------*/
+//
+//        /*------------------隐藏状态栏---------------------*/
+//        /*
+//         此时只是初次隐藏了，当屏幕点击之后，状态栏和导航栏就会恢复原状
+//        */
 
 //        View decorView = getWindow().getDecorView();
 //        int option = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -77,14 +80,14 @@ public class MainActivity extends AppCompatActivity {
 //        decorView.setSystemUiVisibility(option);
 //        ActionBar actionBar = getSupportActionBar();
 //        actionBar.hide();
-        /*-------------------隐藏状态栏--------------------*/
-
-        /*------------------隐藏状态栏---------------------*/
-        /*
-         设置状态栏和导航栏都为透明
-         使用了SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION，表示会让应用的主体内容占用系统导航栏的空间，
-         然后又调用了setNavigationBarColor()方法将导航栏设置成透明色。
-        */
+//        /*-------------------隐藏状态栏--------------------*/
+//
+//        /*------------------隐藏状态栏---------------------*/
+//        /*
+//         设置状态栏和导航栏都为透明
+//         使用了SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION，表示会让应用的主体内容占用系统导航栏的空间，
+//         然后又调用了setNavigationBarColor()方法将导航栏设置成透明色。
+//        */
 //        if (Build.VERSION.SDK_INT >= 21) {
 //            View decorView = getWindow().getDecorView();
 //            int option = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -96,13 +99,13 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //        ActionBar actionBar = getSupportActionBar();
 //        actionBar.hide();
-
-        /*-------------------隐藏状态栏--------------------*/
-
+//
+//        /*-------------------隐藏状态栏--------------------*/
+//
 
     }
 
-    @OnClick({R.id.imageView, R.id.imageViewTwo,R.id.imageViewThree})
+    @OnClick({R.id.imageView, R.id.imageViewTwo, R.id.imageViewThree,R.id.imageViewFour})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imageView:
@@ -115,6 +118,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.imageViewThree:
                 intent = new Intent(this, DHActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.imageViewFour:
+                intent = new Intent(this, MoveActivity.class);
                 startActivity(intent);
                 break;
         }

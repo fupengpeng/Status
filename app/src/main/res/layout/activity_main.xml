@@ -26,5 +26,12 @@
         android:layout_height="0dp"
         android:src="@drawable/tt"
         android:scaleType="centerCrop" />
+    <ImageView
+        android:id="@+id/imageViewFour"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/tt"
+        android:scaleType="centerCrop" />
 
 </LinearLayout>

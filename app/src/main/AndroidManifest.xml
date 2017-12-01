@@ -21,7 +21,8 @@
             android:name=".activity.PWActivity"
             android:label="@string/title_activity_pw"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.DHActivity"></activity>
+        <activity android:name=".activity.DHActivity" />
+        <activity android:name=".activity.test.MoveActivity"></activity>
     </application>
 
 </manifest>
