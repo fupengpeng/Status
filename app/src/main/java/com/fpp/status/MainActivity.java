@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.PWActivity;
 import com.fpp.status.activity.test.MoveActivity;
+import com.fpp.status.activity.test.MoveTestActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageViewThree;
     @BindView(R.id.imageViewFour)
     ImageView imageViewFour;
+    @BindView(R.id.imageViewFive)
+    ImageView imageViewFive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.imageView, R.id.imageViewTwo, R.id.imageViewThree,R.id.imageViewFour})
+    @OnClick({R.id.imageView, R.id.imageViewTwo, R.id.imageViewThree, R.id.imageViewFour,R.id.imageViewFive})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imageView:
@@ -124,8 +127,13 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, MoveActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.imageViewFive:
+                intent = new Intent(this, MoveTestActivity.class);
+                startActivity(intent);
+                break;
         }
     }
+
 
 
 
