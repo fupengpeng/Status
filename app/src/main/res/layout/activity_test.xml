@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg_one"
+    android:layout_height="match_parent">
+
+    <!--主页面-->
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_23"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--下层-标题栏    克里姆林宫-->
+        <LinearLayout
+            android:id="@+id/ll_atvt_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@drawable/main_left_top_page" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="克里姆林宫"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_15"
+                android:src="@drawable/main_right_top_qr_code" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_atvt_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <!--下层-图片栏-->
+            <LinearLayout
+                android:id="@+id/ll_atvt_main_iv"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="378dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_atvt_main_untreated_order"
+                    android:background="@drawable/main_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_atvt_main_liu"
+                        android:src="@drawable/main_untreated_order_bg_one"
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="@dimen/dp_220"
+                        android:layout_marginTop="18dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/dp_220"
+                        android:layout_height="@dimen/dp_220"
+                        android:layout_marginTop="15dp"
+                        android:layout_centerHorizontal="true">
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0">
+                            <TextView
+                                android:textColor="@color/white"
+                                android:text="8"
+                                android:layout_marginRight="@dimen/dp_5"
+                                android:textSize="@dimen/dp_40"
+                                android:gravity="right|bottom"
+                                android:layout_weight="0.55"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:textColor="@color/white"
+                                android:text="个"
+                                android:layout_marginBottom="@dimen/dp_10"
+                                android:gravity="left|bottom"
+                                android:layout_weight="0.45"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="@color/white"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:gravity="center|top"
+                            android:text="未处理订单"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!--下层-空白 -->
+            <LinearLayout
+                android:id="@+id/ll_atvt_main_black"
+                android:layout_marginTop="285dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_2000"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_atvt_main_bg"
+                    android:orientation="vertical"
+                    android:background="#ffaaff"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2000">
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--上层    -->
+            <LinearLayout
+                android:id="@+id/ll_atvt_main_superstratum"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_285"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_700">
+
+
+                <!--一键下单等-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_240"
+                    android:orientation="vertical">
+                    <!--第一行-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+                        <!--第一列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_center_create_order" />
+
+                            <TextView
+                                android:id="@+id/v4_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="一键下单" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_bg_two" />
+                        <!--第二列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_center_customer_filing" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="客户建档" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2"
+                        android:background="@color/main_bg_two" />
+                    <!--第二行-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+                        <!--第一列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_center_service_queue" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="服务队列" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_bg_two" />
+                        <!--第二列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_center_customer_bill" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="顾客账单" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--我的消息-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:background="@color/main_bg_two"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="我的消息" />
+                <!--我的消息详情-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_margin="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_gravity="center"
+                        android:src="@drawable/main_center_message" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_20">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="0.5"
+                            android:gravity="center|left"
+                            android:text="你收到一条消息" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            android:layout_weight="0.5"
+                            android:gravity="center|left"
+                            android:text="日期时间"
+                            android:textColor="@color/dl_tv_two" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_right_black_24dp" />
+                </LinearLayout>
+                <!--管理功能-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:background="@color/main_bg_two"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="管理功能" />
+                <!--管理功能详情-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:orientation="vertical">
+                    <!--第一行-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+                        <!--第一列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_bottom_performance" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="绩效" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_bg_two" />
+                        <!--第二列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_bottom_make_an_appointment" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="预约" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_bg_two" />
+                        <!--第三列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_bottom_statement" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="报表" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2"
+                        android:background="@color/main_bg_two" />
+                    <!--第二行-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+                        <!--第一列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_bottom_member" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="会员" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_bg_two" />
+                        <!--第二列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:src="@drawable/main_bottom_set" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10"
+                                android:text="设置" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_bg_two" />
+                        <!--第三列-->
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_10">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_0"
+                                android:layout_weight="0.5"
+                                android:gravity="center|top"
+                                android:paddingTop="@dimen/dp_10" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--空白-->
+                <LinearLayout
+                    android:background="@color/main_bg_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

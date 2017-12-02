@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/button1"
+        android:text="点击发送消息"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45" />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="70dip" />
+
+    <TextView
+        android:id="@+id/tv_show_msg"
+        android:gravity="center"
+        android:text="显示消息"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="49dp" />
+
+
+</RelativeLayout>

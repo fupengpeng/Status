@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fpp.status.activity.handler.HandlerFourActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_23"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_one_one"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+        <Button
+            android:id="@+id/btn_one_two"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+        <Button
+            android:id="@+id/btn_one_three"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+        <Button
+            android:id="@+id/btn_one_four"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+        <Button
+            android:id="@+id/btn_one_five"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+        <Button
+            android:id="@+id/btn_one_six"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+        <Button
+            android:id="@+id/btn_one_seven"
+            android:text="one"
+            android:padding="@dimen/dp_5"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_55" />
+    </LinearLayout>
+
+</LinearLayout>

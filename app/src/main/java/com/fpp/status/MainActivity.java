@@ -7,12 +7,20 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.PWActivity;
+import com.fpp.status.activity.handler.HandlerFiveActivity;
+import com.fpp.status.activity.handler.HandlerFourActivity;
+import com.fpp.status.activity.handler.HandlerOneActivity;
+import com.fpp.status.activity.handler.HandlerThreeActivity;
+import com.fpp.status.activity.handler.MHandlerTwoActivity;
 import com.fpp.status.activity.test.MoveActivity;
+import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
+import com.fpp.status.activity.test.MoveViewGroupActivity;
+import com.fpp.status.activity.test.TestActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,17 +28,39 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.imageView)
-    ImageView imageView;
-    @BindView(R.id.imageViewTwo)
-    ImageView imageViewTwo;
+
     Intent intent;
-    @BindView(R.id.imageViewThree)
-    ImageView imageViewThree;
-    @BindView(R.id.imageViewFour)
-    ImageView imageViewFour;
-    @BindView(R.id.imageViewFive)
-    ImageView imageViewFive;
+    @BindView(R.id.btn_one_one)
+    Button btnOneOne;
+    @BindView(R.id.btn_one_two)
+    Button btnOneTwo;
+    @BindView(R.id.btn_one_three)
+    Button btnOneThree;
+    @BindView(R.id.btn_one_four)
+    Button btnOneFour;
+    @BindView(R.id.btn_one_five)
+    Button btnOneFive;
+    @BindView(R.id.btn_one_six)
+    Button btnOneSix;
+    @BindView(R.id.btn_one_seven)
+    Button btnOneSeven;
+    @BindView(R.id.btn_two_one)
+    Button btnTwoOne;
+    @BindView(R.id.btn_two_two)
+    Button btnTwoTwo;
+    @BindView(R.id.btn_two_three)
+    Button btnTwoThree;
+    @BindView(R.id.btn_two_four)
+    Button btnTwoFour;
+    @BindView(R.id.btn_two_five)
+    Button btnTwoFive;
+    @BindView(R.id.btn_two_six)
+    Button btnTwoSix;
+    @BindView(R.id.btn_two_seven)
+    Button btnTwoSeven;
+    @BindView(R.id.btn_two_eight)
+    Button btnTwoEight;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +98,7 @@ public class MainActivity extends AppCompatActivity {
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+
 //        /*-------------------隐藏状态栏--------------------*/
 //
 //        /*------------------隐藏状态栏---------------------*/
@@ -108,27 +137,70 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.imageView, R.id.imageViewTwo, R.id.imageViewThree, R.id.imageViewFour,R.id.imageViewFive})
+    @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four,
+            R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one,
+            R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five,
+            R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.imageView:
+            case R.id.btn_two_one:
                 intent = new Intent(this, DLActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.imageViewTwo:
+            case R.id.btn_two_two:
                 intent = new Intent(this, PWActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.imageViewThree:
+            case R.id.btn_two_three:
                 intent = new Intent(this, DHActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.imageViewFour:
+            case R.id.btn_two_four:
                 intent = new Intent(this, MoveActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.imageViewFive:
+            case R.id.btn_two_five:
                 intent = new Intent(this, MoveTestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_two_six:
+                intent = new Intent(this, TestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_two_seven:
+                intent = new Intent(this, MoveImageActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_two_eight:
+                intent = new Intent(this, MoveViewGroupActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_one:
+                intent = new Intent(this, HandlerOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_two:
+                intent = new Intent(this, MHandlerTwoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_three:
+                intent = new Intent(this, HandlerThreeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_four:
+                intent = new Intent(this, HandlerFourActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_five:
+                intent = new Intent(this, HandlerFiveActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_six:
+                intent = new Intent(this, MoveViewGroupActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_seven:
+                intent = new Intent(this, MoveViewGroupActivity.class);
                 startActivity(intent);
                 break;
         }

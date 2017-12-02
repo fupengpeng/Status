@@ -4,41 +4,119 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<LinearLayout
+    android:layout_marginTop="@dimen/dp_23"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_55">
+    <Button
+        android:id="@+id/btn_one_one"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+    <Button
+        android:id="@+id/btn_one_two"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+    <Button
+        android:id="@+id/btn_one_three"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+    <Button
+        android:id="@+id/btn_one_four"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+    <Button
+        android:id="@+id/btn_one_five"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+    <Button
+        android:id="@+id/btn_one_six"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+    <Button
+        android:id="@+id/btn_one_seven"
+        android:text="one"
+        android:padding="@dimen/dp_5"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55">
+        <Button
+            android:id="@+id/btn_two_one"
+            android:text=""
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/btn_two_two"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/btn_two_three"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/btn_two_four"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
+        <Button
+        android:id="@+id/btn_two_five"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+            android:background="@drawable/tt"
+        android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/btn_two_six"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:text="test"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/btn_two_seven"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
+        <Button
+            android:id="@+id/btn_two_eight"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt"
+            android:scaleType="centerCrop" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_weight="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/tt"
-        android:scaleType="centerCrop" />
-    <ImageView
-        android:id="@+id/imageViewTwo"
-        android:layout_weight="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/tt"
-        android:scaleType="centerCrop" />
-    <ImageView
-        android:id="@+id/imageViewThree"
-        android:layout_weight="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/tt"
-        android:scaleType="centerCrop" />
-    <ImageView
-        android:id="@+id/imageViewFour"
-        android:layout_weight="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/tt"
-        android:scaleType="centerCrop" />
-    <ImageView
-        android:id="@+id/imageViewFive"
-        android:layout_weight="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/tt"
-        android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>

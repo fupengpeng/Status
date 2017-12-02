@@ -4,4 +4,26 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFffff</color>
+
+
+    <color name="transparent">#00ffffff</color>
+    <color name="text_color_hint">#3d4245</color>
+    <color name="recycler_bg">#000000</color>
+    <color name="bg_page">#ebebeb</color>
+    <color name="text_goods_name">#3e4346</color>
+    <color name="text_goods_describe">#676767</color>
+    <color name="btn_tell">#ff9402</color>
+    <color name="background">#eeeeee</color>
+    <color name="text_hint">#999999</color>
+    <color name="register">#21A675</color>
+    <color name="btn_background">#cdcdcd</color>
+
+    <color name="dl_bg">#1b1c40</color>
+    <color name="dl_ll_bg">#2E3050</color>
+    <color name="dl_v_bg">#1F2043</color>
+    <color name="dl_tv_one">#8D8D9F</color>
+    <color name="dl_tv_two">#D8AE51</color>
+
+    <color name="main_bg_one">#D3AA50</color>
+    <color name="main_bg_two">#FAFAFA</color>
 </resources>
