@@ -8,19 +8,29 @@
 
     <TextView
         android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dip"
-        android:layout_marginTop="100dip"
-        android:text="hello"
-        android:textSize="22sp" />
+        android:background="@color/colorAccent"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:text="编辑模式点击移动"
+        android:textSize="22sp"
+        android:layout_above="@+id/bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp" />
 
     <Button
         android:id="@+id/bt"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:text="点击模式"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp" />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="其它事件"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 

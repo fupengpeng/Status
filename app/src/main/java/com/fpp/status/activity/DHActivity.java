@@ -30,7 +30,7 @@ public class DHActivity extends AppCompatActivity {
     @OnClick(R.id.btn_move)
     public void onViewClicked() {
 
-        Animation scaleAnimation = AnimationUtils.loadAnimation(DHActivity.this, R.anim.ll_atvt_main_black_anim_s);
+        Animation scaleAnimation = AnimationUtils.loadAnimation(DHActivity.this, R.anim.ll_atvt_main_iv_anim_s);
 
         ivAnimTest.startAnimation(scaleAnimation);
 

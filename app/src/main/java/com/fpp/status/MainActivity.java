@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +14,10 @@ import com.fpp.status.activity.handler.HandlerFiveActivity;
 import com.fpp.status.activity.handler.HandlerFourActivity;
 import com.fpp.status.activity.handler.HandlerOneActivity;
 import com.fpp.status.activity.handler.HandlerThreeActivity;
-import com.fpp.status.activity.handler.MHandlerTwoActivity;
+import com.fpp.status.activity.handler.MoveTwoTestActivity;
+import com.fpp.status.activity.move.MoveOneActivity;
+import com.fpp.status.activity.move.MoveThreeActivity;
+import com.fpp.status.activity.move.MoveTwoActivity;
 import com.fpp.status.activity.test.MoveActivity;
 import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
@@ -60,6 +62,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnTwoSeven;
     @BindView(R.id.btn_two_eight)
     Button btnTwoEight;
+    @BindView(R.id.btn_three_one)
+    Button btnThreeOne;
+    @BindView(R.id.btn_three_two)
+    Button btnThreeTwo;
+    @BindView(R.id.btn_three_three)
+    Button btnThreeThree;
+    @BindView(R.id.btn_three_four)
+    Button btnThreeFour;
+    @BindView(R.id.btn_three_five)
+    Button btnThreeFive;
+    @BindView(R.id.btn_three_six)
+    Button btnThreeSix;
+    @BindView(R.id.btn_three_seven)
+    Button btnThreeSeven;
+    @BindView(R.id.btn_three_eight)
+    Button btnThreeEight;
 
 
     @Override
@@ -67,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
 //
 //
 //
@@ -90,22 +116,16 @@ public class MainActivity extends AppCompatActivity {
 //        注意两个Flag必须要结合在一起使用，表示会让应用的主体内容占用系统状态栏的空间，
 //        最后再调用Window的setStatusBarColor()方法将状态栏设置成透明色就可以了。
 //        */
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-
+//
+//
+//
 //        /*-------------------隐藏状态栏--------------------*/
 //
 //        /*------------------隐藏状态栏---------------------*/
 //        /*
 //         此时只是初次隐藏了，当屏幕点击之后，状态栏和导航栏就会恢复原状
 //        */
-
+//
 //        View decorView = getWindow().getDecorView();
 //        int option = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 //                | View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -140,7 +160,9 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four,
             R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one,
             R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five,
-            R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight})
+            R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight,R.id.btn_three_one,
+            R.id.btn_three_two, R.id.btn_three_three, R.id.btn_three_four,
+            R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven, R.id.btn_three_eight})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_two_one:
@@ -180,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_one_two:
-                intent = new Intent(this, MHandlerTwoActivity.class);
+                intent = new Intent(this, MoveTwoTestActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_one_three:
@@ -203,8 +225,32 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, MoveViewGroupActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_three_one:
+                intent = new Intent(this, MoveOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_three_two:
+                intent = new Intent(this, MoveTwoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_three_three:
+                intent = new Intent(this, MoveThreeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_three_four:
+                break;
+            case R.id.btn_three_five:
+                break;
+            case R.id.btn_three_six:
+                break;
+            case R.id.btn_three_seven:
+                break;
+            case R.id.btn_three_eight:
+                break;
         }
     }
+
+
 
 
 

@@ -6,8 +6,8 @@
     <Button
         android:id="@+id/btn_move"
         android:layout_gravity="center"
-        android:text="yidong"
-        android:layout_width="@dimen/dp_80"
+        android:text="点击展示隐身缩小动画效果"
+        android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_45" />
 
     <ImageView

@@ -8,7 +8,9 @@
 
     <com.fpp.status.view.MoveView
         android:id="@+id/move_view"
-        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_55"
+        android:background="@color/colorAccent"
         android:layout_width="45dp"
         android:layout_height="45dp" />
 

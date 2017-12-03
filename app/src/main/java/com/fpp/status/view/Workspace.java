@@ -9,7 +9,7 @@ public class Workspace extends ViewGroup {
     public Workspace(Context context) {
         super(context);
         // TODO Auto-generated constructor stub
-        addView(new MyViewGroup(context));
+        addView(new ScrollLinearLayout(context));
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Workspace extends ViewGroup {
         for (int i = 0; i < count; i++) {
             final View child = getChildAt(i);
             child.measure(r - l, b - t);
-            child.layout(0, 0, 320, 480);
+            child.layout(0, 0, 1080, 1920);
         }
     }
 

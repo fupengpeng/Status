@@ -2,16 +2,17 @@ package com.fpp.status.activity.test;
 
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -31,7 +32,6 @@ public class TestActivity extends AppCompatActivity {
     int bottom;
     int dx;
     int dy;
-
 
 
     // 主页面
@@ -60,6 +60,8 @@ public class TestActivity extends AppCompatActivity {
 
     @BindView(R.id.ll_atvt_main_bg)
     LinearLayout llAtvtMainBg;
+    @BindView(R.id.iv_atvt_main_order)
+    ImageView ivAtvtMainOrder;
 
     private int startX;
     private int startY;
@@ -84,24 +86,28 @@ public class TestActivity extends AppCompatActivity {
 
         initView();
     }
-     boolean isMoves = true;
-    int i = 1 ;
+
+    boolean isMoves = true;
+    int i = 56;
     Thread moveThread = new Thread(new Runnable() {
         @Override
         public void run() {
+            Log.e(TAG, "run: isMoves = " + isMoves);
             while (isMoves) {
                 try {
-                    Log.e(TAG, "run: "  + "线程睡觉中   "  + i);
+                    Log.e(TAG, "run: " + "线程睡觉中   " + i);
                     // 2.计时，睡眠 1 毫秒给主线程发送一个消息
 
-                    int time = i * 100 ;
-                    Thread.sleep(time);
-                    Log.e(TAG, "run: "  + "线程睡醒了" );
-                    Message msg=new Message();
-                    Bundle b=new Bundle();
+                    Thread.sleep(20);
+
+                    Log.e(TAG, "run: " + "线程睡醒了");
+                    Message msg = new Message();
+                    Bundle b = new Bundle();
                     b.putString("i", String.valueOf(i));
                     msg.setData(b);
+                    Log.e(TAG, "run: 发送消息 i  == " + i);
                     mHandler.sendMessage(msg);
+
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -114,19 +120,28 @@ public class TestActivity extends AppCompatActivity {
             super.handleMessage(msg);
             // 3. 主线程接收到子线程发送的消息，处理UI
             Bundle b = msg.getData();
-            int top= Integer.parseInt(b.getString("i"));
+            int top = Integer.parseInt(b.getString("i"));
             Log.e(TAG, "handleMessage:------------------ 接收到消息 = " + top);
-            refreshUI(top);
+            if (top >= 0) {
+                refreshUI(top);
+            } else {
+                isMoves = false;
+            }
+
         }
     };
 
     private void refreshUI(int top) {
+        Log.e(TAG, "refreshUI: top = " + top * 15);
+        Animation oneAnimationS = AnimationUtils.loadAnimation(TestActivity.this, R.anim.ll_atvt_main_iv_anim_s);
+        ivAtvtMainOrder.startAnimation(oneAnimationS);
+        llAtvtMainSuperstratum.layout(left, top * 15, right, bottom);
+        llAtvtMainBlack.layout(left - 45, top * 15, right + 45, bottom);
 
-        llAtvtMainSuperstratum.layout(left, top*15, right, bottom);
-        i++;
-        if (top*15 > 135){
-            isMoves = false;
-        }
+        Log.e(TAG, "refreshUI:++ 前  i  =  " + i);
+        i--;
+        Log.e(TAG, "refreshUI: 后  i = " + i);
+
 
     }
 
@@ -163,8 +178,6 @@ public class TestActivity extends AppCompatActivity {
                             Log.e(TAG, "onTouch: ----" + "scrollview 在中间");
 
 
-
-
                             if (dy < 0) {  // 向上滑动
 //                            if ((top + dy) < 135) {
 //                                Log.e(TAG, "onTouch: " + " aaaaa");
@@ -192,25 +205,25 @@ public class TestActivity extends AppCompatActivity {
 
                         } else {
 
-                            if (dy < 0) {  // 向上滑动
-                                // 动画效果
-                                Log.e(TAG, "onTouch: ====" + "向上滑动  scrollview  滑动");
-                            }
-//                            if (dy > 0) {  // 向下滑动
-                            if ((top + dy) > 990) {
-                                Log.e(TAG, "onTouch: " + " ccccc");
-                                llAtvtMainBlack.layout(left - 45, 1110, right + 45, bottom);
-                                llAtvtMainBg.layout(left - 45, 0, right + 45, bottom);
-                                llAtvtMainSuperstratum.layout(left, 990, right, bottom);
-
-                                isCenter = true;
-                            } else {
-                                Log.e(TAG, "onTouch: " + " ddddd");
-                                llAtvtMainBlack.layout(left - 45, top + dy + 120, right + 45, bottom);
-                                llAtvtMainBg.layout(left - 45, 0, right + 45, bottom);
-                                llAtvtMainSuperstratum.layout(left, top + dy, right, bottom);
-
-                            }
+//                            if (dy < 0) {  // 向上滑动
+//                                // 动画效果
+//                                Log.e(TAG, "onTouch: ====" + "向上滑动  scrollview  滑动");
+//                            }
+////                            if (dy > 0) {  // 向下滑动
+//                            if ((top + dy) > 990) {
+//                                Log.e(TAG, "onTouch: " + " ccccc");
+//                                llAtvtMainBlack.layout(left - 45, 1110, right + 45, bottom);
+//                                llAtvtMainBg.layout(left - 45, 0, right + 45, bottom);
+//                                llAtvtMainSuperstratum.layout(left, 990, right, bottom);
+//
+//                                isCenter = true;
+//                            } else {
+//                                Log.e(TAG, "onTouch: " + " ddddd");
+//                                llAtvtMainBlack.layout(left - 45, top + dy + 120, right + 45, bottom);
+//                                llAtvtMainBg.layout(left - 45, 0, right + 45, bottom);
+//                                llAtvtMainSuperstratum.layout(left, top + dy, right, bottom);
+//
+//                            }
                             // 设置到中间去
 
 

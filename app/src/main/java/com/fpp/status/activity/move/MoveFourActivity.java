@@ -1,16 +1,15 @@
-package com.fpp.status.activity.test;
+package com.fpp.status.activity.move;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.fpp.status.R;
-import com.fpp.status.view.Workspace;
 
-public class MoveViewGroupActivity extends AppCompatActivity {
+public class MoveFourActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new Workspace(this));
+        setContentView(R.layout.activity_move_four);
     }
 }

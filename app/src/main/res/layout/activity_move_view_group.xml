@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.fpp.status.activity.test.MoveViewGroupActivity">
 
-    <com.fpp.status.view.MyViewGroup
+    <com.fpp.status.view.ScrollLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -532,6 +532,6 @@
 
         </LinearLayout>
 
-    </com.fpp.status.view.MyViewGroup>
+    </com.fpp.status.view.ScrollLinearLayout>
 
 </LinearLayout>

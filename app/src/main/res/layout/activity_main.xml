@@ -1,122 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_marginTop="@dimen/dp_23"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_55">
-    <Button
-        android:id="@+id/btn_one_one"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-    <Button
-        android:id="@+id/btn_one_two"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-    <Button
-        android:id="@+id/btn_one_three"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-    <Button
-        android:id="@+id/btn_one_four"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-    <Button
-        android:id="@+id/btn_one_five"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-    <Button
-        android:id="@+id/btn_one_six"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-    <Button
-        android:id="@+id/btn_one_seven"
-        android:text="one"
-        android:padding="@dimen/dp_5"
-        android:layout_width="@dimen/dp_55"
-        android:layout_height="@dimen/dp_55" />
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginTop="@dimen/dp_23">
+
+        <Button
+            android:id="@+id/btn_one_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+
+        <Button
+            android:id="@+id/btn_one_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+
+        <Button
+            android:id="@+id/btn_one_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+
+        <Button
+            android:id="@+id/btn_one_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+
+        <Button
+            android:id="@+id/btn_one_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+
+        <Button
+            android:id="@+id/btn_one_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+
+        <Button
+            android:id="@+id/btn_one_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:padding="@dimen/dp_5"
+            android:text="one" />
+    </LinearLayout>
+    <View
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_5"/>
+    <LinearLayout
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dp_55">
+
         <Button
             android:id="@+id/btn_two_one"
-            android:text=""
-            android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:text="fragment" />
+
         <Button
             android:id="@+id/btn_two_two"
-            android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="侧滑菜单" />
+
         <Button
             android:id="@+id/btn_two_three"
-            android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="动画" />
+
         <Button
             android:id="@+id/btn_two_four"
-            android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="控件移动" />
+
         <Button
-        android:id="@+id/btn_two_five"
-        android:layout_weight="0.5"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-            android:background="@drawable/tt"
-        android:scaleType="centerCrop" />
+            android:id="@+id/btn_two_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="版本1.0" />
+
         <Button
             android:id="@+id/btn_two_six"
-            android:layout_weight="0.5"
             android:layout_width="0dp"
-            android:text="test"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#ccffff"
+            android:scaleType="centerCrop"
+            android:text="版本2.0" />
+
         <Button
             android:id="@+id/btn_two_seven"
-            android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#ffcccc"
+            android:scaleType="centerCrop"
+            android:text="自定义移动控件" />
+
         <Button
             android:id="@+id/btn_two_eight"
-            android:layout_weight="0.5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/tt"
-            android:scaleType="centerCrop" />
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="自定义view研究" />
 
 
     </LinearLayout>
+    <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"/>
+    <LinearLayout
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55">
+
+        <Button
+            android:id="@+id/btn_three_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:scaleType="centerCrop"
+            android:text="fragment" />
+
+        <Button
+            android:id="@+id/btn_three_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="版本3.0" />
+
+        <Button
+            android:id="@+id/btn_three_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="版本4.0" />
+
+        <Button
+            android:id="@+id/btn_three_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="控件移动" />
+
+        <Button
+            android:id="@+id/btn_three_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aa95ff"
+            android:scaleType="centerCrop"
+            android:text="项目历史版本" />
+
+        <Button
+            android:id="@+id/btn_three_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="项目测试" />
+
+        <Button
+            android:id="@+id/btn_three_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="自定义移动控件" />
+
+        <Button
+            android:id="@+id/btn_three_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#0055aa"
+            android:scaleType="centerCrop"
+            android:text="自定义view研究" />
 
 
-
+    </LinearLayout>
+    <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"/>
+    <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"/>
+    <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"/>
 
 </LinearLayout>

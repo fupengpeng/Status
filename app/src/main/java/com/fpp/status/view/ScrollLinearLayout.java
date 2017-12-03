@@ -12,13 +12,14 @@ import android.view.ViewGroup;
 import android.view.GestureDetector.OnGestureListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Scroller;
 import android.widget.Toast;
 import android.widget.ImageView.ScaleType;
 
 import com.fpp.status.R;
 
-public class MyViewGroup extends ViewGroup implements OnGestureListener {
+public class ScrollLinearLayout extends LinearLayout implements OnGestureListener {
 
     private float mLastMotionY;// 最后点击的点
     private GestureDetector detector;
@@ -34,11 +35,11 @@ public class MyViewGroup extends ViewGroup implements OnGestureListener {
     Context mContext;
 
 
-    public MyViewGroup(Context context) {
+    public ScrollLinearLayout(Context context) {
         super(context);
         mContext = context;
         // TODO Auto-generated constructor stub
-//        setBackgroundResource(R.drawable.shilipic);
+        setBackgroundResource(R.drawable.shilipic);
         mScroller = new Scroller(context);
         detector = new GestureDetector(this);
 
