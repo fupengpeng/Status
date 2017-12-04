@@ -41,10 +41,7 @@ public class MoveThreeActivity extends AppCompatActivity {
     int dy;
 
     //手指按下的点为(x1, y1)手指离开屏幕的点为(x2, y2)
-    float x1 = 0;
-    float x2 = 0;
-    float y1 = 0;
-    float y2 = 0;
+
 
     Context mContext;
 
@@ -177,8 +174,7 @@ public class MoveThreeActivity extends AppCompatActivity {
                         startX = (int) event.getRawX();
                         startY = (int) event.getRawY();
                         //当手指按下的时候
-                        x1 = event.getX();
-                        y1 = event.getY();
+
                         break;
                     case MotionEvent.ACTION_MOVE:
 //                        Log.e(TAG, "onTouch: " + "ACTION_MOVE");
@@ -194,7 +190,7 @@ public class MoveThreeActivity extends AppCompatActivity {
                         int top = llAtvtMainSuperstratum.getTop();
                         int bottom = llAtvtMainSuperstratum.getBottom();
                         // 设置本次TextView的上 下 左 右各边与父控件的距离
-                        if (isCenter && (movingY - startY) < 0) {  //从中间向上移动
+                        if (isCenter && dy < 0) {  //从中间向上移动
                             //在中间
                             if (top + dy <= 0) {
                                 Log.e(TAG, "onTouch: " + "30");
@@ -204,7 +200,7 @@ public class MoveThreeActivity extends AppCompatActivity {
                                 Log.e(TAG, "onTouch: " + "30-");
                                 llAtvtMainSuperstratum.layout(left, top + dy, right, bottom);
                             }
-                        } else if (isCenter && (movingY - startY) > 0) {  //从中间向下移动
+                        } else if (isCenter && dy > 0) {  //从中间向下移动
                             //在中间
                             Log.e(TAG, "onTouch: " + "0+");
 
@@ -216,7 +212,7 @@ public class MoveThreeActivity extends AppCompatActivity {
 
 //                            Animation oneAnimationS = AnimationUtils.loadAnimation(MoveActivity.this, R.anim.ll_atvt_main_black_anim_test_s   );
 //                            tv.startAnimation(oneAnimationS);
-                        } else if (!isCenter && (movingY - startY) < 0) {  //从上方向上移动
+                        } else if (!isCenter && dy < 0) {  //从上方向上移动
                             //在上方
                             Log.e(TAG, "onTouch: " + "855+");
                             if (top <= 0) {
@@ -227,7 +223,7 @@ public class MoveThreeActivity extends AppCompatActivity {
 
 //                            Animation oneAnimationS = AnimationUtils.loadAnimation(MoveActivity.this, R.anim.ll_atvt_main_black_anim_test_x);
 //                            tv.startAnimation(oneAnimationS);
-                        } else if (!isCenter && (movingY - startY) > 0) {  //从上方方向下移动
+                        } else if (!isCenter && dy > 0) {  //从上方方向下移动
                             //在上方
                             if (top + dy >= 855) {
                                 Log.e(TAG, "onTouch: " + "855");
@@ -247,8 +243,8 @@ public class MoveThreeActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_UP:
 
 
-                        Scroller scroller = new Scroller(mContext);
-
+//                        Scroller scroller = new Scroller(mContext);
+//
 //                private void smoothScrollTo ( int dstX, int dstY){
 //                    int scrollX = getScrollX();
 //                    int delta = dstX - scrollX;
@@ -282,21 +278,7 @@ public class MoveThreeActivity extends AppCompatActivity {
                         //当手指离开的时候
                 Log.e(TAG, "onTouch: " + "ACTION_UP");
                 //当手指离开的时候
-                x2 = event.getX();
-                y2 = event.getY();
-                if (y1 - y2 > 50) {
-                    Toast.makeText(MoveThreeActivity.this, "向上滑", Toast.LENGTH_SHORT).show();
 
-                } else if (y2 - y1 > 50) {
-                    Toast.makeText(MoveThreeActivity.this, "向下滑", Toast.LENGTH_SHORT).show();
-
-                } else if (x1 - x2 > 50) {
-                    Toast.makeText(MoveThreeActivity.this, "向左滑", Toast.LENGTH_SHORT).show();
-
-                } else if (x2 - x1 > 50) {
-                    Toast.makeText(MoveThreeActivity.this, "向右滑", Toast.LENGTH_SHORT).show();
-
-                }
                 break;
                 case MotionEvent.ACTION_CANCEL:
                 Log.e(TAG, "onTouch: " + "ACTION_CANCEL");

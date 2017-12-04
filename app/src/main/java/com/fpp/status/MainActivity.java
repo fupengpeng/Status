@@ -15,9 +15,11 @@ import com.fpp.status.activity.handler.HandlerFourActivity;
 import com.fpp.status.activity.handler.HandlerOneActivity;
 import com.fpp.status.activity.handler.HandlerThreeActivity;
 import com.fpp.status.activity.handler.MoveTwoTestActivity;
+import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
+import com.fpp.status.activity.popupwindow.PWOneActivity;
 import com.fpp.status.activity.test.MoveActivity;
 import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
@@ -78,6 +80,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnThreeSeven;
     @BindView(R.id.btn_three_eight)
     Button btnThreeEight;
+    @BindView(R.id.btn_four_one)
+    Button btnFourOne;
+    @BindView(R.id.btn_four_two)
+    Button btnFourTwo;
+    @BindView(R.id.btn_four_three)
+    Button btnFourThree;
+    @BindView(R.id.btn_four_four)
+    Button btnFourFour;
+    @BindView(R.id.btn_four_five)
+    Button btnFourFive;
+    @BindView(R.id.btn_four_six)
+    Button btnFourSix;
+    @BindView(R.id.btn_four_seven)
+    Button btnFourSeven;
+    @BindView(R.id.btn_four_eight)
+    Button btnFourEight;
 
 
     @Override
@@ -160,9 +178,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four,
             R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one,
             R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five,
-            R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight,R.id.btn_three_one,
+            R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight, R.id.btn_three_one,
             R.id.btn_three_two, R.id.btn_three_three, R.id.btn_three_four,
-            R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven, R.id.btn_three_eight})
+            R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven,
+            R.id.btn_three_eight,R.id.btn_four_one, R.id.btn_four_two, R.id.btn_four_three,
+            R.id.btn_four_four, R.id.btn_four_five, R.id.btn_four_six, R.id.btn_four_seven,
+            R.id.btn_four_eight})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_two_one:
@@ -238,6 +259,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_three_four:
+                intent = new Intent(this, MoveFourActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_three_five:
                 break;
@@ -247,8 +270,29 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_three_eight:
                 break;
+            case R.id.btn_four_one:
+                intent = new Intent(this, PWOneActivity.class);
+                startActivity(intent);
+
+                break;
+            case R.id.btn_four_two:
+                break;
+            case R.id.btn_four_three:
+                break;
+            case R.id.btn_four_four:
+                break;
+            case R.id.btn_four_five:
+                break;
+            case R.id.btn_four_six:
+                break;
+            case R.id.btn_four_seven:
+                break;
+            case R.id.btn_four_eight:
+                break;
         }
     }
+
+
 
 
 

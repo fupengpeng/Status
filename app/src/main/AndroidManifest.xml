@@ -35,7 +35,8 @@
         <activity android:name=".activity.move.MoveOneActivity" />
         <activity android:name=".activity.move.MoveTwoActivity" />
         <activity android:name=".activity.move.MoveThreeActivity" />
-        <activity android:name=".activity.move.MoveFourActivity"></activity>
+        <activity android:name=".activity.move.MoveFourActivity" />
+        <activity android:name=".activity.popupwindow.PWOneActivity"></activity>
     </application>
 
 </manifest>

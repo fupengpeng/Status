@@ -88,7 +88,7 @@ public class TestActivity extends AppCompatActivity {
     }
 
     boolean isMoves = true;
-    int i = 56;
+    int i = 284;
     Thread moveThread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -98,7 +98,7 @@ public class TestActivity extends AppCompatActivity {
                     Log.e(TAG, "run: " + "线程睡觉中   " + i);
                     // 2.计时，睡眠 1 毫秒给主线程发送一个消息
 
-                    Thread.sleep(20);
+                    Thread.sleep(5);
 
                     Log.e(TAG, "run: " + "线程睡醒了");
                     Message msg = new Message();
@@ -120,23 +120,26 @@ public class TestActivity extends AppCompatActivity {
             super.handleMessage(msg);
             // 3. 主线程接收到子线程发送的消息，处理UI
             Bundle b = msg.getData();
-            int top = Integer.parseInt(b.getString("i"));
-            Log.e(TAG, "handleMessage:------------------ 接收到消息 = " + top);
-            if (top >= 0) {
-                refreshUI(top);
-            } else {
+            int topp = Integer.parseInt(b.getString("i"));
+
+            if (topp < 0) {
+                Log.e(TAG, "handleMessage:---------更改--------- 接收到消息 = " + topp);
+                llAtvtMainSuperstratum.layout(left, 45, right, bottom);
                 isMoves = false;
+            } else {
+                Log.e(TAG, "handleMessage:---------更新--------- 接收到消息 = " + topp);
+                refreshUI(topp);
             }
 
         }
     };
 
     private void refreshUI(int top) {
-        Log.e(TAG, "refreshUI: top = " + top * 15);
-        Animation oneAnimationS = AnimationUtils.loadAnimation(TestActivity.this, R.anim.ll_atvt_main_iv_anim_s);
-        ivAtvtMainOrder.startAnimation(oneAnimationS);
-        llAtvtMainSuperstratum.layout(left, top * 15, right, bottom);
-        llAtvtMainBlack.layout(left - 45, top * 15, right + 45, bottom);
+        Log.e(TAG, "refreshUI: top = " + top * 5);
+//        Animation oneAnimationS = AnimationUtils.loadAnimation(TestActivity.this, R.anim.ll_atvt_main_iv_anim_s);
+//        ivAtvtMainOrder.startAnimation(oneAnimationS);
+        llAtvtMainSuperstratum.layout(left, top * 5, right, bottom);
+        llAtvtMainBlack.layout(left - 45, top * 5, right + 45, bottom);
 
         Log.e(TAG, "refreshUI:++ 前  i  =  " + i);
         i--;
