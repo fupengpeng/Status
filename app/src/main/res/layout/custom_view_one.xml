@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/iv_add"
+
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@drawable/yuan_jiao_add_hui"
+            android:src="@drawable/ic_add_black_24dp" />
+
+        <TextView
+            android:id="@+id/tv_add"
+
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@drawable/yuan_jiao_add_hong"
+            android:src="@drawable/ic_add_black_24dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_remove"
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/yuan_jiao_remove"
+            android:src="@drawable/ic_remove_black_24dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="alsdf;a;sldsf"
+            android:textColor="#555555" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="￥"
+                android:textColor="#555555" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="lglghjkyyfygu"
+                android:textColor="#555555" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -36,7 +36,11 @@
         <activity android:name=".activity.move.MoveTwoActivity" />
         <activity android:name=".activity.move.MoveThreeActivity" />
         <activity android:name=".activity.move.MoveFourActivity" />
-        <activity android:name=".activity.popupwindow.PWOneActivity"></activity>
+        <activity android:name=".activity.popupwindow.PWOneActivity" />
+        <activity android:name=".activity.customview.CustomViewOneActivity" />
+        <activity android:name=".activity.customview.CustomViewTwoActivity" />
+        <activity android:name=".activity.customview.CustomViewThreeActivity" />
+        <activity android:name=".activity.customview.CustomViewFourActivity"></activity>
     </application>
 
 </manifest>

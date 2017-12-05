@@ -10,6 +10,10 @@ import android.widget.Button;
 
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.PWActivity;
+import com.fpp.status.activity.customview.CustomViewFourActivity;
+import com.fpp.status.activity.customview.CustomViewOneActivity;
+import com.fpp.status.activity.customview.CustomViewThreeActivity;
+import com.fpp.status.activity.customview.CustomViewTwoActivity;
 import com.fpp.status.activity.handler.HandlerFiveActivity;
 import com.fpp.status.activity.handler.HandlerFourActivity;
 import com.fpp.status.activity.handler.HandlerOneActivity;
@@ -25,6 +29,7 @@ import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
 import com.fpp.status.activity.test.MoveViewGroupActivity;
 import com.fpp.status.activity.test.TestActivity;
+import com.fpp.status.view.CustomViewTwo;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -96,6 +101,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnFourSeven;
     @BindView(R.id.btn_four_eight)
     Button btnFourEight;
+    @BindView(R.id.btn_five_one)
+    Button btnFiveOne;
+    @BindView(R.id.btn_five_two)
+    Button btnFiveTwo;
+    @BindView(R.id.btn_five_three)
+    Button btnFiveThree;
+    @BindView(R.id.btn_five_four)
+    Button btnFiveFour;
+    @BindView(R.id.btn_five_five)
+    Button btnFiveFive;
+    @BindView(R.id.btn_five_six)
+    Button btnFiveSix;
+    @BindView(R.id.btn_five_seven)
+    Button btnFiveSeven;
+    @BindView(R.id.btn_five_eight)
+    Button btnFiveEight;
 
 
     @Override
@@ -181,9 +202,11 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight, R.id.btn_three_one,
             R.id.btn_three_two, R.id.btn_three_three, R.id.btn_three_four,
             R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven,
-            R.id.btn_three_eight,R.id.btn_four_one, R.id.btn_four_two, R.id.btn_four_three,
+            R.id.btn_three_eight, R.id.btn_four_one, R.id.btn_four_two, R.id.btn_four_three,
             R.id.btn_four_four, R.id.btn_four_five, R.id.btn_four_six, R.id.btn_four_seven,
-            R.id.btn_four_eight})
+            R.id.btn_four_eight,R.id.btn_five_one, R.id.btn_five_two, R.id.btn_five_three,
+            R.id.btn_five_four,
+            R.id.btn_five_five, R.id.btn_five_six, R.id.btn_five_seven, R.id.btn_five_eight})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_two_one:
@@ -289,8 +312,34 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_four_eight:
                 break;
+            case R.id.btn_five_one:
+                intent  =  new Intent(this, CustomViewOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_five_two:
+                intent  =  new Intent(this, CustomViewTwoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_five_three:
+                intent  =  new Intent(this, CustomViewThreeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_five_four:
+                intent  =  new Intent(this, CustomViewFourActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_five_five:
+                break;
+            case R.id.btn_five_six:
+                break;
+            case R.id.btn_five_seven:
+                break;
+            case R.id.btn_five_eight:
+                break;
         }
     }
+
+
 
 
 
