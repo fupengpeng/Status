@@ -41,6 +41,10 @@
         <activity android:name=".activity.customview.CustomViewTwoActivity" />
         <activity android:name=".activity.customview.CustomViewThreeActivity" />
         <activity android:name=".activity.customview.CustomViewFourActivity"></activity>
+        <activity android:name=".activity.customview.CustomViewFiveActivity"/>
+        <activity android:name=".activity.customview.CustomViewSixActivity"/>
+        <activity android:name=".activity.customview.CustomViewSevenActivity"/>
+        <activity android:name=".activity.customview.CustomViewEightActivity"/>
     </application>
 
 </manifest>

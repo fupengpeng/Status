@@ -10,8 +10,12 @@ import android.widget.Button;
 
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.PWActivity;
+import com.fpp.status.activity.customview.CustomViewEightActivity;
+import com.fpp.status.activity.customview.CustomViewFiveActivity;
 import com.fpp.status.activity.customview.CustomViewFourActivity;
 import com.fpp.status.activity.customview.CustomViewOneActivity;
+import com.fpp.status.activity.customview.CustomViewSevenActivity;
+import com.fpp.status.activity.customview.CustomViewSixActivity;
 import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
 import com.fpp.status.activity.handler.HandlerFiveActivity;
@@ -286,6 +290,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_three_five:
+                intent = new Intent(this, MoveActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_three_six:
                 break;
@@ -329,12 +335,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_five_five:
+                intent  =  new Intent(this, CustomViewFiveActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_five_six:
+                intent  =  new Intent(this, CustomViewSixActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_five_seven:
+                intent  =  new Intent(this, CustomViewSevenActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_five_eight:
+                intent  =  new Intent(this, CustomViewEightActivity.class);
+                startActivity(intent);
                 break;
         }
     }
