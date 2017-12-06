@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,6 +28,7 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
+import com.fpp.status.activity.popupwindow.OrderParticularsActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
 import com.fpp.status.activity.test.MoveActivity;
 import com.fpp.status.activity.test.MoveImageActivity;
@@ -42,6 +44,7 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
 
+    private static final String TAG = "MainActivity";
     Intent intent;
     @BindView(R.id.btn_one_one)
     Button btnOneOne;
@@ -305,6 +308,9 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_four_two:
+                Log.e(TAG, "onViewClicked: " + "????????????????" );
+                intent = new Intent(this, OrderParticularsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_four_three:
                 break;
