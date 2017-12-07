@@ -19,12 +19,15 @@
 
         <TextView
             android:id="@+id/tv_lv_item_select_service_add"
+            android:textSize="55sp"
+            android:gravity="center"
+            android:text="+"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginTop="@dimen/dp_15"
-            android:background="@drawable/yuan_jiao_add_hong"
+            android:background="@drawable/yuan_jiao_add_hui"
             android:src="@drawable/ic_add_black_24dp"
-            android:visibility="gone" />
+             />
 
         <ImageView
             android:id="@+id/iv_lv_item_select_service_remove"
