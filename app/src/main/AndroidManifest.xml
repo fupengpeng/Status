@@ -46,6 +46,8 @@
         <activity android:name=".activity.customview.CustomViewSevenActivity"/>
         <activity android:name=".activity.customview.CustomViewEightActivity"/>
         <activity android:name=".activity.popupwindow.OrderParticularsActivity"/>
+        <activity android:name=".activity.fragmentone.OneFragmentActivity"/>
+        <activity android:name=".activity.fragmenttwo.FragmentTwoActivity"/>
     </application>
 
 </manifest>

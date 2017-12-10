@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
     android:layout_height="match_parent">
 
     <Button
         android:id="@+id/btn_move"
+        android:visibility="gone"
         android:layout_gravity="center"
         android:text="点击展示隐身缩小动画效果"
         android:layout_width="@dimen/dp_200"
@@ -12,9 +14,87 @@
 
     <ImageView
         android:id="@+id/iv_anim_test"
+        android:visibility="gone"
         android:layout_gravity="center"
         android:src="@drawable/hudie"
         android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_200" />
+    <LinearLayout
+        android:background="#ffffff"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="工资收入证明"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+        <TextView
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:text="        兹证明付朋朋是我单位员工，身份证号：610124199108247517，现为我公司Android项目部下Android开发程序员，平均月收入为2000元整（人名币）。"
+            android:gravity="center|left"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+        <TextView
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:text="        此证明仅限用于申请公租房使用，不作其他用途。"
+            android:gravity="center|left"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:text="        特此证明"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:gravity="left"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="180dp"
+                android:background="@drawable/zhansan"
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+            </TextView>
+            <TextView
+
+                android:textSize="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#000000"
+                android:text="济宁九点连线信息技术有限公司"
+                android:gravity="center|right"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/textView4" />
+            <TextView
+                android:layout_marginRight="70dp"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:text="2017年12月1日"
+                android:gravity="center|right"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
