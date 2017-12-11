@@ -17,8 +17,8 @@
         android:visibility="gone"
         android:layout_gravity="center"
         android:src="@drawable/hudie"
-        android:layout_width="@dimen/dp_200"
-        android:layout_height="@dimen/dp_200" />
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
     <LinearLayout
         android:background="#ffffff"
         android:layout_marginRight="15dp"
@@ -68,8 +68,8 @@
                 android:layout_marginLeft="180dp"
                 android:background="@drawable/zhansan"
                 android:orientation="vertical"
-                android:layout_width="100dp"
-                android:layout_height="100dp">
+                android:layout_width="80dp"
+                android:layout_height="80dp">
             </TextView>
             <TextView
 
