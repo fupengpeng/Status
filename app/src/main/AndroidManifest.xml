@@ -48,6 +48,7 @@
         <activity android:name=".activity.popupwindow.OrderParticularsActivity"/>
         <activity android:name=".activity.fragmentone.OneFragmentActivity"/>
         <activity android:name=".activity.fragmenttwo.FragmentTwoActivity"/>
+        <activity android:name=".activity.fragmentthree.ThreeFragmentActivity"/>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
@@ -28,7 +29,8 @@ import java.util.List;
  * Created by fp on 2017/12/10.
  */
 
-public class FragmentTwoActivity extends AppCompatActivity {
+public class FragmentTwoActivity extends AppCompatActivity implements View.OnClickListener {
+    String TAG = "FragmentTwoActivity";
 
     private ViewPager viewPager;// 声明一个viewpager对象
     private TextView tv1;
@@ -75,6 +77,10 @@ public class FragmentTwoActivity extends AppCompatActivity {
         tv1 = (TextView) findViewById(R.id.tv1);
         tv2 = (TextView) findViewById(R.id.tv2);
         tv3 = (TextView) findViewById(R.id.tv3);
+
+        tv1.setOnClickListener(this);
+        tv2.setOnClickListener(this);
+        tv3.setOnClickListener(this);
 
         list = new ArrayList<Fragment>();
 
@@ -140,16 +146,13 @@ public class FragmentTwoActivity extends AppCompatActivity {
                         .getLayoutParams();
 
                 if (currentPage == 0 && arg0 == 0) { // 0->1移动(第一页到第二页)
-                    ll.leftMargin = (int) (currentPage * tabLineLength + arg1
-                            * tabLineLength);
+                    ll.leftMargin = (int) (currentPage * tabLineLength + arg1 * tabLineLength);
                 } else if (currentPage == 1 && arg0 == 1) { // 1->2移动（第二页到第三页）
-                    ll.leftMargin = (int) (currentPage * tabLineLength + arg1
-                            * tabLineLength);
+                    ll.leftMargin = (int) (currentPage * tabLineLength + arg1 * tabLineLength);
                 } else if (currentPage == 1 && arg0 == 0) { // 1->0移动（第二页到第一页）
                     ll.leftMargin = (int) (currentPage * tabLineLength - ((1 - arg1) * tabLineLength));
                 } else if (currentPage == 2 && arg0 == 1) { // 2->1移动（第三页到第二页）
-                    ll.leftMargin = (int) (currentPage * tabLineLength - (1 - arg1)
-                            * tabLineLength);
+                    ll.leftMargin = (int) (currentPage * tabLineLength - (1 - arg1) * tabLineLength);
                 }
 
                 tabline.setLayoutParams(ll);
@@ -168,4 +171,29 @@ public class FragmentTwoActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.tv1:
+                changeView(0);
+                break;
+            case R.id.tv2:
+                changeView(1);
+                break;
+
+            case R.id.tv3:
+                changeView(2);
+                break;
+
+
+
+        }
+
+    }
+    //手动设置ViewPager要显示的视图
+    private void changeView(int desTab)
+    {
+        Log.e(TAG, "changeView: " + " ---------");
+        viewPager.setCurrentItem(desTab, true);
+    }
 }
