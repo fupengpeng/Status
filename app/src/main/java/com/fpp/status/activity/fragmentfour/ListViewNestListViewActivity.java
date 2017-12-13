@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fpp.status.R;
 import com.fpp.status.entity.LVOne;
@@ -25,7 +26,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by fupengpeng on 2017/12/13 0013.
+ * ListView嵌套ListView
  */
 
 public class ListViewNestListViewActivity extends AppCompatActivity {
@@ -64,7 +65,7 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
      */
     public List<LVOne> getData() {
         List<LVOne> lvOnes = new ArrayList<LVOne>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             LVOne lvOne = new LVOne();
             lvOne.setLvOneId("one-id--" + i);
             lvOne.setLvOneName("one-name--" + i);
@@ -72,7 +73,7 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
             lvOne.setLvOneSelect(false);
 
             List<LVTwo> lvTwos = new ArrayList<LVTwo>();
-            for (int j = 0; j < 5; j++) {
+            for (int j = 0; j < 20; j++) {
                 LVTwo lvTwo = new LVTwo();
                 lvTwo.setLvTwoId("two-id--" + j);
                 lvTwo.setLvTwoName("two-name--" + j);
@@ -85,8 +86,6 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
             lvOnes.add(lvOne);
 
         }
-
-
         return lvOnes;
     }
 
@@ -144,11 +143,88 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
             }
             holder.tvLvNestLvOneId.setText(lvOneList.get(position).getLvOneId());
             holder.tvLvNestLvOneName.setText(lvOneList.get(position).getLvOneName());
-            List<LVTwo> lvTwos = lvOneList.get(position).getLvTwos();
+            final List<LVTwo> lvTwos = lvOneList.get(position).getLvTwos();
+            final LVTwoAdapter lvTwoAdapter = new LVTwoAdapter(context,lvTwos);
+            holder.lvLvNestLvOneLvItem.setAdapter(lvTwoAdapter);
+            //添加服务按钮点击事件
+            lvTwoAdapter.setOnItemAddClickListener(new LVTwoAdapter.OnItemAddListener() {
+                @Override
+                public void onAddClick(int position, LVTwoAdapter.ViewHolder holder) {
+                    addLVTwo(position, holder, lvTwoAdapter, lvTwos);
 
-            holder.lvLvNestLvOneLvItem.setAdapter(new LVTwoAdapter(context,lvTwos));
+
+                }
+            });
+            //减少服务按钮点击事件
+            lvTwoAdapter.setOnItemDeleteClickListener(new LVTwoAdapter.OnItemDeleteListener() {
+                @Override
+                public void onDeleteClick(int position, LVTwoAdapter.ViewHolder holder) {
+                    deleteLVTwo(position,holder,lvTwoAdapter,lvTwos);
+                    List<LVTwo> lvTwoNumList = new ArrayList<LVTwo>();
+
+                    getLVTwoNumList(lvTwoNumList, lvTwos);
+
+                }
+            });
 
             return convertView;
+        }
+
+        /**
+         * 统计此分类的选定的数据--筛选选定的项目，统计出来
+         * @param lvTwoNumList  筛选过后的数据
+         * @param lvTwos  删选数据源
+         */
+        private void getLVTwoNumList(List<LVTwo> lvTwoNumList, List<LVTwo> lvTwos) {
+            lvTwoNumList.clear();
+            for ( LVTwo lvTwo : lvTwos ) {
+                if (Integer.parseInt(lvTwo.getLvTwoNum()) > 0 ){
+                    lvTwoNumList.add(lvTwo);
+                }
+            }
+        }
+
+        /**
+         * 添加
+         * @param position  第position个子条目
+         * @param holder  子条目的布局
+         * @param lvTwoAdapter  使用到的数据适配器
+         * @param lvTwos  布局所要添加的数据
+         */
+        private void addLVTwo(int position, LVTwoAdapter.ViewHolder holder, LVTwoAdapter lvTwoAdapter, List<LVTwo> lvTwos) {
+            LVTwo item = (LVTwo) lvTwoAdapter.getItem(position);
+            int number = Integer.parseInt(item.getLvTwoNum());
+
+            if (number == 1) {
+                if (holder.ivLvItemSelectServiceRemove.getVisibility() == View.GONE) {
+                    holder.ivLvItemSelectServiceRemove.setVisibility(View.VISIBLE);
+                }
+                Toast.makeText(context, "相同的项目只能添加一次！", Toast.LENGTH_LONG).show();
+            } else {
+                if (holder.ivLvItemSelectServiceRemove.getVisibility() == View.VISIBLE) {
+                    holder.ivLvItemSelectServiceRemove.setVisibility(View.GONE);
+                }
+                number = 1;
+                holder.tvLvItemSelectServiceAdd.setText(number + "");
+                lvTwos.get(position).setLvTwoNum(number + "");
+            }
+
+            lvTwoAdapter.notifyDataSetChanged();
+        }
+
+        /**
+         * 减少
+         * @param position  第position个子条目
+         * @param holder  子条目的布局
+         * @param lvTwoAdapter  使用到的数据适配器
+         * @param lvTwos  布局所要添加的数据
+         */
+        private void deleteLVTwo(int position, LVTwoAdapter.ViewHolder holder, LVTwoAdapter lvTwoAdapter, List<LVTwo> lvTwos) {
+            holder.tvLvItemSelectServiceAdd.setText("+");
+            holder.ivLvItemSelectServiceRemove.setVisibility(View.GONE);
+            int number = 0;
+            lvTwos.get(position).setLvTwoNum(number + "");
+            lvTwoAdapter.notifyDataSetChanged();
         }
 
         class ViewHolder {
@@ -227,24 +303,26 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
             }
 
             //子条目中增加服务按钮的点击事件设置
+            final ViewHolder finalHolder = holder;
             holder.tvLvItemSelectServiceAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    mOnItemAddListener.onAddClick(position ,holder);
+                    mOnItemAddListener.onAddClick(position , finalHolder);
                 }
             });
             //子条目中减少服务按钮的点击事件设置
+            final ViewHolder finalHolder1 = holder;
             holder.ivLvItemSelectServiceRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    mOnItemDeleteListener.onDeleteClick(position,holder);
+                    mOnItemDeleteListener.onDeleteClick(position, finalHolder1);
                 }
             });
 
             return convertView;
         }
 
-        class ViewHolder {
+        static class ViewHolder {
             TextView tvLvItemSelectServiceAdd;
             ImageView ivLvItemSelectServiceRemove;
             TextView tvLvItemSelectServiceName;

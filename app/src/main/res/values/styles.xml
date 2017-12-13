@@ -17,4 +17,11 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--checkbox-->
+    <style name="circlecheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/order_item_select</item>
+        <item name="android:paddingLeft">10.0dp</item>
+        <item name="android:height">35dp</item>
+    </style>
+
 </resources>

@@ -19,6 +19,7 @@ import com.fpp.status.activity.customview.CustomViewSevenActivity;
 import com.fpp.status.activity.customview.CustomViewSixActivity;
 import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
+import com.fpp.status.activity.fragmentfive.AllSelectActivity;
 import com.fpp.status.activity.fragmentfour.ListViewNestListViewActivity;
 import com.fpp.status.activity.fragmentone.OneFragmentActivity;
 import com.fpp.status.activity.fragmentthree.ThreeFragmentActivity;
@@ -395,6 +396,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_six_five:
+                intent = new Intent(this, AllSelectActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_six_six:
                 break;

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+
+        <CheckBox
+            android:id="@+id/cb_lv_item_pw_select_item"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="@dimen/dp_40"
+            style="@style/circlecheckbox"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:layout_height="match_parent"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_lv_item_pw_select_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="4"
+            android:layout_gravity="center"
+            android:textSize="@dimen/order_main_body_text_size"
+            android:text="水疗"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_lv_item_pw_select_number"
+            android:layout_gravity="center"
+            android:text="*5"
+            android:textSize="@dimen/order_main_body_text_size"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_lv_item_pw_select_price"
+            android:textColor="#000000"
+            android:text="￥100.00"
+            android:textSize="@dimen/order_main_body_text_size"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
