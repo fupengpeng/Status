@@ -49,6 +49,7 @@
         <activity android:name=".activity.fragmentone.OneFragmentActivity"/>
         <activity android:name=".activity.fragmenttwo.FragmentTwoActivity"/>
         <activity android:name=".activity.fragmentthree.ThreeFragmentActivity"/>
+        <activity android:name=".activity.fragmentfour.ListViewNestListViewActivity"/>
     </application>
 
 </manifest>

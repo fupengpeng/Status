@@ -110,4 +110,25 @@
     <dimen name="txt_28">28sp</dimen>
 
 
+
+    <!--一键开单-->
+    <dimen name="dp_44">44dp</dimen>
+
+    <!--  order  文字  -->
+    <!--标题栏文字大小-->
+    <dimen name="order_title_text_size">18sp</dimen>
+    <!--副标题文字大小-->
+    <dimen name="order_subheading_text_size">15sp</dimen>
+    <!--正文文字大-->
+    <dimen name="order_main_body_text_size">12sp</dimen>
+    <!--正文文字小-->
+    <dimen name="order_main_body_little_text_size">10sp</dimen>
+
+    <!--  order  布局  -->
+    <!--标题栏高度-->
+    <dimen name="order_title_height">68dp</dimen>
+    <!--标题栏paddingTop-->
+    <dimen name="order_title_padding_top">23dp</dimen>
+
+
 </resources>

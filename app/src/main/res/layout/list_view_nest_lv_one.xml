@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/tv_lv_nest_lv_one_id"
+            android:text="id"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:gravity="center|bottom"
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_lv_nest_lv_one_name"
+            android:gravity="center"
+            android:text="护理类"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <com.fpp.status.view.HorizontalListView
+        android:id="@+id/lv_lv_nest_lv_one_lv_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120">
+
+    </com.fpp.status.view.HorizontalListView>
+
+
+</LinearLayout>
