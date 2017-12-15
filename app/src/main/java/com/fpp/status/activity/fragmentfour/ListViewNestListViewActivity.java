@@ -234,6 +234,7 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
         }
     }
 
+
     static class LVTwoAdapter extends BaseAdapter {
         List<LVTwo> lvTwoList;
         Context context;
@@ -303,19 +304,19 @@ public class ListViewNestListViewActivity extends AppCompatActivity {
             }
 
             //子条目中增加服务按钮的点击事件设置
-            final ViewHolder finalHolder = holder;
+            final ViewHolder addHolder = holder;
             holder.tvLvItemSelectServiceAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mOnItemAddListener.onAddClick(position , finalHolder);
+                    mOnItemAddListener.onAddClick(position , addHolder);
                 }
             });
             //子条目中减少服务按钮的点击事件设置
-            final ViewHolder finalHolder1 = holder;
+            final ViewHolder deleteHolder = holder;
             holder.ivLvItemSelectServiceRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mOnItemDeleteListener.onDeleteClick(position, finalHolder1);
+                    mOnItemDeleteListener.onDeleteClick(position, deleteHolder);
                 }
             });
 

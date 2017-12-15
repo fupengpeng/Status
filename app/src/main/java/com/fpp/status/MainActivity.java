@@ -22,6 +22,7 @@ import com.fpp.status.activity.customview.CustomViewTwoActivity;
 import com.fpp.status.activity.fragmentfive.AllSelectActivity;
 import com.fpp.status.activity.fragmentfour.ListViewNestListViewActivity;
 import com.fpp.status.activity.fragmentone.OneFragmentActivity;
+import com.fpp.status.activity.fragmentsix.FragmentSixActivity;
 import com.fpp.status.activity.fragmentthree.ThreeFragmentActivity;
 import com.fpp.status.activity.fragmenttwo.FragmentTwoActivity;
 import com.fpp.status.activity.handler.HandlerFiveActivity;
@@ -400,6 +401,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_six_six:
+                intent = new Intent(this, FragmentSixActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_six_seven:
                 break;

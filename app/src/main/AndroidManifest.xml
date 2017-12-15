@@ -51,6 +51,7 @@
         <activity android:name=".activity.fragmentthree.ThreeFragmentActivity"/>
         <activity android:name=".activity.fragmentfour.ListViewNestListViewActivity"/>
         <activity android:name=".activity.fragmentfive.AllSelectActivity"/>
+        <activity android:name=".activity.fragmentsix.FragmentSixActivity"/>
     </application>
 
 </manifest>

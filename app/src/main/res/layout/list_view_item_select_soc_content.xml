@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--分类-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25">
+
+            <TextView
+                android:id="@+id/tv_lv_item_select_soc_content_id"
+                android:text="4."
+                android:textColor="#000000"
+                android:textSize="@dimen/order_main_body_text_size"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_lv_item_select_soc_content_name"
+                android:text="护理类"
+                android:textSize="@dimen/order_main_body_text_size"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <!--分类数据列表-->
+        <com.fpp.status.view.HorizontalListView
+            android:id="@+id/hlv_fragment_add_service"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+    <View
+        android:background="#dddddd"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+
+
+</LinearLayout>
