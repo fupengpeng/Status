@@ -40,7 +40,7 @@
         <activity android:name=".activity.customview.CustomViewOneActivity" />
         <activity android:name=".activity.customview.CustomViewTwoActivity" />
         <activity android:name=".activity.customview.CustomViewThreeActivity" />
-        <activity android:name=".activity.customview.CustomViewFourActivity"></activity>
+        <activity android:name=".activity.customview.CustomViewFourActivity"/>
         <activity android:name=".activity.customview.CustomViewFiveActivity"/>
         <activity android:name=".activity.customview.CustomViewSixActivity"/>
         <activity android:name=".activity.customview.CustomViewSevenActivity"/>
@@ -52,6 +52,8 @@
         <activity android:name=".activity.fragmentfour.ListViewNestListViewActivity"/>
         <activity android:name=".activity.fragmentfive.AllSelectActivity"/>
         <activity android:name=".activity.fragmentsix.FragmentSixActivity"/>
+        <activity android:name=".activity.fragmentseven.FragmentSevenActivity"/>
+        <activity android:name=".activity.fragmenteight.FragmentEightActivity"/>
     </application>
 
 </manifest>

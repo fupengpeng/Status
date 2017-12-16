@@ -19,9 +19,11 @@ import com.fpp.status.activity.customview.CustomViewSevenActivity;
 import com.fpp.status.activity.customview.CustomViewSixActivity;
 import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
+import com.fpp.status.activity.fragmenteight.FragmentEightActivity;
 import com.fpp.status.activity.fragmentfive.AllSelectActivity;
 import com.fpp.status.activity.fragmentfour.ListViewNestListViewActivity;
 import com.fpp.status.activity.fragmentone.OneFragmentActivity;
+import com.fpp.status.activity.fragmentseven.FragmentSevenActivity;
 import com.fpp.status.activity.fragmentsix.FragmentSixActivity;
 import com.fpp.status.activity.fragmentthree.ThreeFragmentActivity;
 import com.fpp.status.activity.fragmenttwo.FragmentTwoActivity;
@@ -405,8 +407,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_six_seven:
+                intent = new Intent(this, FragmentSevenActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_six_eight:
+                intent = new Intent(this, FragmentEightActivity.class);
+                startActivity(intent);
                 break;
         }
     }

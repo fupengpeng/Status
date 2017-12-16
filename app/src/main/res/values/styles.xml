@@ -24,4 +24,9 @@
         <item name="android:height">35dp</item>
     </style>
 
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">12sp</item>
+        <!--<item name="android:textSize">@dimen/text_16_sp</item>-->
+    </style>
+
 </resources>

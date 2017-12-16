@@ -10,8 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fpp.status.R;
-import com.fpp.status.entity.LVOne;
-import com.fpp.status.entity.LVTwo;
 import com.fpp.status.entity.ServiceCategory;
 import com.fpp.status.entity.ServiceItem;
 import com.fpp.status.view.HorizontalListView;
