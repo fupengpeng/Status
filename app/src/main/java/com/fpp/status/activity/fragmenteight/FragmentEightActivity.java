@@ -45,7 +45,7 @@ public class FragmentEightActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_billing_select);
+        setContentView(R.layout.activity_fragment_eight);
         ButterKnife.bind(this);
 
 //        init();

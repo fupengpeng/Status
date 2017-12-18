@@ -26,4 +26,7 @@
 
     <color name="main_bg_one">#D3AA50</color>
     <color name="main_bg_two">#FAFAFA</color>
+
+    <!-- 侧滑菜单职称字体颜色 -->
+    <color name="leftMenuWorkNameTextColor">#d3aa50</color>
 </resources>
