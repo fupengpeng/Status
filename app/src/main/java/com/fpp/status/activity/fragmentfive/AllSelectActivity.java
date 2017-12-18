@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ import butterknife.OnClick;
  */
 
 public class AllSelectActivity extends AppCompatActivity {
+    String TAG = "AllSelectActivity";
 
     @BindView(R.id.listview)
     ListView listview;
@@ -55,8 +57,20 @@ public class AllSelectActivity extends AppCompatActivity {
     List<ServiceItem> mListData;
     private void initView() {
         data = getData();
+        String name0 = data.get(0).getServiceItemName();
+        Log.e(TAG, "initView: ----name0 = " + name0);  //服务名1   从0开始
+        String name1 = data.get(1).getServiceItemName();
+        Log.e(TAG, "initView: ----name1 = " + name1 );
+
         pwAdapter = new PwAdapter(this, data);
         listview.setAdapter(pwAdapter);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.e(TAG, "onItemClick:  position = " + position );
+            }
+        });
+
     }
 
     @OnClick(R.id.cb_lv_item_pw_select_item)
@@ -262,7 +276,7 @@ public class AllSelectActivity extends AppCompatActivity {
             boolean selected = !mSelectState.get(_id, false);
             holder.cbLvItemPwSelectItem.toggle();
 
-            LogUtils.e("pw---", "onItemClick: " + "----0017----");
+            LogUtils.e("pw---", "onItemClick: " + "----0017----"  + "position ==== " + position);
             // 将CheckBox的选中状况记录下来
             mListData.get(position).setEnable(holder.cbLvItemPwSelectItem.isChecked());
             // 调整选定条目

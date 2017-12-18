@@ -16,8 +16,6 @@ import android.widget.Toast;
 
 import com.fpp.status.R;
 import com.fpp.status.fragment.BaseFragment;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
