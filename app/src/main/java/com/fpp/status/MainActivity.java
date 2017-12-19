@@ -19,6 +19,7 @@ import com.fpp.status.activity.customview.CustomViewSevenActivity;
 import com.fpp.status.activity.customview.CustomViewSixActivity;
 import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
+import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
 import com.fpp.status.activity.fragmenteight.FragmentEightActivity;
 import com.fpp.status.activity.fragmentfive.AllSelectActivity;
@@ -343,6 +344,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_four_four:
+                intent = new Intent(this, FourFourActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_four_five:
                 break;

@@ -55,6 +55,7 @@
         <activity android:name=".activity.fragmentseven.FragmentSevenActivity"/>
         <activity android:name=".activity.fragmenteight.FragmentEightActivity"/>
         <activity android:name=".activity.four.FourThreeActivity"/>
+        <activity android:name=".activity.four.FourFourActivity"/>
     </application>
 
 </manifest>
