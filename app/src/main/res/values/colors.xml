@@ -29,4 +29,6 @@
 
     <!-- 侧滑菜单职称字体颜色 -->
     <color name="leftMenuWorkNameTextColor">#d3aa50</color>
+
+    <color name="colorWhite">#ffffff</color>
 </resources>

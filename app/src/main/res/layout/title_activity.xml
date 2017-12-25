@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/order_title_height">
+    <!--公共标题栏-->
+    <LinearLayout
+        android:paddingTop="@dimen/order_title_padding_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_title_height"
+        android:background="#000000"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5">
+        <!--左侧图片-->
+        <ImageView
+            android:id="@+id/iv_title_activity_left"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chevron_left_black_24dp" />
+        <!--左侧文字-->
+        <TextView
+            android:id="@+id/tv_title_activity_left"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title_activity_title"
+            android:textSize="@dimen/order_title_text_size"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#ffffff" />
+        <!--右侧文字-->
+        <TextView
+            android:id="@+id/tv_title_activity_right"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <!--右侧图片-->
+        <ImageView
+            android:id="@+id/iv_title_activity_right"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

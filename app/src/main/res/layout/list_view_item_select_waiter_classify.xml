@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+    <!--设计师-->
+    <TextView
+        android:id="@+id/tv_lv_item_select_waiter"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/order_main_body_text_size"
+        android:gravity="center|left"
+        android:text="设计师"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <ListView
+        android:id="@+id/lv_lv_item_select_waiter"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

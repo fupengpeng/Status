@@ -480,7 +480,7 @@
             android:layout_weight="0.5"
             android:background="#00ffff"
             android:scaleType="centerCrop"
-            android:text="自定义view研究" />
+            android:text="viewpager配合fragment实现侧滑" />
 
 
     </LinearLayout>

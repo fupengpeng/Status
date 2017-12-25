@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_lv_item_select_waiter_content"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_lv_item_select_waiter_user_image"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:src="@drawable/ic_account_circle_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_lv_item_select_waiter_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.5"
+                android:gravity="center|left"
+                android:text="100号"
+                android:textColor="#000000"
+                android:textSize="@dimen/order_subheading_text_size" />
+
+            <TextView
+                android:id="@+id/tv_lv_item_select_waiter_user_position"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.5"
+                android:gravity="center|left"
+                android:textSize="@dimen/order_main_body_little_text_size"
+                android:text="100号" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_lv_item_select_waiter_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textSize="@dimen/order_main_body_little_text_size"
+                android:text="100号" />
+
+            <CheckBox
+                android:id="@+id/cb_lv_item_select_waiter"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:button="@null"
+                android:layout_gravity="center"
+                android:focusable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
