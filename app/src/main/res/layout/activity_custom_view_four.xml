@@ -7,12 +7,11 @@
     android:layout_height="match_parent"
     tools:context="com.fpp.status.activity.customview.CustomViewFourActivity">
 
-    <com.fpp.status.view.CustomViewFour
-        android:id="@+id/custom_view_Four"
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:format="00:00:00"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </com.fpp.status.view.CustomViewFour>
+        android:layout_height="@dimen/dp_45" />
 
 
 </LinearLayout>
