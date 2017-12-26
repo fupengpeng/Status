@@ -24,7 +24,7 @@ public class CustomViewFourActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-        chronometer.setBase(SystemClock.elapsedRealtime() - new Date().getTime());//计时器清零
+        chronometer.setBase(new Date().getTime());//计时器清零
         int hour = (int) ((SystemClock.elapsedRealtime() - chronometer.getBase()) / 1000 / 60);
         chronometer.setFormat("0"+String.valueOf(hour)+":%s");
         chronometer.start();

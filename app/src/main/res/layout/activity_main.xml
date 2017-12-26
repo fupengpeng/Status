@@ -267,7 +267,7 @@
             android:layout_weight="0.5"
             android:background="#ffffff"
             android:scaleType="centerCrop"
-            android:text="动画" />
+            android:text="viewpager滑动" />
 
         <Button
             android:id="@+id/btn_four_four"
@@ -343,7 +343,7 @@
             android:layout_weight="0.5"
             android:background="#ffffff"
             android:scaleType="centerCrop"
-            android:text="版本3.0" />
+            android:text="点击自增view" />
 
         <Button
             android:id="@+id/btn_five_three"
@@ -352,7 +352,7 @@
             android:layout_weight="0.5"
             android:background="#ffff00"
             android:scaleType="centerCrop"
-            android:text="版本4.0" />
+            android:text="竖向listview" />
 
         <Button
             android:id="@+id/btn_five_four"
@@ -370,7 +370,7 @@
             android:layout_weight="0.5"
             android:background="#aa95ff"
             android:scaleType="centerCrop"
-            android:text="项目历史版本" />
+            android:text="竖向listview" />
 
         <Button
             android:id="@+id/btn_five_six"
@@ -379,7 +379,7 @@
             android:layout_weight="0.5"
             android:background="#ff00ff"
             android:scaleType="centerCrop"
-            android:text="项目测试" />
+            android:text="竖向listview" />
 
         <Button
             android:id="@+id/btn_five_seven"
@@ -388,7 +388,7 @@
             android:layout_weight="0.5"
             android:background="#ffaaaa"
             android:scaleType="centerCrop"
-            android:text="自定义移动控件" />
+            android:text="横向listview" />
 
         <Button
             android:id="@+id/btn_five_eight"
@@ -397,7 +397,7 @@
             android:layout_weight="0.5"
             android:background="#0055aa"
             android:scaleType="centerCrop"
-            android:text="自定义view研究" />
+            android:text="横向listview" />
 
 
     </LinearLayout>
@@ -444,7 +444,7 @@
             android:layout_weight="0.5"
             android:background="#ff00ff"
             android:scaleType="centerCrop"
-            android:text="控件移动" />
+            android:text="listview嵌套横向" />
 
         <Button
             android:id="@+id/btn_six_five"
@@ -462,7 +462,7 @@
             android:layout_weight="0.5"
             android:background="#ccffff"
             android:scaleType="centerCrop"
-            android:text="版本2.0" />
+            android:text="listview嵌套横向" />
 
         <Button
             android:id="@+id/btn_six_seven"
@@ -471,7 +471,7 @@
             android:layout_weight="0.5"
             android:background="#ffcccc"
             android:scaleType="centerCrop"
-            android:text="自定义移动控件" />
+            android:text="listview嵌套竖向" />
 
         <Button
             android:id="@+id/btn_six_eight"
