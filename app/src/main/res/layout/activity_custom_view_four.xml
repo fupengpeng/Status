@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.fpp.status.activity.customview.CustomViewFourActivity">
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
     <Chronometer
-        android:id="@+id/chronometer"
-        android:format="00:00:00"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_45" />
-
-
+        android:id="@+id/myChronometer"
+        android:format="%s"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始" />
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止" />
+        <Button
+            android:id="@+id/btn_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复位" />
+        <Button
+            android:id="@+id/btn_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="格式化" />
+    </LinearLayout>
 </LinearLayout>
