@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.fpp.status.R;
 import com.fpp.status.adapter.OrderParticularsAdapter;
+import com.fpp.status.entity.LVOne;
 import com.fpp.status.entity.ServiceItemData;
 
 import java.text.SimpleDateFormat;
@@ -27,6 +28,8 @@ public class OrderParticularsActivity extends AppCompatActivity {
 
     public static final String TAG = "ServiceOrderParticularsActivity";
 
+    LVOne lvOne = new LVOne();
+
 
     /**
      * 模拟数据（用户服务项）
@@ -41,6 +44,8 @@ public class OrderParticularsActivity extends AppCompatActivity {
     TextView tvAtvtServiceOrderParticularsTime;
     @BindView(R.id.lv_atvt_service_order_particulars_service_item)
     ListView lvAtvtServiceOrderParticularsServiceItem;
+
+    List list = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +85,15 @@ public class OrderParticularsActivity extends AppCompatActivity {
         }
         return data;
     }
+
+    public List getList() {
+        return list;
+    }
+
+    public void setList(List list) {
+        this.list = list;
+    }
+
 
 
 }

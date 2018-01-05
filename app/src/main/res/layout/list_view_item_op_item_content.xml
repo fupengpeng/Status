@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_lv_item_op_item_content_show_service_item"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:focusable="true"
+        android:orientation="horizontal">
+        <!--工作者头像-->
+        <ImageView
+            android:id="@+id/iv_lv_item_op_item_content_user_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_account_circle_black_24dp" />
+        <!--工作者名称-->
+        <TextView
+            android:id="@+id/tv_lv_item_op_item_content_user_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="一沉"
+            android:textSize="@dimen/order_main_body_text_size" />
+
+
+        <TextView
+            android:id="@+id/tv_lv_item_op_item_content_user_level"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center|left"
+            android:text="" />
+
+
+        <ImageView
+            android:id="@+id/iv_lv_item_op_item_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_expand_less_black_24dp"/>
+
+    </LinearLayout>
+    <View
+        android:background="#c8c8c8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <ListView
+        android:id="@+id/lv_lv_item_op_item_content"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

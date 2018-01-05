@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 /**
  * 工作人员列表
  */
-class ShopAssistantAdapter extends BaseAdapter<ShopAssistant> {
+public class ShopAssistantAdapter extends BaseAdapter<ShopAssistant> {
 
     public ShopAssistantAdapter(Context context, List<ShopAssistant> data) {
         super(context, data);

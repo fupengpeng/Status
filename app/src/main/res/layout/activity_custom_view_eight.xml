@@ -1,26 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
+    <!--服务单详情标题栏-->
     <LinearLayout
-        android:orientation="vertical"
-        android:paddingTop="@dimen/dp_10"
-        android:paddingBottom="@dimen/dp_10"
-        android:paddingLeft="@dimen/dp_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="4.护理类"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <com.fpp.status.view.HorizontalListView
-            android:id="@+id/hlv_layout_tab_service_project"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_title_height"
+        android:background="#000000"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="@dimen/order_title_padding_top">
 
-        </com.fpp.status.view.HorizontalListView>
+        <ImageView
+            android:id="@+id/iv_atvt_service_order_particulars_return"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chevron_left_black_24dp" />
+
+        <TextView
+            android:id="@+id/tv_atvt_service_order_particulars_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="服务单详情"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/order_title_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_atvt_service_order_particulars_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_more_horiz_black_24dp" />
+    </LinearLayout>
+    <!--内容-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!--排序时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+            <!--id-->
+            <TextView
+                android:id="@+id/tv_atvt_service_order_particulars_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@drawable/task_no_bg_1"
+                android:gravity="center"
+                android:text="5"
+                android:textSize="@dimen/order_main_body_text_size" />
+
+            <!--状态-->
+            <TextView
+                android:id="@+id/tv_atvt_service_order_particulars_status"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:textColor="#000000"
+                android:textSize="@dimen/order_main_body_text_size" />
+            <!--创建时间-->
+            <TextView
+                android:id="@+id/tv_atvt_service_order_particulars_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="时间"
+                android:textSize="@dimen/order_main_body_text_size" />
+        </LinearLayout>
+        <!--客户内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#eeeeee"
+            android:orientation="horizontal">
+            <!--会员头像/散客默认头像-->
+            <ImageView
+                android:id="@+id/iv_atvt_service_order_particulars_user_pic"
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_account_circle_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <!--会员名称/散客默认名称-->
+                <TextView
+                    android:id="@+id/tv_atvt_service_order_particulars_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:gravity="center|left"
+                    android:text="散客"
+                    android:textSize="@dimen/order_main_body_text_size" />
+                <!--会员手机号-->
+                <TextView
+                    android:id="@+id/tv_atvt_service_order_particulars_user_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textSize="@dimen/order_main_body_text_size" />
+
+            </LinearLayout>
+
+            <!--会员拨打电话-->
+            <LinearLayout
+                android:id="@+id/ll_atvt_service_order_particulars_turn_member"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_atvt_service_order_particulars_dial"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:padding="15dp"
+                    android:src="@drawable/task_call_mobile" />
+
+                <TextView
+                    android:id="@+id/tv_atvt_service_order_particulars_dial"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text="拨打电话"
+                    android:textSize="@dimen/order_main_body_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--间隔-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <!--服务员和添加品项-->
+        <ListView
+            android:id="@+id/lv_atvt_service_order_particulars_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#eeeeee"/>
+
+
+    </LinearLayout>
+    <!--导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+        <!--添加品项-->
+        <LinearLayout
+            android:id="@+id/ll_atvt_service_order_particulars_add_service_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:src="@drawable/task_add" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="添加品项"
+                android:textSize="@dimen/order_main_body_text_size" />
+        </LinearLayout>
+        <!--转单-->
+        <LinearLayout
+            android:id="@+id/ll_atvt_service_order_particulars_transfer_order"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.6"
+                android:src="@drawable/task_switch" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="转单"
+                android:textSize="@dimen/order_main_body_text_size" />
+        </LinearLayout>
+        <!--传单-->
+        <LinearLayout
+            android:id="@+id/ll_atvt_service_order_particulars_transmit_order"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.6"
+                android:src="@drawable/task_transfer" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="传单"
+                android:textSize="@dimen/order_main_body_text_size" />
+        </LinearLayout>
+        <!--结单-->
+        <LinearLayout
+            android:id="@+id/ll_atvt_service_order_particulars_finish_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="#ff0000"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:src="@drawable/task_done" />
+
+            <TextView
+                android:id="@+id/tv_atvt_service_order_particulars_finish_take_order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="结单"
+                android:textSize="@dimen/order_main_body_text_size" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </LinearLayout>

@@ -35,16 +35,7 @@ import butterknife.OnClick;
  */
 
 public class CustomViewFiveActivity extends ListActivity {
-//    @BindView(R.id.horizontal_horizontal_list_view)
-//    HorizontalListView horizontalHorizontalListView;
-//
-//    @Override
-//    protected void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_custom_view_five);
-//        ButterKnife.bind(this);
-//        initview();
-//    }
+
 
     private List<Map<String, Object>> mData;
 
