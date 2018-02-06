@@ -244,6 +244,34 @@ public class MainActivity extends AppCompatActivity {
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.btn_one_one:
+                intent = new Intent(this, HandlerOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_two:
+                intent = new Intent(this, MoveTwoTestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_three:
+                intent = new Intent(this, HandlerThreeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_four:
+                intent = new Intent(this, HandlerFourActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_five:
+                intent = new Intent(this, HandlerFiveActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_six:
+                intent = new Intent(this, MoveViewGroupActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_one_seven:
+                intent = new Intent(this, MoveViewGroupActivity.class);
+                startActivity(intent);
+                break;
             case R.id.btn_two_one:
                 intent = new Intent(this, DLActivity.class);
                 startActivity(intent);
@@ -273,34 +301,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_two_eight:
-                intent = new Intent(this, MoveViewGroupActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_one:
-                intent = new Intent(this, HandlerOneActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_two:
-                intent = new Intent(this, MoveTwoTestActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_three:
-                intent = new Intent(this, HandlerThreeActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_four:
-                intent = new Intent(this, HandlerFourActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_five:
-                intent = new Intent(this, HandlerFiveActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_six:
-                intent = new Intent(this, MoveViewGroupActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_one_seven:
                 intent = new Intent(this, MoveViewGroupActivity.class);
                 startActivity(intent);
                 break;

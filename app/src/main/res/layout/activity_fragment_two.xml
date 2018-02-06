@@ -11,53 +11,52 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="37dp"
-        android:gravity="center_vertical"
         android:background="#cccccc"
-        >
+        android:gravity="center_vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center" >
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/tv1"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:text="聊天"
-                android:textColor="#339900"/>
+                android:textColor="#339900" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center" >
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/tv2"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:text="发现"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center" >
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/tv3"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:text="通讯录"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
 

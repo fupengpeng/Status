@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fpp.status.activity.popupwindow.PWOneActivity">
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_marginRight="@dimen/dp_15"
         android:layout_marginLeft="@dimen/dp_15"
         android:orientation="horizontal"
+        android:background="#ffaa00"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45">
         <ImageView

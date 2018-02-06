@@ -1,25 +1,18 @@
 package com.fpp.status.activity.four;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fpp.status.R;
-import com.fpp.status.activity.fragmenteight.fragment.AllFragment;
-import com.fpp.status.activity.fragmenteight.fragment.AlreadyAccomplishFragment;
-import com.fpp.status.activity.fragmenteight.fragment.AlreadyCancelFragment;
-import com.fpp.status.activity.fragmenteight.fragment.UnderwayFragment;
-import com.fpp.status.activity.fragmenteight.fragment.WaitAcceptFragment;
 import com.fpp.status.entity.LoadMemberListResponseData;
 import com.fpp.status.utils.LogUtils;
 
@@ -48,6 +41,14 @@ public class FourThreeActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_four_three);
         ButterKnife.bind(this);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
 
         initViewPager();
 

@@ -32,30 +32,35 @@
         <activity android:name=".activity.handler.HandlerThreeActivity" />
         <activity android:name=".activity.handler.HandlerFourActivity" />
         <activity android:name=".activity.handler.HandlerFiveActivity" />
-        <activity android:name=".activity.move.MoveOneActivity" />
+        <activity
+            android:name=".activity.move.MoveOneActivity"
+            android:theme="@style/ImageTranslucentTheme" />
         <activity android:name=".activity.move.MoveTwoActivity" />
         <activity android:name=".activity.move.MoveThreeActivity" />
         <activity android:name=".activity.move.MoveFourActivity" />
-        <activity android:name=".activity.popupwindow.PWOneActivity" />
+        <activity
+            android:name=".activity.popupwindow.PWOneActivity"
+            android:theme="@style/ColorTranslucentTheme" />
         <activity android:name=".activity.customview.CustomViewOneActivity" />
         <activity android:name=".activity.customview.CustomViewTwoActivity" />
         <activity android:name=".activity.customview.CustomViewThreeActivity" />
-        <activity android:name=".activity.customview.CustomViewFourActivity"/>
-        <activity android:name=".activity.customview.CustomViewFiveActivity"/>
-        <activity android:name=".activity.customview.CustomViewSixActivity"/>
-        <activity android:name=".activity.customview.CustomViewSevenActivity"/>
-        <activity android:name=".activity.customview.CustomViewEightActivity"/>
-        <activity android:name=".activity.popupwindow.OrderParticularsActivity"/>
-        <activity android:name=".activity.fragmentone.OneFragmentActivity"/>
-        <activity android:name=".activity.fragmenttwo.FragmentTwoActivity"/>
-        <activity android:name=".activity.fragmentthree.ThreeFragmentActivity"/>
-        <activity android:name=".activity.fragmentfour.ListViewNestListViewActivity"/>
-        <activity android:name=".activity.fragmentfive.AllSelectActivity"/>
-        <activity android:name=".activity.fragmentsix.FragmentSixActivity"/>
-        <activity android:name=".activity.fragmentseven.FragmentSevenActivity"/>
-        <activity android:name=".activity.fragmenteight.FragmentEightActivity"/>
-        <activity android:name=".activity.four.FourThreeActivity"/>
-        <activity android:name=".activity.four.FourFourActivity"/>
+        <activity android:name=".activity.customview.CustomViewFourActivity" />
+        <activity android:name=".activity.customview.CustomViewFiveActivity" />
+        <activity android:name=".activity.customview.CustomViewSixActivity" />
+        <activity android:name=".activity.customview.CustomViewSevenActivity" />
+        <activity android:name=".activity.customview.CustomViewEightActivity" />
+        <activity android:name=".activity.popupwindow.OrderParticularsActivity" />
+        <activity android:name=".activity.fragmentone.OneFragmentActivity" />
+        <activity android:name=".activity.fragmenttwo.FragmentTwoActivity" />
+        <activity android:name=".activity.fragmentthree.ThreeFragmentActivity" />
+        <activity android:name=".activity.fragmentfour.ListViewNestListViewActivity" />
+        <activity android:name=".activity.fragmentfive.AllSelectActivity" />
+        <activity android:name=".activity.fragmentsix.FragmentSixActivity" />
+        <activity android:name=".activity.fragmentseven.FragmentSevenActivity" />
+        <activity android:name=".activity.fragmenteight.FragmentEightActivity" />
+        <activity android:name=".activity.four.FourThreeActivity" />
+        <activity android:name=".activity.four.FourFourActivity" />
+        <activity android:name=".activity.two.RecycleViewActivity"></activity>
     </application>
 
 </manifest>
