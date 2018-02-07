@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -45,6 +44,8 @@ import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
 import com.fpp.status.activity.test.MoveViewGroupActivity;
 import com.fpp.status.activity.test.TestActivity;
+import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
+import com.fpp.status.activity.two.RecycleViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -301,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_two_eight:
-                intent = new Intent(this, MoveViewGroupActivity.class);
+                intent = new Intent(this, RecycleViewActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_three_one:
@@ -325,6 +326,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_three_six:
+                intent = new Intent(this, MoveDeleteRecycleViewItemActivity.class);
+                startActivity(intent);
+
+
                 break;
             case R.id.btn_three_seven:
                 break;

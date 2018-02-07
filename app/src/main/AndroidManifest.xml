@@ -60,7 +60,8 @@
         <activity android:name=".activity.fragmenteight.FragmentEightActivity" />
         <activity android:name=".activity.four.FourThreeActivity" />
         <activity android:name=".activity.four.FourFourActivity" />
-        <activity android:name=".activity.two.RecycleViewActivity"></activity>
+        <activity android:name=".activity.two.RecycleViewActivity" />
+        <activity android:name=".activity.three.six.MoveDeleteRecycleViewItemActivity"></activity>
     </application>
 
 </manifest>

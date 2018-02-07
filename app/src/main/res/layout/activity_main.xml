@@ -12,6 +12,7 @@
         <Button
             android:id="@+id/btn_one_one"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -20,6 +21,7 @@
         <Button
             android:id="@+id/btn_one_two"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -28,6 +30,7 @@
         <Button
             android:id="@+id/btn_one_three"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -36,6 +39,7 @@
         <Button
             android:id="@+id/btn_one_four"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -44,6 +48,7 @@
         <Button
             android:id="@+id/btn_one_five"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -52,6 +57,7 @@
         <Button
             android:id="@+id/btn_one_six"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -60,6 +66,7 @@
         <Button
             android:id="@+id/btn_one_seven"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
@@ -78,6 +85,7 @@
         <Button
             android:id="@+id/btn_two_one"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aaff00"
@@ -86,6 +94,7 @@
         <Button
             android:id="@+id/btn_two_two"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffff00"
@@ -95,6 +104,7 @@
         <Button
             android:id="@+id/btn_two_three"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffffff"
@@ -104,6 +114,7 @@
         <Button
             android:id="@+id/btn_two_four"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ff00ff"
@@ -113,6 +124,7 @@
         <Button
             android:id="@+id/btn_two_five"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffaaaa"
@@ -122,6 +134,7 @@
         <Button
             android:id="@+id/btn_two_six"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ccffff"
@@ -131,6 +144,7 @@
         <Button
             android:id="@+id/btn_two_seven"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffcccc"
@@ -140,11 +154,12 @@
         <Button
             android:id="@+id/btn_two_eight"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#00ffff"
             android:scaleType="centerCrop"
-            android:text="自定义view研究" />
+            android:text="rcv滑动删除子条目" />
 
 
     </LinearLayout>
@@ -162,6 +177,7 @@
         <Button
             android:id="@+id/btn_three_one"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aaff00"
@@ -171,6 +187,7 @@
         <Button
             android:id="@+id/btn_three_two"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffffff"
@@ -180,6 +197,7 @@
         <Button
             android:id="@+id/btn_three_three"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffff00"
@@ -189,6 +207,7 @@
         <Button
             android:id="@+id/btn_three_four"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#00ffff"
@@ -198,6 +217,7 @@
         <Button
             android:id="@+id/btn_three_five"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aa95ff"
@@ -207,15 +227,17 @@
         <Button
             android:id="@+id/btn_three_six"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ff00ff"
             android:scaleType="centerCrop"
-            android:text="项目测试" />
+            android:text="rcv滑动显示删除按钮" />
 
         <Button
             android:id="@+id/btn_three_seven"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffaaaa"
@@ -225,6 +247,7 @@
         <Button
             android:id="@+id/btn_three_eight"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#0055aa"
@@ -246,6 +269,7 @@
         <Button
             android:id="@+id/btn_four_one"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aaff00"
@@ -254,6 +278,7 @@
         <Button
             android:id="@+id/btn_four_two"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffff00"
@@ -263,6 +288,7 @@
         <Button
             android:id="@+id/btn_four_three"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffffff"
@@ -272,6 +298,7 @@
         <Button
             android:id="@+id/btn_four_four"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ff00ff"
@@ -281,6 +308,7 @@
         <Button
             android:id="@+id/btn_four_five"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffaaaa"
@@ -290,6 +318,7 @@
         <Button
             android:id="@+id/btn_four_six"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ccffff"
@@ -299,6 +328,7 @@
         <Button
             android:id="@+id/btn_four_seven"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffcccc"
@@ -308,6 +338,7 @@
         <Button
             android:id="@+id/btn_four_eight"
             android:layout_width="0dp"
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#00ffff"
@@ -329,7 +360,8 @@
 
         <Button
             android:id="@+id/btn_five_one"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aaff00"
@@ -338,7 +370,8 @@
 
         <Button
             android:id="@+id/btn_five_two"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffffff"
@@ -347,7 +380,8 @@
 
         <Button
             android:id="@+id/btn_five_three"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffff00"
@@ -356,7 +390,8 @@
 
         <Button
             android:id="@+id/btn_five_four"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#00ffff"
@@ -365,7 +400,8 @@
 
         <Button
             android:id="@+id/btn_five_five"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aa95ff"
@@ -374,7 +410,8 @@
 
         <Button
             android:id="@+id/btn_five_six"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ff00ff"
@@ -383,7 +420,8 @@
 
         <Button
             android:id="@+id/btn_five_seven"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffaaaa"
@@ -392,7 +430,8 @@
 
         <Button
             android:id="@+id/btn_five_eight"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#0055aa"
@@ -413,7 +452,8 @@
 
         <Button
             android:id="@+id/btn_six_one"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aaff00"
@@ -421,7 +461,8 @@
 
         <Button
             android:id="@+id/btn_six_two"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffff00"
@@ -430,7 +471,8 @@
 
         <Button
             android:id="@+id/btn_six_three"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffffff"
@@ -439,7 +481,8 @@
 
         <Button
             android:id="@+id/btn_six_four"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ff00ff"
@@ -448,7 +491,8 @@
 
         <Button
             android:id="@+id/btn_six_five"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffaaaa"
@@ -457,7 +501,8 @@
 
         <Button
             android:id="@+id/btn_six_six"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ccffff"
@@ -466,7 +511,8 @@
 
         <Button
             android:id="@+id/btn_six_seven"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#ffcccc"
@@ -475,7 +521,8 @@
 
         <Button
             android:id="@+id/btn_six_eight"
-            android:layout_width="0dp"
+            android:layout_width="0dp" 
+            android:textSize="@dimen/dp_10" 
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#00ffff"
