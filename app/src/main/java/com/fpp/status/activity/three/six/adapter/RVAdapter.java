@@ -22,7 +22,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.Holder>{
     private ArrayList<Message> list = new ArrayList<>();
     private Context context;
 
-
     public RVAdapter(Context context, List<Message> list) {
         this.list = (ArrayList<Message>) list;
         this.context = context;

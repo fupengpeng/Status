@@ -44,4 +44,9 @@
         <item name="android:layout_width">45dp</item>
     </style>
 
+    <!--  checkbox 样式-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
 </resources>

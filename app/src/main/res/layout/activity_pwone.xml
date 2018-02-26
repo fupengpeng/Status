@@ -1,46 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_marginRight="@dimen/dp_15"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:orientation="horizontal"
-        android:background="#ffaa00"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_45">
-        <ImageView
-            android:id="@+id/left"
-            android:src="@drawable/shilipic"
-            android:layout_gravity="center"
-            android:layout_width="@dimen/dp_30"
-            android:layout_height="@dimen/dp_30" />
-        <TextView
-            android:id="@+id/tv_title"
-            android:text="标题"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="match_parent" />
-        <ImageView
-            android:id="@+id/iv_right"
-            android:src="@drawable/shilipic"
-            android:layout_gravity="center"
-            android:layout_width="@dimen/dp_30"
-            android:layout_height="@dimen/dp_30" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/ll_content"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="275dp">
+        <FrameLayout
 
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+            <!--轮播图位置-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/live_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <!--右下角小圆点-->
+            <LinearLayout
 
-</LinearLayout>
+                android:layout_gravity="center|bottom"
+                android:id="@+id/live_indicator"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -6,6 +6,13 @@
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+
+    <!--  ==========  导航页模块开始  ==========  -->
+    <dimen name="text_size_large">28sp</dimen>
+
+    <!--  ==========  导航页模块结束  ==========  -->
+
+
     <dimen name="dp_0">0dp</dimen>
     <dimen name="dp_1">1dp</dimen>
     <dimen name="dp_2">2dp</dimen>

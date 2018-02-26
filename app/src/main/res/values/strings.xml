@@ -10,4 +10,22 @@
 
     <string name="action_settings">Settings</string>
 
+
+    <!--  ==========  购物车模块开始  ==========  -->
+    <string name="menu_del">删除</string>
+    <string name="menu_sett">结算</string>
+
+    <string name="menu_edit">编辑</string>
+    <string name="menu_enter">完成</string>
+
+    <!--  ==========  购物车模块结束  ==========  -->
+
+
+    <!--  ==========  导航页模块开始  ==========  -->
+    <string name="text_web_ceo">WEB ANALYTICS</string>
+
+    <!--  ==========  导航页模块结束  ==========  -->
+
+
+
 </resources>

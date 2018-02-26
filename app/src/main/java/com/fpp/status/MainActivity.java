@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.fpp.status.activity.DHActivity;
-import com.fpp.status.activity.PWActivity;
 import com.fpp.status.activity.customview.CustomViewEightActivity;
 import com.fpp.status.activity.customview.CustomViewFiveActivity;
 import com.fpp.status.activity.customview.CustomViewFourActivity;
@@ -20,6 +19,9 @@ import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
 import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
+import com.fpp.status.activity.fourfive.GuideTwoActivity;
+import com.fpp.status.activity.fourseven.GuideFourActivity;
+import com.fpp.status.activity.foursix.GuideThreeActivity;
 import com.fpp.status.activity.fragmenteight.FragmentEightActivity;
 import com.fpp.status.activity.fragmentfive.AllSelectActivity;
 import com.fpp.status.activity.fragmentfour.ListViewNestListViewActivity;
@@ -37,7 +39,7 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
-import com.fpp.status.activity.popupwindow.OrderParticularsActivity;
+import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
 import com.fpp.status.activity.test.MoveActivity;
 import com.fpp.status.activity.test.MoveImageActivity;
@@ -46,6 +48,7 @@ import com.fpp.status.activity.test.MoveViewGroupActivity;
 import com.fpp.status.activity.test.TestActivity;
 import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
+import com.fpp.status.activity.twotwo.PWActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -332,8 +335,10 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_three_seven:
+
                 break;
             case R.id.btn_three_eight:
+
                 break;
             case R.id.btn_four_one:
                 intent = new Intent(this, PWOneActivity.class);
@@ -341,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_four_two:
-                intent = new Intent(this, OrderParticularsActivity.class);
+                intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_four_three:
@@ -353,12 +358,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_four_five:
+                intent = new Intent(this, GuideTwoActivity.class);
+                startActivity(intent);
+
                 break;
             case R.id.btn_four_six:
+                intent = new Intent(this, GuideThreeActivity.class);
+                startActivity(intent);
+
+
                 break;
             case R.id.btn_four_seven:
+                intent = new Intent(this, GuideFourActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_four_eight:
+                intent = new Intent(this, GuideTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_five_one:
                 intent = new Intent(this, CustomViewOneActivity.class);

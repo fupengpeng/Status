@@ -99,7 +99,7 @@
             android:layout_weight="0.5"
             android:background="#ffff00"
             android:scaleType="centerCrop"
-            android:text="侧滑菜单" />
+            android:text="抽屉侧滑菜单" />
 
         <Button
             android:id="@+id/btn_two_three"
@@ -212,7 +212,7 @@
             android:layout_weight="0.5"
             android:background="#00ffff"
             android:scaleType="centerCrop"
-            android:text="版本5.0" />
+            android:text="checkbox样式大小改变" />
 
         <Button
             android:id="@+id/btn_three_five"
@@ -273,7 +273,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:background="#aaff00"
-            android:text="fragment" />
+            android:text="viewpager实现轮播" />
 
         <Button
             android:id="@+id/btn_four_two"
@@ -283,7 +283,7 @@
             android:layout_weight="0.5"
             android:background="#ffff00"
             android:scaleType="centerCrop"
-            android:text="侧滑菜单" />
+            android:text="登录模块" />
 
         <Button
             android:id="@+id/btn_four_three"
@@ -293,7 +293,7 @@
             android:layout_weight="0.5"
             android:background="#ffffff"
             android:scaleType="centerCrop"
-            android:text="viewpager滑动" />
+            android:text="动态添加viewpager" />
 
         <Button
             android:id="@+id/btn_four_four"
@@ -313,7 +313,7 @@
             android:layout_weight="0.5"
             android:background="#ffaaaa"
             android:scaleType="centerCrop"
-            android:text="版本1.0" />
+            android:text="引导页模块二" />
 
         <Button
             android:id="@+id/btn_four_six"
@@ -323,7 +323,7 @@
             android:layout_weight="0.5"
             android:background="#ccffff"
             android:scaleType="centerCrop"
-            android:text="版本2.0" />
+            android:text="引导页模块三" />
 
         <Button
             android:id="@+id/btn_four_seven"
@@ -333,7 +333,7 @@
             android:layout_weight="0.5"
             android:background="#ffcccc"
             android:scaleType="centerCrop"
-            android:text="自定义移动控件" />
+            android:text="引导页模块四（使用中）" />
 
         <Button
             android:id="@+id/btn_four_eight"
@@ -436,7 +436,7 @@
             android:layout_weight="0.5"
             android:background="#0055aa"
             android:scaleType="centerCrop"
-            android:text="横向listview" />
+            android:text="竖向listview嵌套" />
 
 
     </LinearLayout>
@@ -497,7 +497,7 @@
             android:layout_weight="0.5"
             android:background="#ffaaaa"
             android:scaleType="centerCrop"
-            android:text="版本1.0" />
+            android:text="购物车全选模块" />
 
         <Button
             android:id="@+id/btn_six_six"

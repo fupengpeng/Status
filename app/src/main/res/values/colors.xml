@@ -31,4 +31,26 @@
     <color name="leftMenuWorkNameTextColor">#d3aa50</color>
 
     <color name="colorWhite">#ffffff</color>
+
+
+    <!--  ==========  购物车模块开始  ==========  -->
+    <color name="menu_item_press">#2e000000</color>
+    <color name="grey_color1">#333333</color>
+    <color name="page_backgroup">#f2f2f2</color>
+
+    <!--  ==========  购物车模块结束  ==========  -->
+
+
+    <!--  ==========  登录模块开始  ==========  -->
+    <color name="_9">#999999</color>
+
+    <color name="e">#EEEEEE</color>
+
+    <color name="c">#CCCCCC</color>
+
+    <!--  ==========  登录模块结束  ==========  -->
+
+
+
+
 </resources>
