@@ -9,6 +9,11 @@
 
     <com.fpp.status.view.CustomViewThree
         android:id="@+id/custom_lv"
+
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:listSelector="@android:color/transparent"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

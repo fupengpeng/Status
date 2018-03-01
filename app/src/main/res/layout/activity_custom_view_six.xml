@@ -2,11 +2,506 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    <ListView
-        android:id="@+id/lv"
-        android:layout_width="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fastScrollEnabled="true"
-        />
+        android:layout_marginLeft="@dimen/dp_10"
+        android:orientation="horizontal">
+        <!--流程图-->
+        <LinearLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.fpp.status.customview.CircleImageView
+                android:id="@+id/civ_atvt_beforehand_appoint_particulars_three"
+
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+
+            <ImageView
+                android:id="@+id/iv_atvt_beforehand_appoint_particulars_two"
+
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:src="@drawable/beforehand_appoint_particulars_step_up" />
+
+            <com.fpp.status.customview.CircleImageView
+                android:id="@+id/civ_atvt_beforehand_appoint_particulars_two"
+
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+
+            <ImageView
+                android:id="@+id/iv_atvt_beforehand_appoint_particulars_one"
+
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:src="@drawable/beforehand_appoint_particulars_step_up" />
+
+            <com.fpp.status.customview.CircleImageView
+                android:id="@+id/civ_atvt_beforehand_appoint_particulars_one"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+        </LinearLayout>
+        <!--流程操作者-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--完成操作-->
+            <LinearLayout
+                android:id="@+id/ll_atvt_beforehand_appoint_particulars_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffaaff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tv_atvt_beforehand_appoint_particulars_user_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="测试操作完成了预约"
+                        android:textSize="@dimen/dp_13" />
+
+                    <TextView
+                        android:id="@+id/tv_atvt_beforehand_appoint_particulars_time_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="1111-11-11  11:11:11"
+                        android:textSize="@dimen/sp_10" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginBottom="@dimen/dp_10.5"
+                    android:layout_marginTop="@dimen/dp_10.5"
+                    android:background="@color/dl_bg" />
+            </LinearLayout>
+
+            <!--接受操作-->
+            <LinearLayout
+                android:id="@+id/ll_atvt_beforehand_appoint_particulars_two"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tv_atvt_beforehand_appoint_particulars_user_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="测试操作完成了预约"
+                        android:textSize="@dimen/dp_13" />
+
+                    <TextView
+                        android:id="@+id/tv_atvt_beforehand_appoint_particulars_time_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="1111-11-11  11:11:11"
+                        android:textSize="@dimen/sp_10" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginBottom="@dimen/dp_10.5"
+                    android:layout_marginTop="@dimen/dp_10.5"
+                    android:background="@color/dl_bg" />
+            </LinearLayout>
+            <!--提交操作-->
+            <LinearLayout
+                android:id="@+id/ll_atvt_beforehand_appoint_particulars_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/tv_atvt_beforehand_appoint_particulars_user_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="测试操作完成了预约"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:id="@+id/tv_atvt_beforehand_appoint_particulars_time_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1111-11-11  11:11:11"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/dl_bg" />
+
+
+
+
+    <!--  list子条目通用布局  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  流程图  -->
+        <LinearLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.fpp.status.customview.CircleImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:src="@drawable/beforehand_appoint_particulars_step_up" />
+        </LinearLayout>
+
+        <!--  流程操作者  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="测试操作完成了预约"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1111-11-11  11:11:11"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginBottom="@dimen/dp_10.5"
+                android:layout_marginTop="@dimen/dp_10.5"
+                android:background="@color/dl_bg" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/dl_bg" />
+
+
+    <!--  list子条目第一条目布局  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  流程图  -->
+        <LinearLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.fpp.status.customview.CircleImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+        </LinearLayout>
+
+        <!--  流程操作者  -->
+        <!--提交操作-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="测试操作完成了预约"
+                android:textSize="@dimen/dp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="1111-11-11  11:11:11"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--  list子条目通用布局   ++++++++++  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  流程图  -->
+        <LinearLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:rotation="180"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:src="@drawable/beforehand_appoint_particulars_step_up" />
+            <com.fpp.status.customview.CircleImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+
+
+        </LinearLayout>
+
+        <!--  流程操作者  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginBottom="@dimen/dp_10.5"
+                android:layout_marginTop="@dimen/dp_10.5"
+                android:background="@color/dl_bg" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="测试操作完成了预约"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1111-11-11  11:11:11"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  list子条目通用布局   ++++++++++  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  流程图  -->
+        <LinearLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:src="@drawable/beforehand_appoint_particulars_step_up" />
+            <com.fpp.status.customview.CircleImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+
+
+        </LinearLayout>
+
+        <!--  流程操作者  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginBottom="@dimen/dp_10.5"
+                android:layout_marginTop="@dimen/dp_10.5"
+                android:background="@color/dl_bg" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="测试操作完成了预约"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1111-11-11  11:11:11"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>    <!--  list子条目通用布局   ++++++++++  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  流程图  -->
+        <LinearLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:src="@drawable/beforehand_appoint_particulars_step_up" />
+            <com.fpp.status.customview.CircleImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/beforehand_appoint_particulars_self_motion" />
+
+
+        </LinearLayout>
+
+        <!--  流程操作者  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginBottom="@dimen/dp_10.5"
+                android:layout_marginTop="@dimen/dp_10.5"
+                android:background="@color/dl_bg" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="测试操作完成了预约"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1111-11-11  11:11:11"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
 </LinearLayout>

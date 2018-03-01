@@ -1,9 +1,5 @@
 package com.fpp.status.activity.customview;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -12,10 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fpp.status.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -23,18 +23,18 @@ import com.fpp.status.R;
  */
 
 public class CustomViewSixActivity extends Activity {
-    private ListView lv;
+
     private List<Map<String, Object>> data;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view_six);
 
-        lv = (ListView)findViewById(R.id.lv);
+
         //获取将要绑定的数据设置到data中
         data = getData();
-        MyAdapter adapter = new MyAdapter(this);
-        lv.setAdapter(adapter);
+
+
     }
 
     private List<Map<String, Object>> getData()

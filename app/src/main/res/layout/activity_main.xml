@@ -366,7 +366,7 @@
             android:layout_weight="0.5"
             android:background="#aaff00"
             android:scaleType="centerCrop"
-            android:text="fragment" />
+            android:text="Time处理" />
 
         <Button
             android:id="@+id/btn_five_two"
@@ -386,7 +386,7 @@
             android:layout_weight="0.5"
             android:background="#ffff00"
             android:scaleType="centerCrop"
-            android:text="竖向listview" />
+            android:text="listview（无分割线）" />
 
         <Button
             android:id="@+id/btn_five_four"
@@ -396,7 +396,7 @@
             android:layout_weight="0.5"
             android:background="#00ffff"
             android:scaleType="centerCrop"
-            android:text="版本5.0" />
+            android:text="计时器" />
 
         <Button
             android:id="@+id/btn_five_five"
@@ -416,7 +416,7 @@
             android:layout_weight="0.5"
             android:background="#ff00ff"
             android:scaleType="centerCrop"
-            android:text="竖向listview" />
+            android:text="test" />
 
         <Button
             android:id="@+id/btn_five_seven"
@@ -477,7 +477,7 @@
             android:layout_weight="0.5"
             android:background="#ffffff"
             android:scaleType="centerCrop"
-            android:text="动画" />
+            android:text="无用" />
 
         <Button
             android:id="@+id/btn_six_four"

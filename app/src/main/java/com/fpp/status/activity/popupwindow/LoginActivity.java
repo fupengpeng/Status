@@ -21,6 +21,7 @@ import com.fpp.status.presenter.usercenter.ILoginView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 
 /**
  * APP登录界面
@@ -109,6 +110,23 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
         });
     }
 
+    /**
+     * 输入框文本改变后
+     *
+     * @param editable editable
+     */
+    @OnTextChanged(value = {R.id.et_mobile, R.id.et_password}, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
+    public void afterTextChanged(Editable editable) {
+        if (!TextUtils.isEmpty(mEtMobile.getText().toString().trim()) &&
+                !TextUtils.isEmpty(mEtPassword.getText().toString().trim())) {
+            btnLogin.setEnabled(true);
+            btnLogin.setBackgroundResource(R.drawable.bg_btn_enable_selector);
+        } else {
+            btnLogin.setEnabled(false);
+            btnLogin.setBackgroundResource(R.drawable.shape_rounded_rectangle_unable);
+        }
+    }
+
 
     @OnClick({R.id.iv_clean_phone, R.id.clean_password, R.id.iv_show_pwd, R.id.btn_login})
     public void onViewClicked(View view) {
@@ -132,8 +150,10 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
                     mEtPassword.setSelection(pwd.length());
                 break;
             case R.id.btn_login:
-                Intent intent = new Intent(this, MainActivity.class);
 
+
+
+                Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
         }
