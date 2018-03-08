@@ -9,6 +9,7 @@
     android:orientation="vertical"
     tools:showIn="@layout/app_bar_pw">
     <TextView
+        android:background="#ffaa00"
         android:gravity="center"
         android:text="aasdfasdf"
         android:textSize="35dp"
