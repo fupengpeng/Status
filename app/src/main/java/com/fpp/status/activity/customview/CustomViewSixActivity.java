@@ -1,21 +1,24 @@
 package com.fpp.status.activity.customview;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.support.v7.widget.Toolbar;
+import android.util.SparseArray;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fpp.status.R;
+import com.fpp.status.entity.User;
+import com.fpp.status.utils.LogUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 /**
@@ -24,96 +27,231 @@ import java.util.Map;
 
 public class CustomViewSixActivity extends Activity {
 
-    private List<Map<String, Object>> data;
+
+    @BindView(R.id.toolbar_title)
+    TextView toolbarTitle;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.tv_atvt_user_list_state)
+    TextView tvAtvtUserListState;
+    @BindView(R.id.et_atvt_user_list_job_number_name)
+    EditText etAtvtUserListJobNumberName;
+    @BindView(R.id.tv_atvt_user_list_search)
+    TextView tvAtvtUserListSearch;
+    @BindView(R.id.lv_atvt_user_list)
+    ListView lvAtvtUserList;
+    @BindView(R.id.tv_atvt_user_list_update)
+    TextView tvAtvtUserListUpdate;
+    @BindView(R.id.cb_atvt_select_worker)
+    CheckBox cbAtvtSelectWorker;
+    @BindView(R.id.tv_atvt_user_list_delete)
+    TextView tvAtvtUserListDelete;
+
+
+
+    /**
+     * listview适配器
+     */
+    private UserListAdapter mUserListAdapter;
+    /**
+     * 批量模式下，用来记录当前选中状态
+     */
+    private SparseArray<Boolean> mSelectState = new SparseArray<Boolean>();
+
+    /**
+     * 适配器添加数据（用户服务项）
+     */
+    List<User> data;
+
+    List<String> idList = new ArrayList<String>();
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view_six);
+        ButterKnife.bind(this);
 
-
-        //获取将要绑定的数据设置到data中
-        data = getData();
+        data = getUserData();
+        //刷新页面数据
+        refreshListView();
 
 
     }
 
-    private List<Map<String, Object>> getData()
-    {
-        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-        Map<String, Object> map;
-        for(int i=0;i<10;i++)
-        {
-            map = new HashMap<String, Object>();
-            map.put("img", R.drawable.shilipic);
-            map.put("title", "跆拳道");
-            map.put("info", "快乐源于生活...");
-            list.add(map);
-        }
-        return list;
-    }
 
-    //ViewHolder静态类
-    static class ViewHolder
-    {
-        public ImageView img;
-        public TextView title;
-        public TextView info;
-    }
+    /**
+     * 全选按钮点击事件
+     */
+    @OnClick(R.id.cb_atvt_select_worker)
+    public void checkAll() {
 
-    public class MyAdapter extends BaseAdapter
-    {
-        private LayoutInflater mInflater = null;
-        private MyAdapter(Context context)
-        {
-            //根据context上下文加载布局，这里的是Demo17Activity本身，即this
-            this.mInflater = LayoutInflater.from(context);
-        }
-        @Override
-        public int getCount() {
-            //How many items are in the data set represented by this Adapter.
-            //在此适配器中所代表的数据集中的条目数
-            return data.size();
-        }
-        @Override
-        public Object getItem(int position) {
-            // Get the data item associated with the specified position in the data set.
-            //获取数据集中与指定索引对应的数据项
-            return data.get(position);
-        }
-        @Override
-        public long getItemId(int position) {
-            //Get the row id associated with the specified position in the list.
-            //获取在列表中与指定索引对应的行id
-            return position;
-        }
-
-        //Get a View that displays the data at the specified position in the data set.
-        //获取一个在数据集中指定索引的视图来显示数据
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder = null;
-            //如果缓存convertView为空，则需要创建View
-            if(convertView == null)
-            {
-                holder = new ViewHolder();
-                //根据自定义的Item布局加载布局
-                convertView = mInflater.inflate(R.layout.list_item, null);
-                holder.img = (ImageView)convertView.findViewById(R.id.img);
-                holder.title = (TextView)convertView.findViewById(R.id.tv);
-                holder.info = (TextView)convertView.findViewById(R.id.info);
-                //将设置好的布局保存到缓存中，并将其设置在Tag里，以便后面方便取出Tag
-                convertView.setTag(holder);
-            }else
-            {
-                holder = (ViewHolder)convertView.getTag();
+        // 判断全选按钮是否选定，如果选定，则设置所有的数据条目都为选定状态，并且获取其pid，添加到idList集合中，更新适配器。
+        //                       如果没有选定，设置所有的数据条目都为非选定状态，清除idList集合中的pid，更新适配器
+        if (cbAtvtSelectWorker.isChecked()) {
+            idList.clear();
+            LogUtils.e("全部选定，获取所有的id，并进行保存，设置所有的子条目都为选定状态");
+            for (int i = 0; i < data.size(); i++) {
+                data.get(i).setEnable(true);
+                idList.add(data.get(i).getId());
             }
-            holder.img.setImageResource((Integer) data.get(position).get("img"));
-            holder.title.setText((String)data.get(position).get("title"));
-            holder.info.setText((String)data.get(position).get("info"));
-
-            return convertView;
+            LogUtils.e("idList 全部选定= " + idList.size());
+            // 刷新
+            mUserListAdapter.notifyDataSetChanged();
+        } else {
+            LogUtils.e("全部取消选定，清除所有获取到的id，并进行保存，设置所有的子条目都为非选定状态");
+            idList.clear();
+            for (int i = 0; i < data.size(); i++) {
+                data.get(i).setEnable(false);
+            }
+            LogUtils.e("idList 全部取消= " + idList.size());
+            // 刷新
+            mUserListAdapter.notifyDataSetChanged();
         }
-
     }
 
+    /**
+     * 更新popupwindow列表页面数据
+     */
+    private void refreshListView() {
+        if (mUserListAdapter == null) {
+            mUserListAdapter = new UserListAdapter(this, data);
+            lvAtvtUserList.setAdapter(mUserListAdapter);
+            lvAtvtUserList.setOnItemClickListener(mUserListAdapter);
+        } else {
+            mUserListAdapter.notifyDataSetChanged();
+        }
+    }
+
+
+    public List<User> getUserData() {
+        List<User> userList = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            User user = new User();
+            user.setId("" + i);
+            user.setSelect(false);
+            user.setEnable(false);
+            user.setName("name " + i);
+            user.setLevel("level " + i);
+            user.setNickName("nick " + i);
+            user.setGender("0");
+            userList.add(user);
+        }
+        User user1 = new User();
+        user1.setId("30");
+        user1.setSelect(false);
+        user1.setEnable(false);
+        user1.setName("name 30" );
+        user1.setLevel("level  30 " );
+        user1.setNickName("nick  30 " );
+        user1.setGender("0");
+        userList.add(user1);
+
+        return userList;
+    }
+
+
+    public TextView getToolbarTitle() {
+        return toolbarTitle;
+    }
+
+    public void setToolbarTitle(TextView toolbarTitle) {
+        this.toolbarTitle = toolbarTitle;
+    }
+
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
+
+    public void setToolbar(Toolbar toolbar) {
+        this.toolbar = toolbar;
+    }
+
+    public TextView getTvAtvtUserListState() {
+        return tvAtvtUserListState;
+    }
+
+    public void setTvAtvtUserListState(TextView tvAtvtUserListState) {
+        this.tvAtvtUserListState = tvAtvtUserListState;
+    }
+
+    public EditText getEtAtvtUserListJobNumberName() {
+        return etAtvtUserListJobNumberName;
+    }
+
+    public void setEtAtvtUserListJobNumberName(EditText etAtvtUserListJobNumberName) {
+        this.etAtvtUserListJobNumberName = etAtvtUserListJobNumberName;
+    }
+
+    public TextView getTvAtvtUserListSearch() {
+        return tvAtvtUserListSearch;
+    }
+
+    public void setTvAtvtUserListSearch(TextView tvAtvtUserListSearch) {
+        this.tvAtvtUserListSearch = tvAtvtUserListSearch;
+    }
+
+    public ListView getLvAtvtUserList() {
+        return lvAtvtUserList;
+    }
+
+    public void setLvAtvtUserList(ListView lvAtvtUserList) {
+        this.lvAtvtUserList = lvAtvtUserList;
+    }
+
+    public TextView getTvAtvtUserListUpdate() {
+        return tvAtvtUserListUpdate;
+    }
+
+    public void setTvAtvtUserListUpdate(TextView tvAtvtUserListUpdate) {
+        this.tvAtvtUserListUpdate = tvAtvtUserListUpdate;
+    }
+
+    public CheckBox getCbAtvtSelectWorker() {
+        return cbAtvtSelectWorker;
+    }
+
+    public void setCbAtvtSelectWorker(CheckBox cbAtvtSelectWorker) {
+        this.cbAtvtSelectWorker = cbAtvtSelectWorker;
+    }
+
+    public TextView getTvAtvtUserListDelete() {
+        return tvAtvtUserListDelete;
+    }
+
+    public void setTvAtvtUserListDelete(TextView tvAtvtUserListDelete) {
+        this.tvAtvtUserListDelete = tvAtvtUserListDelete;
+    }
+
+    public UserListAdapter getmUserListAdapter() {
+        return mUserListAdapter;
+    }
+
+    public void setmUserListAdapter(UserListAdapter mUserListAdapter) {
+        this.mUserListAdapter = mUserListAdapter;
+    }
+
+    public SparseArray<Boolean> getmSelectState() {
+        return mSelectState;
+    }
+
+    public void setmSelectState(SparseArray<Boolean> mSelectState) {
+        this.mSelectState = mSelectState;
+    }
+
+    public List<User> getData() {
+        return data;
+    }
+
+    public void setData(List<User> data) {
+        this.data = data;
+    }
+
+    public List<String> getIdList() {
+        return idList;
+    }
+
+    public void setIdList(List<String> idList) {
+        this.idList = idList;
+    }
 }

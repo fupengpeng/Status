@@ -29,8 +29,9 @@
     <!--checkbox-->
     <style name="circlecheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/order_item_select</item>
-        <item name="android:paddingLeft">10.0dp</item>
-        <item name="android:height">35dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textSize">@dimen/dp_25</item>
+        <item name="android:height">25dp</item>
     </style>
 
     <style name="TabLayoutTextStyle">

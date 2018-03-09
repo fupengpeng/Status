@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fpp.status.R;
@@ -95,10 +94,10 @@ public class CustomViewSevenActivity extends Activity {
         //获取一个在数据集中指定索引的视图来显示数据
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            CustomViewSixActivity.ViewHolder holder = null;
+            ViewHolder holder = null;
             //如果缓存convertView为空，则需要创建View
             if (convertView == null) {
-                holder = new CustomViewSixActivity.ViewHolder();
+                holder = new ViewHolder();
                 //根据自定义的Item布局加载布局
                 convertView = mInflater.inflate(R.layout.list_item, null);
                 holder.img = (ImageView) convertView.findViewById(R.id.img);
@@ -107,7 +106,7 @@ public class CustomViewSevenActivity extends Activity {
                 //将设置好的布局保存到缓存中，并将其设置在Tag里，以便后面方便取出Tag
                 convertView.setTag(holder);
             } else {
-                holder = (CustomViewSixActivity.ViewHolder) convertView.getTag();
+                holder = (ViewHolder) convertView.getTag();
             }
             holder.img.setImageResource((Integer) data.get(position).get("img"));
             holder.title.setText((String) data.get(position).get("title"));

@@ -416,7 +416,7 @@
             android:layout_weight="0.5"
             android:background="#ff00ff"
             android:scaleType="centerCrop"
-            android:text="test" />
+            android:text="listview多布局配合全选" />
 
         <Button
             android:id="@+id/btn_five_seven"

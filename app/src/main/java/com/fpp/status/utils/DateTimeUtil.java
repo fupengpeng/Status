@@ -313,22 +313,174 @@ public class DateTimeUtil {
      * @return 返回日期
      */
     public static String getRecentTime(int i, String format) {
-        Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat(format);
         Calendar calendar = new GregorianCalendar();
-        calendar.setTime(date);
+        calendar.setTime(mDate);
         String dateString = "";
         try {
             calendar.add(calendar.DATE, i);//把日期往后增加一天.整数往后推,负数往前移动
-            date = calendar.getTime(); //这个时间就是日期往后推一天的结果
-            dateString = formatter.format(date);
+            mDate = calendar.getTime(); //这个时间就是日期往后推一天的结果
+            dateString = formatter.format(mDate);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return dateString;
     }
 
+    public static int compare_date(String DATE1, String DATE2) {
 
+
+        mSdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        try {
+            Date dt1 = mSdf.parse(DATE1);
+            Date dt2 = mSdf.parse(DATE2);
+            if (dt1.getTime() > dt2.getTime()) {
+                System.out.println("dt1 在dt2前");
+                return 1;
+            } else if (dt1.getTime() < dt2.getTime()) {
+                System.out.println("dt1在dt2后");
+                return -1;
+            } else {
+                return 0;
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        return 0;
+    }
+
+    /**
+     * 日期大小对比
+     *
+     * @param date1 开始日期
+     * @param date2 结束日期
+     * @return 返回值：0、两个日期相同；-1、date1在date2之前；1、date1在date2之后
+     */
+    public static int compareDate(String date1, String date2) {
+        int comparetoDate = 0;
+        mSdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        try {
+            Date startDate = mSdf.parse(date1);
+            Date endDate = mSdf.parse(date2);
+            comparetoDate = startDate.compareTo(endDate);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return comparetoDate;
+    }
+
+
+    /**
+     * 判断time是否在now的n天之内
+     *
+     * @param time
+     * @param now
+     * @param n    正数表示在条件时间n天之后，负数表示在条件时间n天之前
+     * @return
+     */
+    public static boolean belongDate(Date time, Date now, int n) {
+        Calendar calendar = Calendar.getInstance();  //得到日历
+        calendar.setTime(now);//把当前时间赋给日历
+        calendar.add(Calendar.DAY_OF_MONTH, n);
+        Date before7days = calendar.getTime();   //得到n前的时间
+        if (before7days.getTime() < time.getTime()) {
+            return true;
+        } else {
+            return false;
+        }
+
+//        System.out.println(belongDate(time,now,-2));//2天前
+//        System.out.println(belongDate(time,now,2));//2天后
+//        System.out.println(belongDate(time,now,-6));//6天前
+    }
+
+    /**
+     * 判断time是否在from，to之内
+     *
+     * @param time 指定日期
+     * @param from 开始日期
+     * @param to   结束日期
+     * @return
+     */
+    public static boolean belongCalendar(Date time, Date from, Date to) {
+        Calendar date = Calendar.getInstance();
+        date.setTime(time);
+
+        Calendar after = Calendar.getInstance();
+        after.setTime(from);
+
+        Calendar before = Calendar.getInstance();
+        before.setTime(to);
+
+        if (date.after(after) && date.before(before)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 判断给定时间与当前时间相差多少天
+     *
+     * @param date 给定时间
+     * @return
+     */
+    public static long getDistanceDays(String date) {
+        mSdf = new SimpleDateFormat("yyyy-MM-dd");
+        long days = 0;
+        try {
+            Date time = mSdf.parse(date);//String转Date
+            Date now = new Date();//获取当前时间
+            long time1 = time.getTime();
+            long time2 = now.getTime();
+            long diff = time1 - time2;
+            days = diff / (1000 * 60 * 60 * 24);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return days;//正数表示在当前时间之后，负数表示在当前时间之前
+    }
+
+    /**
+     * 判断连个日期是否是否在同一周
+     *
+     * @param date1
+     * @param date2
+     * @return
+     */
+    public static boolean isSameDate(String date1, String date2) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date d1 = null;
+        Date d2 = null;
+        try {
+            d1 = format.parse(date1);
+            d2 = format.parse(date2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Calendar cal1 = Calendar.getInstance();
+        Calendar cal2 = Calendar.getInstance();
+        cal1.setFirstDayOfWeek(Calendar.MONDAY);//西方周日为一周的第一天，咱得将周一设为一周第一天
+        cal2.setFirstDayOfWeek(Calendar.MONDAY);
+        cal1.setTime(d1);
+        cal2.setTime(d2);
+        int subYear = cal1.get(Calendar.YEAR) - cal2.get(Calendar.YEAR);
+        if (subYear == 0)// subYear==0,说明是同一年
+        {
+            if (cal1.get(Calendar.WEEK_OF_YEAR) == cal2.get(Calendar.WEEK_OF_YEAR))
+                return true;
+        } else if (subYear == 1 && cal2.get(Calendar.MONTH) == 11) //subYear==1,说明cal比cal2大一年;java的一月用"0"标识，那么12月用"11"
+        {
+            if (cal1.get(Calendar.WEEK_OF_YEAR) == cal2.get(Calendar.WEEK_OF_YEAR))
+                return true;
+        } else if (subYear == -1 && cal1.get(Calendar.MONTH) == 11)//subYear==-1,说明cal比cal2小一年
+        {
+            if (cal1.get(Calendar.WEEK_OF_YEAR) == cal2.get(Calendar.WEEK_OF_YEAR))
+                return true;
+        }
+        return false;
+    }
 
 
 
@@ -351,7 +503,7 @@ public class DateTimeUtil {
 
 
     //获取当天的开始时间
-    public static java.util.Date getDayBegin() {
+    public static Date getDayBegin() {
         Calendar cal = new GregorianCalendar();
         cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
@@ -361,7 +513,7 @@ public class DateTimeUtil {
     }
 
     //获取当天的结束时间
-    public static java.util.Date getDayEnd() {
+    public static Date getDayEnd() {
         Calendar cal = new GregorianCalendar();
         cal.set(Calendar.HOUR_OF_DAY, 23);
         cal.set(Calendar.MINUTE, 59);
@@ -444,7 +596,7 @@ public class DateTimeUtil {
     }
 
     //获取本年的开始时间
-    public static java.util.Date getBeginDayOfYear() {
+    public static Date getBeginDayOfYear() {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.YEAR, getNowYear());
         // cal.set
