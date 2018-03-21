@@ -1,5 +1,9 @@
 package com.fpp.status.utils;
 
+import android.annotation.SuppressLint;
+import android.os.CountDownTimer;
+import android.widget.TextView;
+
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,6 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * @author fupengpeng
@@ -17,18 +22,9 @@ import java.util.List;
 
 public class DateTimeUtil {
 
-    public static final String DATE = "";
-    public static final int INT = 225;
-    public static final int INT1 = 226;
-    public static final int INT2 = 230;
-    String time01 = "HH:mm:ss";  // 13:12:14  24小时制
-    String time02 = "hh:mm:ss";  // 11:12:12  12小时制
-    String time03 = "HH:mm";  // 15:12
-    String time04 = "hh:mm";  // 11:12
-    String dateTime01 = "yyyy-MM-dd HH:mm:ss";  // 2012-01-02 15:12:14
-    String dateTime02 = "yyyy-M-d HH:mm:ss";  // 2012-1-2 15:12:14
-    String dateTime03 = "yyyy-MM-dd HH:mm:ss";
-    String dateTime04 = "yyyy-MM-dd HH:mm:ss";
+
+    public static String pattern = "yyyy-MM-dd";
+    public static SimpleDateFormat formatter = new SimpleDateFormat(pattern);
     /**
      * 默认格式
      */
@@ -77,6 +73,7 @@ public class DateTimeUtil {
         return mSdf.format(getTimestamp01());
     }
 
+
     /*******************************  时间戳转日期时间字符串  *******************************/
     /**
      * 根据给定的时间戳获取指定格式的日期时间
@@ -90,6 +87,7 @@ public class DateTimeUtil {
         return mSdf.format(dateTime);
     }
     /*******************************  时间戳转日期时间字符串  *******************************/
+
 
     /*******************************  时间戳转Date、Calendar对象  *******************************/
     /**
@@ -306,30 +304,15 @@ public class DateTimeUtil {
         return mCalendar.get(Calendar.WEEK_OF_YEAR);
     }
 
+
     /**
-     * 获取最近日期
+     * 日期大小对比
      *
-     * @param i 偏离当前日期天数      -1:昨天   0:今天      1:明天
-     * @return 返回日期
+     * @param DATE1 开始日期
+     * @param DATE2 结束日期
+     * @return 返回值：0、两个日期相同；-1、date1在date2之前；1、date1在date2之后
      */
-    public static String getRecentTime(int i, String format) {
-        SimpleDateFormat formatter = new SimpleDateFormat(format);
-        Calendar calendar = new GregorianCalendar();
-        calendar.setTime(mDate);
-        String dateString = "";
-        try {
-            calendar.add(calendar.DATE, i);//把日期往后增加一天.整数往后推,负数往前移动
-            mDate = calendar.getTime(); //这个时间就是日期往后推一天的结果
-            dateString = formatter.format(mDate);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return dateString;
-    }
-
     public static int compare_date(String DATE1, String DATE2) {
-
-
         mSdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
         try {
             Date dt1 = mSdf.parse(DATE1);
@@ -372,19 +355,19 @@ public class DateTimeUtil {
 
 
     /**
-     * 判断time是否在now的n天之内
+     * 判断time1是否在time2的n天之内
      *
-     * @param time
-     * @param now
-     * @param n    正数表示在条件时间n天之后，负数表示在条件时间n天之前
+     * @param time1 输入Data
+     * @param time2
+     * @param n     正数表示在条件时间n天之后，负数表示在条件时间n天之前
      * @return
      */
-    public static boolean belongDate(Date time, Date now, int n) {
+    public static boolean belongDate(Date time1, Date time2, int n) {
         Calendar calendar = Calendar.getInstance();  //得到日历
-        calendar.setTime(now);//把当前时间赋给日历
+        calendar.setTime(time2);//把当前时间赋给日历
         calendar.add(Calendar.DAY_OF_MONTH, n);
         Date before7days = calendar.getTime();   //得到n前的时间
-        if (before7days.getTime() < time.getTime()) {
+        if (before7days.getTime() < time1.getTime()) {
             return true;
         } else {
             return false;
@@ -396,22 +379,22 @@ public class DateTimeUtil {
     }
 
     /**
-     * 判断time是否在from，to之内
+     * 判断time1是否在time2，time3之间
      *
-     * @param time 指定日期
-     * @param from 开始日期
-     * @param to   结束日期
+     * @param time1 指定日期
+     * @param time2 开始日期
+     * @param time3 结束日期
      * @return
      */
-    public static boolean belongCalendar(Date time, Date from, Date to) {
+    public static boolean belongCalendar(Date time1, Date time2, Date time3) {
         Calendar date = Calendar.getInstance();
-        date.setTime(time);
+        date.setTime(time1);
 
         Calendar after = Calendar.getInstance();
-        after.setTime(from);
+        after.setTime(time2);
 
         Calendar before = Calendar.getInstance();
-        before.setTime(to);
+        before.setTime(time3);
 
         if (date.after(after) && date.before(before)) {
             return true;
@@ -443,7 +426,7 @@ public class DateTimeUtil {
     }
 
     /**
-     * 判断连个日期是否是否在同一周
+     * 判断两个日期是否是否在同一周
      *
      * @param date1
      * @param date2
@@ -482,25 +465,191 @@ public class DateTimeUtil {
         return false;
     }
 
-
-
-
-    /*
-    获取本年第一天
-    获取本年第n天
-    获取本年最后一天
-    获取今天的前后天
-    获取今天是本年的第几天
-    获取今天是本月的第几天
-    获取今天是星期几
-    获取本年的星期数
-
-    获取指定天的日期
-    获取指定天的周数
-    获取指定天的月份
-
+    /**
+     * 时间格式化
+     *
+     * @param time 传入的时间毫秒值
+     * @return 格式化后的时间
      */
+    public static String getFormatTime(long time) {
 
+        long second = time / 1000;
+        long day = second / 60 / 60 / 24;
+        long hour = (second - day * 60 * 60 * 24) / 60 / 60;
+        long minute = (second - hour * 60 * 60) / 60;
+        long sec = (second - hour * 60 * 60) - minute * 60;
+
+        String rDay = "";
+        String rHour = "";
+        String rMin = "";
+        String rSs = "";
+        // 天
+        if (day < 10) {
+            rDay = "0" + day;
+        } else {
+            rDay = day + "";
+        }
+        // 时
+        if (hour < 10) {
+            rHour = "0" + hour;
+        } else {
+            rHour = hour + "";
+        }
+        // 分
+        if (minute < 10) {
+            rMin = "0" + minute;
+        } else {
+            rMin = minute + "";
+        }
+        // 秒
+        if (sec < 10) {
+            rSs = "0" + sec;
+        } else {
+            rSs = sec + "";
+        }
+
+        // return day + "天" + hour + "小时" + minute + "分钟" + sec + "秒";
+        return rDay + " " + rHour + ":" + rMin + ":" + rSs;
+
+    }
+
+
+    /**
+     * 判断是否润年
+     *
+     * @param ddate
+     * @return
+     */
+    public static boolean isLeapYear(String ddate) throws ParseException {
+
+        /**
+         * 详细设计： 1.被400整除是闰年，否则：
+         *            2.不能被4整除则不是闰年
+         *            3.能被4整除同时不能被100整除则是闰年
+         *            4.能被4整除同时能被100整除则不是闰年
+         */
+        Date d = DateTimeUtil.stringOfDate(ddate);
+        GregorianCalendar gc = (GregorianCalendar) Calendar.getInstance();
+        gc.setTime(d);
+        int year = gc.get(Calendar.YEAR);
+        if ((year % 400) == 0)
+            return true;
+        else if ((year % 4) == 0) {
+            if ((year % 100) == 0)
+                return false;
+            else
+                return true;
+        } else
+            return false;
+    }
+
+    /**
+     * 产生周序列,即得到当前时间所在的年度是第几周
+     *
+     * @return
+     */
+    public static String getSeqWeek() {
+        Calendar c = Calendar.getInstance(Locale.CHINA);
+        String week = Integer.toString(c.get(Calendar.WEEK_OF_YEAR));
+        if (week.length() == 1)
+            week = "0" + week;
+        return week;
+    }
+
+    /**
+     * 获取最近日期
+     *
+     * @param i 偏离当前日期天数      -1:昨天   0:今天      1:明天
+     * @return 返回日期
+     */
+    public static String getRecentTime(int i, String format) {
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat(format);
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(date);
+        String dateString = "";
+        try {
+            calendar.add(calendar.DATE, i);//把日期往后增加一天.整数往后推,负数往前移动
+            date = calendar.getTime(); //这个时间就是日期往后推一天的结果
+            dateString = formatter.format(date);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dateString;
+    }
+
+
+/* ---------------------------------------- 测试分界 ---------------------------------------- */
+
+
+    /**
+     * 倒计时处理类
+     */
+    public class CountDownUtil extends CountDownTimer {
+        /**
+         * 设置显示倒计时的TextView
+         */
+        private TextView mTextView;
+
+        /**
+         * 构造函数
+         *
+         * @param millisInFuture    倒计时时间
+         * @param countDownInterval 间隔
+         * @param textView          控件
+         */
+        public CountDownUtil(long millisInFuture, long countDownInterval,
+                             TextView textView) {
+            super(millisInFuture, countDownInterval);
+            this.mTextView = textView;
+        }
+
+        @SuppressLint("NewApi")
+        @Override
+        public void onTick(long millisUntilFinished) {
+            mTextView.setText(getFormatTime(millisUntilFinished));//设置倒计时格式化好的时间
+        }
+
+        @SuppressLint("NewApi")
+        @Override
+        public void onFinish() {
+
+        }
+    }
+
+
+    /**
+     * 得到一个时间延后或前移几天的时间,nowdate(yyyy-mm-dd)为时间,delay为前移或后延的天数
+     */
+    public static String getNextDay(String nowdate, String delay) {
+        try {
+            String mdate = "";
+            Date d = DateTimeUtil.stringOfDate(nowdate);
+            long myTime = (d.getTime() / 1000) + Integer.parseInt(delay) * 24 * 60 * 60;
+            d.setTime(myTime * 1000);
+            mdate = formatter.format(d);
+            return mdate;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * 根据一个日期，返回是星期几的字符串
+     *
+     * @param sdate
+     * @return
+     */
+    public static String getWeek(String sdate) throws ParseException {
+        // 再转换为时间
+        Date date = DateTimeUtil.stringOfDate(sdate);
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        // int hour=c.get(Calendar.DAY_OF_WEEK);
+        // hour中存的就是星期几了，其范围 1~7
+        // 1=星期日 7=星期六，其他类推
+        return new SimpleDateFormat("EEEE").format(c.getTime());
+    }
 
     //获取当天的开始时间
     public static Date getDayBegin() {
@@ -607,7 +756,7 @@ public class DateTimeUtil {
     }
 
     //获取本年的结束时间
-    public static java.util.Date getEndDayOfYear() {
+    public static Date getEndDayOfYear() {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.YEAR, getNowYear());
         cal.set(Calendar.MONTH, Calendar.DECEMBER);
@@ -649,7 +798,7 @@ public class DateTimeUtil {
         return gc.get(2) + 1;
     }
 
-    //两个日期相减得到的天数
+    // TODO: 2018/3/21 0021  两个日期相减得到的天数
     public static int getDiffDays(Date beginDate, Date endDate) {
 
         if (beginDate == null || endDate == null) {
@@ -664,14 +813,14 @@ public class DateTimeUtil {
         return days;
     }
 
-    //两个日期相减得到的毫秒数
+    // TODO: 2018/3/21 0021 两个日期相减得到的毫秒数 
     public static long dateDiff(Date beginDate, Date endDate) {
         long date1ms = beginDate.getTime();
         long date2ms = endDate.getTime();
         return date2ms - date1ms;
     }
 
-    //获取两个日期中的最大日期
+    // TODO: 2018/3/21 0021  获取两个日期中的最大日期
     public static Date max(Date beginDate, Date endDate) {
         if (beginDate == null) {
             return endDate;
@@ -685,7 +834,7 @@ public class DateTimeUtil {
         return endDate;
     }
 
-    //获取两个日期中的最小日期
+    // TODO: 2018/3/21 0021 获取两个日期中的最小日期
     public static Date min(Date beginDate, Date endDate) {
         if (beginDate == null) {
             return endDate;
@@ -811,6 +960,20 @@ public class DateTimeUtil {
         return timestamp;
     }
 
+    /**
+     * 获取某周的最后一天日期
+     *
+     * @param week
+     * @return
+     */
+    public static String weekLastDay(int week) {
+        Calendar c1 = Calendar.getInstance();
+        int dow = c1.get(Calendar.DAY_OF_WEEK);
+        c1.add(Calendar.DATE, -dow - 7 * (week - 1) + 1);
+        String d1 = new SimpleDateFormat("yyyy-MM-dd").format(c1.getTime());
+        return d1 + " 23:59:59";
+    }
+
 
 
     /*手机号处理*/
@@ -824,90 +987,6 @@ public class DateTimeUtil {
     /**
      * 给邮箱加密加星号
      */
-
-//    /**
-//     * 获取传入时间和当前时间的时间差
-//     */
-//    public static Long getTimediff(int timeStamp) {
-//        Date d1 = DateFormatUtil.transForDate(timeStamp);
-//        Date today = new Date();
-//        if (d1.getTime() < today.getTime()) {
-//            return null;
-//        }
-//        return (d1.getTime() - today.getTime()) / 1000;
-//    }
-//
-//    /**
-//     * 计算两个日期之间差的天数（httl模版用）
-//     *
-//     * @param ts1 时间戳1
-//     * @param ts2 时间戳2
-//     * @return
-//     */
-//    public static int caculate2Days(Integer ts1, Integer ts2) {
-//        Date firstDate = DateFormatUtil.transForDate(ts1);
-//        Date secondDate = DateFormatUtil.transForDate(ts2);
-//        Calendar calendar = Calendar.getInstance();
-//        calendar.setTime(firstDate);
-//        int dayNum1 = calendar.get(Calendar.DAY_OF_YEAR);
-//        calendar.setTime(secondDate);
-//        int dayNum2 = calendar.get(Calendar.DAY_OF_YEAR);
-//        return Math.abs(dayNum1 - dayNum2);
-//    }
-//
-//    /**
-//     * 获取某周的第一天日期
-//     *
-//     * @param week 0 当周 1 上一周 -1 下一周
-//     * @return
-//     */
-//    public static String weekFirstDay(int week) {
-//        Calendar c1 = Calendar.getInstance();
-//        int dow = c1.get(Calendar.DAY_OF_WEEK);
-//        c1.add(Calendar.DATE, -dow - 7 * (week - 1) - 5);
-//        String d1 = new SimpleDateFormat("yyyy-MM-dd").format(c1.getTime());
-//        return d1 + " 00:00:00";
-//    }
-//
-//    /**
-//     * 当前时间加一年
-//     */
-//    public static String addYear(int startTime) {
-//        Date firstDate = DateFormatUtil.transForDate(startTime);
-//        Calendar calendar = Calendar.getInstance();
-//        calendar.setTime(firstDate);
-//        calendar.add(Calendar.YEAR, 1);
-//        String d1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime());
-//        return d1;
-//    }
-//
-//    /**
-//     * 获取某周的最后一天日期
-//     *
-//     * @param week
-//     * @return
-//     */
-//    public static String weekLastDay(int week) {
-//        Calendar c1 = Calendar.getInstance();
-//        int dow = c1.get(Calendar.DAY_OF_WEEK);
-//        c1.add(Calendar.DATE, -dow - 7 * (week - 1) + 1);
-//        String d1 = new SimpleDateFormat("yyyy-MM-dd").format(c1.getTime());
-//        return d1 + " 23:59:59";
-//    }
-//
-//    /**
-//     * 和当前时间比对
-//     *
-//     * @return
-//     */
-//    public static boolean greaterThanNow(int timeStamp) {
-//        Date d1 = DateTimeUtil.transForDate(timeStamp);
-//        Date today = new Date();
-//        if (d1.getTime() >= today.getTime()) {
-//            return true;
-//        }
-//        return false;
-//    }
 
 
 }

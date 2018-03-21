@@ -126,7 +126,7 @@ public class CustomViewSixActivity extends Activity {
 
     public List<User> getUserData() {
         List<User> userList = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 10; i++) {
             User user = new User();
             user.setId("" + i);
             user.setSelect(false);
@@ -138,12 +138,12 @@ public class CustomViewSixActivity extends Activity {
             userList.add(user);
         }
         User user1 = new User();
-        user1.setId("30");
+        user1.setId("10");
         user1.setSelect(false);
         user1.setEnable(false);
-        user1.setName("name 30" );
-        user1.setLevel("level  30 " );
-        user1.setNickName("nick  30 " );
+        user1.setName("name 10" );
+        user1.setLevel("level  10 " );
+        user1.setNickName("nick  10 " );
         user1.setGender("0");
         userList.add(user1);
 
