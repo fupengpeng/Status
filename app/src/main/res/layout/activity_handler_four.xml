@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_5"
         android:layout_width="match_parent"
         android:layout_height="55dp">
         <Button
@@ -55,5 +55,10 @@
             android:layout_width="@dimen/dp_55"
             android:layout_height="@dimen/dp_55" />
     </LinearLayout>
+
+    <com.fpp.status.view.CalendarView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

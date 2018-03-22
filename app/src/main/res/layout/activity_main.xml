@@ -43,7 +43,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
-            android:text="one" />
+            android:text="日历" />
 
         <Button
             android:id="@+id/btn_one_five"

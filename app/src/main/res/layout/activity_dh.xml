@@ -98,106 +98,31 @@
     </LinearLayout>
 
     <LinearLayout
-        android:gravity="center"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <TextView
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
-            android:text="全"
-            android:layout_width="18dp"
-            android:layout_height="18dp" />
-
-        <View
+        <com.fpp.status.view.CustomView
             android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="接"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
+            android:layout_height="@dimen/dp_45" />
 
-            android:layout_width="18dp"
-            android:layout_height="18dp" />
-
-        <View
+        <com.fpp.status.view.CustomViewOne
             android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="服"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
-            android:layout_width="18dp"
-            android:layout_height="18dp" />
+            android:layout_height="@dimen/dp_100" />
 
-        <View
+        <com.fpp.status.view.CustomViewTwo
             android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="入"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
-            android:layout_width="18dp"
-            android:layout_height="18dp"/>
+            android:layout_height="@dimen/dp_45" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
         <TextView
-            android:text="拒"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
-            android:layout_width="18dp"
-            android:layout_height="18dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="爽"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
-            android:layout_width="18dp"
-            android:layout_height="18dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="撤"
-            android:gravity="center"
-            android:textColor="#ffffff"
-            android:background="@drawable/text_style"
-            android:layout_width="18dp"
-            android:layout_height="18dp"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="全"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="全" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-        <TextView
-            android:text="全"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
-
+            android:layout_height="10dp" />
 
 
     </LinearLayout>

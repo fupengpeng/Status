@@ -34,13 +34,21 @@ public class CustomViewTwo extends View implements View.OnClickListener {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        /*---- 绘制背景 ----*/
+        // 设置画笔颜色
         mPaint.setColor(Color.BLUE);
         // 绘制一个填充色为蓝色的矩形
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
 
-        mPaint.setColor(Color.YELLOW);
-        mPaint.setTextSize(50);
+
+
+
+
+        /*---- 绘制文字 ----*/
+        // 设置画笔颜色
+        mPaint.setColor(Color.RED);
+        // 设置画笔大小
+        mPaint.setTextSize(100);
         String text = String.valueOf(mCount);
         // 获取文字的宽和高
         mPaint.getTextBounds(text, 0, text.length(), mBounds);
