@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:padding="@dimen/dp_5"
-            android:text="测试版本" />
+            android:text="handlerTest" />
 
         <Button
             android:id="@+id/btn_one_three"
@@ -242,7 +242,7 @@
             android:layout_weight="0.5"
             android:background="#ffaaaa"
             android:scaleType="centerCrop"
-            android:text="自定义移动控件" />
+            android:text="响应系统设置事件" />
 
         <Button
             android:id="@+id/btn_three_eight"
@@ -252,7 +252,7 @@
             android:layout_weight="0.5"
             android:background="#0055aa"
             android:scaleType="centerCrop"
-            android:text="自定义view研究" />
+            android:text="基于回调事件处理" />
 
 
     </LinearLayout>

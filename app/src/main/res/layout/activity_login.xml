@@ -10,6 +10,7 @@
 
     <ScrollView
         android:id="@+id/login_form"
+        android:layout_margin="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -127,6 +128,60 @@
                 android:layout_marginRight="10dp"
                 android:textColor="#ffffff"
                 android:textSize="18dp"/>
+
+            <RelativeLayout
+                android:layout_margin="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:text="注册新账号"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_forget_password"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="忘记密码" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="第三方登录"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="qq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

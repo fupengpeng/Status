@@ -19,6 +19,7 @@ import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
 import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
+import com.fpp.status.activity.four.eight.HandlerActivity;
 import com.fpp.status.activity.fourfive.GuideTwoActivity;
 import com.fpp.status.activity.fourseven.GuideFourActivity;
 import com.fpp.status.activity.foursix.GuideThreeActivity;
@@ -33,8 +34,8 @@ import com.fpp.status.activity.fragmenttwo.FragmentTwoActivity;
 import com.fpp.status.activity.handler.HandlerFiveActivity;
 import com.fpp.status.activity.handler.HandlerFourActivity;
 import com.fpp.status.activity.handler.HandlerOneActivity;
+import com.fpp.status.activity.handler.HandlerTestActivity;
 import com.fpp.status.activity.handler.HandlerThreeActivity;
-import com.fpp.status.activity.handler.MoveTwoTestActivity;
 import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
@@ -46,6 +47,8 @@ import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
 import com.fpp.status.activity.test.MoveViewGroupActivity;
 import com.fpp.status.activity.test.TestActivity;
+import com.fpp.status.activity.three.eight.EventTwoActivity;
+import com.fpp.status.activity.three.seven.ConfigurationActivity;
 import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
@@ -253,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_one_two:
-                intent = new Intent(this, MoveTwoTestActivity.class);
+                intent = new Intent(this, HandlerTestActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_one_three:
@@ -335,10 +338,12 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_three_seven:
-
+                intent = new Intent(this, ConfigurationActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_three_eight:
-
+                intent = new Intent(this, EventTwoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_four_one:
                 intent = new Intent(this, PWOneActivity.class);
@@ -373,7 +378,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_four_eight:
-                intent = new Intent(this, GuideTwoActivity.class);
+                intent = new Intent(this, HandlerActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_five_one:

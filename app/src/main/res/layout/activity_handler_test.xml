@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg_one"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_atvt_handler_test"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    <EditText
+        android:id="@+id/et_atvt_handler"
+        android:text="5000"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/tv_atvt_handler"
+        android:gravity="center"
+        android:text="点击计算输入的数之下的质数"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+
+
+</LinearLayout>

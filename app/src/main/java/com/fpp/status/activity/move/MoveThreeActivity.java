@@ -2,13 +2,12 @@ package com.fpp.status.activity.move;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,12 +16,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Scroller;
-import android.widget.Toast;
 
 import com.fpp.status.R;
-import com.fpp.status.activity.handler.MoveTwoTestActivity;
-import com.fpp.status.activity.test.TestActivity;
 
 import java.util.Timer;
 

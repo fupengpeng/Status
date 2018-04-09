@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_atvt_configuration_screen_direction"
+        android:gravity="center"
+        android:text="显示屏幕方向"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <View
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <TextView
+        android:id="@+id/tv_atvt_configuration_phone_direction"
+        android:gravity="center"
+        android:text="显示手机方向控制设备"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <View
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <TextView
+        android:id="@+id/tv_atvt_configuration_touch_screen"
+        android:gravity="center"
+        android:text="显示触摸屏状态"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <View
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <TextView
+        android:id="@+id/tv_atvt_configuration_network"
+        android:gravity="center"
+        android:text="显示网络代号"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <View
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <Button
+        android:id="@+id/btn_atvt_configuration"
+        android:gravity="center"
+        android:text="获取手机信息"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <View
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <Button
+        android:id="@+id/btn_atvt_configuration_change"
+        android:gravity="center"
+        android:text="改变手机屏幕方向"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <View
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+</LinearLayout>

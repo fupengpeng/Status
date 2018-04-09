@@ -24,7 +24,7 @@
         <activity android:name=".activity.test.MoveImageActivity" />
         <activity android:name=".activity.test.MoveViewGroupActivity" />
         <activity android:name=".activity.handler.HandlerOneActivity" />
-        <activity android:name=".activity.handler.MoveTwoTestActivity" />
+        <activity android:name=".activity.handler.HandlerTestActivity" />
         <activity android:name=".activity.handler.HandlerThreeActivity" />
         <activity android:name=".activity.handler.HandlerFourActivity" />
         <activity android:name=".activity.handler.HandlerFiveActivity" />
@@ -57,7 +57,7 @@
         <activity android:name=".activity.four.FourThreeActivity" />
         <activity android:name=".activity.four.FourFourActivity" />
         <activity android:name=".activity.two.RecycleViewActivity" />
-        <activity android:name=".activity.three.six.MoveDeleteRecycleViewItemActivity"></activity>
+        <activity android:name=".activity.three.six.MoveDeleteRecycleViewItemActivity"/>
         <activity android:name=".activity.fourfive.GuideTwoActivity"/>
         <activity android:name=".activity.foursix.GuideThreeActivity"/>
         <activity android:name=".activity.fourseven.GuideFourActivity">
@@ -67,6 +67,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 设置Activity可以监听屏幕方向改变的事件 -->
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name=".activity.three.seven.ConfigurationActivity"/>
+        <activity android:name=".activity.three.eight.EventTwoActivity"/>
+        <activity android:name=".activity.four.eight.HandlerActivity"/>
     </application>
 
 </manifest>
