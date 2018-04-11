@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_atvt"/>
+    <ListView
+        android:id="@+id/lv_fragment_shopping_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <RelativeLayout
+        android:id="@+id/rl_fragment_shopping_cart_price_total"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+
+        <CheckBox
+            android:id="@+id/cb_fragment_shopping_cart_select_all"
+            style="@style/circlecheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_4"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="全选"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/dp_25" />
+
+        <LinearLayout
+            android:id="@+id/ll_fragment_shopping_cart_price_total"
+            android:layout_toRightOf="@id/cb_fragment_shopping_cart_select_all"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="合计：" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_shopping_cart_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="￥0.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="总额：" />
+
+                <TextView
+                    android:id="@+id/tv_fragment_shopping_cart_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="￥0.00" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_fragment_shopping_cart_settlement"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="match_parent"
+            android:text="去结算（0）" />
+
+    </RelativeLayout>
+
+</LinearLayout>

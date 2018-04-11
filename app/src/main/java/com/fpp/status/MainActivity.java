@@ -156,6 +156,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnSixSeven;
     @BindView(R.id.btn_six_eight)
     Button btnSixEight;
+    @BindView(R.id.btn_eight_one)
+    Button btnEightOne;
+    @BindView(R.id.btn_eight_two)
+    Button btnEightTwo;
+    @BindView(R.id.btn_eight_three)
+    Button btnEightThree;
+    @BindView(R.id.btn_eight_four)
+    Button btnEightFour;
+    @BindView(R.id.btn_eight_five)
+    Button btnEightFive;
+    @BindView(R.id.btn_eight_six)
+    Button btnEightSix;
+    @BindView(R.id.btn_eight_seven)
+    Button btnEightSeven;
+    @BindView(R.id.btn_eight_eight)
+    Button btnEightEight;
 
 
     @Override
@@ -247,7 +263,9 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn_five_four,
             R.id.btn_five_five, R.id.btn_five_six, R.id.btn_five_seven, R.id.btn_five_eight,
             R.id.btn_six_one, R.id.btn_six_two, R.id.btn_six_three, R.id.btn_six_four,
-            R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight
+            R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight,
+            R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three, R.id.btn_eight_four,
+            R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven, R.id.btn_eight_eight
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -445,8 +463,29 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, FragmentEightActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_eight_one:
+                // TODO: 2018/4/10 0010
+
+
+                break;
+            case R.id.btn_eight_two:
+                break;
+            case R.id.btn_eight_three:
+                break;
+            case R.id.btn_eight_four:
+                break;
+            case R.id.btn_eight_five:
+                break;
+            case R.id.btn_eight_six:
+                break;
+            case R.id.btn_eight_seven:
+                break;
+            case R.id.btn_eight_eight:
+                break;
         }
     }
+
+
 
 
 
