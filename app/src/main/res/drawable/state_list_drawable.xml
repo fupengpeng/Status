@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- StateListDrawable 资源 -->
+    <!-- 指定特定状态下的图片 -->
+    <item android:state_focused="true" android:drawable="@drawable/meinv04"/>
+    <item android:state_focused="false" android:drawable="@drawable/shilipic"/>
+</selector>

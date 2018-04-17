@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="true"
+    android:duration="30"
+    android:interpolator="@android:anim/linear_interpolator"
+    >
+    <!--  android:duration="30"  持续时间设置  -->
+    <!--  android:interpolator="@android:anim/linear_interpolator"  匀速变换  -->
+    <!--  android:interpolator="@android:anim/accelerate_interpolator"  加速变换  -->
+    <!--  android:interpolator="@android:anim/decelerate_interpolator"  减速变换  -->
+
+    <!-- 透明度变换 -->
+    <alpha
+        android:fromAlpha="2.0"
+        android:toAlpha="3.0"
+        />
+    <!-- 缩放变换 -->
+    <scale
+        android:fromXScale="25"
+        android:toXScale="36"
+        android:fromYScale="25"
+        android:toYScale="36"
+        android:pivotX="25"
+        android:pivotY="36"
+        />
+    <!--    android:pivotX="25"    android:pivotY="36"  指定变换中心点  -->
+    <!-- 平移变换 -->
+    <translate
+        android:fromXDelta="25"
+        android:toXDelta="36"
+        android:fromYDelta="25"
+        android:toYDelta="36"
+        />
+    <!-- 旋转变换 -->
+    <rotate
+        android:fromDegrees="25"
+        android:toDegrees="36"
+        android:pivotX="25"
+        android:pivotY="36"
+        />
+</set>

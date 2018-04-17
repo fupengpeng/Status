@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 定义几何图形的四个角弧度 -->
+    <corners
+        android:radius="@dimen/dp_25"
+        android:topLeftRadius="@dimen/dp_25"
+        android:topRightRadius="@dimen/dp_25"
+        android:bottomLeftRadius="@dimen/dp_25"
+        android:bottomRightRadius="@dimen/dp_25"/>
+    <!-- 定义使用渐变色填充 -->
+    <gradient
+        android:angle="25"
+        android:centerX="255"
+        android:centerY="223"
+        android:centerColor="@color/c"
+        android:endColor="@color/btn_tell"
+        android:gradientRadius="@dimen/dp_25"
+        android:startColor="@color/bg_page"
+        android:type="linear"
+        android:useLevel="true"/>
+
+    <!-- 定义几何图像内边距 -->
+    <padding
+        android:left="@dimen/dp_25"
+        android:right="@dimen/dp_25"
+        android:top="@dimen/dp_25"
+        android:bottom="@dimen/dp_25"
+        />
+    <!-- 定义几何形状的大小 -->
+    <size
+        android:width="@dimen/dp_25"
+        android:color="@color/white"
+        android:dashWidth="25dp"
+        android:dashGap="22dp"
+        />
+    <!-- 定义使用单色填充 -->
+    <solid
+        android:color="@color/colorAccent"/>
+    <!-- 定义为几何形状绘制边框 -->
+    <stroke
+        android:width="@dimen/dp_25"
+        android:color="@color/colorAccent"
+        android:dashWidth="@dimen/dp_25"
+        android:dashGap="@dimen/dp_25"
+        />
+</shape>

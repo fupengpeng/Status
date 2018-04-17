@@ -143,9 +143,36 @@ public class AllSelectListActivity extends AppCompatActivity
     }
 
     private void loadData() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         Log.e(TAG, "loadData: " + "----0003----");
         // TODO: 2018/4/11 0011 待修改
-        mListData = getData();
+//        mListData = getData();
         Log.e(TAG, "loadData:=======------------ " + isBatchModel);
 
 

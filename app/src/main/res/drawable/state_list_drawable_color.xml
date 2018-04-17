@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- StateListDrawable 资源 -->
+    <!-- 指定特定状态下的颜色 -->
+    <item android:state_focused="true" android:color="#ffaaff"/>
+    <item android:state_focused="false" android:color="#00ffaa"/>
+</selector>

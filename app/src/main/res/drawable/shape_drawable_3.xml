@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 填充渐变色 -->
+    <gradient
+        android:startColor="@color/colorAccent"
+        android:endColor="@color/c"
+        android:angle="45"
+        android:type="sweep"
+        />
+    <padding
+        android:left="@dimen/dp_5"
+        android:top="@dimen/dp_5"
+        android:right="@dimen/dp_5"
+        android:bottom="@dimen/dp_5"
+        />
+    <stroke
+        android:width="@dimen/dp_5"
+        android:color="@color/bg_page"/>
+</shape>

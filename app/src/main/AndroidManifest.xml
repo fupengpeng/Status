@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".DLActivity" />
         <activity
             android:name=".activity.twotwo.PWActivity"
@@ -57,9 +55,9 @@
         <activity android:name=".activity.four.FourThreeActivity" />
         <activity android:name=".activity.four.FourFourActivity" />
         <activity android:name=".activity.two.RecycleViewActivity" />
-        <activity android:name=".activity.three.six.MoveDeleteRecycleViewItemActivity"/>
-        <activity android:name=".activity.fourfive.GuideTwoActivity"/>
-        <activity android:name=".activity.foursix.GuideThreeActivity"/>
+        <activity android:name=".activity.three.six.MoveDeleteRecycleViewItemActivity" />
+        <activity android:name=".activity.fourfive.GuideTwoActivity" />
+        <activity android:name=".activity.foursix.GuideThreeActivity" />
         <activity android:name=".activity.fourseven.GuideFourActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,10 +67,11 @@
         </activity>
         <!-- 设置Activity可以监听屏幕方向改变的事件 -->
         <activity
-            android:configChanges="orientation|screenSize"
-            android:name=".activity.three.seven.ConfigurationActivity"/>
-        <activity android:name=".activity.three.eight.EventTwoActivity"/>
-        <activity android:name=".activity.four.eight.HandlerActivity"/>
+            android:name=".activity.three.seven.ConfigurationActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".activity.three.eight.EventTwoActivity" />
+        <activity android:name=".activity.four.eight.HandlerActivity" />
+        <activity android:name=".activity.eight.two.ResourceActivity"/>
     </application>
 
 </manifest>
