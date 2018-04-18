@@ -4,19 +4,29 @@ import android.animation.AnimatorInflater;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.content.res.XmlResourceParser;
+import android.graphics.Color;
 import android.graphics.drawable.ClipDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.fpp.status.R;
 
@@ -46,6 +56,10 @@ public class ResourceActivity extends AppCompatActivity {
     Button btnAnim;
     @BindView(R.id.ll_anim)
     LinearLayout llAnim;
+    @BindView(R.id.et_xml)
+    EditText etXml;
+    @BindView(R.id.tv_menu)
+    TextView tvMenu;
     private ClipDrawable drawable;
     private Animation animation;
 
@@ -63,8 +77,85 @@ public class ResourceActivity extends AppCompatActivity {
         initViewAnim();
         initViewPropertyAnim();
         initViewXml();
+        initViewMenu();
 
 
+    }
+
+    private void initViewMenu() {
+        registerForContextMenu(tvMenu);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // 装填R.menu.menu_main的菜单，并添加到menu中
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        // 装填R.menu.context对应的菜单，并添加到menu中
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.context, menu);
+        menu.setHeaderIcon(R.drawable.nvshengtouxiang);
+        menu.setHeaderTitle("请选择背景颜色");
+
+    }
+
+    /**
+     * 上下文菜单中菜单项被点击是触发该方法
+     *
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        // 勾选该菜单项
+        item.setChecked(true);
+        switch (item.getItemId()) {
+            case R.id.red:
+                item.setChecked(true);
+                tvMenu.setBackgroundColor(Color.RED);
+                break;
+            case R.id.green:
+                item.setChecked(true);
+                tvMenu.setBackgroundColor(Color.GREEN);
+                break;
+            case R.id.blue:
+                item.setChecked(true);
+                tvMenu.setBackgroundColor(Color.BLUE);
+                break;
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.isCheckable()) {
+            // 勾选该菜单项
+            item.setChecked(true);
+        }
+        // 判断单击的是那个菜单项，并有针对性的作出响应
+        switch (item.getItemId()) {
+            case R.id.menu_01:
+                tvMenu.setText("menu_01");
+                break;
+            case R.id.menu_02:
+                tvMenu.setText("menu_02");
+                break;
+            case R.id.menu_03:
+                tvMenu.setText("menu_03");
+                break;
+            case R.id.plain_item:
+                tvMenu.setText("plain_item");
+                break;
+        }
+
+        return true;
     }
 
     private void initViewXml() {
@@ -75,16 +166,16 @@ public class ResourceActivity extends AppCompatActivity {
         StringBuilder sb = new StringBuilder("");
         // 还没有到xml文档的结尾处
         try {
-            while (xrp.getEventType() != XmlResourceParser.END_DOCUMENT){
+            while (xrp.getEventType() != XmlResourceParser.END_DOCUMENT) {
                 // 如果遇到开始标签
-                if (xrp.getEventType() == XmlResourceParser.START_DOCUMENT){
+                if (xrp.getEventType() == XmlResourceParser.START_TAG) {
                     // 获取该标签的标签名
                     String tagName = xrp.getName();
                     // 如果遇到book标签
-                    if (tagName.equals("book")){
+                    if (tagName.equals("book")) {
                         // 根据属性名来获取属性值
-                        String bookName = xrp.getAttributeValue(null,"price");
-                        sb.append("价格：" );
+                        String bookName = xrp.getAttributeValue(null, "price");
+                        sb.append("价格：");
                         sb.append(bookName);
                         // 根据属性索引来获取属性值
                         String bookPrice = xrp.getAttributeValue(1);
@@ -102,7 +193,7 @@ public class ResourceActivity extends AppCompatActivity {
                 xrp.next();
 
             }
-
+            etXml.setText(sb.toString());
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -173,11 +264,11 @@ public class ResourceActivity extends AppCompatActivity {
     }
 
     private class MyAnimationView extends View {
-        public MyAnimationView(Context context){
+        public MyAnimationView(Context context) {
             super(context);
             // 加载动画资源
             ObjectAnimator objectAnimator = (ObjectAnimator) AnimatorInflater.loadAnimator(
-                    ResourceActivity.this,R.animator.property_animation_example);
+                    ResourceActivity.this, R.animator.property_animation_example);
             objectAnimator.setEvaluator(new ArgbEvaluator());
             // 对该View本身应用属性动画
             objectAnimator.setTarget(this);
@@ -186,4 +277,32 @@ public class ResourceActivity extends AppCompatActivity {
 
         }
     }
+
+    public void raw(View resource) {
+        // 直接根据声音文件的id来创建MediaPlayer
+        MediaPlayer mediaPlayer1 = MediaPlayer.create(this, R.raw.haojiubujian);
+        // 播放声音
+        mediaPlayer1.start();
+    }
+
+    public void assets(View resource) {
+        // 获取应用的AssetManager
+        AssetManager am = getAssets();
+        try {
+            // 获取指定文件对应的AssetFileDescriptor
+            AssetFileDescriptor afd = am.openFd("haojiubujian.mp3");
+            MediaPlayer mediaPlayer2 = new MediaPlayer();
+            // 使用MediaPlayer加载指定的声音文件
+            mediaPlayer2.setDataSource(afd.getFileDescriptor());
+            mediaPlayer2.prepare();
+            // 播放声音
+            mediaPlayer2.start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

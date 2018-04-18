@@ -50,4 +50,15 @@
         <item name="android:button">@drawable/checkbox_style</item>
     </style>
 
+    <!-- 定义一个样式，指定文字颜色、文字大小 -->
+    <style name="text_style1">
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- 定义一个新的样式，继承上述样式，指定边距等 -->
+    <style name="text_style2" parent="text_style1">
+        <item name="android:padding">5dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
 </resources>

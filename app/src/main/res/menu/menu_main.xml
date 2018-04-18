@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="@string/app_name"
+        android:icon="@drawable/meinv04">
+        <menu>
+            <!-- 定义一组单选菜单项 -->
+            <group android:checkableBehavior="single">
+                <!-- 定义多个菜单项 -->
+                <item
+                    android:id="@+id/menu_01"
+                    android:title="按钮01"/>
+                <item
+                    android:id="@+id/menu_02"
+                    android:title="按钮02"/>
+                <item
+                    android:id="@+id/menu_03"
+                    android:title="按钮03"/>
+
+            </group>
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/plain_item"
+        android:title="plain_item" />
+    <item
+        android:id="@+id/app_bar_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search" />
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title=""
+        app:actionLayout="@layout/switch_item" />
+    <menu />
+</menu>

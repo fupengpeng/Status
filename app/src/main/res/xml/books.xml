@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<books xmlns:android="http://schemas.android.com/apk/res/android">
+<books>
     <book price="24" 出版日期="2008">java</book>
     <book price="25" 出版日期="2009">android</book>
     <book price="23" 出版日期="2010">javaee</book>

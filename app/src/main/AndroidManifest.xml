@@ -2,6 +2,62 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fpp.status">
 
+
+
+    <!--  ******************** 相机相关权限 ********************  -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--  ******************** 相机相关权限 ********************  -->
+
+
+    <!--  ******************** 日历相关权限 ********************  -->
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <!--  ******************** 日历相关权限 ********************  -->
+
+    <!--  ******************** 通讯录相关权限 ********************  -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--  ******************** 通讯录相关权限 ********************  -->
+
+    <!--  ******************** 位置相关权限 ********************  -->
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--  ******************** 位置相关权限 ********************  -->
+
+
+    <!--  ******************** 麦克风相关权限 ********************  -->
+    <uses-permission android:name="android.permission_group.MICROPHONE" />
+    <!--  ******************** 麦克风相关权限 ********************  -->
+
+
+    <!--  ******************** 电话相关权限 ********************  -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--  ******************** 电话相关权限 ********************  -->
+
+    <!--  ******************** 传感器相关权限 ********************  -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <!--  ******************** 传感器相关权限 ********************  -->
+
+    <!--  ******************** 短信相关权限 ********************  -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!--  ******************** 短信相关权限 ********************  -->
+
+    <!--  ******************** 文件存储相关权限 ********************  -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--  ******************** 文件存储相关权限 ********************  -->
+
+
+
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -71,7 +127,23 @@
             android:configChanges="orientation|screenSize" />
         <activity android:name=".activity.three.eight.EventTwoActivity" />
         <activity android:name=".activity.four.eight.HandlerActivity" />
-        <activity android:name=".activity.eight.two.ResourceActivity"/>
+        <activity android:name=".activity.eight.two.ResourceActivity" />
+        <activity android:name=".activity.eight.three.PermissionManageActivity" />
+        <activity android:name=".activity.eight.three.PermissionManageOneActivity" />
+
+        <!-- 解决Android 7.0 读写本地文件的问题 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.fpp.status.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- 解决Android 7.0 读写本地文件的问题 -->
+
+
     </application>
 
 </manifest>
