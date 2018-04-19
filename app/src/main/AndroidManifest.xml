@@ -130,6 +130,9 @@
         <activity android:name=".activity.eight.two.ResourceActivity" />
         <activity android:name=".activity.eight.three.PermissionManageActivity" />
         <activity android:name=".activity.eight.three.PermissionManageOneActivity" />
+        <activity android:name=".activity.eight.four.SharePreferencesActivity"/>
+        <activity android:name=".activity.eight.four.SharePreferencesExampleActivity"/>
+        <activity android:name=".activity.eight.four.SQLiteActivity"/>
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <provider

@@ -17,6 +17,8 @@ import com.fpp.status.activity.customview.CustomViewSevenActivity;
 import com.fpp.status.activity.customview.CustomViewSixActivity;
 import com.fpp.status.activity.customview.CustomViewThreeActivity;
 import com.fpp.status.activity.customview.CustomViewTwoActivity;
+import com.fpp.status.activity.eight.four.SharePreferencesActivity;
+import com.fpp.status.activity.eight.four.SharePreferencesExampleActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
@@ -485,8 +487,13 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_eight_five:
+                intent = new Intent(this, SharePreferencesActivity.class);
+                startActivity(intent);
+
                 break;
             case R.id.btn_eight_six:
+                intent = new Intent(this, SharePreferencesExampleActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_eight_seven:
                 break;
