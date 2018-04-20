@@ -133,6 +133,11 @@
         <activity android:name=".activity.eight.four.SharePreferencesActivity"/>
         <activity android:name=".activity.eight.four.SharePreferencesExampleActivity"/>
         <activity android:name=".activity.eight.four.SQLiteActivity"/>
+        <activity android:name=".activity.eight.four.SQLiteExampleActivity"/>
+        <activity android:name=".activity.eight.four.ResultActivity"/>
+        <activity android:name=".activity.eight.four.GestureOneActivity"/>
+        <activity android:name=".activity.eight.four.GestureTwoActivity"/>
+
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <provider

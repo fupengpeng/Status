@@ -20,12 +20,12 @@
         "source": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\res\\drawable-hdpi\\bottom_bg.9.png"
     },
     {
-        "merged": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stripes.png",
-        "source": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\res\\drawable-hdpi\\stripes.png"
-    },
-    {
         "merged": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jpush_notification_icon.png",
         "source": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\res\\drawable-hdpi\\jpush_notification_icon.png"
+    },
+    {
+        "merged": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\stripes.png",
+        "source": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\res\\drawable-hdpi\\stripes.png"
     },
     {
         "merged": "E:\\workspace\\AndroidStudio\\workspaceTestApp\\Status\\JPushExample(806656)\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\border_bg.9.png",

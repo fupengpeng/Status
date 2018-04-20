@@ -620,7 +620,7 @@
             android:layout_weight="0.5"
             android:background="#ffaaaa"
             android:scaleType="centerCrop"
-            android:text="==="
+            android:text="SQLite使用"
             android:textSize="@dimen/dp_10" />
 
         <Button
@@ -630,7 +630,7 @@
             android:layout_weight="0.5"
             android:background="#0055aa"
             android:scaleType="centerCrop"
-            android:text="==="
+            android:text="手势处理"
             android:textSize="@dimen/dp_10" />
 
 

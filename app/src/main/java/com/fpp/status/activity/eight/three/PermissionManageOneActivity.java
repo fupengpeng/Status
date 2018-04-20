@@ -33,8 +33,6 @@ import butterknife.OnClick;
 public class PermissionManageOneActivity extends AppCompatActivity {
 
 
-
-
     @BindView(R.id.iv_atvt_permission_manage)
     ImageView ivAtvtPermissionManage;
     @BindView(R.id.btn_atvt_permission_manage_calendar)
@@ -74,9 +72,6 @@ public class PermissionManageOneActivity extends AppCompatActivity {
     }
 
 
-
-
-
     /**
      * 权限申请返回结果
      *
@@ -93,11 +88,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有日历权限，相关操作
-                    ToastUtils.showLong(this,"已有日历权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有日历权限，进行相关操作");
                     LogUtils.e("已有日历权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了日历相关权限");
+                    ToastUtils.showLong(this, "用户禁止了日历相关权限");
                     LogUtils.e("用户禁止了日历相关权限");
                 }
                 break;
@@ -105,11 +100,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有日历权限，相关操作
-                    ToastUtils.showLong(this,"已有相机权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有相机权限，进行相关操作");
                     LogUtils.e("已有相机权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了相机相关权限");
+                    ToastUtils.showLong(this, "用户禁止了相机相关权限");
                     LogUtils.e("用户禁止了相机相关权限");
                 }
 
@@ -119,11 +114,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有日历权限，相关操作
-                    ToastUtils.showLong(this,"已有通讯录权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有通讯录权限，进行相关操作");
                     LogUtils.e("已有通讯录权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了通讯录相关权限");
+                    ToastUtils.showLong(this, "用户禁止了通讯录相关权限");
                     LogUtils.e("用户禁止了通讯录相关权限");
                 }
                 break;
@@ -131,11 +126,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有位置权限，相关操作
-                    ToastUtils.showLong(this,"已有位置权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有位置权限，进行相关操作");
                     LogUtils.e("已有位置权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了位置相关权限");
+                    ToastUtils.showLong(this, "用户禁止了位置相关权限");
                     LogUtils.e("用户禁止了位置相关权限");
                 }
                 break;
@@ -143,11 +138,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有麦克风权限，相关操作
-                    ToastUtils.showLong(this,"已有麦克风权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有麦克风权限，进行相关操作");
                     LogUtils.e("已有麦克风权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了麦克风相关权限");
+                    ToastUtils.showLong(this, "用户禁止了麦克风相关权限");
                     LogUtils.e("用户禁止了麦克风相关权限");
                 }
                 break;
@@ -155,11 +150,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有电话相关权限，相关操作
-                    ToastUtils.showLong(this,"已有电话相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有电话相关权限，进行相关操作");
                     LogUtils.e("已有电话相关权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了电话相关权限");
+                    ToastUtils.showLong(this, "用户禁止了电话相关权限");
                     LogUtils.e("用户禁止了电话相关权限");
                 }
                 break;
@@ -167,11 +162,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有传感器相关权限，相关操作
-                    ToastUtils.showLong(this,"已有传感器相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有传感器相关权限，进行相关操作");
                     LogUtils.e("已有传感器相关权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了传感器相关权限");
+                    ToastUtils.showLong(this, "用户禁止了传感器相关权限");
                     LogUtils.e("用户禁止了传感器相关权限");
                 }
                 break;
@@ -179,11 +174,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有短信相关权限，相关操作
-                    ToastUtils.showLong(this,"已有短信相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有短信相关权限，进行相关操作");
                     LogUtils.e("已有短信相关权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了短信相关权限");
+                    ToastUtils.showLong(this, "用户禁止了短信相关权限");
                     LogUtils.e("用户禁止了短信相关权限");
                 }
                 break;
@@ -191,11 +186,11 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                 LogUtils.e("requestCode =  " + requestCode + "   permissions = " + permissions[0] + "   grantResults = " + grantResults[0]);
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // TODO: 2018/4/18 0018 有文件存储相关权限，相关操作
-                    ToastUtils.showLong(this,"已有文件存储相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有文件存储相关权限，进行相关操作");
                     LogUtils.e("已有文件存储相关权限，进行相关操作");
                 } else {
                     // TODO: 2018/4/18 0018 用户禁止了相关权限，对应提示
-                    ToastUtils.showLong(this,"用户禁止了文件存储相关权限");
+                    ToastUtils.showLong(this, "用户禁止了文件存储相关权限");
                     LogUtils.e("用户禁止了文件存储相关权限");
                 }
                 break;
@@ -246,7 +241,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.WRITE_CALENDAR}, 1001);
                 } else {
                     // TODO: 2018/4/18 0018 有日历权限，相关操作
-                    ToastUtils.showLong(this,"已有日历权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有日历权限，进行相关操作");
                     LogUtils.e("已有日历权限，进行相关操作");
                 }
 
@@ -258,7 +253,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.CAMERA}, 1002);
                 } else {
                     // TODO: 2018/4/18 0018 有相机权限，相关操作
-                    ToastUtils.showLong(this,"已有相机权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有相机权限，进行相关操作");
                     LogUtils.e("已有相机权限，进行相关操作");
                 }
                 break;
@@ -269,7 +264,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.WRITE_CONTACTS}, 1003);
                 } else {
                     // TODO: 2018/4/18 0018 有通讯录权限，相关操作
-                    ToastUtils.showLong(this,"已有通讯录权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有通讯录权限，进行相关操作");
                     LogUtils.e("已有通讯录权限，进行相关操作");
                 }
                 break;
@@ -280,7 +275,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.LOCATION_HARDWARE}, 1004);
                 } else {
                     // TODO: 2018/4/18 0018 有位置权限，相关操作
-                    ToastUtils.showLong(this,"已有位置权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有位置权限，进行相关操作");
                     LogUtils.e("已有位置权限，进行相关操作");
                 }
                 break;
@@ -291,7 +286,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission_group.MICROPHONE}, 1005);
                 } else {
                     // TODO: 2018/4/18 0018 有麦克风权限，相关操作
-                    ToastUtils.showLong(this,"已有麦克风权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有麦克风权限，进行相关操作");
                     LogUtils.e("已有麦克风权限，进行相关操作");
                 }
                 break;
@@ -302,7 +297,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.CALL_PHONE}, 1006);
                 } else {
                     // TODO: 2018/4/18 0018 有电话相关权限，相关操作
-                    ToastUtils.showLong(this,"已有电话相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有电话相关权限，进行相关操作");
                     LogUtils.e("已有电话相关权限，进行相关操作");
                 }
                 break;
@@ -313,7 +308,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.BODY_SENSORS}, 1007);
                 } else {
                     // TODO: 2018/4/18 0018 有传感器相关权限，相关操作
-                    ToastUtils.showLong(this,"已有传感器相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有传感器相关权限，进行相关操作");
                     LogUtils.e("已有传感器相关权限，进行相关操作");
                 }
                 break;
@@ -324,7 +319,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission_group.SMS}, 1008);
                 } else {
                     // TODO: 2018/4/18 0018 有短信相关权限，相关操作
-                    ToastUtils.showLong(this,"已有短信相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有短信相关权限，进行相关操作");
                     LogUtils.e("已有短信相关权限，进行相关操作");
                 }
                 break;
@@ -335,7 +330,7 @@ public class PermissionManageOneActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(PMA, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1009);
                 } else {
                     // TODO: 2018/4/18 0018 有文件存储相关权限，相关操作
-                    ToastUtils.showLong(this,"已有文件存储相关权限，进行相关操作");
+                    ToastUtils.showLong(this, "已有文件存储相关权限，进行相关操作");
                     LogUtils.e("已有文件存储相关权限，进行相关操作");
                 }
                 break;

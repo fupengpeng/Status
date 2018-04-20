@@ -184,14 +184,14 @@ public class PermissionManageActivity extends AppCompatActivity {
                         &&
 //                        !(PackageManager.PERMISSION_GRANTED ==
 //                        PMA.getPackageManager().checkPermission("android.permission.WRITE_EXTERNAL_STORAGE", PMA.getPackageName()))
-                    (ContextCompat.checkSelfPermission(PMA, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED))
+                        (ContextCompat.checkSelfPermission(PMA, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED))
 
                 {
                     // 申请权限
                     PMA.requestPermissions(
                             new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, PHOTO_ALBUM_REQUEST_CODE);
                     // 解释权限(系统自带)
-                    ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
                 } else {
                     //有存储空间权限
                     // TODO: 2018/1/12 0012 相册 ----- 判断系统版本决定是否拍照（涉及Android7.0存储空间问题）
@@ -273,8 +273,6 @@ public class PermissionManageActivity extends AppCompatActivity {
     }
 
 
-
-
     /**
      * 权限申请返回结果
      *
@@ -293,10 +291,10 @@ public class PermissionManageActivity extends AppCompatActivity {
                 } else {
                     //用户勾选了不再询问
                     //提示用户手动打开权限
-                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)  ||
-                            !ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) ||
+                            !ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         Toast.makeText(this, "相机权限已被禁止,请手动设置允许相关权限！", Toast.LENGTH_SHORT).show();
-                        intent =  new Intent(Settings.ACTION_SETTINGS);
+                        intent = new Intent(Settings.ACTION_SETTINGS);
                         startActivity(intent);
                     }
 
@@ -310,10 +308,10 @@ public class PermissionManageActivity extends AppCompatActivity {
                 } else {
                     //用户勾选了不再询问
                     //提示用户手动打开权限
-                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)   ||
-                            !ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) ||
+                            !ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         Toast.makeText(this, "相机权限已被禁止,请手动设置允许相关权限！", Toast.LENGTH_SHORT).show();
-                        intent =  new Intent(Settings.ACTION_SETTINGS);
+                        intent = new Intent(Settings.ACTION_SETTINGS);
                         startActivity(intent);
                     }
                 }
@@ -326,10 +324,10 @@ public class PermissionManageActivity extends AppCompatActivity {
                 } else {
                     //用户拒绝了所有权限
                     //提示用户手动打开权限
-                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)   ||
-                            !ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) ||
+                            !ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         Toast.makeText(this, "相机权限已被禁止,请手动设置允许相关权限！", Toast.LENGTH_SHORT).show();
-                        intent =  new Intent(Settings.ACTION_SETTINGS);
+                        intent = new Intent(Settings.ACTION_SETTINGS);
                         startActivity(intent);
                     }
                 }

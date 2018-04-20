@@ -77,8 +77,6 @@ public class SharePreferencesActivity extends AppCompatActivity {
     }
 
 
-
-
     private void initViewCount() {
         sharedPreferences = getSharedPreferences("count", MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -160,12 +158,12 @@ public class SharePreferencesActivity extends AppCompatActivity {
             case R.id.btn_atvt_share_preferences_three:
                 try {
                     // 如果手机插入了SD卡，且应用具有SD卡访问权限
-                    if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+                    if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                         // 获取SD卡对应的存储目录
                         File sdCardDir = Environment.getExternalStorageDirectory();
                         File targetFile = new File(sdCardDir.getCanonicalPath() + "/default_sp.bin");
                         // 以指定文件创建 RandomAccessFile对象
-                        RandomAccessFile raf = new RandomAccessFile(targetFile,"rw");
+                        RandomAccessFile raf = new RandomAccessFile(targetFile, "rw");
                         // 将文件记录指针移动到最后
                         raf.seek(targetFile.length());
                         // 输出文件内容
@@ -181,7 +179,7 @@ public class SharePreferencesActivity extends AppCompatActivity {
 
                 try {
                     // 如果手机插入了SD卡，且应用具有SD卡访问权限
-                    if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+                    if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                         // 获取SD卡对应的存储目录
                         File sdCardDir = Environment.getExternalStorageDirectory();
                         // 获取指定文件对应的输入流
