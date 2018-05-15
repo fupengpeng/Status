@@ -39,6 +39,7 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
 }
 
 apt {

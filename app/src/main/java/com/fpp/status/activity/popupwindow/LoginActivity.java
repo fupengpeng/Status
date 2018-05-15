@@ -16,6 +16,8 @@ import android.widget.ScrollView;
 
 import com.fpp.status.MainActivity;
 import com.fpp.status.R;
+import com.fpp.status.presenter.impl.LoginPresenter;
+import com.fpp.status.presenter.interf.ILoginPresenter;
 import com.fpp.status.presenter.usercenter.ILoginView;
 
 import butterknife.BindView;
@@ -48,6 +50,8 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
     ScrollView loginForm;
     @BindView(R.id.activity_login)
     LinearLayout activityLogin;
+
+    private ILoginPresenter loginPresenter = new LoginPresenter(this);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -150,8 +154,8 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
                     mEtPassword.setSelection(pwd.length());
                 break;
             case R.id.btn_login:
-
-
+                loginPresenter.login(mEtMobile.getText().toString().trim(),
+                        mEtPassword.getText().toString().trim());
 
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
@@ -160,16 +164,14 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
     }
 
     @Override
-    public void onLoginSuccess() {
-
-        // TODO: 2018/2/26 0026 获取到登录数据，保存到application中，跳转至MainActivity 
-
-
+    public void loginSuccess(String data) {
+//        界面的初始化
+//        发起请求以及请求完成后的界面更新
+//        点击的监听设置方法。
     }
 
     @Override
-    public void onLoginFail(Exception e) {
+    public void failure(Exception e) {
 
     }
-
 }
