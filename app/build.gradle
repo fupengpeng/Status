@@ -1,9 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+// TODO greenDao 使用第一步
+apply plugin: 'org.greenrobot.greendao'
+
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
 
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
@@ -24,13 +27,24 @@ android {
     }
 }
 
+// TODO greenDao 使用第二步
+greendao {
+    schemaVersion 2 // 数据库版本号
+    daoPackage 'com.fpp.status.greendao'   // greenDao 自动生成的代码保存的包名
+    targetGenDir 'src/main/java' //自动生成的代码存储的路径，默认是 build/generated/source/greendao.
+    generateTests false //true的时候自动生成测试单元
+    // targetGenDirTests:    // 测试单元的生成目录默认是 src/androidTest/java
+}
+
+// TODO greenDao 使用第四步
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //butterknife
-
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.jakewharton:butterknife:8.1.0'
     compile 'com.android.support:design:25.3.1'
@@ -40,6 +54,11 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    // TODO greenDao 使用第三步
+    compile 'org.greenrobot:greendao:3.2.2'// add library
+    compile 'org.greenrobot:greendao-generator:3.2.2'
+
 }
 
 apt {
