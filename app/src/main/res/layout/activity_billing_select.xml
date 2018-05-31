@@ -92,7 +92,7 @@
                     android:layout_height="@dimen/dp_30" />
                 <TextView
                     android:padding="@dimen/dp_6"
-                    android:background="@drawable/yuanquanright"
+                    android:background="@drawable/ic_check_circle_green_24dp"
                     android:textSize="@dimen/sp_20"
                     android:gravity="center"
                     android:textColor="#ffffff"
