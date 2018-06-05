@@ -2,6 +2,7 @@ package com.fpp.status.entity;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Generated;
 
 /**
  * Description:
@@ -18,6 +19,19 @@ public class Student {
     private int age;
     private String sex;
     private String grade;
+
+    @Generated(hash = 1612785574)
+    public Student(Long id, String name, int age, String sex, String grade) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.grade = grade;
+    }
+
+    @Generated(hash = 1556870573)
+    public Student() {
+    }
 
     public Long getId() {
         return id;
