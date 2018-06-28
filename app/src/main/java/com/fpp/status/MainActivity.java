@@ -569,6 +569,11 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_nine_seven:
+                intent = new Intent(this, com.fpp.status.activity.nine.seven.RecycleViewActivity.class);
+                startActivity(intent);
+
+
+
                 break;
             case R.id.btn_nine_eight:
                 break;

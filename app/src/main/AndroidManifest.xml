@@ -150,6 +150,10 @@
         <activity android:name=".activity.nine.four.WebActivity"/>
         <activity android:name=".activity.nine.five.JsActivity"/>
         <activity android:name=".activity.nine.six.AnimationActivity"/>
+        <activity android:name=".activity.nine.seven.RecycleViewActivity"/>
+
+
+
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <provider

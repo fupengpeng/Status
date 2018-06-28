@@ -714,7 +714,7 @@
             android:layout_weight="0.5"
             android:background="#ffaaaa"
             android:scaleType="centerCrop"
-            android:text="SQLite使用"
+            android:text="RecycleView嵌套"
             android:textSize="@dimen/dp_10" />
 
         <Button
