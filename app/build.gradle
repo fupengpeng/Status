@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.neenbedankt.android-apt'
 // TODO greenDao 使用第一步
 apply plugin: 'org.greenrobot.greendao'
 
@@ -18,7 +18,24 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "706fa0d3c155459a843743d4", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+
     }
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -50,20 +67,29 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
     compile 'org.greenrobot:eventbus:3.0.0'
-    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
 
     // TODO greenDao 使用第三步
     compile 'org.greenrobot:greendao:3.2.2'// add library
     compile 'org.greenrobot:greendao-generator:3.2.2'
 
+
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    compile 'com.google.code.gson:gson:2.8.5'
+
+    // 极光推送
+    compile 'cn.jiguang.sdk:jpush:3.1.1'  // 此处以JPush 3.1.1 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
+
 }
 
-apt {
-    arguments {
-        eventBusIndex "com.whoislcj.eventbus.MyEventBusIndex"
-    }
-}
+//apt {
+//    arguments {
+//        eventBusIndex "com.whoislcj.eventbus.MyEventBusIndex"
+//    }
+//}
 

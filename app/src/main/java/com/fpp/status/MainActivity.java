@@ -47,6 +47,12 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
+import com.fpp.status.activity.nine.five.JsActivity;
+import com.fpp.status.activity.nine.four.WebActivity;
+import com.fpp.status.activity.nine.one.RVOneActivity;
+import com.fpp.status.activity.nine.six.AnimationActivity;
+import com.fpp.status.activity.nine.three.PictureLargenActivity;
+import com.fpp.status.activity.nine.two.GridManagerActivity;
 import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
 import com.fpp.status.activity.test.MoveActivity;
@@ -179,6 +185,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnEightSeven;
     @BindView(R.id.btn_eight_eight)
     Button btnEightEight;
+    @BindView(R.id.btn_nine_one)
+    Button btnNineOne;
+    @BindView(R.id.btn_nine_two)
+    Button btnNineTwo;
+    @BindView(R.id.btn_nine_three)
+    Button btnNineThree;
+    @BindView(R.id.btn_nine_four)
+    Button btnNineFour;
+    @BindView(R.id.btn_nine_five)
+    Button btnNineFive;
+    @BindView(R.id.btn_nine_six)
+    Button btnNineSix;
+    @BindView(R.id.btn_nine_seven)
+    Button btnNineSeven;
+    @BindView(R.id.btn_nine_eight)
+    Button btnNineEight;
 
 
     @Override
@@ -194,6 +216,16 @@ public class MainActivity extends AppCompatActivity {
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+
+
+        // TODO: 2018/6/23 极光推送 --------------------------------------------------------------------
+
+
+
+
+
+
+
 //
 //
 //
@@ -273,6 +305,11 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight,
             R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three, R.id.btn_eight_four,
             R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven, R.id.btn_eight_eight
+            ,R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
+            , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
+            , R.id.btn_nine_seven, R.id.btn_nine_eight
+
+
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -506,8 +543,39 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, GestureOneActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_nine_one:
+                intent = new Intent(this, RVOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_two:
+                intent = new Intent(this, GridManagerActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_three:
+                intent = new Intent(this, PictureLargenActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_four:
+                intent = new Intent(this, WebActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_five:
+                intent = new Intent(this, JsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_six:
+                intent = new Intent(this, AnimationActivity.class);
+                startActivity(intent);
+
+                break;
+            case R.id.btn_nine_seven:
+                break;
+            case R.id.btn_nine_eight:
+                break;
         }
     }
+
+
 
 
 

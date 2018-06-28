@@ -39,6 +39,7 @@
     <application
         android:name="com.example.jpushdemo.ExampleApplication"
         android:allowBackup="false"
+        android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
 

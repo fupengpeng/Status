@@ -1,18 +1,22 @@
 -- Merging decision tree log ---
 manifest
 ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:1-176:12
+INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:1-176:12
+INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:1-176:12
+INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:1-176:12
+INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:1-176:12
 	package
 		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:3:5-29
 	android:versionName
 		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:5:5-32
 		INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml
 		INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:11-69
 	android:versionCode
 		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:4:5-30
 		INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml
 		INJECTED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml
-	xmlns:android
-		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:7:5-73
 	android:targetSdkVersion
@@ -105,10 +109,10 @@ application
 ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:39:5-175:19
 	android:label
 		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:42:9-41
-	android:allowBackup
-		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:41:9-36
 	android:icon
 		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:40:9-45
+	android:allowBackup
+		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:41:9-36
 	android:name
 		ADDED from C:\Users\fpp\workspace\Android\Test\Status\JPushExample(806656)\AndroidManifest.xml:43:9-64
 activity#com.example.jpushdemo.MainActivity

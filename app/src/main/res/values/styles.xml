@@ -61,4 +61,12 @@
         <item name="android:maxLines">1</item>
     </style>
 
+
+
+    <style name="dialog_anim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_appear</item>
+        <item name="android:windowExitAnimation">@anim/dialog_disappear</item>
+    </style>
+
+
 </resources>

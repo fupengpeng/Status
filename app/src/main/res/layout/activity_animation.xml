@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_atvt_animation_show"
+        android:text="弹出dialog"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45" />
+
+    <Button
+        android:id="@+id/btn_atvt_animation_hide"
+        android:text="隐藏dialog"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45" />
+
+</LinearLayout>

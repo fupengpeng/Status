@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.fpp.status">
-
 
 
     <!--  ******************** 相机相关权限 ********************  -->
@@ -10,8 +10,8 @@
 
 
     <!--  ******************** 日历相关权限 ********************  -->
-    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
-    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
     <!--  ******************** 日历相关权限 ********************  -->
 
     <!--  ******************** 通讯录相关权限 ********************  -->
@@ -54,12 +54,18 @@
     <!--  ******************** 文件存储相关权限 ********************  -->
 
 
-
-
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
 
     <application
-        android:name="com.fpp.status.base.BaseApplication"
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -131,14 +137,19 @@
         <activity android:name=".activity.eight.two.ResourceActivity" />
         <activity android:name=".activity.eight.three.PermissionManageActivity" />
         <activity android:name=".activity.eight.three.PermissionManageOneActivity" />
-        <activity android:name=".activity.eight.four.SharePreferencesActivity"/>
-        <activity android:name=".activity.eight.four.SharePreferencesExampleActivity"/>
-        <activity android:name=".activity.eight.four.SQLiteActivity"/>
-        <activity android:name=".activity.eight.four.SQLiteExampleActivity"/>
-        <activity android:name=".activity.eight.four.ResultActivity"/>
-        <activity android:name=".activity.eight.four.GestureOneActivity"/>
-        <activity android:name=".activity.eight.four.GestureTwoActivity"/>
-
+        <activity android:name=".activity.eight.four.SharePreferencesActivity" />
+        <activity android:name=".activity.eight.four.SharePreferencesExampleActivity" />
+        <activity android:name=".activity.eight.four.SQLiteActivity" />
+        <activity android:name=".activity.eight.four.SQLiteExampleActivity" />
+        <activity android:name=".activity.eight.four.ResultActivity" />
+        <activity android:name=".activity.eight.four.GestureOneActivity" />
+        <activity android:name=".activity.eight.four.GestureTwoActivity" />
+        <activity android:name=".activity.nine.one.RVOneActivity" />
+        <activity android:name=".activity.nine.two.GridManagerActivity" />
+        <activity android:name=".activity.nine.three.PictureLargenActivity"/>
+        <activity android:name=".activity.nine.four.WebActivity"/>
+        <activity android:name=".activity.nine.five.JsActivity"/>
+        <activity android:name=".activity.nine.six.AnimationActivity"/>
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->
         <provider
@@ -152,6 +163,45 @@
         </provider>
         <!-- 解决Android 7.0 读写本地文件的问题 -->
 
+
+        <!--********** 激光推送开始 ***********-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".receiver.push.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.fpp.status" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name=".receiver.push.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.fpp.status" />
+            </intent-filter>
+        </receiver>
+        <!--********** 激光推送结束 ***********-->
 
     </application>
 
