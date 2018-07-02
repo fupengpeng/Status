@@ -28,7 +28,7 @@ public class RecycleViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycleview);
         initView();
-        getData();
+
     }
 
 
@@ -36,6 +36,7 @@ public class RecycleViewActivity extends AppCompatActivity {
      * 初始化view
      */
     private void initView() {
+        getData();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_atvt_section);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -53,7 +54,7 @@ public class RecycleViewActivity extends AppCompatActivity {
             sectionBean.setTitle("章节 一 ");
 
             List<TopicBean> topicBeans = new ArrayList<>();
-            for (int j = 0; j < 20; j++) {
+            for (int j = 0; j < 22; j++) {
                 TopicBean topicBean = new TopicBean();
                 topicBean.setId(i + "-" + j);
                 topicBean.setIs_wrong(true);

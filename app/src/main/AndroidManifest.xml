@@ -151,6 +151,7 @@
         <activity android:name=".activity.nine.five.JsActivity"/>
         <activity android:name=".activity.nine.six.AnimationActivity"/>
         <activity android:name=".activity.nine.seven.RecycleViewActivity"/>
+        <activity android:name=".activity.nine.eight.DialogFragmentActivity"/>
 
 
 

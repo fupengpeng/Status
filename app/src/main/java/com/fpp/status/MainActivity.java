@@ -47,6 +47,7 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
+import com.fpp.status.activity.nine.eight.DialogFragmentActivity;
 import com.fpp.status.activity.nine.five.JsActivity;
 import com.fpp.status.activity.nine.four.WebActivity;
 import com.fpp.status.activity.nine.one.RVOneActivity;
@@ -576,6 +577,8 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_nine_eight:
+                intent = new Intent(this, DialogFragmentActivity.class);
+                startActivity(intent);
                 break;
         }
     }

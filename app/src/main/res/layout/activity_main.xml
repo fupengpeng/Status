@@ -724,7 +724,7 @@
             android:layout_weight="0.5"
             android:background="#0055aa"
             android:scaleType="centerCrop"
-            android:text="手势处理"
+            android:text="DialogFragment应用"
             android:textSize="@dimen/dp_10" />
 
 
