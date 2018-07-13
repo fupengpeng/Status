@@ -26,5 +26,14 @@
 
     <!--  ==========  导航页模块结束  ==========  -->
 
-
+    <string-array name="magic_effect">
+        <item>RotateDown</item>
+        <item>RotateUp</item>
+        <item>RotateY</item>
+        <item>Standard</item>
+        <item>Alpha</item>
+        <item>ScaleIn</item>
+        <item>RotateDown and Alpha</item>
+        <item>RotateDown and Alpha And ScaleIn</item>
+    </string-array>
 </resources>

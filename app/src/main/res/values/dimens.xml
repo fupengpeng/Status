@@ -7,6 +7,11 @@
     <dimen name="fab_margin">16dp</dimen>
 
 
+    <dimen name="dot_margin">4dp</dimen>
+    <dimen name="dot_h">4dp</dimen>
+    <dimen name="dot_selected_h">8dp</dimen>
+    <dimen name="dot_container_h">30dp</dimen>
+
     <!--  ==========  导航页模块开始  ==========  -->
     <dimen name="text_size_large">28sp</dimen>
 

@@ -56,6 +56,9 @@ import com.fpp.status.activity.nine.three.PictureLargenActivity;
 import com.fpp.status.activity.nine.two.GridManagerActivity;
 import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
+import com.fpp.status.activity.ten.one.GreenDaoActivity;
+import com.fpp.status.activity.ten.three.TenThreeActivity;
+import com.fpp.status.activity.ten.two.TenTwoActivity;
 import com.fpp.status.activity.test.MoveActivity;
 import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
@@ -202,6 +205,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnNineSeven;
     @BindView(R.id.btn_nine_eight)
     Button btnNineEight;
+    @BindView(R.id.btn_ten_one)
+    Button btnTenOne;
+    @BindView(R.id.btn_ten_two)
+    Button btnTenTwo;
+    @BindView(R.id.btn_ten_three)
+    Button btnTenThree;
+    @BindView(R.id.btn_ten_four)
+    Button btnTenFour;
+    @BindView(R.id.btn_ten_five)
+    Button btnTenFive;
+    @BindView(R.id.btn_ten_six)
+    Button btnTenSix;
+    @BindView(R.id.btn_ten_seven)
+    Button btnTenSeven;
+    @BindView(R.id.btn_ten_eight)
+    Button btnTenEight;
 
 
     @Override
@@ -220,11 +239,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         // TODO: 2018/6/23 极光推送 --------------------------------------------------------------------
-
-
-
-
-
 
 
 //
@@ -306,10 +320,13 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight,
             R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three, R.id.btn_eight_four,
             R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven, R.id.btn_eight_eight
-            ,R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
+            , R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
             , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
             , R.id.btn_nine_seven, R.id.btn_nine_eight
-
+            ,R.id.btn_ten_one, R.id.btn_ten_two
+            , R.id.btn_ten_three, R.id.btn_ten_four
+            , R.id.btn_ten_five, R.id.btn_ten_six
+            , R.id.btn_ten_seven, R.id.btn_ten_eight
 
     })
     public void onViewClicked(View view) {
@@ -574,14 +591,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
 
-
                 break;
             case R.id.btn_nine_eight:
-                intent = new Intent(this, DialogFragmentActivity.class);
+                intent = new Intent(this, com.fpp.status.transformer.MainActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.btn_ten_one:
+                intent = new Intent(this, GreenDaoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_two:
+                intent = new Intent(this, TenTwoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_three:
+                intent = new Intent(this, TenThreeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_four:
+                break;
+            case R.id.btn_ten_five:
+                break;
+            case R.id.btn_ten_six:
+                break;
+            case R.id.btn_ten_seven:
+                break;
+            case R.id.btn_ten_eight:
                 break;
         }
     }
+
 
 
 

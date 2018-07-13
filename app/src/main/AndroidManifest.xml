@@ -152,8 +152,14 @@
         <activity android:name=".activity.nine.six.AnimationActivity"/>
         <activity android:name=".activity.nine.seven.RecycleViewActivity"/>
         <activity android:name=".activity.nine.eight.DialogFragmentActivity"/>
-
-
+        <activity android:name=".activity.ten.one.GreenDaoActivity"/>
+        <activity android:name=".transformer.MainActivity"/>
+        <activity android:name=".transformer.CircleViewPagerActivity"/>
+        <activity android:name=".transformer.StandardViewPagerActivity"/>
+        <activity android:name=".transformer.CarouselActivity"/>
+        <activity android:name=".transformer.CustomViewPagerActivity"/>
+        <activity android:name=".activity.ten.two.TenTwoActivity"/>
+        <activity android:name=".activity.ten.three.TenThreeActivity"/>
 
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->

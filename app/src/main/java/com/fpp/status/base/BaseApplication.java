@@ -4,9 +4,11 @@ import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.fpp.status.R;
 import com.fpp.status.utils.Constant;
 import com.fpp.status.utils.SPUtils;
 
@@ -16,8 +18,11 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import cn.jpush.android.api.JPushInterface;
@@ -36,7 +41,10 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
     private final String TAG = this.getClass().getSimpleName();
     // 用于格式化日期,作为日志文件名的一部分
 
-
+    public static List<?> images=new ArrayList<>();
+    public static List<String> titles=new ArrayList<>();
+    public static int H,W;
+    public static BaseApplication app;
 
     /**
      * 标识网络是否连接
@@ -74,6 +82,19 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
         super.onCreate();
         // 初始化实例
         instance = this;
+        initApp();
+    }
+
+    private void initApp() {
+        app=this;
+        getScreen(this);
+
+    }
+
+    public void getScreen(Context aty) {
+        DisplayMetrics dm = aty.getResources().getDisplayMetrics();
+        H=dm.heightPixels;
+        W=dm.widthPixels;
     }
 
     /**

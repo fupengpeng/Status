@@ -27,8 +27,7 @@ public class StudentDao extends AbstractDao<Student, Long> {
         public final static Property Id = new Property(0, Long.class, "id", true, "_id");
         public final static Property Name = new Property(1, String.class, "name", false, "NAME");
         public final static Property Age = new Property(2, int.class, "age", false, "AGE");
-        public final static Property Sex = new Property(3, String.class, "sex", false, "SEX");
-        public final static Property Grade = new Property(4, String.class, "grade", false, "GRADE");
+        public final static Property Num = new Property(3, String.class, "num", false, "NUM");
     }
 
 
@@ -47,8 +46,7 @@ public class StudentDao extends AbstractDao<Student, Long> {
                 "\"_id\" INTEGER PRIMARY KEY ," + // 0: id
                 "\"NAME\" TEXT," + // 1: name
                 "\"AGE\" INTEGER NOT NULL ," + // 2: age
-                "\"SEX\" TEXT," + // 3: sex
-                "\"GRADE\" TEXT);"); // 4: grade
+                "\"NUM\" TEXT);"); // 3: num
     }
 
     /** Drops the underlying database table. */
@@ -72,14 +70,9 @@ public class StudentDao extends AbstractDao<Student, Long> {
         }
         stmt.bindLong(3, entity.getAge());
  
-        String sex = entity.getSex();
-        if (sex != null) {
-            stmt.bindString(4, sex);
-        }
- 
-        String grade = entity.getGrade();
-        if (grade != null) {
-            stmt.bindString(5, grade);
+        String num = entity.getNum();
+        if (num != null) {
+            stmt.bindString(4, num);
         }
     }
 
@@ -98,14 +91,9 @@ public class StudentDao extends AbstractDao<Student, Long> {
         }
         stmt.bindLong(3, entity.getAge());
  
-        String sex = entity.getSex();
-        if (sex != null) {
-            stmt.bindString(4, sex);
-        }
- 
-        String grade = entity.getGrade();
-        if (grade != null) {
-            stmt.bindString(5, grade);
+        String num = entity.getNum();
+        if (num != null) {
+            stmt.bindString(4, num);
         }
     }
 
@@ -116,13 +104,8 @@ public class StudentDao extends AbstractDao<Student, Long> {
 
     @Override
     public Student readEntity(Cursor cursor, int offset) {
-        Student entity = new Student( //
-            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
-            cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // name
-            cursor.getInt(offset + 2), // age
-            cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // sex
-            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4) // grade
-        );
+        Student entity = new Student();
+        readEntity(cursor, entity, offset);
         return entity;
     }
      
@@ -131,8 +114,7 @@ public class StudentDao extends AbstractDao<Student, Long> {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setName(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setAge(cursor.getInt(offset + 2));
-        entity.setSex(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
-        entity.setGrade(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
+        entity.setNum(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
      }
     
     @Override

@@ -59,6 +59,10 @@ public class PWOneActivity extends AppCompatActivity  implements ViewPager.OnPag
         //配置轮播图ViewPager
         mViewPager = ((ViewPager) findViewById(R.id.live_view_pager));
 
+//        //设置Page间间距
+//        mViewPager.setPageMargin(30);
+//        //设置缓存的页面数量
+//        mViewPager.setOffscreenPageLimit(3);
         mItems = new ArrayList<>();
         mAdapter = new MyPagerAdapter(mItems, this);
         mViewPager.setAdapter(mAdapter);

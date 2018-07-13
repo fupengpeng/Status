@@ -3,6 +3,7 @@ package com.fpp.status.entity;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Keep;
 
 /**
  * Description:
@@ -10,66 +11,96 @@ import org.greenrobot.greendao.annotation.Generated;
  * Date: 2018/5/31  14:19
  */
 
-@Entity
+@Entity(generateConstructors = false)
 public class Student {
-    //Id 默认为主键，自增方式
+
+
     @Id
     private Long id;
     private String name;
     private int age;
-    private String sex;
-    private String grade;
+    private String num;
 
-    @Generated(hash = 1612785574)
-    public Student(Long id, String name, int age, String sex, String grade) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.grade = grade;
-    }
-
-    @Generated(hash = 1556870573)
     public Student() {
     }
 
+    @Keep
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+
+    public Student(Long id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    @Keep
     public Long getId() {
         return id;
     }
 
+    @Keep
     public void setId(Long id) {
         this.id = id;
     }
 
+    @Keep
     public String getName() {
         return name;
     }
 
+    @Keep
     public void setName(String name) {
         this.name = name;
     }
 
+    @Keep
     public int getAge() {
         return age;
     }
 
+    @Keep
     public void setAge(int age) {
         this.age = age;
     }
 
-    public String getSex() {
-        return sex;
+    @Keep
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+
+        Student student = (Student) o;
+
+        return name.equals(student.name);
+
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    @Keep
+    @Override
+    public int hashCode() {
+        return (int) (id ^ (id >>> 32));
     }
 
-    public String getGrade() {
-        return grade;
+    @Keep
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    public String getNum() {
+        return this.num;
     }
+
+    public void setNum(String num) {
+        this.num = num;
+    }
+
 }
