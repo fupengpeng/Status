@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <com.fpp.status.view.banner.Banner
-        android:id="@+id/banner"
+    <View
+        android:background="#ff0000"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:banner_layout="@layout/banner_custom_viewpager" />
+        android:layout_height="@dimen/dp_1"/>
+    <RelativeLayout
+        android:background="#ffaaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
+        <com.fpp.status.view.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:background="#ffaa00"
+            app:banner_layout="@layout/banner_custom_viewpager" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_below="@id/banner"
+            android:background="#ff0000"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:padding="10dp"
+            android:background="@color/recycler_bg"
+            android:text="这是一个修改banner布局文件的例子，你可以按照这个套路修改里面的内容，比如修改指示器位置啊，文字的大小啊，他们之间的间距啊，或者修改他们的摆放位置等待"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+    <View
+        android:background="#ff0000"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/banner"
-        android:padding="10dp"
-        android:text="这是一个修改banner布局文件的例子，你可以按照这个套路修改里面的内容，比如修改指示器位置啊，文字的大小啊，他们之间的间距啊，或者修改他们的摆放位置等待"
-        android:textColor="@color/colorPrimary" />
-</RelativeLayout>
+        android:layout_height="@dimen/dp_1"/>
+</LinearLayout>

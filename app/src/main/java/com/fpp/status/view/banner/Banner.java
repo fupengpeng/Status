@@ -99,9 +99,13 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         initView(context, attrs);
     }
 
+    /**
+     * @param context
+     * @param attrs
+     */
     private void initView(Context context, AttributeSet attrs) {
         imageViews.clear();
-        LogUtil.e("initView  = " +"初始化view");
+        LogUtil.e("initView  = " + "初始化view");
         handleTypedArray(context, attrs);
         View view = LayoutInflater.from(context).inflate(mLayoutResId, this
                 , true);
@@ -117,6 +121,10 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         initViewPagerScroll();
     }
 
+    /**
+     * @param context
+     * @param attrs
+     */
     private void handleTypedArray(Context context, AttributeSet attrs) {
 
         LogUtil.e("handleTypedArray = " + "");
@@ -142,6 +150,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         typedArray.recycle();
     }
 
+    /**
+     *
+     */
     private void initViewPagerScroll() {
 
         LogUtil.e("initViewPagerScroll + " + " ");
@@ -157,23 +168,41 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
     }
 
 
+    /**
+     * @param isAutoPlay
+     * @return
+     */
     public Banner isAutoPlay(boolean isAutoPlay) {
         this.isAutoPlay = isAutoPlay;
         return this;
     }
 
+    /**
+     * 设置图片加载器
+     *
+     * @param imageLoader
+     * @return
+     */
     public Banner setImageLoader(ImageLoaderInterface imageLoader) {
-        LogUtil.e("setImageLoader + " + "---  imageLoader = " + imageLoader
+        LogUtil.e("setImageLoader + " + "---  设置图片加载器 = " + imageLoader.hashCode()
         );
         this.imageLoader = imageLoader;
         return this;
     }
 
+    /**
+     * @param delayTime
+     * @return
+     */
     public Banner setDelayTime(int delayTime) {
         this.delayTime = delayTime;
         return this;
     }
 
+    /**
+     * @param type
+     * @return
+     */
     public Banner setIndicatorGravity(int type) {
         switch (type) {
             case BannerConfig.LEFT:
@@ -189,6 +218,10 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         return this;
     }
 
+    /**
+     * @param transformer
+     * @return
+     */
     public Banner setBannerAnimation(Class<? extends PageTransformer> transformer) {
         try {
             setPageTransformer(true, transformer.newInstance());
@@ -228,35 +261,62 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         return this;
     }
 
+    /**
+     * @param titles
+     * @return
+     */
     public Banner setBannerTitles(List<String> titles) {
         this.titles = titles;
         return this;
     }
 
+    /**
+     * 设置轮播显示样式
+     *
+     * @param bannerStyle
+     * @return
+     */
     public Banner setBannerStyle(int bannerStyle) {
         this.bannerStyle = bannerStyle;
         return this;
     }
 
+    /**
+     * @param isScroll
+     * @return
+     */
     public Banner setViewPagerIsScroll(boolean isScroll) {
         this.isScroll = isScroll;
         return this;
     }
 
+    /**
+     * 设置图片集合
+     *
+     * @param imageUrls
+     * @return
+     */
     public Banner setImages(List<?> imageUrls) {
-        LogUtil.e("setImages + " + "---  imageUrls = " + imageUrls.size()
+        LogUtil.e("setImages + " + "---  设置加载的图片链接集合  imageUrls = " + imageUrls.size()
         );
         this.imageUrls = imageUrls;
         this.count = imageUrls.size();
         return this;
     }
 
+    /**
+     * @param imageUrls
+     * @param titles
+     */
     public void update(List<?> imageUrls, List<String> titles) {
         this.titles.clear();
         this.titles.addAll(titles);
         update(imageUrls);
     }
 
+    /**
+     * @param imageUrls
+     */
     public void update(List<?> imageUrls) {
         LogUtil.e("update + " + "---  imag ff    eUrls = " + imageUrls.size()
         );
@@ -268,6 +328,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         start();
     }
 
+    /**
+     * @param bannerStyle
+     */
     public void updateBannerStyle(int bannerStyle) {
         indicator.setVisibility(GONE);
         numIndicator.setVisibility(GONE);
@@ -279,13 +342,21 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         start();
     }
 
+    /**
+     * 开启轮播
+     * @return
+     */
     public Banner start() {
         setBannerStyleUI();
         setImageList(imageUrls);
+
         setData();
         return this;
     }
 
+    /**
+     *
+     */
     private void setTitleStyleUI() {
         if (titles.size() != imageUrls.size()) {
             throw new RuntimeException("[Banner] --> The number of titles and images is different");
@@ -309,8 +380,11 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     }
 
+    /**
+     * 根据配置设置轮播样式
+     */
     private void setBannerStyleUI() {
-        int visibility =count > 1 ? View.VISIBLE :View.GONE;
+        int visibility = count > 1 ? View.VISIBLE : View.GONE;
         switch (bannerStyle) {
             case BannerConfig.CIRCLE_INDICATOR:
                 indicator.setVisibility(visibility);
@@ -333,6 +407,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     }
 
+    /**
+     *
+     */
     private void initImages() {
         imageViews.clear();
         if (bannerStyle == BannerConfig.CIRCLE_INDICATOR ||
@@ -346,6 +423,10 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     }
 
+    /**
+     * 设置图片集合
+     * @param imagesUrl
+     */
     private void setImageList(List<?> imagesUrl) {
         if (imagesUrl == null || imagesUrl.size() <= 0) {
             bannerDefaultImage.setVisibility(VISIBLE);
@@ -356,11 +437,21 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         initImages();
         for (int i = 0; i <= count + 1; i++) {
             View imageView = null;
+            View iv = null;
             if (imageLoader != null) {
                 imageView = imageLoader.createImageView(context);
             }
             if (imageView == null) {
-                imageView = new ImageView(context);
+//                imageView = new ImageView(context);
+
+
+                imageView = inflate(context,R.layout.item_vp_iv_round_drawable,null);
+                imageView.setClipToOutline(true);
+                // 使用自定义的ImageView
+//                View view = inflate(context,R.layout.item_vp_iv_round,null);
+//                iv = view.findViewById(R.id.iv_item_vp_iv_round);
+//                imageView = view;
+
             }
             setScaleType(imageView);
             Object url = null;
@@ -379,6 +470,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     }
 
+    /**
+     * @param imageView
+     */
     private void setScaleType(View imageView) {
         if (imageView instanceof ImageView) {
             ImageView view = ((ImageView) imageView);
@@ -412,6 +506,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     }
 
+    /**
+     *
+     */
     private void createIndicator() {
         indicatorImages.clear();
         indicator.removeAllViews();
@@ -437,6 +534,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
     }
 
 
+    /**
+     * 初始数据设置
+     */
     private void setData() {
         currentItem = 1;
         if (adapter == null) {
@@ -453,30 +553,55 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         } else {
             viewPager.setScrollable(false);
         }
+        // 是否自动轮播
         if (isAutoPlay)
             startAutoPlay();
     }
 
 
+    /**
+     *
+     */
     public void startAutoPlay() {
+        LogUtil.e("startAutoPlay  " + "设置自动轮播，清理所有之前的轮播任务，开始新的轮播任务"
+
+        );
         handler.removeCallbacks(task);
         handler.postDelayed(task, delayTime);
     }
 
+    /**
+     *
+     */
     public void stopAutoPlay() {
         handler.removeCallbacks(task);
     }
 
+    /**
+     *
+     */
     private final Runnable task = new Runnable() {
         @Override
         public void run() {
+            LogUtil.e("task  run  " + "开始新的轮播任务"
+                    + "   task = " + task.hashCode()
+            );
+
             if (count > 1 && isAutoPlay) {
                 currentItem = currentItem % (count + 1) + 1;
 //                Log.i(tag, "curr:" + currentItem + " count:" + count);
                 if (currentItem == 1) {
                     viewPager.setCurrentItem(currentItem, false);
+                    LogUtil.e("task  run  " + "添加轮播任务到消息队列中去"
+                            + "   task = " + task.hashCode()
+                    );
                     handler.post(task);
                 } else {
+                    LogUtil.e("task  run  " + "添加轮播任务到消息队列中去（根据已有的轮播下标添加轮播任务，" +
+                            "并设置在 指定的时间之后开始  ）"
+                            + "   task = " + task.hashCode()
+                            + "   delayTime = " + delayTime
+                    );
                     viewPager.setCurrentItem(currentItem);
                     handler.postDelayed(task, delayTime);
                 }
@@ -484,6 +609,10 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     };
 
+    /**
+     * @param ev
+     * @return
+     */
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
 //        Log.i(tag, ev.getAction() + "--" + isAutoPlay);
@@ -512,6 +641,9 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         return realPosition;
     }
 
+    /**
+     * 轮播适配器设置
+     */
     class BannerPagerAdapter extends PagerAdapter {
 
         @Override
@@ -556,8 +688,12 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 
     }
 
+    /**
+     * @param state
+     */
     @Override
     public void onPageScrollStateChanged(int state) {
+        LogUtil.e("onPageScrollStateChanged    state = " + state);
         if (mOnPageChangeListener != null) {
             mOnPageChangeListener.onPageScrollStateChanged(state);
         }
@@ -582,16 +718,31 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         }
     }
 
+    /**
+     * @param position
+     * @param positionOffset
+     * @param positionOffsetPixels
+     */
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        LogUtil.e("onPageScrolled    position = " + position
+                + "   positionOffset  = " +positionOffset
+                + "   positionOffsetPixels  = " +positionOffsetPixels
+        );
         if (mOnPageChangeListener != null) {
             mOnPageChangeListener.onPageScrolled(toRealPosition(position), positionOffset, positionOffsetPixels);
         }
     }
 
+    /**
+     * @param position
+     */
     @Override
     public void onPageSelected(int position) {
-        currentItem=position;
+
+        LogUtil.e("onPageSelected    position = " + position);
+
+        currentItem = position;
         if (mOnPageChangeListener != null) {
             mOnPageChangeListener.onPageSelected(toRealPosition(position));
         }
@@ -624,6 +775,10 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
 
     }
 
+    /**
+     * @param listener
+     * @return
+     */
     @Deprecated
     public Banner setOnBannerClickListener(OnBannerClickListener listener) {
         this.bannerListener = listener;
@@ -631,6 +786,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
     }
 
     /**
+     * 点击事件设置
      * 废弃了旧版接口，新版的接口下标是从1开始，同时解决下标越界问题
      *
      * @param listener

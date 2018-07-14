@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
 
+import com.fpp.status.utils.LogUtil;
+
 import java.lang.ref.WeakReference;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -30,6 +32,7 @@ public class WeakHandler {
     public WeakHandler() {
         mCallback = null;
         mExec = new ExecHandler();
+        LogUtil.e("WeakHandler  " + "WeakHandler构造器 -- 001");
     }
 
     /**
@@ -45,6 +48,7 @@ public class WeakHandler {
     public WeakHandler(@Nullable Handler.Callback callback) {
         mCallback = callback; // Hard referencing body
         mExec = new ExecHandler(new WeakReference<>(callback)); // Weak referencing inside ExecHandler
+        LogUtil.e("WeakHandler  " + "WeakHandler构造器 -- 002");
     }
 
     /**
@@ -55,6 +59,7 @@ public class WeakHandler {
     public WeakHandler(@NonNull Looper looper) {
         mCallback = null;
         mExec = new ExecHandler(looper);
+        LogUtil.e("WeakHandler  " + "WeakHandler构造器 -- 003-----looper"+looper);
     }
 
     /**
@@ -67,20 +72,24 @@ public class WeakHandler {
     public WeakHandler(@NonNull Looper looper, @NonNull Handler.Callback callback) {
         mCallback = callback;
         mExec = new ExecHandler(looper, new WeakReference<>(callback));
+        LogUtil.e("WeakHandler  " + "WeakHandler构造器 -- 004" + looper);
     }
 
     /**
      * Causes the Runnable r to be added to the message queue.
      * The runnable will be run on the thread to which this handler is
      * attached.
-     *
-     * @param r The Runnable that will be executed.
+     *  使可运行的r被添加到消息队列中。 runnable将会在这个处理器附加的线程上运行。
+     * @param r The Runnable that will be executed.  将被执行的Runnable。
      *
      * @return Returns true if the Runnable was successfully placed in to the
      *         message queue.  Returns false on failure, usually because the
      *         looper processing the message queue is exiting.
+     *         如果Runnable被成功地放置到消息队列中，则返回true。
+     *         在失败时返回false，通常是因为looper处理消息队列正在退出。
      */
     public final boolean post(@NonNull Runnable r) {
+        LogUtil.e("post  " + "WeakHandler构造器 -- 004"  + r.toString());
         return mExec.post(wrapRunnable(r));
     }
 
@@ -102,6 +111,10 @@ public class WeakHandler {
      *         occurs then the message will be dropped.
      */
     public final boolean postAtTime(@NonNull Runnable r, long uptimeMillis) {
+        LogUtil.e("postAtTime  " + "添加指定任务到消息队列中，以便在指定的时间运行"
+                + "   r = "  +  r.toString()
+                + "   uptimeMillis = "  +  uptimeMillis
+        );
         return mExec.postAtTime(wrapRunnable(r), uptimeMillis);
     }
 
@@ -125,6 +138,11 @@ public class WeakHandler {
      * @see android.os.SystemClock#uptimeMillis
      */
     public final boolean postAtTime(Runnable r, Object token, long uptimeMillis) {
+        LogUtil.e("postAtTime  " + "添加指定任务到消息队列中，以便在指定的时间运行"
+                + "   r = "  +  r.toString()
+                + "   uptimeMillis = "  +  uptimeMillis
+                + "   token = "  +  token
+        );
         return mExec.postAtTime(wrapRunnable(r), token, uptimeMillis);
     }
 
@@ -133,6 +151,8 @@ public class WeakHandler {
      * after the specified amount of time elapses.
      * The runnable will be run on the thread to which this handler
      * is attached.
+     * 使可运行的r被添加到消息队列中，以便在指定的时间流逝后运行。
+     * runnable将会在这个处理器附加的线程上运行。
      *
      * @param r The Runnable that will be executed.
      * @param delayMillis The delay (in milliseconds) until the Runnable
@@ -146,6 +166,11 @@ public class WeakHandler {
      *         occurs then the message will be dropped.
      */
     public final boolean postDelayed(Runnable r, long delayMillis) {
+        LogUtil.e("postDelayed  " + "使可运行的r被添加到消息队列中，以便在指定的时间流逝后运行。\n" +
+                "runnable将会在这个处理器附加的线程上运行。"
+                + "   r = "  +  r.hashCode()
+                + "   delayMillis = "  +  delayMillis
+        );
         return mExec.postDelayed(wrapRunnable(r), delayMillis);
     }
 
@@ -154,6 +179,8 @@ public class WeakHandler {
      * Causes the Runnable r to executed on the next iteration through the
      * message queue. The runnable will be run on the thread to which this
      * handler is attached.
+     * 将一条消息发布到一个实现Runnable的对象上。
+     * 使Runnable r在下一次迭代中通过消息队列执行。runnable将会在这个处理器附加的线程上运行。
      * <b>This method is only for use in very special circumstances -- it
      * can easily starve the message queue, cause ordering problems, or have
      * other unexpected side-effects.</b>
@@ -165,15 +192,27 @@ public class WeakHandler {
      *         looper processing the message queue is exiting.
      */
     public final boolean postAtFrontOfQueue(Runnable r) {
+        LogUtil.e("removeCallbacks  " + "      将一条消息发布到一个实现Runnable的对象上。\n" +
+                "        使Runnable r在下一次迭代中通过消息队列执行。runnable将会在这个处理器附加的线程上运行。"
+                + "   r = "  +  r.toString()
+        );
+
         return mExec.postAtFrontOfQueue(wrapRunnable(r));
     }
 
     /**
      * Remove any pending posts of Runnable r that are in the message queue.
+     * 删除在消息队列中Runnable r的任何待定帖子。
      */
     public final void removeCallbacks(Runnable r) {
         final WeakRunnable runnable = mRunnables.remove(r);
+        LogUtil.e("removeCallbacks  " + "删除在消息队列中Runnable r 的任务  "
+                + "   r = "  +  r.hashCode()
+        );
         if (runnable != null) {
+            LogUtil.e("removeCallbacks  " + "删除在消息队列中Runnable r的任何待定帖子。"
+                    + "   r = "  +  r.toString()
+            );
             mExec.removeCallbacks(runnable);
         }
     }
@@ -182,10 +221,19 @@ public class WeakHandler {
      * Remove any pending posts of Runnable <var>r</var> with Object
      * <var>token</var> that are in the message queue.  If <var>token</var> is null,
      * all callbacks will be removed.
+     * 在消息队列中删除Runnable的任何待定帖子。如果“令牌”为空，则所有回调都将被删除。
      */
     public final void removeCallbacks(Runnable r, Object token) {
         final WeakRunnable runnable = mRunnables.remove(r);
+        LogUtil.e("removeCallbacks  " + "删除在消息队列中Runnable r的任何待定帖子。"
+                + "   r = "  +  r.toString()
+                + "   token = "  +  token
+        );
         if (runnable != null) {
+            LogUtil.e("removeCallbacks  " + "删除在消息队列中Runnable r的任何待定帖子。"
+                    + "   r = "  +  r.toString()
+                    + "   token = "  +  token
+            );
             mExec.removeCallbacks(runnable, token);
         }
     }
@@ -194,23 +242,31 @@ public class WeakHandler {
      * Pushes a message onto the end of the message queue after all pending messages
      * before the current time. It will be received in callback,
      * in the thread attached to this handler.
+     * 在当前时间之前，将一条消息推到消息队列的末尾。它将在回调中接收，在连接到这个处理器的线程中。
      *
      * @return Returns true if the message was successfully placed in to the
      *         message queue.  Returns false on failure, usually because the
      *         looper processing the message queue is exiting.
      */
     public final boolean sendMessage(Message msg) {
+        LogUtil.e("sendMessage  " + "在当前时间之前，将一条消息推到消息队列的末尾。它将在回调中接收，在连接到这个处理器的线程中。。"
+                + "   msg = "  +  msg.toString()
+        );
         return mExec.sendMessage(msg);
     }
 
     /**
      * Sends a Message containing only the what value.
+     * 只发送包含该值的消息。
      *
      * @return Returns true if the message was successfully placed in to the
      *         message queue.  Returns false on failure, usually because the
      *         looper processing the message queue is exiting.
      */
     public final boolean sendEmptyMessage(int what) {
+        LogUtil.e("sendEmptyMessage  " + "只发送包含该值的消息。"
+                + "   what = "  +  what
+        );
         return mExec.sendEmptyMessage(what);
     }
 
@@ -219,11 +275,17 @@ public class WeakHandler {
      * after the specified amount of time elapses.
      * @see #sendMessageDelayed(Message, long)
      *
+     * 发送一个只包含该值的消息，在指定的时间之后发送。
+     *
      * @return Returns true if the message was successfully placed in to the
      *         message queue.  Returns false on failure, usually because the
      *         looper processing the message queue is exiting.
      */
     public final boolean sendEmptyMessageDelayed(int what, long delayMillis) {
+        LogUtil.e("sendEmptyMessageDelayed  " + "发送一个只包含该值的消息，在指定的时间之后发送。"
+                + "   what = "  +  what
+                + "   delayMillis = "  +  delayMillis
+        );
         return mExec.sendEmptyMessageDelayed(what, delayMillis);
     }
 
@@ -231,12 +293,17 @@ public class WeakHandler {
      * Sends a Message containing only the what value, to be delivered
      * at a specific time.
      * @see #sendMessageAtTime(Message, long)
+     * 发送一个仅包含该值的消息，在特定的时间发送。
      *
      * @return Returns true if the message was successfully placed in to the
      *         message queue.  Returns false on failure, usually because the
      *         looper processing the message queue is exiting.
      */
     public final boolean sendEmptyMessageAtTime(int what, long uptimeMillis) {
+        LogUtil.e("sendEmptyMessageAtTime  " + "发送一个只包含该值的消息，在特定的时间发送。"
+                + "   what = "  +  what
+                + "   uptimeMillis = "  +  uptimeMillis
+        );
         return mExec.sendEmptyMessageAtTime(what, uptimeMillis);
     }
 
@@ -244,6 +311,8 @@ public class WeakHandler {
      * Enqueue a message into the message queue after all pending messages
      * before (current time + delayMillis). You will receive it in
      * callback, in the thread attached to this handler.
+     *
+     * 在所有未决消息（当前时间+delayMillis）之后，将一条消息放入消息队列中。您将在回调中接收它，在这个处理程序附带的线程中。
      *
      * @return Returns true if the message was successfully placed in to the
      *         message queue.  Returns false on failure, usually because the
@@ -253,6 +322,10 @@ public class WeakHandler {
      *         occurs then the message will be dropped.
      */
     public final boolean sendMessageDelayed(Message msg, long delayMillis) {
+        LogUtil.e("sendMessageDelayed  " + "在所有未决消息（当前时间+delayMillis）之后，将一条消息放入消息队列中。您将在回调中接收它，在这个处理程序附带的线程中。"
+                + "   msg = "  +  msg
+                + "   delayMillis = "  +  delayMillis
+        );
         return mExec.sendMessageDelayed(msg, delayMillis);
     }
 
@@ -275,6 +348,11 @@ public class WeakHandler {
      *         occurs then the message will be dropped.
      */
     public boolean sendMessageAtTime(Message msg, long uptimeMillis) {
+        LogUtil.e("sendMessageAtTime  " + "  "
+                + "   msg = "  +  msg
+                + "   uptimeMillis = "  +  uptimeMillis
+        );
+
         return mExec.sendMessageAtTime(msg, uptimeMillis);
     }
 
@@ -291,6 +369,9 @@ public class WeakHandler {
      *         looper processing the message queue is exiting.
      */
     public final boolean sendMessageAtFrontOfQueue(Message msg) {
+        LogUtil.e("sendMessageAtFrontOfQueue  " + "  "
+                + "   msg = "  +  msg
+        );
         return mExec.sendMessageAtFrontOfQueue(msg);
     }
 
@@ -299,6 +380,10 @@ public class WeakHandler {
      * message queue.
      */
     public final void removeMessages(int what) {
+
+        LogUtil.e("removeMessages  " + "  "
+                + "   what = "  +  what
+        );
         mExec.removeMessages(what);
     }
 
@@ -308,6 +393,11 @@ public class WeakHandler {
      * all messages will be removed.
      */
     public final void removeMessages(int what, Object object) {
+
+        LogUtil.e("removeMessages  " + "  "
+                + "   what = "  +  what
+                + "   object = "  +  object
+        );
         mExec.removeMessages(what, object);
     }
 
@@ -317,6 +407,10 @@ public class WeakHandler {
      * all callbacks and messages will be removed.
      */
     public final void removeCallbacksAndMessages(Object token) {
+        LogUtil.e("removeCallbacksAndMessages  " + "  "
+                + "   token = "  +  token
+                + "   token = "  +  token
+        );
         mExec.removeCallbacksAndMessages(token);
     }
 
@@ -325,6 +419,11 @@ public class WeakHandler {
      * the message queue.
      */
     public final boolean hasMessages(int what) {
+        LogUtil.e("hasMessages  " + "  "
+                + "   what = "  +  what
+                + "   what = "  +  what
+        );
+
         return mExec.hasMessages(what);
     }
 
@@ -333,10 +432,16 @@ public class WeakHandler {
      * whose obj is 'object' in the message queue.
      */
     public final boolean hasMessages(int what, Object object) {
+        LogUtil.e("hasMessages  " + "  "
+                + "   what = "  +  what
+                + "   object = "  +  object
+        );
         return mExec.hasMessages(what, object);
     }
 
     public final Looper getLooper() {
+        LogUtil.e("getLooper  " + "  "
+        );
         return mExec.getLooper();
     }
 
@@ -347,6 +452,9 @@ public class WeakHandler {
         }
         final ChainedRef hardRef = new ChainedRef(mLock, r);
         mRunnables.insertAfter(hardRef);
+        LogUtil.e("wrapRunnable  " + "   加锁，执行任务？？？ "
+                + "   r = "  +  r.hashCode()
+        );
         return hardRef.wrapper;
     }
 
@@ -376,10 +484,14 @@ public class WeakHandler {
             if (mCallback == null) {
                 return;
             }
+
             final Callback callback = mCallback.get();
             if (callback == null) { // Already disposed
                 return;
             }
+            LogUtil.e("ExecHandler   handleMessage  " + "  "
+                    + "   msg = "  +  msg.toString()
+            );
             callback.handleMessage(msg);
         }
     }
@@ -395,6 +507,8 @@ public class WeakHandler {
 
         @Override
         public void run() {
+            LogUtil.e("WeakRunnable   run  " + "  启动线程执行任务 "  + this.hashCode()
+            );
             final Runnable delegate = mDelegate.get();
             final ChainedRef reference = mReference.get();
             if (reference != null) {
@@ -427,6 +541,9 @@ public class WeakHandler {
 
         public WeakRunnable remove() {
             lock.lock();
+            LogUtil.e("WeakRunnable   remove  " + "   移除  任务  "
+                    + "   lock = "  +  lock.toString()
+            );
             try {
                 if (prev != null) {
                     prev.next = next;
@@ -444,6 +561,9 @@ public class WeakHandler {
 
         public void insertAfter(@NonNull ChainedRef candidate) {
             lock.lock();
+            LogUtil.e("WeakRunnable   insertAfter  " + "  插入任务后，给线程加锁 "
+                    + "   candidate = "  +  candidate.hashCode()
+            );
             try {
                 if (this.next != null) {
                     this.next.prev = candidate;
@@ -460,6 +580,10 @@ public class WeakHandler {
         @Nullable
         public WeakRunnable remove(Runnable obj) {
             lock.lock();
+
+            LogUtil.e("WeakRunnable   remove  " + "  删除消息队列中的任务 "
+                    + "   obj = "  +  obj.hashCode()
+            );
             try {
                 ChainedRef curr = this.next; // Skipping head
                 while (curr != null) {

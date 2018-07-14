@@ -44,7 +44,7 @@ public class BannerScroller extends Scroller {
     }
 
     public void setDuration(int time) {
-        LogUtil.e("setDuration = " + "---  time = " + time
+        LogUtil.e("setDuration = " + "---  设置时间   = " + time
         );
         mDuration = time;
     }

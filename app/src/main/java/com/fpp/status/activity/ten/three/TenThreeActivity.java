@@ -54,7 +54,7 @@ public class TenThreeActivity  extends AppCompatActivity implements OnBannerList
 
     @Override
     public void OnBannerClick(int position) {
-
+        ToastUtils.showLong(this,"position = " + position);
     }
 
     //如果你需要考虑更好的体验，可以这么操作

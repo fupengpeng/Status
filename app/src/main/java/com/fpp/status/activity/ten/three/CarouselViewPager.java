@@ -17,11 +17,13 @@ public class CarouselViewPager  extends BannerViewPager {
     public CarouselViewPager(Context context) {
         super(context);
         this.setPageMargin(40);
+        this.setOffscreenPageLimit(4);
     }
 
     public CarouselViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setPageMargin(40);
+        this.setOffscreenPageLimit(4);
     }
 
     @Override
