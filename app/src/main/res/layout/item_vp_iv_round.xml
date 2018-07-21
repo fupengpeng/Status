@@ -7,10 +7,11 @@
 
 <!--    app:borderRadius="@dimen/dp_5"
     app:imageType="round"-->
-    <com.fpp.status.view.RoundImageView
+    <ImageView
         android:id="@+id/iv_item_vp_iv_round"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#00aaff"
       />
+
 </LinearLayout>

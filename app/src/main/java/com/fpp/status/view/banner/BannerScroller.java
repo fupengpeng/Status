@@ -24,7 +24,7 @@ public class BannerScroller extends Scroller {
 
     @Override
     public void startScroll(int startX, int startY, int dx, int dy, int duration) {
-        LogUtil.e("startScroll + " + "---  startX = " + startX
+        LogUtil.e("---startScroll + " + "---  startX = " + startX
                 + "   startY = " + startY
                 + "   dx = " + dx
                 + "   dy = " + dy

@@ -347,7 +347,8 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
      * @return
      */
     public Banner start() {
-        setBannerStyleUI();
+//        setBannerStyleUI();
+        LogUtil.e("start = " + imageUrls.size());
         setImageList(imageUrls);
 
         setData();
@@ -428,6 +429,7 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
      * @param imagesUrl
      */
     private void setImageList(List<?> imagesUrl) {
+        LogUtil.e("setImageList  imagesUrl = " + imagesUrl.size());
         if (imagesUrl == null || imagesUrl.size() <= 0) {
             bannerDefaultImage.setVisibility(VISIBLE);
             Log.e(tag, "The image data set is empty.");
@@ -463,10 +465,12 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
                 url = imagesUrl.get(i - 1);
             }
             imageViews.add(imageView);
-            if (imageLoader != null)
+            LogUtil.e("  imageviews = " + imageViews.size());
+            if (imageLoader != null){
                 imageLoader.displayImage(context, url, imageView);
-            else
+            } else{
                 Log.e(tag, "Please set images loader.");
+            }
         }
     }
 
@@ -693,11 +697,14 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
      */
     @Override
     public void onPageScrollStateChanged(int state) {
-        LogUtil.e("onPageScrollStateChanged    state = " + state);
         if (mOnPageChangeListener != null) {
             mOnPageChangeListener.onPageScrollStateChanged(state);
         }
-//        Log.i(tag,"currentItem: "+currentItem);
+        LogUtil.e("onPageScrollStateChanged  "
+                + "  state = " + state
+                + "   currentItem = " + currentItem
+                + "   count = " + count
+        );
         switch (state) {
             case 0://No operation
                 if (currentItem == 0) {
@@ -725,10 +732,10 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
      */
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        LogUtil.e("onPageScrolled    position = " + position
-                + "   positionOffset  = " +positionOffset
-                + "   positionOffsetPixels  = " +positionOffsetPixels
-        );
+//        LogUtil.e("onPageScrolled    position = " + position
+//                + "   positionOffset  = " +positionOffset
+//                + "   positionOffsetPixels  = " +positionOffsetPixels
+//        );
         if (mOnPageChangeListener != null) {
             mOnPageChangeListener.onPageScrolled(toRealPosition(position), positionOffset, positionOffsetPixels);
         }
@@ -740,7 +747,11 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
     @Override
     public void onPageSelected(int position) {
 
-        LogUtil.e("onPageSelected    position = " + position);
+        LogUtil.e("onPageSelected  "
+                + "  position = " + position
+                + "   currentItem = " + currentItem
+                + "   count = " + count
+        );
 
         currentItem = position;
         if (mOnPageChangeListener != null) {

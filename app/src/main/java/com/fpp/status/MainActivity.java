@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +57,7 @@ import com.fpp.status.activity.nine.three.PictureLargenActivity;
 import com.fpp.status.activity.nine.two.GridManagerActivity;
 import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
+import com.fpp.status.activity.ten.five.VideoActivity;
 import com.fpp.status.activity.ten.one.GreenDaoActivity;
 import com.fpp.status.activity.ten.three.TenThreeActivity;
 import com.fpp.status.activity.ten.two.TenTwoActivity;
@@ -612,6 +614,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_ten_four:
                 break;
             case R.id.btn_ten_five:
+                intent = new Intent(this, VideoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_ten_six:
                 break;

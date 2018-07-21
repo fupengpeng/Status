@@ -62,10 +62,26 @@
     </style>
 
 
-
     <style name="dialog_anim" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/dialog_appear</item>
         <item name="android:windowExitAnimation">@anim/dialog_disappear</item>
+    </style>
+
+
+    <!-- 视频播放 -->
+    <declare-styleable name="UniversalMediaController">
+        <attr name="uvv_scalable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="UniversalVideoView">
+        <attr name="uvv_fitXY" format="boolean" />
+        <attr name="uvv_autoRotation" format="boolean" />
+    </declare-styleable>
+
+    <style name="Universal.Widget.ProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/cvv_progress_rotate</item>
+        <item name="android:indeterminateDuration">1000</item>
     </style>
 
 

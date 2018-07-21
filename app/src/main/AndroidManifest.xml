@@ -159,6 +159,7 @@
         <activity android:name=".transformer.CustomViewPagerActivity"/>
         <activity android:name=".activity.ten.two.TenTwoActivity"/>
         <activity android:name=".activity.ten.three.TenThreeActivity"/>
+        <activity android:name=".activity.ten.five.VideoActivity"/>
 
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->

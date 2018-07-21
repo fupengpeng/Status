@@ -776,7 +776,7 @@
                     android:layout_weight="0.5"
                     android:background="#ffff00"
                     android:scaleType="centerCrop"
-                    android:text="权限管理"
+                    android:text="轮播广告"
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -796,7 +796,7 @@
                     android:layout_weight="0.5"
                     android:background="#aa95ff"
                     android:scaleType="centerCrop"
-                    android:text="Android与WEB交互"
+                    android:text="视频播放"
                     android:textSize="@dimen/dp_10" />
 
                 <Button
