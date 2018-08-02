@@ -71,7 +71,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".DLActivity" />
         <activity
             android:name=".activity.twotwo.PWActivity"
@@ -121,11 +129,7 @@
         <activity android:name=".activity.fourfive.GuideTwoActivity" />
         <activity android:name=".activity.foursix.GuideThreeActivity" />
         <activity android:name=".activity.fourseven.GuideFourActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- 设置Activity可以监听屏幕方向改变的事件 -->
         <activity
@@ -133,6 +137,7 @@
             android:configChanges="orientation|screenSize" />
         <activity android:name=".activity.three.eight.EventTwoActivity" />
         <activity android:name=".activity.four.eight.HandlerActivity" />
+        <activity android:name=".activity.eight.one.AllSelectListActivity"/>
         <activity android:name=".activity.eight.two.ResourceActivity" />
         <activity android:name=".activity.eight.three.PermissionManageActivity" />
         <activity android:name=".activity.eight.three.PermissionManageOneActivity" />
@@ -160,6 +165,9 @@
         <activity android:name=".activity.ten.two.TenTwoActivity"/>
         <activity android:name=".activity.ten.three.TenThreeActivity"/>
         <activity android:name=".activity.ten.five.VideoActivity"/>
+        <activity android:name=".activity.ten.six.DLActivity"/>
+        <activity android:name=".activity.ten.six.TenSixActivity"/>
+        <activity android:name=".activity.ten.six.TaskManageActivity"/>
 
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->

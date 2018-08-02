@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.fpp.status.R;
+import com.fpp.status.db.DbManager;
+import com.fpp.status.greendao.DaoSession;
 import com.fpp.status.utils.Constant;
 import com.fpp.status.utils.SPUtils;
 
@@ -65,6 +67,11 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
         return context;
     }
 
+
+    // greenDao  session
+    public static DaoSession daoSession;
+
+
     @Override
     public void onCreate() {
 //      Thread.setDefaultUncaughtExceptionHandler(this);
@@ -83,8 +90,17 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
         // 初始化实例
         instance = this;
         initApp();
-    }
 
+        // 初始化数据库
+        initDatabase();
+
+
+    }
+    private void initDatabase() {
+        //初始化数据库
+        daoSession = DbManager.getDaoSession(context);
+
+    }
     private void initApp() {
         app=this;
         getScreen(this);

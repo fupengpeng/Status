@@ -567,7 +567,7 @@
                     android:layout_weight="0.5"
                     android:background="#aaff00"
                     android:scaleType="centerCrop"
-                    android:text="==="
+                    android:text="全选RV实现"
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -806,7 +806,7 @@
                     android:layout_weight="0.5"
                     android:background="#ff00ff"
                     android:scaleType="centerCrop"
-                    android:text="动画处理"
+                    android:text="下载文件"
                     android:textSize="@dimen/dp_10" />
 
                 <Button

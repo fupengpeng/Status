@@ -22,6 +22,7 @@ import com.fpp.status.activity.eight.four.GestureOneActivity;
 import com.fpp.status.activity.eight.four.SQLiteActivity;
 import com.fpp.status.activity.eight.four.SharePreferencesActivity;
 import com.fpp.status.activity.eight.four.SharePreferencesExampleActivity;
+import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
@@ -528,7 +529,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_eight_one:
-                // TODO: 2018/4/10 0010
+                intent = new Intent(this, AllSelectListActivity.class);
+                startActivity(intent);
 
 
                 break;
@@ -618,6 +620,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_six:
+
+                intent = new Intent(this, com.fpp.status.activity.ten.six.DLActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_ten_seven:
                 break;

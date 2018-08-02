@@ -3,7 +3,35 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/title_atvt"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+        <TextView
+            android:id="@+id/tv_atvt_all_select_list_return"
+            android:text="返回"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent" />
+
+        <TextView
+
+            android:text="标题"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:id="@+id/tv_atvt_all_select_list_edit"
+            android:gravity="center"
+            android:text="编辑"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/lv_fragment_shopping_cart"
         android:layout_width="match_parent"
