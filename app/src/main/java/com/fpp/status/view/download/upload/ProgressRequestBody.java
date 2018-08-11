@@ -13,8 +13,9 @@ import okio.ForwardingSink;
 import okio.Okio;
 import okio.Sink;
 
-import static com.huazhong.car.drivingjiang.view.download.data.Consts.ERROR;
-import static com.huazhong.car.drivingjiang.view.download.data.Consts.PROGRESS;
+import static com.fpp.status.view.download.data.Consts.ERROR;
+import static com.fpp.status.view.download.data.Consts.PROGRESS;
+
 
 public class ProgressRequestBody extends RequestBody {
     private RequestBody requestBody;

@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.fpp.status.R;
-import com.fpp.status.activity.ten.five.costom.UniversalMediaController;
-import com.fpp.status.activity.ten.five.costom.UniversalVideoView;
+import com.fpp.status.activity.ten.five.costom.CMC;
+import com.fpp.status.activity.ten.five.costom.CVV;
 import com.fpp.status.utils.LogUtil;
 
 /**
@@ -19,14 +19,14 @@ import com.fpp.status.utils.LogUtil;
  */
 
 public class VideoActivity  extends AppCompatActivity
-        implements UniversalVideoView.VideoViewCallback{
+        implements CVV.VVC{
 
     private static final String TAG = "MainActivity";
     private static final String SEEK_POSITION_KEY = "SEEK_POSITION_KEY";
     private static final String VIDEO_URL = "http://img.xiaojiangjiakao.com/20180627/7podaodingdiantingchejiaocheng.mp4";
 
-    UniversalVideoView mVideoView;
-    UniversalMediaController mMediaController;
+    CVV mVideoView;
+    CMC mMediaController;
 
     View mBottomLayout;
     View mVideoLayout;
@@ -43,8 +43,8 @@ public class VideoActivity  extends AppCompatActivity
 
         mVideoLayout = findViewById(R.id.video_layout);
         mBottomLayout = findViewById(R.id.bottom_layout);
-        mVideoView = (UniversalVideoView) findViewById(R.id.videoView);
-        mMediaController = (UniversalMediaController) findViewById(R.id.media_controller);
+        mVideoView = (CVV) findViewById(R.id.videoView);
+        mMediaController = (CMC) findViewById(R.id.media_controller);
         mVideoView.setMediaController(mMediaController);
         setVideoAreaSize();
         mVideoView.setVideoViewCallback(this);
@@ -168,6 +168,11 @@ public class VideoActivity  extends AppCompatActivity
     @Override
     public void onBufferingEnd(MediaPlayer mediaPlayer) {
         LogUtil.d(TAG, "onBufferingEnd UniversalVideoView callback");
+    }
+
+    @Override
+    public void finishActivity() {
+
     }
 
     @Override

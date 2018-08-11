@@ -168,6 +168,20 @@
         <activity android:name=".activity.ten.six.DLActivity"/>
         <activity android:name=".activity.ten.six.TenSixActivity"/>
         <activity android:name=".activity.ten.six.TaskManageActivity"/>
+        <activity android:name=".activity.ten.four.TenFourTwoActivity"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!-- 解决Android 7.0 读写本地文件的问题 -->

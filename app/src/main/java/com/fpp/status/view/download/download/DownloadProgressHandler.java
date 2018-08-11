@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 
 import com.fpp.status.base.BaseApplication;
+import com.fpp.status.greendao.DownloadDataDao;
 import com.fpp.status.view.download.callback.DownloadCallback;
 import com.fpp.status.view.download.data.DownloadData;
 import com.fpp.status.view.download.utils.Utils;

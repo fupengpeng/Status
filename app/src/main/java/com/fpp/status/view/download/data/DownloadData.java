@@ -1,10 +1,9 @@
 package com.fpp.status.view.download.data;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
-import com.othershe.dutil.data.*;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
@@ -18,6 +17,7 @@ import static com.fpp.status.view.download.data.Consts.START;
  * Author: fpp
  * Date: 2018/7/27  11:14
  */
+@SuppressLint("ParcelCreator")
 @Entity
 public class DownloadData implements Parcelable {
     static final long serialVersionUID = 49L;
@@ -74,6 +74,8 @@ public class DownloadData implements Parcelable {
         this.lastModify = lastModify;
         this.date = date;
     }
+
+
 
 
     public Long getId() {
@@ -262,17 +264,19 @@ public class DownloadData implements Parcelable {
         this.lastModify = lastModify;
     }
 
-    public static final Creator<DownloadData> CREATOR = new Creator<DownloadData>() {
-        @Override
-        public DownloadData createFromParcel(Parcel source) {
-            return new DownloadData(source);
-        }
+//    public static final Creator<DownloadData> CREATOR = new Creator<DownloadData>() {
+//        @Override
+//        public DownloadData createFromParcel(Parcel source) {
+//            return new DownloadData(source);
+//        }
+//
+//        @Override
+//        public DownloadData[] newArray(int size) {
+//            return new DownloadData[size];
+//        }
+//    };
 
-        @Override
-        public DownloadData[] newArray(int size) {
-            return new DownloadData[size];
-        }
-    };
+
 
 
 }

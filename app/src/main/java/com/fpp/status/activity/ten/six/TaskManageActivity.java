@@ -8,9 +8,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.fpp.status.R;
+import com.fpp.status.base.BaseApplication;
+import com.fpp.status.greendao.DownloadDataDao;
+import com.fpp.status.view.download.data.DownloadData;
 import com.othershe.baseadapter.ViewHolder;
 import com.othershe.baseadapter.interfaces.OnItemChildClickListener;
-import com.othershe.dutil.data.DownloadData;
+
 import com.othershe.dutil.db.Db;
 import com.othershe.dutil.download.DownloadManger;
 
@@ -49,31 +52,47 @@ public class TaskManageActivity  extends AppCompatActivity {
         downloadList = (RecyclerView) findViewById(R.id.download_list);
         final List<DownloadData> datas = new ArrayList<>();
         if (Db.getInstance(mContext).getData(url1) != null){
-            datas.add(Db.getInstance(mContext).getData(url1));
+            DownloadData downloadData =
+                    BaseApplication.daoSession.getDownloadDataDao()
+                            .queryBuilder().where(DownloadDataDao.Properties.Url.eq(url1)).unique();
+
+            datas.add(downloadData);
         }else{
             datas.add(new DownloadData(url1, path, "欢乐斗地主.mp4"));
         }
 
         if (Db.getInstance(mContext).getData(url2) != null){
-            datas.add(Db.getInstance(mContext).getData(url2));
+            DownloadData downloadData =
+                    BaseApplication.daoSession.getDownloadDataDao()
+                            .queryBuilder().where(DownloadDataDao.Properties.Url.eq(url2)).unique();
+            datas.add(downloadData);
         }else{
             datas.add(new DownloadData(url2, path, "球球大作战.mp4"));
         }
 
         if (Db.getInstance(mContext).getData(url3) != null){
-            datas.add(Db.getInstance(mContext).getData(url3));
+            DownloadData downloadData =
+                    BaseApplication.daoSession.getDownloadDataDao()
+                            .queryBuilder().where(DownloadDataDao.Properties.Url.eq(url3)).unique();
+            datas.add(downloadData);
         }else{
             datas.add(new DownloadData(url3, path, "节奏大师.mp4"));
         }
 
         if (Db.getInstance(mContext).getData(url4) != null){
-            datas.add(Db.getInstance(mContext).getData(url4));
+            DownloadData downloadData =
+                    BaseApplication.daoSession.getDownloadDataDao()
+                            .queryBuilder().where(DownloadDataDao.Properties.Url.eq(url4)).unique();
+            datas.add(downloadData);
         }else{
             datas.add(new DownloadData(url4, path, "部落冲突.mp4"));
         }
 
         if (Db.getInstance(mContext).getData(url5) != null){
-            datas.add(Db.getInstance(mContext).getData(url5));
+            DownloadData downloadData =
+                    BaseApplication.daoSession.getDownloadDataDao()
+                            .queryBuilder().where(DownloadDataDao.Properties.Url.eq(url5)).unique();
+            datas.add(downloadData);
         }else{
             datas.add(new DownloadData(url5, path, "捕鱼达人.mp4"));
         }

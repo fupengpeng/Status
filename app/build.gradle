@@ -27,9 +27,9 @@ android {
         }
 
         manifestPlaceholders = [
-                JPUSH_PKGNAME : applicationId,
+                JPUSH_PKGNAME: applicationId,
                 JPUSH_APPKEY : "706fa0d3c155459a843743d4", //JPush上注册的包名对应的appkey.
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
 
 
@@ -86,11 +86,6 @@ dependencies {
     compile 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
 
 
-
-
-
-
-
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'io.reactivex:rxjava:1.1.0'
@@ -106,6 +101,21 @@ dependencies {
     compile 'com.github.Othershe:DUtil:1.1.1'
 
     compile 'com.othershe:BaseAdapter:1.1.0'
+
+//    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+//    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+    // required, enough for most devices.
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+
+//    // Other ABIs: optional
+//    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'
+//
+//    // ExoPlayer as IMediaPlayer: optional, experimental
+//    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
 
 
 }

@@ -3,6 +3,7 @@ package com.fpp.status.view.download.download;
 import android.content.Context;
 
 import com.fpp.status.base.BaseApplication;
+import com.fpp.status.greendao.DownloadDataDao;
 import com.fpp.status.view.download.callback.DownloadCallback;
 import com.fpp.status.view.download.data.DownloadData;
 import com.fpp.status.view.download.net.OkHttpManager;

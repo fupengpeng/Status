@@ -10,7 +10,7 @@
         android:layout_height="200dp"
         android:background="@android:color/black">
 
-        <com.fpp.status.activity.ten.five.costom.UniversalVideoView
+        <com.fpp.status.activity.ten.five.costom.CVV
             android:id="@+id/videoView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -18,7 +18,7 @@
             app:uvv_autoRotation="true"
             app:uvv_fitXY="false" />
 
-        <com.fpp.status.activity.ten.five.costom.UniversalMediaController
+        <com.fpp.status.activity.ten.five.costom.CMC
             android:id="@+id/media_controller"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
