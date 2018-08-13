@@ -32,8 +32,9 @@ import java.util.Map;
 
 public class CVV   extends SurfaceView
         implements CMC.MPC,OrientationDetector.OrientationChangeListener{
-    private String TAG = "UniversalVideoView";
+    private String TAG = "CVV";
     // settable by the client
+    // 播放uri
     private Uri mUri;
 
     // all possible internal states
@@ -61,8 +62,11 @@ public class CVV   extends SurfaceView
     private int         mVideoHeight;
     private int         mSurfaceWidth;
     private int         mSurfaceHeight;
+    // 播放控制器
     private CMC mMediaController;
+    // 播放完成监听器
     private MediaPlayer.OnCompletionListener mOnCompletionListener;
+    // 播放监听器
     private MediaPlayer.OnPreparedListener mOnPreparedListener;
     private int         mCurrentBufferPercentage;
     private MediaPlayer.OnErrorListener mOnErrorListener;
@@ -79,6 +83,7 @@ public class CVV   extends SurfaceView
     private int  mVideoViewLayoutHeight = 0;
 
     private OrientationDetector mOrientationDetector;
+    // 播放控制响应
     private VVC videoViewCallback;
 
     public CVV(Context context) {

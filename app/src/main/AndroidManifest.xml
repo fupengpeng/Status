@@ -169,6 +169,7 @@
         <activity android:name=".activity.ten.six.TenSixActivity"/>
         <activity android:name=".activity.ten.six.TaskManageActivity"/>
         <activity android:name=".activity.ten.four.TenFourTwoActivity"/>
+        <activity android:name=".activity.ten.seven.TenSevenActivity"/>
 
 
 

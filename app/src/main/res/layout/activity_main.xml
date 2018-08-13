@@ -816,7 +816,7 @@
                     android:layout_weight="0.5"
                     android:background="#ffaaaa"
                     android:scaleType="centerCrop"
-                    android:text="RecycleView嵌套"
+                    android:text="SurfaceView播放视频"
                     android:textSize="@dimen/dp_10" />
 
                 <Button

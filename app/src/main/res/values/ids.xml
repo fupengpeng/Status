@@ -9,4 +9,17 @@
     <item name="numIndicatorInside" type="id"/>
     <item name="indicatorInside" type="id"/>
     <item name="bannerDefaultImage" type="id"/>
+
+
+
+
+    <item name="jz_fullscreen_id" type="id" />
+    <item name="jz_tiny_id" type="id" />
+
+
+
+
+
+
+
 </resources>

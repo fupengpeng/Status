@@ -61,6 +61,7 @@ import com.fpp.status.activity.popupwindow.PWOneActivity;
 import com.fpp.status.activity.ten.five.VideoActivity;
 import com.fpp.status.activity.ten.four.TenFourTwoActivity;
 import com.fpp.status.activity.ten.one.GreenDaoActivity;
+import com.fpp.status.activity.ten.seven.TenSevenActivity;
 import com.fpp.status.activity.ten.three.TenThreeActivity;
 import com.fpp.status.activity.ten.two.TenTwoActivity;
 import com.fpp.status.activity.test.MoveActivity;
@@ -628,6 +629,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_seven:
+                intent = new Intent(this, TenSevenActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_ten_eight:
                 break;
