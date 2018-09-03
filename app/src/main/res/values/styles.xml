@@ -106,6 +106,25 @@
 
 
 
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <!--28px字体-->
+    <style name="tv_gray_28px">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+
+
+
 
 
 

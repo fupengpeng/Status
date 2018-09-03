@@ -47,9 +47,9 @@
     <string name="video_loading_faild">Video loading failed</string>
 
 
-
-
-
+    <string name="VideoView_error_button">8787</string>
+    <string name="VideoView_error_text_unknown">8887</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">899987</string>
 
 
 

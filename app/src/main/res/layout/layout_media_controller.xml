@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/media_controller_title_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/media_controller_back"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/media_controller_title"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="标题" />
+
+        <Button
+            android:id="@+id/media_controller_"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="其他" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/media_controller_lock"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:background="@drawable/ic_lock_outline" />
+
+        <ImageView
+            android:id="@+id/media_controller_play_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/uvv_itv_player_play"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/media_controller_cut"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/ic_content_cut" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/media_controller_progress_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/media_controller_play"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_play_arrow" />
+
+        <TextView
+            android:id="@+id/media_controller_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+
+        <TextView
+            android:id="@+id/media_controller_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="04:34" />
+
+        <SeekBar
+            android:id="@+id/media_controller_progress"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/media_controller_fullscreen"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:background="@drawable/ic_fullscreen" />
+
+
+    </LinearLayout>
+</LinearLayout>

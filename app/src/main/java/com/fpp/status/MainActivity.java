@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +25,7 @@ import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
+import com.fpp.status.activity.eleven.one.ElevenOneActivity;
 import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
 import com.fpp.status.activity.four.eight.HandlerActivity;
@@ -49,7 +49,6 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
-import com.fpp.status.activity.nine.eight.DialogFragmentActivity;
 import com.fpp.status.activity.nine.five.JsActivity;
 import com.fpp.status.activity.nine.four.WebActivity;
 import com.fpp.status.activity.nine.one.RVOneActivity;
@@ -226,6 +225,22 @@ public class MainActivity extends AppCompatActivity {
     Button btnTenSeven;
     @BindView(R.id.btn_ten_eight)
     Button btnTenEight;
+    @BindView(R.id.btn_eleven_one)
+    Button btnElevenOne;
+    @BindView(R.id.btn_eleven_two)
+    Button btnElevenTwo;
+    @BindView(R.id.btn_eleven_three)
+    Button btnElevenThree;
+    @BindView(R.id.btn_eleven_four)
+    Button btnElevenFour;
+    @BindView(R.id.btn_eleven_five)
+    Button btnElevenFive;
+    @BindView(R.id.btn_eleven_six)
+    Button btnElevenSix;
+    @BindView(R.id.btn_eleven_seven)
+    Button btnElevenSeven;
+    @BindView(R.id.btn_eleven_eight)
+    Button btnElevenEight;
 
 
     @Override
@@ -310,28 +325,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four,
-            R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one,
-            R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five,
-            R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight, R.id.btn_three_one,
-            R.id.btn_three_two, R.id.btn_three_three, R.id.btn_three_four,
-            R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven,
-            R.id.btn_three_eight, R.id.btn_four_one, R.id.btn_four_two, R.id.btn_four_three,
-            R.id.btn_four_four, R.id.btn_four_five, R.id.btn_four_six, R.id.btn_four_seven,
-            R.id.btn_four_eight, R.id.btn_five_one, R.id.btn_five_two, R.id.btn_five_three,
-            R.id.btn_five_four,
-            R.id.btn_five_five, R.id.btn_five_six, R.id.btn_five_seven, R.id.btn_five_eight,
-            R.id.btn_six_one, R.id.btn_six_two, R.id.btn_six_three, R.id.btn_six_four,
-            R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight,
-            R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three, R.id.btn_eight_four,
-            R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven, R.id.btn_eight_eight
-            , R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
-            , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
-            , R.id.btn_nine_seven, R.id.btn_nine_eight
-            ,R.id.btn_ten_one, R.id.btn_ten_two
-            , R.id.btn_ten_three, R.id.btn_ten_four
-            , R.id.btn_ten_five, R.id.btn_ten_six
-            , R.id.btn_ten_seven, R.id.btn_ten_eight
+    @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four
+            , R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one
+            , R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five
+            , R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight, R.id.btn_three_one
+            , R.id.btn_three_two, R.id.btn_three_three, R.id.btn_three_four
+            , R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven
+            , R.id.btn_three_eight, R.id.btn_four_one, R.id.btn_four_two, R.id.btn_four_three
+            , R.id.btn_four_four, R.id.btn_four_five, R.id.btn_four_six, R.id.btn_four_seven
+            , R.id.btn_four_eight, R.id.btn_five_one, R.id.btn_five_two, R.id.btn_five_three
+            , R.id.btn_five_four, R.id.btn_five_five, R.id.btn_five_six, R.id.btn_five_seven
+            , R.id.btn_five_eight, R.id.btn_six_one, R.id.btn_six_two, R.id.btn_six_three
+            , R.id.btn_six_four, R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven
+            , R.id.btn_six_eight, R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three
+            , R.id.btn_eight_four, R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven
+            , R.id.btn_eight_eight, R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
+            , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six, R.id.btn_nine_seven
+            , R.id.btn_nine_eight, R.id.btn_ten_one, R.id.btn_ten_two, R.id.btn_ten_three
+            , R.id.btn_ten_four, R.id.btn_ten_five, R.id.btn_ten_six, R.id.btn_ten_seven
+            , R.id.btn_ten_eight, R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three
+            , R.id.btn_eleven_four, R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven
+            , R.id.btn_eleven_eight
 
     })
     public void onViewClicked(View view) {
@@ -634,8 +648,28 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_ten_eight:
                 break;
+            case R.id.btn_eleven_one:
+                intent = new Intent(this, ElevenOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_two:
+                break;
+            case R.id.btn_eleven_three:
+                break;
+            case R.id.btn_eleven_four:
+                break;
+            case R.id.btn_eleven_five:
+                break;
+            case R.id.btn_eleven_six:
+                break;
+            case R.id.btn_eleven_seven:
+                break;
+            case R.id.btn_eleven_eight:
+                break;
         }
     }
+
+
 
 
 

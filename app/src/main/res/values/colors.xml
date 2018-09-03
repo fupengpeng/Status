@@ -58,5 +58,10 @@
     <color name="uvv_gray">#ffbbbbbb</color>
     <color name="uvv_titlebar_bg">#7f000000</color>
 
+    <color name="black">#000000</color>
 
+    <color name="tv_gray">#999999</color>
+
+
+    <color name="lighter_gray">#99999999</color>
 </resources>
