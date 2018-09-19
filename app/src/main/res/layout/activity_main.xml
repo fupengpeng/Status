@@ -870,7 +870,7 @@
                     android:layout_weight="0.5"
                     android:background="#ffff00"
                     android:scaleType="centerCrop"
-                    android:text="===="
+                    android:text="图表"
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -880,7 +880,7 @@
                     android:layout_weight="0.5"
                     android:background="#00ffff"
                     android:scaleType="centerCrop"
-                    android:text="===="
+                    android:text="联系人"
                     android:textSize="@dimen/dp_10" />
 
                 <Button

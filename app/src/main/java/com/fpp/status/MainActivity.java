@@ -25,7 +25,9 @@ import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
+import com.fpp.status.activity.eleven.four.LinkmanActivity;
 import com.fpp.status.activity.eleven.one.ElevenOneActivity;
+import com.fpp.status.activity.eleven.three.ChartActivity;
 import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
 import com.fpp.status.activity.four.eight.HandlerActivity;
@@ -653,10 +655,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_eleven_two:
+
+
                 break;
             case R.id.btn_eleven_three:
+                intent = new Intent(this, ChartActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_eleven_four:
+                intent = new Intent(this, LinkmanActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_eleven_five:
                 break;

@@ -173,6 +173,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"/>
 
         <activity android:name=".activity.eleven.one.ElevenOneActivity"/>
+        <activity android:name=".activity.eleven.two.HomeActivity"/>
+        <activity android:name=".activity.eleven.three.ChartActivity"/>
+
+        <activity android:name=".activity.eleven.four.LinkmanActivity"/>
+
 
 
 

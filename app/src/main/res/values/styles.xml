@@ -122,7 +122,10 @@
     </style>
 
 
-
+    <!-- tabayout text size -->
+    <style name="tabLayout_textView_size">
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
 
 
 
