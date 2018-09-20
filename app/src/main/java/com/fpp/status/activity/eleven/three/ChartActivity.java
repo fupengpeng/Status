@@ -53,10 +53,14 @@ public class ChartActivity extends AppCompatActivity {
     private void setData() {
         mFragmentList = new ArrayList<>();
         mFragmentList.add(ChartOneFragment.newInstance(1));
+        mFragmentList.add(ChartTwoFragment.newInstance(2));
+        mFragmentList.add(ChartThreeFragment.newInstance(3));
+//        mFragmentList.add(ChartOneFragment.newInstance(1));
+
         mTitleList = new ArrayList<>();
         mTitleList.add("科一");
-//        mTitleList.add("科二)");
-//        mTitleList.add("科三");
+        mTitleList.add("科二)");
+        mTitleList.add("科三");
 //        mTitleList.add("科四");
 
         // 设置缓存viewpager子界面数量（2：当前子界面前后各2个）

@@ -67,4 +67,140 @@
 
 
     <color name="gray_f7f7f7">#f7f7f7</color>
+
+    <color name="GREEN">#FF00FF00</color>
+    <color name="RED">#FFFF0000</color>
+    <color name="PointerColor">#C9DEEE</color>
+    <color name="Yellow">#FFFFFF00</color>
+
+    <color name="series_not_end">#fffec500</color>
+    <color name="sienna">#ffa0522d</color>
+    <color name="silver">#ffc0c0c0</color>
+    <color name="skyblue">#ff87ceeb</color>
+    <color name="slateblue">#ff6a5acd</color>
+    <color name="slategray">#ff708090</color>
+    <color name="slategrey">#ff708090</color>
+    <color name="textColor">#666666</color>
+    <color name="shadow">#dfdfdf</color>
+    <color name="scale">#58000000</color>
+    <color name="leftRight">#e1dcd6</color>
+    <color name="rightRight">#f4efe9</color>
+    <color name="outsideBlue">#2690f8</color>
+    <color name="insideBlue">#58ade5</color>
+
+    <color name="insideCircle">#c2b9b0</color>
+
+
+    <color name="blue">#2A8EE3</color>
+    <color name="transparent_gray">#90000000</color>
+    <color name="orange">#FFE8A140</color>
+    <color name="green">#83d383</color>
+
+
+
+    <color name="pink">#FF4683</color>
+    <color name="pink_p">#ee4683</color>
+    <color name="pink_text">#FC7D69</color>
+
+
+    <color name="red_xieyi">#FF001D</color>
+    <color name="red">#b4000a</color>
+    <color name="blackmost">#000000</color>
+    <color name="green_down">#00C06E</color>
+
+
+    <color name="green_notice">#00C06E</color>
+    <color name="red_notice">#D81E06</color>
+
+
+
+    <color name="start_blue">#01E2E6</color>
+    <color name="end_blue">#0089FF</color>
+
+
+    <color name="title_blue">#008BFF</color>
+
+
+    <color name="car_type_blue">#75A8E4</color>
+    <color name="car_type_pink">#FD907C</color>
+
+    <color name="blue_cancle">#3296FA</color>
+    <color name="blue_riduce">#3EA9D9</color>
+
+    <color name="blue_button">#008AFF</color>
+    <color name="yellow">#ff5722</color>
+    <color name="yellow_gray">#c49b62</color>
+    <color name="btn_yellow">#FFAA2B</color>
+    <color name="hint_">#999999</color>
+    <color name="_6">#666666</color>
+    <color name="_3">#333333</color>
+    <color name="_line">#EDEFF3</color>
+
+    <color name="bg_et">#F9F9F9</color>
+    <color name="grey_button">#8A8A8A</color>
+    <color name="bg_gray">#F5F5F5</color>
+    <color name="bg_grayF8">#F8F8F8</color>
+
+
+    <color name="color_line_gray">#eaeaea</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="title_color">#333333</color>
+
+    <color name="cp_colorPrimary">#3F51B5</color>
+    <color name="cp_colorPrimaryDark">#303F9F</color>
+    <color name="cp_colorAccent">#3F51B5</color>
+
+    <color name="cp_color_gray_light">#cdcdcd</color>
+    <color name="cp_color_gray">#999999</color>
+    <color name="cp_color_gray_deep">#666666</color>
+    <color name="cp_color_gray_dark">#333333</color>
+    <color name="cp_color_section_bg">#EDEDED</color>
+    <color name="cp_color_grid_item_bg">#f5f5f5</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+
+    <color name="btn_pay_cancel">#F5F5F5</color>
+
+    <color name="text_pay">#ECECEC</color>
+
+    <color name="gray_unselected">#DDDDDD</color>
+    <color name="blue_undetermined">#0078D7</color>
+    <color name="green_exercise_radio_button">#0CAD6C</color>
+
+
+    <color name="green_1CC104">#1CC104</color>
+    <color name="green_2AC414">#2AC414</color>
+    <color name="green_1D7018">#1D7018</color>
+    <color name="red_F93636">#F93636</color>
+    <color name="red_FF575C">#FF575C</color>
+    <color name="red_8A3A3B">#8A3A3B</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_999999">#999999</color>
+    <color name="black_333333">#333333</color>
+    <color name="gray_F7F7F7">#F7F7F7</color>
+    <color name="blue_188ED2">#188ED2</color>
+    <color name="gray_EDEFF3">#EDEFF3</color>
+    <color name="gray_A0A3A4">#A0A3A4</color>
+    <color name="gray_D0D1D2">#D0D1D2</color>
+    <color name="blue_24A3FB">#24A3FB</color>
+
+
+
+    <color name="blue_188de2">#188de2</color>
+    <color name="grey_686b7e">#686b7e</color>
+
+    <color name="theme_title_window">#ffffff</color>
+    <color name="theme_title_window_night">#999999</color>
+    <color name="theme_dialog_bg">#ffffff</color>
+    <color name="theme_dialog_bg_night">#151617</color>
+    <color name="theme_dialog_text">#333333</color>
+    <color name="theme_dialog_text_night">#a1a2a2</color>
+    <color name="theme_dialog_line">#edeff3</color>
+    <color name="theme_dialog_line_night">#1e2223</color>
+    <color name="theme_title_text">#333333</color>
+    <color name="theme_title_text_night">#999999</color>
+
+
 </resources>

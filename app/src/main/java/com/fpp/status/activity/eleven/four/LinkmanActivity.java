@@ -138,11 +138,6 @@ public class LinkmanActivity extends  AppCompatActivity implements
         list.add(new Person("9宇航"));
 
 
-
-
-
-
-
         //对集合排序
         Collections.sort(list, new Comparator<Person>() {
             @Override
