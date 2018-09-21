@@ -49,7 +49,9 @@ public class LineChartMarkView extends MarkerView {
                 //获取到曲线的所有在Y轴的数据集合，根据当前X轴的位置 来获取对应的Y轴值
                 float y = dataSet.getValues().get((int) e.getX()).getY();
                 if (i == 0) {
-                    tvValue0.setText(dataSet.getLabel() + "：" + df.format(y ) + "");
+                    tvValue0.setText(
+//                            dataSet.getLabel() + "：" +
+                                    df.format(y ) + "单");
                 }
 
             }

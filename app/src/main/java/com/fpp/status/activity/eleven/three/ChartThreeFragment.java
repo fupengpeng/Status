@@ -102,7 +102,7 @@ public class ChartThreeFragment extends BaseFragment {
         lineChartManager1 = new LineChartUtil(lineChart1);
 
         //展示图表
-        lineChartManager1.showLineChart(incomeBeanList, "我的收益", getResources().getColor(R.color.blue));
+        lineChartManager1.showLineChart(incomeBeanList, " ", getResources().getColor(R.color.blue));
 //        lineChartManager1.addLine(shanghai, "上证指数", getResources().getColor(R.color.orange));
 
         //设置曲线填充色 以及 MarkerView

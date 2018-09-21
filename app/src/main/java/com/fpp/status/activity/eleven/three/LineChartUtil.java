@@ -343,12 +343,14 @@ public class LineChartUtil {
         }
 
         /******根据需求的不同 在此在次设置X Y轴的显示内容******/
-        xAxis.setLabelCount(6, false);
+
+        // 设置x轴显示几个刻度
+        xAxis.setLabelCount(7, false);
         //设置是否绘制刻度
         // TODO: 2018/9/20
 //        xAxis.setDrawScale(false);
         //是否绘制X轴线
-        xAxis.setDrawAxisLine(false);
+        xAxis.setDrawAxisLine(true);
 
         xAxis.setValueFormatter(new IAxisValueFormatter() {
             @Override
@@ -358,7 +360,8 @@ public class LineChartUtil {
             }
         });
 
-        leftYAxis.setLabelCount(8);
+        // 设置y轴显示几个刻度
+        leftYAxis.setLabelCount(6);
         // TODO: 2018/9/20
 //        leftYAxis.setDrawScale(true);
 
