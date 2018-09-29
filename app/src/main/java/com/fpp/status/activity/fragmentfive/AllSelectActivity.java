@@ -365,14 +365,11 @@ public class AllSelectActivity extends AppCompatActivity
      * 适配器
      */
     class ShoppingCartFragmentAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
-
-        private LayoutInflater mInflater = null;
         private Context context;
         private List<DataBean> mListData;
 
         public ShoppingCartFragmentAdapter(Context context, List<DataBean> mListData) {
-            //根据context上下文加载布局，这里的是Activity本身，即this
-            this.mInflater = LayoutInflater.from(context);
+
             this.context = context;
             this.mListData = mListData;
         }
@@ -398,7 +395,7 @@ public class AllSelectActivity extends AppCompatActivity
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                convertView = mInflater.inflate(R.layout.item_fragment_shopping_cart_commodity_list, null);
+                convertView = LayoutInflater.from(context).inflate(R.layout.item_fragment_shopping_cart_commodity_list, null);
                 holder = new ViewHolder(convertView);
                 convertView.setTag(holder);
             } else {
@@ -691,5 +688,277 @@ public class AllSelectActivity extends AppCompatActivity
 
 
     /*----------  编辑按钮事件处理结束  ----------*/
+
+    public abstract class ListAdapter<T> extends BaseAdapter {
+        public List<T> list;
+
+        public ListAdapter(List<T> list) {
+            this.list = list;
+        }
+        @Override
+        public int getCount() {
+            return list.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return list.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public abstract View getView(int position, View convertView, ViewGroup parent);
+    }
+    /**
+     * 适配器
+     */
+    class CheckListAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
+        private Context context;
+        private List<DataBean> mListData;
+
+        public CheckListAdapter(Context context, List<DataBean> mListData) {
+
+            this.context = context;
+            this.mListData = mListData;
+        }
+
+
+        @Override
+        public int getCount() {
+            return mListData.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return mListData.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        ViewHolder holder = null;
+
+        @Override
+        public View getView(final int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(context).inflate(R.layout.item_fragment_shopping_cart_commodity_list, null);
+                holder = new ViewHolder(convertView);
+                convertView.setTag(holder);
+            } else {
+                holder = (ViewHolder) convertView.getTag();
+            }
+
+            final DataBean data = mListData.get(position);
+            bindListItem(holder, data);
+
+            if (data != null) {
+                // 判断是否选择
+                if (data.isChoose()) {
+                    holder.cbItemFragmentShoppingCartCommodityListSelect.setChecked(true);
+                } else {
+                    holder.cbItemFragmentShoppingCartCommodityListSelect.setChecked(false);
+                }
+
+                // 选中操作
+                holder.cbItemFragmentShoppingCartCommodityListSelect.setOnClickListener(new CheckBoxOnClick(data));
+                // 减少操作
+                holder.tvItemFragmentShoppingCartCommodityListNumberReduce.setOnClickListener(new ReduceOnClick(data,
+                        holder.tvItemFragmentShoppingCartCommodityListNumber));
+
+                // 增加操作
+                holder.tvItemFragmentShoppingCartCommodityListNumberAdd.setOnClickListener(new AddOnclick(data,
+                        holder.tvItemFragmentShoppingCartCommodityListNumber));
+
+            }
+            return convertView;
+        }
+
+        class CheckBoxOnClick implements View.OnClickListener {
+            DataBean shopcartEntity;
+
+            public CheckBoxOnClick(DataBean shopcartEntity) {
+                this.shopcartEntity = shopcartEntity;
+            }
+
+            @Override
+            public void onClick(View view) {
+                Log.e(TAG, "onClick: " + "----0011----");
+                CheckBox cb = (CheckBox) view;
+                if (cb.isChecked()) {
+                    shopcartEntity.setChoose(true);
+                } else {
+                    shopcartEntity.setChoose(false);
+                }
+                if (isBatchModel) {
+                    number();
+                } else {
+                    count();
+                }
+
+                select();
+
+            }
+
+        }
+
+        /**
+         * 增加商品数量点击事件
+         */
+        private class AddOnclick implements View.OnClickListener {
+            DataBean shopcartEntity;
+            TextView shopcart_number_btn;
+
+            private AddOnclick(DataBean shopcartEntity,
+                               TextView shopcart_number_btn) {
+                this.shopcartEntity = shopcartEntity;
+                this.shopcart_number_btn = shopcart_number_btn;
+            }
+
+            @Override
+            public void onClick(View arg0) {
+                Log.e(TAG, "onClick: " + "----0014----");
+                shopcartEntity.setChoose(true);
+                String numberStr = shopcart_number_btn.getText().toString();
+                if (!TextUtils.isEmpty(numberStr)) {
+                    int number = Integer.parseInt(numberStr);
+
+                    int currentNum = number + 1;
+                    // 设置列表
+                    shopcartEntity.setCarNum(currentNum);
+                    holder.tvItemFragmentShoppingCartCommodityListNumber.setText("" + currentNum);
+                    notifyDataSetChanged();
+                }
+                number();
+            }
+
+        }
+
+        /**
+         * 减少商品数量点击事件
+         */
+        private class ReduceOnClick implements View.OnClickListener {
+            DataBean shopcartEntity;
+            TextView shopcart_number_btn;
+
+            private ReduceOnClick(DataBean shopcartEntity,
+                                  TextView shopcart_number_btn) {
+                this.shopcartEntity = shopcartEntity;
+                this.shopcart_number_btn = shopcart_number_btn;
+            }
+
+            @Override
+            public void onClick(View arg0) {
+                shopcartEntity.setChoose(true);
+                Log.e(TAG, "onClick: " + "----0015----");
+                String numberStr = shopcart_number_btn.getText().toString();
+                if (!TextUtils.isEmpty(numberStr)) {
+                    int number = Integer.parseInt(numberStr);
+                    if (number == 1) {
+                        // Toast.makeText(CartListActivity.this, "不能往下减少了",
+                        // Toast.LENGTH_SHORT).show();
+                    } else {
+                        int currentNum = number - 1;
+                        // 设置列表
+                        shopcartEntity.setCarNum(currentNum);
+
+                        holder.tvItemFragmentShoppingCartCommodityListNumber.setText("" + currentNum);
+                        notifyDataSetChanged();
+
+                    }
+
+                }
+                number();
+            }
+
+        }
+
+        private void bindListItem(ViewHolder holder, DataBean data) {
+
+            Log.e(TAG, "bindListItem: " + "----0016----");
+
+            holder.tvItemFragmentShoppingCartCommodityListName.setText(data.getContent());
+            holder.tvItemFragmentShoppingCartCommodityListPrice.setText("￥" + data.getPrice());
+            holder.tvItemFragmentShoppingCartCommodityListNumber.setText(data.getCarNum() + "");
+            int _id = data.getId();
+
+            boolean selected = mSelectState.get(_id, false);
+            holder.cbItemFragmentShoppingCartCommodityListSelect.setChecked(selected);
+
+        }
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position,
+                                long id) {
+            DataBean bean = mListData.get(position);
+
+            ViewHolder holder = (ViewHolder) view.getTag();
+            int _id = (int) bean.getId();
+
+            boolean selected = !mSelectState.get(_id, false);
+            holder.cbItemFragmentShoppingCartCommodityListSelect.toggle();
+
+            Log.e(TAG, "onItemClick: " + "----0017----");
+            // 将CheckBox的选中状况记录下来
+            mListData.get(position).setChoose(holder.cbItemFragmentShoppingCartCommodityListSelect.isChecked());
+            // 调整选定条目
+            if (holder.cbItemFragmentShoppingCartCommodityListSelect.isChecked() == true) {
+                totalPrice += bean.getCarNum() * bean.getPrice();
+
+                number += bean.getCarNum();
+
+            } else {
+                mSelectState.delete(position);
+                totalPrice -= bean.getCarNum() * bean.getPrice();
+                number += bean.getCarNum();
+            }
+
+            tvFragmentShoppingCartTotal.setText("￥" + totalPrice + "");
+
+            btnFragmentShoppingCartSettlement.setText("结算（" + number + "）");
+            if (mSelectState.size() == mListData.size()) {
+                cbFragmentShoppingCartSelectAll.setChecked(true);
+            } else {
+                cbFragmentShoppingCartSelectAll.setChecked(false);
+            }
+
+        }
+
+        class ViewHolder {
+            @BindView(R.id.cb_item_fragment_shopping_cart_commodity_list_select)
+            CheckBox cbItemFragmentShoppingCartCommodityListSelect;
+            @BindView(R.id.iv_item_fragment_shopping_cart_commodity_list_pic)
+            ImageView ivItemFragmentShoppingCartCommodityListPic;
+            @BindView(R.id.tv_item_fragment_shopping_cart_commodity_list_name)
+            TextView tvItemFragmentShoppingCartCommodityListName;
+            @BindView(R.id.ll_item_fragment_shopping_cart_commodity_list_name)
+            LinearLayout llItemFragmentShoppingCartCommodityListName;
+            @BindView(R.id.tv_item_fragment_shopping_cart_commodity_list_standard)
+            TextView tvItemFragmentShoppingCartCommodityListStandard;
+            @BindView(R.id.ll_item_fragment_shopping_cart_commodity_list_standard)
+            LinearLayout llItemFragmentShoppingCartCommodityListStandard;
+            @BindView(R.id.tv_item_fragment_shopping_cart_commodity_list_price)
+            TextView tvItemFragmentShoppingCartCommodityListPrice;
+            @BindView(R.id.tv_item_fragment_shopping_cart_commodity_list_number_reduce)
+            TextView tvItemFragmentShoppingCartCommodityListNumberReduce;
+            @BindView(R.id.tv_item_fragment_shopping_cart_commodity_list_number)
+            TextView tvItemFragmentShoppingCartCommodityListNumber;
+            @BindView(R.id.tv_item_fragment_shopping_cart_commodity_list_number_add)
+            TextView tvItemFragmentShoppingCartCommodityListNumberAdd;
+
+            ViewHolder(View view) {
+                ButterKnife.bind(this, view);
+            }
+
+
+        }
+    }
+
+
 
 }

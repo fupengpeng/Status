@@ -178,6 +178,8 @@
 
         <activity android:name=".activity.eleven.four.LinkmanActivity"/>
 
+        <activity android:name=".activity.fragmentfive.CheckActivity"/>
+
 
 
 

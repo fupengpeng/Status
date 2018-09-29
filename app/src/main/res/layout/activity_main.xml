@@ -890,7 +890,7 @@
                     android:layout_weight="0.5"
                     android:background="#aa95ff"
                     android:scaleType="centerCrop"
-                    android:text="====="
+                    android:text="CheckAdapter抽取"
                     android:textSize="@dimen/dp_10" />
 
                 <Button

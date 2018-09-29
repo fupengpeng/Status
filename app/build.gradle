@@ -108,6 +108,9 @@ dependencies {
     //
     //    // ExoPlayer as IMediaPlayer: optional, experimental
     //    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+    /*汉字转拼音*/
+    compile 'com.github.promeg:tinypinyin:2.0.3'
+    compile 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
     implementation files('lib/pinyin4j-2.5.0.jar')
 }
 
