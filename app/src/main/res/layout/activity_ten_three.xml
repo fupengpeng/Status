@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#ff0000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffaaff">
+
+        <com.fpp.status.view.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_18"
+            android:background="#ffaa00"
+            app:banner_layout="@layout/banner_custom_viewpager" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/banner"
+            android:background="#ff0000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:background="@color/recycler_bg"
+            android:padding="10dp"
+            android:text="这是一个修改banner布局文件的例子，你可以按照这个套路修改里面的内容，比如修改指示器位置啊，文字的大小啊，他们之间的间距啊，或者修改他们的摆放位置等待"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#ff0000" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/bvp_atvt_ten_three"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:clipToPadding="false"
+        android:paddingLeft="@dimen/dp_30"
+        android:paddingRight="@dimen/dp_30" />
+
+    <com.fpp.status.view.RoundImageView
+        android:id="@+id/riv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        imagecontrol:border_inside_color="#bc0978"
+        imagecontrol:border_outside_color="#ba3456"
+        imagecontrol:border_thickness="5dp"
+        />
+</LinearLayout>

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.fpp.status.R;
+import com.fpp.status.view.RoundImageView;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -59,6 +60,10 @@ public class PWOneActivity extends AppCompatActivity  implements ViewPager.OnPag
         //配置轮播图ViewPager
         mViewPager = ((ViewPager) findViewById(R.id.live_view_pager));
 
+        //设置Page间间距
+        mViewPager.setPageMargin(30);
+        //设置缓存的页面数量
+        mViewPager.setOffscreenPageLimit(3);
         mItems = new ArrayList<>();
         mAdapter = new MyPagerAdapter(mItems, this);
         mViewPager.setAdapter(mAdapter);
@@ -85,6 +90,8 @@ public class PWOneActivity extends AppCompatActivity  implements ViewPager.OnPag
     private void addImageView(){
 
         ImageView view0 = new ImageView(this);
+        RoundImageView view10 = new RoundImageView(this);
+
         view0.setImageResource(R.drawable.meinv04);
 
         ImageView view1 = new ImageView(this);

@@ -6,13 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -28,6 +25,7 @@ import android.widget.Toast;
 
 import com.fpp.status.MainActivity;
 import com.fpp.status.R;
+import com.fpp.status.activity.fragmentfive.DataBean;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -35,15 +33,16 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * 全选逻辑分析
  */
 
-public class AllSelectListActivity extends AppCompatActivity
-        implements View.OnClickListener {
+public class AllSelectListActivity extends AppCompatActivity {
 
-    String TAG = "AllSelectListActivity";
+
+    String TAG = "AllSelectActivity";
 
     /**
      * 购物车商品列表
@@ -78,11 +77,7 @@ public class AllSelectListActivity extends AppCompatActivity
     @BindView(R.id.ll_fragment_shopping_cart_price_total)
     LinearLayout llFragmentShoppingCartPriceTotal;
 
-    @BindView(R.id.toolbar_title)
-    TextView toolbarTitle;
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
 
     @BindView(R.id.rl_fragment_shopping_cart_price_total)
     RelativeLayout rlFragmentShoppingCartPriceTotal;
@@ -95,6 +90,10 @@ public class AllSelectListActivity extends AppCompatActivity
      * 上下文
      */
     protected Context context = mainActivity;
+    @BindView(R.id.tv_atvt_all_select_list_return)
+    TextView tvAtvtAllSelectListReturn;
+    @BindView(R.id.tv_atvt_all_select_list_edit)
+    TextView tvAtvtAllSelectListEdit;
 
     /**
      * 结算数量
@@ -104,7 +103,7 @@ public class AllSelectListActivity extends AppCompatActivity
 
     private ShoppingCartFragmentAdapter shoppingCartFragmentAdapter;// adapter
 
-    private List<Goods> mListData = new ArrayList<Goods>();// 数据
+    private List<DataBean> mListData = new ArrayList<DataBean>();// 数据
 
 
     private double totalPrice = 0; // 商品总价
@@ -121,9 +120,6 @@ public class AllSelectListActivity extends AppCompatActivity
         setContentView(R.layout.activity_all_select_list);
         ButterKnife.bind(this);
 
-
-//            initView();
-        initToolBar();
         initListener();
         loadData();
         refreshListView();
@@ -131,23 +127,15 @@ public class AllSelectListActivity extends AppCompatActivity
     }
 
 
-    private void initView() {
-        Log.e(TAG, "initView: " + "----0001----");
-        lvFragmentShoppingCart.setSelector(R.drawable.list_selector);
-    }
-
     private void initListener() {
         Log.e(TAG, "initListener: " + "----0002----");
-        btnFragmentShoppingCartSettlement.setOnClickListener(this);
-        cbFragmentShoppingCartSelectAll.setOnClickListener(this);
+
+
     }
 
     private void loadData() {
-
-
         Log.e(TAG, "loadData: " + "----0003----");
-        // TODO: 2018/4/11 0011 待修改
-//        mListData = getData();
+        mListData = getData();
         Log.e(TAG, "loadData:=======------------ " + isBatchModel);
 
 
@@ -164,62 +152,50 @@ public class AllSelectListActivity extends AppCompatActivity
         }
     }
 
-    /**
-     * 初始化Toolbar
-     */
-    private void initToolBar() {
 
-        setTitle("");
-
-        setSupportActionBar(toolbar);
-
-        //是否给左上角图标的左边加上一个返回的图标
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //改变默认返回按钮图片
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
-
-
-    }
 
     /**
-     * 标题栏按钮设置
-     *
-     * @param menu
-     * @return
+     * 获取商品数据
      */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
-        return true;
+    private List<DataBean> getData() {
+        Log.e(TAG, "getData: " + "----00005----");
+        int maxId = 0;
+        if (mListData != null && mListData.size() > 0)
+            maxId = mListData.get(mListData.size() - 1).getId();
+        List<DataBean> result = new ArrayList<DataBean>();
+        DataBean data = null;
+        for (int i = 0; i < 20; i++) {
+            data = new DataBean();
+            data.setId(maxId + i + 1);// 从最大Id的下一个开始
+            data.setShopName("我的" + (maxId + 1 + i) + "店铺");
+            data.setContent("我的购物车里面的第" + (maxId + 1 + i) + "个商品");
+            data.setCarNum(1);
+            data.setPrice(305.00);
+            result.add(data);
+        }
+        return result;
     }
 
 
-    /**
-     * toolbar的按钮点击事件
-     *
-     * @param item
-     * @return
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-//            case R.id.action_settings:
-//                Toast.makeText(AllSelectListActivity.this, "设置动作", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.history:
-//                Toast.makeText(AllSelectListActivity.this, "历史", Toast.LENGTH_SHORT).show();
-//                break;
-            case R.id.calendar:
+
+
+    @OnClick({R.id.tv_atvt_all_select_list_return, R.id.tv_atvt_all_select_list_edit
+            , R.id.cb_fragment_shopping_cart_select_all, R.id.btn_fragment_shopping_cart_settlement})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.tv_atvt_all_select_list_return:
+                finish();
+                break;
+            case R.id.tv_atvt_all_select_list_edit:
                 Toast.makeText(AllSelectListActivity.this, "编辑", Toast.LENGTH_SHORT).show();
 
 
                 Log.e(TAG, "onClick: " + "----0008----");
                 isBatchModel = !isBatchModel;
                 if (isBatchModel) {
-                    item.setTitle(R.string.menu_enter);
+                    tvAtvtAllSelectListEdit.setText(R.string.menu_enter);
                 } else {
-                    item.setTitle(R.string.menu_edit);
+                    tvAtvtAllSelectListEdit.setText(R.string.menu_edit);
                 }
 
 
@@ -236,57 +212,13 @@ public class AllSelectListActivity extends AppCompatActivity
 
                 }
 
+                // 刷新
+                shoppingCartFragmentAdapter.notifyDataSetChanged();
+
 
                 break;
-            // 默认返回按钮的点击事件
-            case android.R.id.home:
-                Toast.makeText(AllSelectListActivity.this, "返回", Toast.LENGTH_SHORT).show();
-                break;
-
-            default:
-                break;
-        }
-
-        return true;
-    }
-
-
-    /**
-     * 获取商品数据
-     */
-    private List<GoodsCategory> getData() {
-        Log.e(TAG, "getData: " + "----00005----");
-        int maxId = 0;
-        if (mListData != null && mListData.size() > 0)
-            maxId = mListData.get(mListData.size() - 1).getId();
-
-        List<GoodsCategory> goodsCategoryList = new ArrayList<GoodsCategory>();
-        for (int i = 1; i < 5; i++) {
-            GoodsCategory goodsCategory = new GoodsCategory();
-            goodsCategory.setId(i + "");
-            goodsCategory.setName("name " + i);
-            goodsCategory.setType("type " + i);
-            List<Goods> result = new ArrayList<Goods>();
-            Goods data = null;
-            for (int j = 0; j < 6; i++) {
-                data = new Goods();
-                data.setId(maxId + j + 1);// 从最大Id的下一个开始
-                data.setShopName("我的" + (maxId + 1 + j) + "店铺");
-                data.setContent("我的购物车里面的第" + (maxId + 1 + j) + "个商品");
-                data.setCarNum(1);
-                data.setPrice(305.00);
-                result.add(data);
-            }
-        }
-
-        return goodsCategoryList;
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
             case R.id.cb_fragment_shopping_cart_select_all:
+
                 Log.e(TAG, "onClick: " + "----0009----");
                 totalPrice = 0;
                 number = 0;
@@ -326,9 +258,11 @@ public class AllSelectListActivity extends AppCompatActivity
                         btnFragmentShoppingCartSettlement.setText("结算（" + number + "）");
                     }
                 }
-                break;
 
+                break;
             case R.id.btn_fragment_shopping_cart_settlement:
+
+
 
                 Log.e(TAG, "onClick: " + "----0010----");
 
@@ -337,7 +271,7 @@ public class AllSelectListActivity extends AppCompatActivity
                     Iterator it = mListData.iterator();
                     while (it.hasNext()) {
                         // 得到对应集合元素
-                        Goods g = (Goods) it.next();
+                        DataBean g = (DataBean) it.next();
                         // 判断
                         if (g.isChoose()) {
                             // 从集合中删除上一次next方法返回的元素
@@ -351,7 +285,7 @@ public class AllSelectListActivity extends AppCompatActivity
 
                 } else {
                     if (totalPrice != 0) {
-                        // TODO: 2018/2/25 0025 结算界面 
+                        // TODO: 2018/2/25 0025 结算界面
                         Intent intent = new Intent(this, MainActivity.class);
                         startActivity(intent);
 
@@ -364,77 +298,20 @@ public class AllSelectListActivity extends AppCompatActivity
                 }
 
                 break;
-            default:
-                break;
         }
     }
 
-    /**
-     * 分类适配器
-     */
-    class CategoryAdapter extends BaseAdapter {
-
-        private Context mContext;
-        private List<GoodsCategory> mGoodsCategoryList;
-        private LayoutInflater mInflater = null;
-
-        public CategoryAdapter(Context context, List<GoodsCategory> goodsCategoryList) {
-            this.mContext = context;
-            this.mGoodsCategoryList = goodsCategoryList;
-            this.mInflater = LayoutInflater.from(context);
-        }
-
-        @Override
-        public int getCount() {
-            return mGoodsCategoryList.size() > 0 ? 0 : mGoodsCategoryList.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return mGoodsCategoryList.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder;
-            if (convertView == null) {
-                convertView = mInflater.inflate(R.layout.lvi_all_select_list_content, null);
-                holder = new ViewHolder(convertView);
-                convertView.setTag(holder);
-            } else {
-                holder = (ViewHolder) convertView.getTag();
-            }
-
-            return null;
-        }
-
-        class ViewHolder {
-            @BindView(R.id.tv_lvi_all_select_list_content_name)
-            TextView tvLviAllSelectListContentName;
-            @BindView(R.id.lv_lvi_all_select_list_content_list)
-            ListView lvLviAllSelectListContentList;
-
-            ViewHolder(View view) {
-                ButterKnife.bind(this, view);
-            }
-        }
-    }
 
     /**
-     * 分类子条目适配器
+     * 适配器
      */
     class ShoppingCartFragmentAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
 
         private LayoutInflater mInflater = null;
         private Context context;
-        private List<Goods> mListData;
+        private List<DataBean> mListData;
 
-        public ShoppingCartFragmentAdapter(Context context, List<Goods> mListData) {
+        public ShoppingCartFragmentAdapter(Context context, List<DataBean> mListData) {
             //根据context上下文加载布局，这里的是Activity本身，即this
             this.mInflater = LayoutInflater.from(context);
             this.context = context;
@@ -469,7 +346,7 @@ public class AllSelectListActivity extends AppCompatActivity
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            final Goods data = mListData.get(position);
+            final DataBean data = mListData.get(position);
             bindListItem(holder, data);
 
             if (data != null) {
@@ -479,7 +356,11 @@ public class AllSelectListActivity extends AppCompatActivity
                 } else {
                     holder.cbItemFragmentShoppingCartCommodityListSelect.setChecked(false);
                 }
-
+                if (isBatchModel){
+                    holder.llItemFragmentShoppingCartCommodityListStandard.setVisibility(View.VISIBLE);
+                }else {
+                    holder.llItemFragmentShoppingCartCommodityListStandard.setVisibility(View.GONE);
+                }
                 // 选中操作
                 holder.cbItemFragmentShoppingCartCommodityListSelect.setOnClickListener(new CheckBoxOnClick(data));
                 // 减少操作
@@ -495,9 +376,9 @@ public class AllSelectListActivity extends AppCompatActivity
         }
 
         class CheckBoxOnClick implements View.OnClickListener {
-            Goods shopcartEntity;
+            DataBean shopcartEntity;
 
-            public CheckBoxOnClick(Goods shopcartEntity) {
+            public CheckBoxOnClick(DataBean shopcartEntity) {
                 this.shopcartEntity = shopcartEntity;
             }
 
@@ -526,10 +407,10 @@ public class AllSelectListActivity extends AppCompatActivity
          * 增加商品数量点击事件
          */
         private class AddOnclick implements View.OnClickListener {
-            Goods shopcartEntity;
+            DataBean shopcartEntity;
             TextView shopcart_number_btn;
 
-            private AddOnclick(Goods shopcartEntity,
+            private AddOnclick(DataBean shopcartEntity,
                                TextView shopcart_number_btn) {
                 this.shopcartEntity = shopcartEntity;
                 this.shopcart_number_btn = shopcart_number_btn;
@@ -558,10 +439,10 @@ public class AllSelectListActivity extends AppCompatActivity
          * 减少商品数量点击事件
          */
         private class ReduceOnClick implements View.OnClickListener {
-            Goods shopcartEntity;
+            DataBean shopcartEntity;
             TextView shopcart_number_btn;
 
-            private ReduceOnClick(Goods shopcartEntity,
+            private ReduceOnClick(DataBean shopcartEntity,
                                   TextView shopcart_number_btn) {
                 this.shopcartEntity = shopcartEntity;
                 this.shopcart_number_btn = shopcart_number_btn;
@@ -593,15 +474,15 @@ public class AllSelectListActivity extends AppCompatActivity
 
         }
 
-        private void bindListItem(ViewHolder holder, Goods data) {
+        private void bindListItem(ViewHolder holder, DataBean data) {
 
             Log.e(TAG, "bindListItem: " + "----0016----");
 
             holder.tvItemFragmentShoppingCartCommodityListName.setText(data.getContent());
             holder.tvItemFragmentShoppingCartCommodityListPrice.setText("￥" + data.getPrice());
             holder.tvItemFragmentShoppingCartCommodityListNumber.setText(data.getCarNum() + "");
-            int _id = data.getId();
 
+            int _id = data.getId();
             boolean selected = mSelectState.get(_id, false);
             holder.cbItemFragmentShoppingCartCommodityListSelect.setChecked(selected);
 
@@ -610,7 +491,7 @@ public class AllSelectListActivity extends AppCompatActivity
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
-            Goods bean = mListData.get(position);
+            DataBean bean = mListData.get(position);
 
             ViewHolder holder = (ViewHolder) view.getTag();
             int _id = (int) bean.getId();

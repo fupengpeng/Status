@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,7 @@ import com.fpp.status.activity.eight.four.GestureOneActivity;
 import com.fpp.status.activity.eight.four.SQLiteActivity;
 import com.fpp.status.activity.eight.four.SharePreferencesActivity;
 import com.fpp.status.activity.eight.four.SharePreferencesExampleActivity;
+import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
@@ -47,8 +49,22 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
+import com.fpp.status.activity.nine.eight.DialogFragmentActivity;
+import com.fpp.status.activity.nine.five.JsActivity;
+import com.fpp.status.activity.nine.four.WebActivity;
+import com.fpp.status.activity.nine.one.RVOneActivity;
+import com.fpp.status.activity.nine.six.AnimationActivity;
+import com.fpp.status.activity.nine.three.PictureLargenActivity;
+import com.fpp.status.activity.nine.two.GridManagerActivity;
 import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
+import com.fpp.status.activity.ten.eight.TenEightActivity;
+import com.fpp.status.activity.ten.five.VideoActivity;
+import com.fpp.status.activity.ten.four.TenFourTwoActivity;
+import com.fpp.status.activity.ten.one.GreenDaoActivity;
+import com.fpp.status.activity.ten.seven.TenSevenActivity;
+import com.fpp.status.activity.ten.three.TenThreeActivity;
+import com.fpp.status.activity.ten.two.TenTwoActivity;
 import com.fpp.status.activity.test.MoveActivity;
 import com.fpp.status.activity.test.MoveImageActivity;
 import com.fpp.status.activity.test.MoveTestActivity;
@@ -179,6 +195,38 @@ public class MainActivity extends AppCompatActivity {
     Button btnEightSeven;
     @BindView(R.id.btn_eight_eight)
     Button btnEightEight;
+    @BindView(R.id.btn_nine_one)
+    Button btnNineOne;
+    @BindView(R.id.btn_nine_two)
+    Button btnNineTwo;
+    @BindView(R.id.btn_nine_three)
+    Button btnNineThree;
+    @BindView(R.id.btn_nine_four)
+    Button btnNineFour;
+    @BindView(R.id.btn_nine_five)
+    Button btnNineFive;
+    @BindView(R.id.btn_nine_six)
+    Button btnNineSix;
+    @BindView(R.id.btn_nine_seven)
+    Button btnNineSeven;
+    @BindView(R.id.btn_nine_eight)
+    Button btnNineEight;
+    @BindView(R.id.btn_ten_one)
+    Button btnTenOne;
+    @BindView(R.id.btn_ten_two)
+    Button btnTenTwo;
+    @BindView(R.id.btn_ten_three)
+    Button btnTenThree;
+    @BindView(R.id.btn_ten_four)
+    Button btnTenFour;
+    @BindView(R.id.btn_ten_five)
+    Button btnTenFive;
+    @BindView(R.id.btn_ten_six)
+    Button btnTenSix;
+    @BindView(R.id.btn_ten_seven)
+    Button btnTenSeven;
+    @BindView(R.id.btn_ten_eight)
+    Button btnTenEight;
 
 
     @Override
@@ -194,6 +242,11 @@ public class MainActivity extends AppCompatActivity {
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+
+
+        // TODO: 2018/6/23 极光推送 --------------------------------------------------------------------
+
+
 //
 //
 //
@@ -273,6 +326,14 @@ public class MainActivity extends AppCompatActivity {
             R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight,
             R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three, R.id.btn_eight_four,
             R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven, R.id.btn_eight_eight
+            , R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
+            , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
+            , R.id.btn_nine_seven, R.id.btn_nine_eight
+            ,R.id.btn_ten_one, R.id.btn_ten_two
+            , R.id.btn_ten_three, R.id.btn_ten_four
+            , R.id.btn_ten_five, R.id.btn_ten_six
+            , R.id.btn_ten_seven, R.id.btn_ten_eight
+
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -471,7 +532,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_eight_one:
-                // TODO: 2018/4/10 0010
+                intent = new Intent(this, AllSelectListActivity.class);
+                startActivity(intent);
 
 
                 break;
@@ -506,8 +568,81 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, GestureOneActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_nine_one:
+                intent = new Intent(this, RVOneActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_two:
+                intent = new Intent(this, GridManagerActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_three:
+                intent = new Intent(this, PictureLargenActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_four:
+                intent = new Intent(this, WebActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_five:
+                intent = new Intent(this, JsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_nine_six:
+                intent = new Intent(this, AnimationActivity.class);
+                startActivity(intent);
+
+                break;
+            case R.id.btn_nine_seven:
+                intent = new Intent(this, com.fpp.status.activity.nine.seven.RecycleViewActivity.class);
+                startActivity(intent);
+
+
+                break;
+            case R.id.btn_nine_eight:
+                intent = new Intent(this, com.fpp.status.transformer.MainActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.btn_ten_one:
+                intent = new Intent(this, GreenDaoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_two:
+                intent = new Intent(this, TenTwoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_three:
+                intent = new Intent(this, TenThreeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_four:
+                intent = new Intent(this, TenFourTwoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_five:
+                intent = new Intent(this, VideoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_six:
+
+                intent = new Intent(this, com.fpp.status.activity.ten.six.DLActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_seven:
+                intent = new Intent(this, TenSevenActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_ten_eight:
+
+                intent = new Intent(this, TenEightActivity.class);
+                startActivity(intent);
+                break;
         }
     }
+
+
+
 
 
 

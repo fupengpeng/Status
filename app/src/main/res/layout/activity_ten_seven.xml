@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bofang"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:text="播放" />
+
+
+        <Button
+            android:id="@+id/zanting"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/tingzhi"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:text="停止" />
+    </LinearLayout>
+
+
+</LinearLayout>

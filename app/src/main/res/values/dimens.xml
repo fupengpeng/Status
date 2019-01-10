@@ -7,6 +7,11 @@
     <dimen name="fab_margin">16dp</dimen>
 
 
+    <dimen name="dot_margin">4dp</dimen>
+    <dimen name="dot_h">4dp</dimen>
+    <dimen name="dot_selected_h">8dp</dimen>
+    <dimen name="dot_container_h">30dp</dimen>
+
     <!--  ==========  导航页模块开始  ==========  -->
     <dimen name="text_size_large">28sp</dimen>
 
@@ -56,6 +61,7 @@
     <dimen name="dp_75">75dp</dimen>
     <dimen name="dp_80">80dp</dimen>
     <dimen name="dp_85">85dp</dimen>
+    <dimen name="dp_88">88dp</dimen>
     <dimen name="dp_90">90dp</dimen>
     <dimen name="dp_95">95dp</dimen>
     <dimen name="dp_100">100dp</dimen>
@@ -140,6 +146,10 @@
     <dimen name="order_title_height">68dp</dimen>
     <!--标题栏paddingTop-->
     <dimen name="order_title_padding_top">23dp</dimen>
+
+
+    <dimen name="jz_start_button_w_h_normal">45dp</dimen>
+    <dimen name="jz_start_button_w_h_fullscreen">62dp</dimen>
 
 
 </resources>

@@ -12,10 +12,10 @@ public interface ILoginView {
     /**
      * 当登录成功
      */
-    void onLoginSuccess();
+    void loginSuccess(String data);
     /**
-     * 当登录失败
+     * 请求失败
      */
-    void onLoginFail(Exception e);
+    void failure(Exception e);
 
 }

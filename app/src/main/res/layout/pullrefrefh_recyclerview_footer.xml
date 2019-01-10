@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/pullrefrefh_footer_content"
+        android:background="#ffaaaa"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"/>
+    <View
+        android:id="@+id/pullrefrefh_footer_ProgressBar"
+        android:background="#aaff22"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"/>
+    <TextView
+        android:id="@+id/pullrefrefh_footer_hint_TextView"
+        android:text="加载中中"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45" />
+
+</LinearLayout>
