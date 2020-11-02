@@ -3,7 +3,6 @@ package com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
@@ -12,6 +11,8 @@ import android.widget.TextView;
 
 import com.fpp.status.R;
 import com.fpp.status.view.pulpdr.AutoLoad.ALFooterCreator;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**

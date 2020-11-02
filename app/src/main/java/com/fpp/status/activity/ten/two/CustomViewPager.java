@@ -1,13 +1,14 @@
 package com.fpp.status.activity.ten.two;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by zhouwei on 17/8/16.

@@ -2,16 +2,17 @@ package com.fpp.status.view.pulpdr.AutoLoad;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator.DALFooterCreator;
 import com.fpp.status.view.pulpdr.PullToLoad.OnLoadListener;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 
 /**

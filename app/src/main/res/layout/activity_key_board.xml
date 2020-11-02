@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BLACK"
+    android:orientation="horizontal"
+    tools:context=".activity.eleven.five.KeyBoardActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="原密码："
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+
+            <EditText
+                android:id="@+id/et_aty_change_password_old"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_45"
+                android:layout_weight="7"
+                android:background="@drawable/bg_5dp_blue_pay"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="请输入旧密码"
+                android:inputType="number"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp_10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="新密码："
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+            <EditText
+                android:id="@+id/et_aty_change_password_new"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_45"
+                android:layout_weight="7"
+                android:background="@drawable/bg_5dp_blue_pay"
+                android:ellipsize="end"
+                android:hint="请输入新密码"
+                android:inputType="number"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp_10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="right"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="确认密码："
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+            <EditText
+                android:id="@+id/et_aty_change_password_affirm"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_45"
+                android:layout_weight="7"
+                android:background="@drawable/bg_5dp_blue_pay"
+                android:ellipsize="end"
+                android:hint="请确认新密码"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp_10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_width="@dimen/dp_361"
+            android:layout_height="@dimen/dp_321"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_2">
+
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/kv_keyboard"
+                android:layout_width="@dimen/dp_331"
+                android:layout_height="@dimen/dp_291"
+                android:background="@android:color/transparent"
+                android:keyBackground="@drawable/bg_5dp_blue"
+                android:keyTextColor="@color/white"
+                android:keyTextSize="@dimen/sp_20"
+                android:labelTextSize="@dimen/sp_20"
+                android:padding="1dp"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="0"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

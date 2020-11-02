@@ -1,11 +1,8 @@
 package com.fpp.status;
 
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -14,10 +11,9 @@ import com.fpp.status.fragment.OneFragment;
 import com.fpp.status.fragment.ThreeFragment;
 import com.fpp.status.fragment.TwoFragment;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 
 public class DLActivity extends AppCompatActivity implements OneFragment.FOneBtnClickListener,
         TwoFragment.FTwoBtnClickListener {
@@ -34,7 +30,6 @@ public class DLActivity extends AppCompatActivity implements OneFragment.FOneBtn
     @BindView(R.id.btn_four)
     Button btnFour;
 
-    private OneFragment oneFragment;
     private TwoFragment twoFragment;
     private ThreeFragment threeFragment;
     private FourFragment fourFragment;
@@ -114,7 +109,7 @@ public class DLActivity extends AppCompatActivity implements OneFragment.FOneBtn
         setContentView(R.layout.activity_dl);
         ButterKnife.bind(this);
 
-        oneFragment = new OneFragment();
+        OneFragment oneFragment = new OneFragment();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction tx = fm.beginTransaction();
         tx.add(R.id.ll_parent, oneFragment, "ONE");

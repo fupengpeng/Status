@@ -8,7 +8,6 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Shader;
-import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,6 +15,10 @@ import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.fpp.status.R;
 import com.fpp.status.view.banner.loader.ImageLoader;
+
+import java.security.MessageDigest;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by Jelly on 2018/5/29.
@@ -48,7 +51,6 @@ public class GlideImageLoader extends ImageLoader {
         private int mImageType;
         private int mBorderRadius;
         public GlideCircleTransform(Context context,int imageType,int borderRadius) {
-            super(context);
             mImageType = imageType;
             mBorderRadius = borderRadius;
         }
@@ -116,12 +118,15 @@ public class GlideImageLoader extends ImageLoader {
             return result;
         }
 
-        @Override
         public String getId() {
             return getClass().getName();
         }
 
 
+        @Override
+        public void updateDiskCacheKey(@NonNull MessageDigest messageDigest) {
+
+        }
     }
     final static class GlideImageLoaderConfig{
         public static final int CIRCULAR_BEAD = 100001;

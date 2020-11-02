@@ -1,10 +1,9 @@
 package com.fpp.status.activity.fourfive;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,12 +15,14 @@ import com.fpp.status.activity.popupwindow.DepthPageTransformer;
 
 import java.util.ArrayList;
 
+import androidx.viewpager.widget.ViewPager;
+
 /**
  * @description  引导页----二
  * @author  fupengpeng
  * @date  2018/2/25 0025 15:20
  */
-public class GuideTwoActivity extends AppCompatActivity  implements ViewPager.OnPageChangeListener, View.OnClickListener {
+public class GuideTwoActivity extends Activity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
     /**
      * 图片资源id

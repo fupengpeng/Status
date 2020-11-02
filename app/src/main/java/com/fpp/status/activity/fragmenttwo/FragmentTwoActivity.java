@@ -2,11 +2,13 @@ package com.fpp.status.activity.fragmenttwo;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -173,7 +175,7 @@ public class FragmentTwoActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.tv1:
                 changeView(0);
                 break;
@@ -186,13 +188,12 @@ public class FragmentTwoActivity extends AppCompatActivity implements View.OnCli
                 break;
 
 
-
         }
 
     }
+
     //手动设置ViewPager要显示的视图
-    private void changeView(int desTab)
-    {
+    private void changeView(int desTab) {
         Log.e(TAG, "changeView: " + " ---------");
         viewPager.setCurrentItem(desTab, true);
     }

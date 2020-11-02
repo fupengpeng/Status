@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,6 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fpp.status.R;
+
+import androidx.annotation.Nullable;
 
 /**
  * Description:

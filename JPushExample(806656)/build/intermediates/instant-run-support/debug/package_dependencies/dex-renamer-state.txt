@@ -1,0 +1,7 @@
+#Tue May 08 16:27:44 GMT+08:00 2018
+base.0=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\jpush-android-3.1.0_ce3fd4d507e6cc2760a28ca29bce76e4d6bb34b1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\jcore-android-1.1.8_bf91b22af9b91cc2c0fe8d408cf1a5b9a68ee6f7\\classes.dex
+base.1=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\jcore-android-1.1.8_bf91b22af9b91cc2c0fe8d408cf1a5b9a68ee6f7
+file.0=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\jpush-android-3.1.0_ce3fd4d507e6cc2760a28ca29bce76e4d6bb34b1\\classes.dex

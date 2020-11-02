@@ -5,14 +5,6 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.AttrRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.annotation.StyleRes;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -36,6 +28,15 @@ import com.fpp.status.activity.ten.two.transformer.ScaleYTransformer;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.AttrRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.annotation.StyleRes;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by zhouwei on 17/5/26.

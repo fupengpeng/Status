@@ -1,10 +1,11 @@
 package com.fpp.status.activity.foursix;
 
-import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 /**
  * @description  引导页适配器----三

@@ -28,7 +28,8 @@ public class MyReceiver extends BroadcastReceiver {
 		LogUtils.e("MyReceiver  " , " 接收到推送的消息 ");
 		try {
 			Bundle bundle = intent.getExtras();
-			LogUtils.e(TAG, "[MyReceiver] onReceive - " + intent.getAction() + ", extras: " + printBundle(bundle));
+			LogUtils.e(TAG, "[MyReceiver] onReceive - " + intent.getAction()
+					+ ", extras: " + printBundle(bundle));
 
 			if (JPushInterface.ACTION_REGISTRATION_ID.equals(intent.getAction())) {
 				String regId = bundle.getString(JPushInterface.EXTRA_REGISTRATION_ID);
@@ -36,7 +37,8 @@ public class MyReceiver extends BroadcastReceiver {
 				//send the Registration Id to your server...
 
 			} else if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
-				LogUtils.e(TAG, "[MyReceiver] 接收到推送下来的自定义消息: " + bundle.getString(JPushInterface.EXTRA_MESSAGE));
+				LogUtils.e(TAG, "[MyReceiver] 接收到推送下来的自定义消息: "
+						+ bundle.getString(JPushInterface.EXTRA_MESSAGE));
 				processCustomMessage(context, bundle);
 
 			} else if (JPushInterface.ACTION_NOTIFICATION_RECEIVED.equals(intent.getAction())) {

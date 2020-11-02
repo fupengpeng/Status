@@ -4,12 +4,16 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import com.fpp.status.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Description:  图片变大，点击变回

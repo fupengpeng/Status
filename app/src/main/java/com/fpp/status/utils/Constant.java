@@ -4,8 +4,6 @@ import android.os.Environment;
 
 
 
-import java.io.File;
-
 /**
  * 作者：Jelly
  * 详情：常量

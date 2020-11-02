@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JPushExample(806656)/JPushExample(806656).iml" filepath="$PROJECT_DIR$/JPushExample(806656)/JPushExample(806656).iml" />
-      <module fileurl="file://$PROJECT_DIR$/Status.iml" filepath="$PROJECT_DIR$/Status.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Status.iml" filepath="$PROJECT_DIR$/Status.iml" group="Status" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Status/app" />
     </modules>
   </component>
 </project>

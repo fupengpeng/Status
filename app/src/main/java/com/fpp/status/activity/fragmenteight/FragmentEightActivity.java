@@ -1,13 +1,6 @@
 package com.fpp.status.activity.fragmenteight;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 
 import com.fpp.status.R;
 import com.fpp.status.activity.fragmenteight.fragment.AllFragment;
@@ -15,10 +8,17 @@ import com.fpp.status.activity.fragmenteight.fragment.AlreadyAccomplishFragment;
 import com.fpp.status.activity.fragmenteight.fragment.AlreadyCancelFragment;
 import com.fpp.status.activity.fragmenteight.fragment.UnderwayFragment;
 import com.fpp.status.activity.fragmenteight.fragment.WaitAcceptFragment;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,6 +18,8 @@ import com.othershe.dutil.utils.Utils;
 
 import java.io.File;
 import java.util.Date;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.othershe.dutil.data.Consts.NONE;
 

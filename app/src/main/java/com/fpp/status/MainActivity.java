@@ -1,13 +1,14 @@
 package com.fpp.status;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.customview.CustomViewEightActivity;
@@ -26,6 +27,12 @@ import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
+import com.fpp.status.activity.eleven.five.KeyBoardActivity;
+import com.fpp.status.activity.eleven.four.InstallActivity;
+import com.fpp.status.activity.eleven.one.UsbCameraActivity;
+import com.fpp.status.activity.eleven.six.BarcodeScannerActivity;
+import com.fpp.status.activity.eleven.three.SerialPortActivity;
+import com.fpp.status.activity.eleven.two.ExcelActivity;
 import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
 import com.fpp.status.activity.four.eight.HandlerActivity;
@@ -49,7 +56,6 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
-import com.fpp.status.activity.nine.eight.DialogFragmentActivity;
 import com.fpp.status.activity.nine.five.JsActivity;
 import com.fpp.status.activity.nine.four.WebActivity;
 import com.fpp.status.activity.nine.one.RVOneActivity;
@@ -75,166 +81,29 @@ import com.fpp.status.activity.three.seven.ConfigurationActivity;
 import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
+import com.fpp.status.receiver.UpdateReceiver;
+import com.fpp.status.utils.LogUtil;
 
-import butterknife.BindView;
+import java.util.ArrayList;
+import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
+public class MainActivity extends Activity {
 
-    private static final String TAG = "MainActivity";
     Intent intent;
-    @BindView(R.id.btn_one_one)
-    Button btnOneOne;
-    @BindView(R.id.btn_one_two)
-    Button btnOneTwo;
-    @BindView(R.id.btn_one_three)
-    Button btnOneThree;
-    @BindView(R.id.btn_one_four)
-    Button btnOneFour;
-    @BindView(R.id.btn_one_five)
-    Button btnOneFive;
-    @BindView(R.id.btn_one_six)
-    Button btnOneSix;
-    @BindView(R.id.btn_one_seven)
-    Button btnOneSeven;
-    @BindView(R.id.btn_two_one)
-    Button btnTwoOne;
-    @BindView(R.id.btn_two_two)
-    Button btnTwoTwo;
-    @BindView(R.id.btn_two_three)
-    Button btnTwoThree;
-    @BindView(R.id.btn_two_four)
-    Button btnTwoFour;
-    @BindView(R.id.btn_two_five)
-    Button btnTwoFive;
-    @BindView(R.id.btn_two_six)
-    Button btnTwoSix;
-    @BindView(R.id.btn_two_seven)
-    Button btnTwoSeven;
-    @BindView(R.id.btn_two_eight)
-    Button btnTwoEight;
-    @BindView(R.id.btn_three_one)
-    Button btnThreeOne;
-    @BindView(R.id.btn_three_two)
-    Button btnThreeTwo;
-    @BindView(R.id.btn_three_three)
-    Button btnThreeThree;
-    @BindView(R.id.btn_three_four)
-    Button btnThreeFour;
-    @BindView(R.id.btn_three_five)
-    Button btnThreeFive;
-    @BindView(R.id.btn_three_six)
-    Button btnThreeSix;
-    @BindView(R.id.btn_three_seven)
-    Button btnThreeSeven;
-    @BindView(R.id.btn_three_eight)
-    Button btnThreeEight;
-    @BindView(R.id.btn_four_one)
-    Button btnFourOne;
-    @BindView(R.id.btn_four_two)
-    Button btnFourTwo;
-    @BindView(R.id.btn_four_three)
-    Button btnFourThree;
-    @BindView(R.id.btn_four_four)
-    Button btnFourFour;
-    @BindView(R.id.btn_four_five)
-    Button btnFourFive;
-    @BindView(R.id.btn_four_six)
-    Button btnFourSix;
-    @BindView(R.id.btn_four_seven)
-    Button btnFourSeven;
-    @BindView(R.id.btn_four_eight)
-    Button btnFourEight;
-    @BindView(R.id.btn_five_one)
-    Button btnFiveOne;
-    @BindView(R.id.btn_five_two)
-    Button btnFiveTwo;
-    @BindView(R.id.btn_five_three)
-    Button btnFiveThree;
-    @BindView(R.id.btn_five_four)
-    Button btnFiveFour;
-    @BindView(R.id.btn_five_five)
-    Button btnFiveFive;
-    @BindView(R.id.btn_five_six)
-    Button btnFiveSix;
-    @BindView(R.id.btn_five_seven)
-    Button btnFiveSeven;
-    @BindView(R.id.btn_five_eight)
-    Button btnFiveEight;
-    @BindView(R.id.btn_six_one)
-    Button btnSixOne;
-    @BindView(R.id.btn_six_two)
-    Button btnSixTwo;
-    @BindView(R.id.btn_six_three)
-    Button btnSixThree;
-    @BindView(R.id.btn_six_four)
-    Button btnSixFour;
-    @BindView(R.id.btn_six_five)
-    Button btnSixFive;
-    @BindView(R.id.btn_six_six)
-    Button btnSixSix;
-    @BindView(R.id.btn_six_seven)
-    Button btnSixSeven;
-    @BindView(R.id.btn_six_eight)
-    Button btnSixEight;
-    @BindView(R.id.btn_eight_one)
-    Button btnEightOne;
-    @BindView(R.id.btn_eight_two)
-    Button btnEightTwo;
-    @BindView(R.id.btn_eight_three)
-    Button btnEightThree;
-    @BindView(R.id.btn_eight_four)
-    Button btnEightFour;
-    @BindView(R.id.btn_eight_five)
-    Button btnEightFive;
-    @BindView(R.id.btn_eight_six)
-    Button btnEightSix;
-    @BindView(R.id.btn_eight_seven)
-    Button btnEightSeven;
-    @BindView(R.id.btn_eight_eight)
-    Button btnEightEight;
-    @BindView(R.id.btn_nine_one)
-    Button btnNineOne;
-    @BindView(R.id.btn_nine_two)
-    Button btnNineTwo;
-    @BindView(R.id.btn_nine_three)
-    Button btnNineThree;
-    @BindView(R.id.btn_nine_four)
-    Button btnNineFour;
-    @BindView(R.id.btn_nine_five)
-    Button btnNineFive;
-    @BindView(R.id.btn_nine_six)
-    Button btnNineSix;
-    @BindView(R.id.btn_nine_seven)
-    Button btnNineSeven;
-    @BindView(R.id.btn_nine_eight)
-    Button btnNineEight;
-    @BindView(R.id.btn_ten_one)
-    Button btnTenOne;
-    @BindView(R.id.btn_ten_two)
-    Button btnTenTwo;
-    @BindView(R.id.btn_ten_three)
-    Button btnTenThree;
-    @BindView(R.id.btn_ten_four)
-    Button btnTenFour;
-    @BindView(R.id.btn_ten_five)
-    Button btnTenFive;
-    @BindView(R.id.btn_ten_six)
-    Button btnTenSix;
-    @BindView(R.id.btn_ten_seven)
-    Button btnTenSeven;
-    @BindView(R.id.btn_ten_eight)
-    Button btnTenEight;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -242,6 +111,13 @@ public class MainActivity extends AppCompatActivity {
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+        //监听系统新安装程序的广播
+        UpdateReceiver receiver = new UpdateReceiver();
+        IntentFilter filter = new IntentFilter(Intent.ACTION_PACKAGE_ADDED);
+        filter.addDataScheme("package");    //必须添加这项，否则拦截不到广播
+        registerReceiver(receiver, filter);
+
+        getPermissions();
 
 
         // TODO: 2018/6/23 极光推送 --------------------------------------------------------------------
@@ -329,10 +205,12 @@ public class MainActivity extends AppCompatActivity {
             , R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
             , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
             , R.id.btn_nine_seven, R.id.btn_nine_eight
-            ,R.id.btn_ten_one, R.id.btn_ten_two
+            , R.id.btn_ten_one, R.id.btn_ten_two
             , R.id.btn_ten_three, R.id.btn_ten_four
             , R.id.btn_ten_five, R.id.btn_ten_six
             , R.id.btn_ten_seven, R.id.btn_ten_eight
+            , R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three, R.id.btn_eleven_four
+            , R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven, R.id.btn_eleven_eight
 
     })
     public void onViewClicked(View view) {
@@ -420,8 +298,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_three_six:
                 intent = new Intent(this, MoveDeleteRecycleViewItemActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_three_seven:
                 intent = new Intent(this, ConfigurationActivity.class);
@@ -434,7 +310,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_four_one:
                 intent = new Intent(this, PWOneActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_four_two:
                 intent = new Intent(this, LoginActivity.class);
@@ -451,13 +326,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_four_five:
                 intent = new Intent(this, GuideTwoActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_four_six:
                 intent = new Intent(this, GuideThreeActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_four_seven:
                 intent = new Intent(this, GuideFourActivity.class);
@@ -534,8 +406,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_eight_one:
                 intent = new Intent(this, AllSelectListActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_eight_two:
                 intent = new Intent(this, ResourceActivity.class);
@@ -548,12 +418,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_eight_four:
                 intent = new Intent(this, PermissionManageOneActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_eight_five:
                 intent = new Intent(this, SharePreferencesActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_eight_six:
                 intent = new Intent(this, SharePreferencesExampleActivity.class);
@@ -562,7 +430,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_eight_seven:
                 intent = new Intent(this, SQLiteActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_eight_eight:
                 intent = new Intent(this, GestureOneActivity.class);
@@ -591,19 +458,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_nine_six:
                 intent = new Intent(this, AnimationActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_nine_seven:
                 intent = new Intent(this, com.fpp.status.activity.nine.seven.RecycleViewActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_nine_eight:
                 intent = new Intent(this, com.fpp.status.transformer.MainActivity.class);
                 startActivity(intent);
                 break;
-
             case R.id.btn_ten_one:
                 intent = new Intent(this, GreenDaoActivity.class);
                 startActivity(intent);
@@ -625,7 +488,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_six:
-
                 intent = new Intent(this, com.fpp.status.activity.ten.six.DLActivity.class);
                 startActivity(intent);
                 break;
@@ -634,23 +496,276 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_eight:
-
                 intent = new Intent(this, TenEightActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_eleven_one:
+                intent = new Intent(this, UsbCameraActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_two:
+                intent = new Intent(this, ExcelActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_three:
+                intent = new Intent(this, SerialPortActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_four:
+                intent = new Intent(this, InstallActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_five:
+                intent = new Intent(this, KeyBoardActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_six:
+                intent = new Intent(this, BarcodeScannerActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_eleven_seven:
+                break;
+            case R.id.btn_eleven_eight:
                 break;
         }
     }
 
 
+    private void getPermissions() {
+        List<String> perms01 = new ArrayList<>();
+        perms01.add(Manifest.permission.CAMERA);
+        perms01.add(Manifest.permission.ACCEPT_HANDOVER);
+        perms01.add(Manifest.permission.ACCESS_BACKGROUND_LOCATION);
+        perms01.add(Manifest.permission.ACCESS_CHECKIN_PROPERTIES);
+        perms01.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        perms01.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        perms01.add(Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS);
+        perms01.add(Manifest.permission.ACCESS_MEDIA_LOCATION);
+        perms01.add(Manifest.permission.ACCESS_NETWORK_STATE);
+        perms01.add(Manifest.permission.ACCESS_NOTIFICATION_POLICY);
+        perms01.add(Manifest.permission.ACCESS_WIFI_STATE);
+        perms01.add(Manifest.permission.ACCOUNT_MANAGER);
+        perms01.add(Manifest.permission.ACTIVITY_RECOGNITION);
+        perms01.add(Manifest.permission.ADD_VOICEMAIL);
+        perms01.add(Manifest.permission.ANSWER_PHONE_CALLS);
+        perms01.add(Manifest.permission.BATTERY_STATS);
+        perms01.add(Manifest.permission.BIND_ACCESSIBILITY_SERVICE);
+        perms01.add(Manifest.permission.BIND_APPWIDGET);
+        perms01.add(Manifest.permission.BIND_AUTOFILL_SERVICE);
+        perms01.add(Manifest.permission.BIND_CALL_REDIRECTION_SERVICE);
+        perms01.add(Manifest.permission.BIND_CARRIER_MESSAGING_CLIENT_SERVICE);
+        List<String> perms02 = new ArrayList<>();
+        perms02.add(Manifest.permission.BIND_CARRIER_MESSAGING_SERVICE);
+        perms02.add(Manifest.permission.BIND_CARRIER_SERVICES);
+        perms02.add(Manifest.permission.BIND_CHOOSER_TARGET_SERVICE);
+        perms02.add(Manifest.permission.BIND_CONDITION_PROVIDER_SERVICE);
+        perms02.add(Manifest.permission.BIND_DEVICE_ADMIN);
+        perms02.add(Manifest.permission.BIND_DREAM_SERVICE);
+        perms02.add(Manifest.permission.BIND_INCALL_SERVICE);
+        perms02.add(Manifest.permission.BIND_INPUT_METHOD);
+        perms02.add(Manifest.permission.BIND_MIDI_DEVICE_SERVICE);
+        perms02.add(Manifest.permission.BIND_NFC_SERVICE);
+        perms02.add(Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE);
+        perms02.add(Manifest.permission.BIND_PRINT_SERVICE);
+        perms02.add(Manifest.permission.BIND_QUICK_SETTINGS_TILE);
+        perms02.add(Manifest.permission.BIND_REMOTEVIEWS);
+        perms02.add(Manifest.permission.BIND_SCREENING_SERVICE);
+        perms02.add(Manifest.permission.BIND_TELECOM_CONNECTION_SERVICE);
+        perms02.add(Manifest.permission.BIND_TEXT_SERVICE);
+        perms02.add(Manifest.permission.BIND_TV_INPUT);
+        perms02.add(Manifest.permission.BIND_VISUAL_VOICEMAIL_SERVICE);
+        perms02.add(Manifest.permission.BIND_VOICE_INTERACTION);
+        perms02.add(Manifest.permission.BIND_VPN_SERVICE);
+        perms02.add(Manifest.permission.BIND_VR_LISTENER_SERVICE);
+        perms02.add(Manifest.permission.BIND_WALLPAPER);
+        perms02.add(Manifest.permission.BLUETOOTH);
+        perms02.add(Manifest.permission.BLUETOOTH_ADMIN);
+        perms02.add(Manifest.permission.BLUETOOTH_PRIVILEGED);
+        perms02.add(Manifest.permission.BODY_SENSORS);
+        perms02.add(Manifest.permission.BROADCAST_PACKAGE_REMOVED);
+        perms02.add(Manifest.permission.BROADCAST_SMS);
+        perms02.add(Manifest.permission.BROADCAST_STICKY);
+        perms02.add(Manifest.permission.BROADCAST_WAP_PUSH);
+        perms02.add(Manifest.permission.CALL_COMPANION_APP);
+        perms02.add(Manifest.permission.CALL_PHONE);
+        perms02.add(Manifest.permission.CALL_PRIVILEGED);
+        perms02.add(Manifest.permission.CAMERA);
+        perms02.add(Manifest.permission.CAPTURE_AUDIO_OUTPUT);
+        perms02.add(Manifest.permission.CHANGE_COMPONENT_ENABLED_STATE);
+        perms02.add(Manifest.permission.CHANGE_CONFIGURATION);
+        perms02.add(Manifest.permission.CHANGE_NETWORK_STATE);
+        perms02.add(Manifest.permission.CHANGE_WIFI_MULTICAST_STATE);
+        perms02.add(Manifest.permission.CHANGE_WIFI_STATE);
+        perms02.add(Manifest.permission.CLEAR_APP_CACHE);
+        perms02.add(Manifest.permission.CONTROL_LOCATION_UPDATES);
+        perms02.add(Manifest.permission.DELETE_CACHE_FILES);
+        perms02.add(Manifest.permission.DELETE_PACKAGES);
+        perms02.add(Manifest.permission.DIAGNOSTIC);
+        perms02.add(Manifest.permission.DISABLE_KEYGUARD);
+        perms02.add(Manifest.permission.DUMP);
+        perms02.add(Manifest.permission.EXPAND_STATUS_BAR);
+        perms02.add(Manifest.permission.FACTORY_TEST);
+        perms02.add(Manifest.permission.FOREGROUND_SERVICE);
+        perms02.add(Manifest.permission.GET_ACCOUNTS);
+        perms02.add(Manifest.permission.GET_ACCOUNTS_PRIVILEGED);
+        perms02.add(Manifest.permission.GET_PACKAGE_SIZE);
+
+        List<String> perms03 = new ArrayList<>();
+        perms03.add(Manifest.permission.GET_TASKS);
+        perms03.add(Manifest.permission.GLOBAL_SEARCH);
+        perms03.add(Manifest.permission.INSTALL_LOCATION_PROVIDER);
+        perms03.add(Manifest.permission.INSTALL_PACKAGES);
+        perms03.add(Manifest.permission.INSTALL_SHORTCUT);
+        perms03.add(Manifest.permission.INSTANT_APP_FOREGROUND_SERVICE);
+        perms03.add(Manifest.permission.INTERNET);
+        perms03.add(Manifest.permission.KILL_BACKGROUND_PROCESSES);
+        perms03.add(Manifest.permission.LOCATION_HARDWARE);
+        perms03.add(Manifest.permission.MANAGE_DOCUMENTS);
+        perms03.add(Manifest.permission.MANAGE_OWN_CALLS);
+        perms03.add(Manifest.permission.MASTER_CLEAR);
+        perms03.add(Manifest.permission.MEDIA_CONTENT_CONTROL);
+        perms03.add(Manifest.permission.MODIFY_AUDIO_SETTINGS);
+        perms03.add(Manifest.permission.MODIFY_PHONE_STATE);
+        perms03.add(Manifest.permission.MOUNT_FORMAT_FILESYSTEMS);
+        perms03.add(Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS);
+        perms03.add(Manifest.permission.NFC);
+        perms03.add(Manifest.permission.NFC_TRANSACTION_EVENT);
+        perms03.add(Manifest.permission.PACKAGE_USAGE_STATS);
+
+        List<String> perms04 = new ArrayList<>();
+        perms04.add(Manifest.permission.PERSISTENT_ACTIVITY);
+
+        List<String> perms05 = new ArrayList<>();
+        perms05.add(Manifest.permission.PROCESS_OUTGOING_CALLS);
+        perms05.add(Manifest.permission.READ_CALENDAR);
+        perms05.add(Manifest.permission.READ_CALL_LOG);
+        perms05.add(Manifest.permission.READ_CONTACTS);
+        perms05.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+
+        List<String> perms06 = new ArrayList<>();
+        perms06.add(Manifest.permission.READ_INPUT_STATE);
+        perms06.add(Manifest.permission.READ_LOGS);
+        perms06.add(Manifest.permission.READ_PHONE_NUMBERS);
+        perms06.add(Manifest.permission.READ_PHONE_STATE);
+        perms06.add(Manifest.permission.READ_SMS);
+        perms06.add(Manifest.permission.READ_SYNC_SETTINGS);
+        perms06.add(Manifest.permission.READ_SYNC_STATS);
+        perms06.add(Manifest.permission.READ_VOICEMAIL);
+        perms06.add(Manifest.permission.REBOOT);
+        perms06.add(Manifest.permission.RECEIVE_BOOT_COMPLETED);
+        perms06.add(Manifest.permission.RECEIVE_MMS);
+        perms06.add(Manifest.permission.RECEIVE_SMS);
+        perms06.add(Manifest.permission.RECEIVE_WAP_PUSH);
+        perms06.add(Manifest.permission.RECORD_AUDIO);
+        perms06.add(Manifest.permission.REORDER_TASKS);
+        perms06.add(Manifest.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND);
+        perms06.add(Manifest.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND);
+        perms06.add(Manifest.permission.REQUEST_DELETE_PACKAGES);
+        perms06.add(Manifest.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+        perms06.add(Manifest.permission.REQUEST_INSTALL_PACKAGES);
+        perms06.add(Manifest.permission.REQUEST_PASSWORD_COMPLEXITY);
 
 
+        List<String> perms07 = new ArrayList<>();
+        perms07.add(Manifest.permission.RESTART_PACKAGES);
+        perms07.add(Manifest.permission.SEND_RESPOND_VIA_MESSAGE);
+        perms07.add(Manifest.permission.SEND_SMS);
+        perms07.add(Manifest.permission.SET_ALARM);
+        perms07.add(Manifest.permission.SET_ALWAYS_FINISH);
+        perms07.add(Manifest.permission.SET_ANIMATION_SCALE);
+        perms07.add(Manifest.permission.SET_DEBUG_APP);
+
+        List<String> perms08 = new ArrayList<>();
+        perms08.add(Manifest.permission.SET_PREFERRED_APPLICATIONS);
+        perms08.add(Manifest.permission.SET_PROCESS_LIMIT);
+        perms08.add(Manifest.permission.SET_TIME);
+        perms08.add(Manifest.permission.SET_TIME_ZONE);
+        perms08.add(Manifest.permission.SET_WALLPAPER);
+        perms08.add(Manifest.permission.SET_WALLPAPER_HINTS);
+        perms08.add(Manifest.permission.SIGNAL_PERSISTENT_PROCESSES);
+        perms08.add(Manifest.permission.SMS_FINANCIAL_TRANSACTIONS);
+        perms08.add(Manifest.permission.START_VIEW_PERMISSION_USAGE);
+        perms08.add(Manifest.permission.STATUS_BAR);
+        perms08.add(Manifest.permission.SYSTEM_ALERT_WINDOW);
+        perms08.add(Manifest.permission.TRANSMIT_IR);
+        perms08.add(Manifest.permission.UNINSTALL_SHORTCUT);
+        perms08.add(Manifest.permission.UPDATE_DEVICE_STATS);
+        perms08.add(Manifest.permission.USE_BIOMETRIC);
+
+        List<String> perms09 = new ArrayList<>();
+        perms09.add(Manifest.permission.USE_FINGERPRINT);
+        perms09.add(Manifest.permission.USE_FULL_SCREEN_INTENT);
+        perms09.add(Manifest.permission.USE_SIP);
+        perms09.add(Manifest.permission.VIBRATE);
+        perms09.add(Manifest.permission.WAKE_LOCK);
+        perms09.add(Manifest.permission.WRITE_APN_SETTINGS);
+        perms09.add(Manifest.permission.WRITE_CALENDAR);
+        perms09.add(Manifest.permission.WRITE_CALL_LOG);
+        perms09.add(Manifest.permission.WRITE_CONTACTS);
+        perms09.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        perms09.add(Manifest.permission.WRITE_GSERVICES);
+        perms09.add(Manifest.permission.WRITE_SECURE_SETTINGS);
+        perms09.add(Manifest.permission.WRITE_SETTINGS);
+        perms09.add(Manifest.permission.WRITE_SYNC_SETTINGS);
+        perms09.add(Manifest.permission.WRITE_VOICEMAIL);
 
 
+        // 所需权限集合
+        List<String> perms = new ArrayList<>();
+        perms.addAll(perms01);
+        perms.addAll(perms02);
+        perms.addAll(perms03);
+        perms.addAll(perms04);
+        perms.addAll(perms05);
+        perms.addAll(perms06);
+        perms.addAll(perms07);
+        perms.addAll(perms08);
+        perms.addAll(perms09);
 
+        List<String> permsNot = new ArrayList<>();
+        // 检测那些权限未被授权
+        for (int i = 0; i < perms.size(); i++) {
+            int per = ContextCompat.checkSelfPermission(this, perms.get(i));
+            if (per != PERMISSION_GRANTED) {
+                permsNot.add(perms.get(i));
+            }
+        }
+        if (permsNot.size() > 0) {
+            String[] permissions = new String[permsNot.size()];
+            permsNot.toArray(permissions);
+            LogUtil.e("申请常用权限");
+            // 申请授权
+            ActivityCompat.requestPermissions(this, permissions, 1);
+        } else {
+            LogUtil.e("已获取权限");
+        }
+    }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1) {
+            if (hasAllPermissionsGranted(grantResults)) {
+                LogUtil.e("申请权限响应成功");
 
+            }
+        }
+    }
 
-
+    /**
+     * 是否授权所有权限
+     *
+     * @param grantResults 授权响应集合
+     * @return 响应
+     */
+    private boolean hasAllPermissionsGranted(@NonNull int[] grantResults) {
+        for (int grantResult : grantResults) {
+            if (grantResult == PackageManager.PERMISSION_DENIED) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 

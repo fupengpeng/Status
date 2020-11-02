@@ -1,6 +1,7 @@
 package com.fpp.status.activity.nine.eight;
 
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Description:
@@ -8,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
  * Date: 2018/6/30  15:51
  */
 
-public class DialogFragmentActivity extends AppCompatActivity{
+public class DialogFragmentActivity extends AppCompatActivity {
 
 
 

@@ -2,7 +2,6 @@ package com.fpp.status.activity.ten.four;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -12,6 +11,7 @@ import com.fpp.status.R;
 import com.fpp.status.view.videoview.MC;
 import com.fpp.status.view.videoview.VV;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

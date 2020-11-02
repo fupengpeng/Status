@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +24,7 @@ import java.io.RandomAccessFile;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

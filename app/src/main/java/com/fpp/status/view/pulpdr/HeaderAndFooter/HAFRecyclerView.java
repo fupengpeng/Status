@@ -1,13 +1,14 @@
 package com.fpp.status.view.pulpdr.HeaderAndFooter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.fpp.status.view.pulpdr.AutoLoad.ALAdapter;
 import com.fpp.status.view.pulpdr.PullToLoad.PullToLoadAdapter;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 
 
 /**

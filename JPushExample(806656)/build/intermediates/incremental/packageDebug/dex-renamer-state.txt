@@ -1,0 +1,7 @@
+#Tue May 08 16:27:53 GMT+08:00 2018
+base.0=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1777e500f10ad5d0f291e9a854a21d266603a5e4
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c8e5ebd12c88fc40c8d267cdb782ea78e868e1e6\\classes.dex
+base.1=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c8e5ebd12c88fc40c8d267cdb782ea78e868e1e6
+file.0=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1777e500f10ad5d0f291e9a854a21d266603a5e4\\classes.dex

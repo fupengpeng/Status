@@ -1,10 +1,11 @@
 package com.fpp.status.view.pulpdr.SimpleAdapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Administrator on 2016/9/27.

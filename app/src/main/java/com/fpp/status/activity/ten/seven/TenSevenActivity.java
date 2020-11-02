@@ -3,7 +3,6 @@ package com.fpp.status.activity.ten.seven;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -17,6 +16,7 @@ import com.fpp.status.R;
 import java.io.IOError;
 import java.io.IOException;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

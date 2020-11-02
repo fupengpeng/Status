@@ -1,9 +1,10 @@
 package com.fpp.status.activity.test;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.fpp.status.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MoveImageActivity extends AppCompatActivity {
 

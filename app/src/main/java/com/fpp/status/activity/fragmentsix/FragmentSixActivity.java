@@ -1,14 +1,15 @@
 package com.fpp.status.activity.fragmentsix;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+
 import android.widget.LinearLayout;
 
 import com.fpp.status.R;
 import com.fpp.status.activity.fragmentsix.fragment.SixSixFragment;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

@@ -1,8 +1,6 @@
 package com.fpp.status.activity.three.six.customview;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -14,6 +12,9 @@ import android.widget.TextView;
 
 import com.fpp.status.activity.three.six.adapter.RVAdapter;
 import com.fpp.status.utils.LogUtils;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**

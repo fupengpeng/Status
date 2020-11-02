@@ -1,7 +1,6 @@
 package com.fpp.status.activity.test;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.DragEvent;
@@ -18,6 +17,7 @@ import android.widget.Toast;
 
 import com.fpp.status.R;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

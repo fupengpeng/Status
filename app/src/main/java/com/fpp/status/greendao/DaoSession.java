@@ -8,10 +8,12 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
+import com.fpp.status.entity.CardBean;
 import com.fpp.status.entity.Student;
 import com.fpp.status.entity.TopicBean;
 import com.fpp.status.view.download.data.DownloadData;
 
+import com.fpp.status.greendao.CardBeanDao;
 import com.fpp.status.greendao.StudentDao;
 import com.fpp.status.greendao.TopicBeanDao;
 import com.fpp.status.greendao.DownloadDataDao;
@@ -25,10 +27,12 @@ import com.fpp.status.greendao.DownloadDataDao;
  */
 public class DaoSession extends AbstractDaoSession {
 
+    private final DaoConfig cardBeanDaoConfig;
     private final DaoConfig studentDaoConfig;
     private final DaoConfig topicBeanDaoConfig;
     private final DaoConfig downloadDataDaoConfig;
 
+    private final CardBeanDao cardBeanDao;
     private final StudentDao studentDao;
     private final TopicBeanDao topicBeanDao;
     private final DownloadDataDao downloadDataDao;
@@ -36,6 +40,9 @@ public class DaoSession extends AbstractDaoSession {
     public DaoSession(Database db, IdentityScopeType type, Map<Class<? extends AbstractDao<?, ?>>, DaoConfig>
             daoConfigMap) {
         super(db);
+
+        cardBeanDaoConfig = daoConfigMap.get(CardBeanDao.class).clone();
+        cardBeanDaoConfig.initIdentityScope(type);
 
         studentDaoConfig = daoConfigMap.get(StudentDao.class).clone();
         studentDaoConfig.initIdentityScope(type);
@@ -46,19 +53,26 @@ public class DaoSession extends AbstractDaoSession {
         downloadDataDaoConfig = daoConfigMap.get(DownloadDataDao.class).clone();
         downloadDataDaoConfig.initIdentityScope(type);
 
+        cardBeanDao = new CardBeanDao(cardBeanDaoConfig, this);
         studentDao = new StudentDao(studentDaoConfig, this);
         topicBeanDao = new TopicBeanDao(topicBeanDaoConfig, this);
         downloadDataDao = new DownloadDataDao(downloadDataDaoConfig, this);
 
+        registerDao(CardBean.class, cardBeanDao);
         registerDao(Student.class, studentDao);
         registerDao(TopicBean.class, topicBeanDao);
         registerDao(DownloadData.class, downloadDataDao);
     }
     
     public void clear() {
+        cardBeanDaoConfig.clearIdentityScope();
         studentDaoConfig.clearIdentityScope();
         topicBeanDaoConfig.clearIdentityScope();
         downloadDataDaoConfig.clearIdentityScope();
+    }
+
+    public CardBeanDao getCardBeanDao() {
+        return cardBeanDao;
     }
 
     public StudentDao getStudentDao() {

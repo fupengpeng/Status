@@ -2,7 +2,6 @@ package com.fpp.status.activity.move;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
@@ -21,10 +20,11 @@ import android.widget.ViewFlipper;
 
 import com.fpp.status.R;
 
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MoveOneActivity extends AppCompatActivity  implements
+public class MoveOneActivity extends AppCompatActivity implements
         android.view.GestureDetector.OnGestureListener {
 
     private int[] imgs = { R.drawable.meinv02, R.drawable.meinv03, R.drawable.meinv04,

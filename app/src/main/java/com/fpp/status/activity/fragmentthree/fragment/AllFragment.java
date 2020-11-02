@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,9 +50,6 @@ public class AllFragment extends Fragment {
         6.每过一秒自加一秒
         7.设置textview
          */
-
-
-
 
 
         unbinder = ButterKnife.bind(this, mView);

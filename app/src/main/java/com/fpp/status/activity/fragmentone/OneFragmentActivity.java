@@ -1,10 +1,12 @@
 package com.fpp.status.activity.fragmentone;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;

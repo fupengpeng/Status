@@ -2,8 +2,6 @@ package com.fpp.status.activity.fragmentfour;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +20,8 @@ import com.fpp.status.view.HorizontalListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

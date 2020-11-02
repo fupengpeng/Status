@@ -3,13 +3,14 @@ package com.fpp.status.view.pulpdr.Divider;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.fpp.status.view.pulpdr.AutoLoad.ALRecyclerView;
 import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFAdapter;
 import com.fpp.status.view.pulpdr.PullToLoad.PullToLoadRecyclerView;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**
