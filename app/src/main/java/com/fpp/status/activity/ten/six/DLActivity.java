@@ -6,6 +6,13 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,11 +24,14 @@ import com.fpp.status.view.download.callback.UploadCallback;
 
 import java.io.ByteArrayOutputStream;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:
  * Author: fpp

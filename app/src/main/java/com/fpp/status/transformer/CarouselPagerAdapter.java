@@ -1,5 +1,6 @@
 package com.fpp.status.transformer;
 
+<<<<<<< HEAD
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,13 @@ import android.view.ViewGroup;
 import androidx.annotation.IntRange;
 import androidx.viewpager.widget.PagerAdapter;
 
+=======
+import android.support.annotation.IntRange;
+import android.support.v4.view.PagerAdapter;
+import android.view.View;
+import android.view.ViewGroup;
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * {@link CarouselViewPager 轮播控件}所需的adapter
  *

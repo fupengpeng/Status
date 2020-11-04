@@ -6,6 +6,7 @@
     <inspection_tool class="AndroidLintLongLogTag" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="AndroidLintMissingConstraints" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="Deprecation" enabled="false" level="WARNING" enabled_by_default="false" />
+<<<<<<< HEAD
     <inspection_tool class="JavaDoc" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="TOP_LEVEL_CLASS_OPTIONS">
         <value>
@@ -37,6 +38,8 @@
       <option name="IGNORE_POINT_TO_ITSELF" value="false" />
       <option name="myAdditionalJavadocTags" value="Author,Date,Description" />
     </inspection_tool>
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     <inspection_tool class="ResourceType" enabled="false" level="ERROR" enabled_by_default="false" />
   </profile>
 </component>

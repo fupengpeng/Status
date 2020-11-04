@@ -3,13 +3,21 @@ package com.fpp.status.view.pulpdr.Divider;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 
 import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFAdapter;
 
+<<<<<<< HEAD
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * Created by Administrator on 2016/9/25.

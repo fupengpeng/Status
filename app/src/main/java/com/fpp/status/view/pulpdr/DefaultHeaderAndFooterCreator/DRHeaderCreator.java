@@ -3,6 +3,10 @@ package com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.RecyclerView;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
@@ -13,8 +17,11 @@ import com.fpp.status.R;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
 import com.fpp.status.view.pulpdr.PullToRefresh.RefreshHeaderCreator;
 
+<<<<<<< HEAD
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * 默认刷新尾部

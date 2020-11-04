@@ -2,12 +2,19 @@ package com.fpp.status.transformer;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 
 import com.fpp.status.R;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 public class MainActivity extends AppCompatActivity {
 
     @Override

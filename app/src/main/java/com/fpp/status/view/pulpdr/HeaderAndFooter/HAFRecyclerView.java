@@ -1,15 +1,23 @@
 package com.fpp.status.view.pulpdr.HeaderAndFooter;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.fpp.status.view.pulpdr.AutoLoad.ALAdapter;
 import com.fpp.status.view.pulpdr.PullToLoad.PullToLoadAdapter;
 
+<<<<<<< HEAD
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * Created by Administrator on 2016/9/19.

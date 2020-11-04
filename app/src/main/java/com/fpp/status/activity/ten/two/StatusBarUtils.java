@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
+<<<<<<< HEAD
+=======
+import android.support.annotation.ColorInt;
+import android.support.v4.view.ViewCompat;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +16,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
+<<<<<<< HEAD
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by zhouwei on 16/10/21.
  */

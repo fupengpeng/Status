@@ -1,11 +1,19 @@
 package com.fpp.status.activity.nine.one;
 
 import android.os.Bundle;
+<<<<<<< HEAD
 
 import com.fpp.status.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+=======
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+
+import com.fpp.status.R;
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

@@ -10,7 +10,11 @@
         android:clipChildren="false"
         android:background="#aadc71ff"
         >
+<<<<<<< HEAD
         <androidx.viewpager.widget.ViewPager
+=======
+        <android.support.v4.view.ViewPager
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
             android:id="@+id/vp_atvt_handler_eight"
             android:layout_width="match_parent"
             android:layout_marginLeft="60dp"
@@ -19,7 +23,11 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             >
+<<<<<<< HEAD
         </androidx.viewpager.widget.ViewPager>
+=======
+        </android.support.v4.view.ViewPager>
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
     </FrameLayout>
 

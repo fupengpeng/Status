@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;

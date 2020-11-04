@@ -3,6 +3,12 @@ package com.fpp.status.view.banner;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+<<<<<<< HEAD
+=======
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 import com.fpp.status.utils.LogUtil;
 
@@ -10,10 +16,13 @@ import java.lang.ref.WeakReference;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 @SuppressWarnings("unused")
 public class WeakHandler {
     private final Handler.Callback mCallback; // hard reference to Callback. We need to keep callback in memory

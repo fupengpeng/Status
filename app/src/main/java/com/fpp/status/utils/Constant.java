@@ -4,6 +4,11 @@ import android.os.Environment;
 
 
 
+<<<<<<< HEAD
+=======
+import java.io.File;
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * 作者：Jelly
  * 详情：常量

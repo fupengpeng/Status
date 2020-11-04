@@ -8,6 +8,10 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Shader;
+<<<<<<< HEAD
+=======
+import android.graphics.drawable.Drawable;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,10 +20,13 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.fpp.status.R;
 import com.fpp.status.view.banner.loader.ImageLoader;
 
+<<<<<<< HEAD
 import java.security.MessageDigest;
 
 import androidx.annotation.NonNull;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by Jelly on 2018/5/29.
  */
@@ -51,6 +58,10 @@ public class GlideImageLoader extends ImageLoader {
         private int mImageType;
         private int mBorderRadius;
         public GlideCircleTransform(Context context,int imageType,int borderRadius) {
+<<<<<<< HEAD
+=======
+            super(context);
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
             mImageType = imageType;
             mBorderRadius = borderRadius;
         }
@@ -118,15 +129,22 @@ public class GlideImageLoader extends ImageLoader {
             return result;
         }
 
+<<<<<<< HEAD
+=======
+        @Override
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         public String getId() {
             return getClass().getName();
         }
 
 
+<<<<<<< HEAD
         @Override
         public void updateDiskCacheKey(@NonNull MessageDigest messageDigest) {
 
         }
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     }
     final static class GlideImageLoaderConfig{
         public static final int CIRCULAR_BEAD = 100001;

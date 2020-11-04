@@ -1,6 +1,12 @@
 package com.fpp.status.transformer;
 
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,12 +15,17 @@ import android.widget.ImageView;
 
 import com.fpp.status.R;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 
 public class StandardViewPagerActivity extends AppCompatActivity {
+=======
+
+public class StandardViewPagerActivity extends AppCompatActivity{
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     private ViewPager mViewPager;
     private PagerAdapter mAdapter;
 

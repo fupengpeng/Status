@@ -2,7 +2,12 @@ package com.fpp.status.view.banner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+<<<<<<< HEAD
 import android.os.Build;
+=======
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -31,6 +36,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.annotation.RequiresApi;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -38,6 +44,12 @@ import androidx.viewpager.widget.ViewPager;
 
 
 public class Banner extends FrameLayout implements ViewPager.OnPageChangeListener {
+=======
+import static android.support.v4.view.ViewPager.OnPageChangeListener;
+import static android.support.v4.view.ViewPager.PageTransformer;
+
+public class Banner extends FrameLayout implements OnPageChangeListener {
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     public String tag = "banner";
     private int mIndicatorMargin = BannerConfig.PADDING_SIZE;
     private int mIndicatorWidth;
@@ -72,7 +84,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
     private ImageView bannerDefaultImage;
     private ImageLoaderInterface imageLoader;
     private BannerPagerAdapter adapter;
+<<<<<<< HEAD
     private ViewPager.OnPageChangeListener mOnPageChangeListener;
+=======
+    private OnPageChangeListener mOnPageChangeListener;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     private BannerScroller mScroller;
     private OnBannerClickListener bannerListener;
     private OnBannerListener listener;
@@ -224,7 +240,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
      * @param transformer
      * @return
      */
+<<<<<<< HEAD
     public Banner setBannerAnimation(Class<? extends ViewPager.PageTransformer> transformer) {
+=======
+    public Banner setBannerAnimation(Class<? extends PageTransformer> transformer) {
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         try {
             setPageTransformer(true, transformer.newInstance());
         } catch (Exception e) {
@@ -249,7 +269,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
     }
 
     /**
+<<<<<<< HEAD
      * Set a {@link ViewPager.PageTransformer} that will be called for each attached page whenever
+=======
+     * Set a {@link PageTransformer} that will be called for each attached page whenever
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
      * the scroll position is changed. This allows the application to apply custom property
      * transformations to each page, overriding the default sliding look and feel.
      *
@@ -258,7 +282,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
      * @param transformer         PageTransformer that will modify each page's animation properties
      * @return Banner
      */
+<<<<<<< HEAD
     public Banner setPageTransformer(boolean reverseDrawingOrder, ViewPager.PageTransformer transformer) {
+=======
+    public Banner setPageTransformer(boolean reverseDrawingOrder, PageTransformer transformer) {
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         viewPager.setPageTransformer(reverseDrawingOrder, transformer);
         return this;
     }
@@ -430,7 +458,10 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
      * 设置图片集合
      * @param imagesUrl
      */
+<<<<<<< HEAD
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     private void setImageList(List<?> imagesUrl) {
         LogUtil.e("setImageList  imagesUrl = " + imagesUrl.size());
         if (imagesUrl == null || imagesUrl.size() <= 0) {
@@ -811,7 +842,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         return this;
     }
 
+<<<<<<< HEAD
     public void setOnPageChangeListener(ViewPager.OnPageChangeListener onPageChangeListener) {
+=======
+    public void setOnPageChangeListener(OnPageChangeListener onPageChangeListener) {
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         mOnPageChangeListener = onPageChangeListener;
     }
 

@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+<<<<<<< HEAD
 import android.util.TypedValue;
 import android.view.View;
 
@@ -13,6 +14,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+=======
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.TypedValue;
+import android.view.View;
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by Administrator on 2016/9/25.
  */

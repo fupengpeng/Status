@@ -1,13 +1,20 @@
 package com.fpp.status.view.pulpdr.AutoLoad;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.RecyclerView;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFAdapter;
 
+<<<<<<< HEAD
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * 自动加载适配器

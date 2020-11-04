@@ -3,6 +3,10 @@ package com.fpp.status.activity.nine.four;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.JsResult;
@@ -14,8 +18,11 @@ import android.widget.Button;
 
 import com.fpp.status.R;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description: Android与js交互
  * Author: fpp

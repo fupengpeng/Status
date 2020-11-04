@@ -1,6 +1,10 @@
 package com.fpp.status.activity.nine.seven;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.RecyclerView;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +15,11 @@ import com.fpp.status.R;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:
  * Author: fp

@@ -9,6 +9,11 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.provider.Settings;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -32,9 +37,12 @@ import java.util.LinkedHashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:
  * Author: fpp

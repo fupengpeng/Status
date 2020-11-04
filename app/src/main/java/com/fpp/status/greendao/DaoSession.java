@@ -8,12 +8,18 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
+<<<<<<< HEAD
 import com.fpp.status.entity.CardBean;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import com.fpp.status.entity.Student;
 import com.fpp.status.entity.TopicBean;
 import com.fpp.status.view.download.data.DownloadData;
 
+<<<<<<< HEAD
 import com.fpp.status.greendao.CardBeanDao;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import com.fpp.status.greendao.StudentDao;
 import com.fpp.status.greendao.TopicBeanDao;
 import com.fpp.status.greendao.DownloadDataDao;
@@ -27,12 +33,18 @@ import com.fpp.status.greendao.DownloadDataDao;
  */
 public class DaoSession extends AbstractDaoSession {
 
+<<<<<<< HEAD
     private final DaoConfig cardBeanDaoConfig;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     private final DaoConfig studentDaoConfig;
     private final DaoConfig topicBeanDaoConfig;
     private final DaoConfig downloadDataDaoConfig;
 
+<<<<<<< HEAD
     private final CardBeanDao cardBeanDao;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     private final StudentDao studentDao;
     private final TopicBeanDao topicBeanDao;
     private final DownloadDataDao downloadDataDao;
@@ -41,9 +53,12 @@ public class DaoSession extends AbstractDaoSession {
             daoConfigMap) {
         super(db);
 
+<<<<<<< HEAD
         cardBeanDaoConfig = daoConfigMap.get(CardBeanDao.class).clone();
         cardBeanDaoConfig.initIdentityScope(type);
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         studentDaoConfig = daoConfigMap.get(StudentDao.class).clone();
         studentDaoConfig.initIdentityScope(type);
 
@@ -53,28 +68,40 @@ public class DaoSession extends AbstractDaoSession {
         downloadDataDaoConfig = daoConfigMap.get(DownloadDataDao.class).clone();
         downloadDataDaoConfig.initIdentityScope(type);
 
+<<<<<<< HEAD
         cardBeanDao = new CardBeanDao(cardBeanDaoConfig, this);
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         studentDao = new StudentDao(studentDaoConfig, this);
         topicBeanDao = new TopicBeanDao(topicBeanDaoConfig, this);
         downloadDataDao = new DownloadDataDao(downloadDataDaoConfig, this);
 
+<<<<<<< HEAD
         registerDao(CardBean.class, cardBeanDao);
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         registerDao(Student.class, studentDao);
         registerDao(TopicBean.class, topicBeanDao);
         registerDao(DownloadData.class, downloadDataDao);
     }
     
     public void clear() {
+<<<<<<< HEAD
         cardBeanDaoConfig.clearIdentityScope();
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         studentDaoConfig.clearIdentityScope();
         topicBeanDaoConfig.clearIdentityScope();
         downloadDataDaoConfig.clearIdentityScope();
     }
 
+<<<<<<< HEAD
     public CardBeanDao getCardBeanDao() {
         return cardBeanDao;
     }
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     public StudentDao getStudentDao() {
         return studentDao;
     }

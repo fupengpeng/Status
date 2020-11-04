@@ -1,16 +1,25 @@
 package com.fpp.status.activity.nine.seven;
 
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 import com.fpp.status.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:
  * Author: fp

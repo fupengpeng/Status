@@ -1,5 +1,10 @@
 package com.fpp.status.utils;
 
+<<<<<<< HEAD
+=======
+import android.app.Activity;
+import android.app.Application;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Base64;
@@ -130,7 +135,11 @@ public class SPUtils {
      * @param key
      * @param object
      */
+<<<<<<< HEAD
     static Context context= BaseApplication.getmContext();
+=======
+    static Context context= BaseApplication.getContext();
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     public static void put(String key, Object object) {
 
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME,

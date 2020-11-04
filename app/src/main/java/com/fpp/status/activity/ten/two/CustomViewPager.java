@@ -1,6 +1,10 @@
 package com.fpp.status.activity.ten.two;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.support.v4.view.ViewPager;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.View;
@@ -8,8 +12,11 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.Collections;
 
+<<<<<<< HEAD
 import androidx.viewpager.widget.ViewPager;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by zhouwei on 17/8/16.
  */

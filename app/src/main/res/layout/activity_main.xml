@@ -826,7 +826,11 @@
                     android:layout_weight="0.5"
                     android:background="#0055aa"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="自动轮播"
+=======
+                    android:text="DialogFragment应用"
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
 
@@ -850,7 +854,11 @@
                     android:layout_weight="0.5"
                     android:background="#aaff00"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="USB相机"
+=======
+                    android:text="阴影设置"
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -860,7 +868,11 @@
                     android:layout_weight="0.5"
                     android:background="#ffffff"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="EXCEL"
+=======
+                    android:text="===="
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -870,7 +882,11 @@
                     android:layout_weight="0.5"
                     android:background="#ffff00"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="串口通信"
+=======
+                    android:text="图表"
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -880,7 +896,11 @@
                     android:layout_weight="0.5"
                     android:background="#00ffff"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="7.0"
+=======
+                    android:text="联系人"
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -890,7 +910,11 @@
                     android:layout_weight="0.5"
                     android:background="#aa95ff"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="KEYBOARD"
+=======
+                    android:text="CheckAdapter抽取"
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -900,7 +924,11 @@
                     android:layout_weight="0.5"
                     android:background="#ff00ff"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="测试"
+=======
+                    android:text="===="
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -910,7 +938,11 @@
                     android:layout_weight="0.5"
                     android:background="#ffaaaa"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="测试"
+=======
+                    android:text="===="
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                     android:textSize="@dimen/dp_10" />
 
                 <Button
@@ -920,9 +952,16 @@
                     android:layout_weight="0.5"
                     android:background="#0055aa"
                     android:scaleType="centerCrop"
+<<<<<<< HEAD
                     android:text="NFC"
                     android:textSize="@dimen/dp_10" />
 
+=======
+                    android:text="===="
+                    android:textSize="@dimen/dp_10" />
+
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
             </LinearLayout>
 
             <View

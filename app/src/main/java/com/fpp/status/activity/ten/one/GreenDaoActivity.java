@@ -2,6 +2,10 @@ package com.fpp.status.activity.ten.one;
 
 import android.content.Context;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +21,10 @@ import com.fpp.status.utils.LogUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

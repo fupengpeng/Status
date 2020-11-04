@@ -2,6 +2,11 @@ package com.fpp.status.activity.ten.two;
 
 import android.content.Context;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +21,12 @@ import com.fpp.status.activity.ten.two.holder.MZViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * Created by zhouwei on 17/5/31.

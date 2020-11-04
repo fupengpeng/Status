@@ -4,6 +4,12 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
+<<<<<<< HEAD
+=======
+import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -13,10 +19,13 @@ import android.view.ViewGroup;
 import com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator.DRHeaderCreator;
 import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFRecyclerView;
 
+<<<<<<< HEAD
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * Created by Administrator on 2016/9/19.

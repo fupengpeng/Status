@@ -1,5 +1,9 @@
 package com.fpp.status.view.download.download;
 
+<<<<<<< HEAD
+=======
+import android.support.annotation.NonNull;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadFactory;
@@ -7,8 +11,11 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * 自定义的下载线程池
  */

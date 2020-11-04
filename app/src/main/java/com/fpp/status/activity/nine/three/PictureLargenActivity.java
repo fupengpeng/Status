@@ -4,17 +4,24 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import com.fpp.status.R;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:  图片变大，点击变回
  * Author: fpp

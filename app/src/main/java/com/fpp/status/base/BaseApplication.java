@@ -2,6 +2,7 @@ package com.fpp.status.base;
 
 import android.app.Application;
 import android.content.Context;
+<<<<<<< HEAD
 import android.os.Environment;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
@@ -14,11 +15,37 @@ import com.fpp.status.utils.SPUtils;
 
 import java.io.File;
 import java.util.ArrayList;
+=======
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.fpp.status.R;
+import com.fpp.status.db.DbManager;
+import com.fpp.status.greendao.DaoSession;
+import com.fpp.status.utils.Constant;
+import com.fpp.status.utils.SPUtils;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+<<<<<<< HEAD
 import androidx.multidex.MultiDex;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import cn.jpush.android.api.JPushInterface;
 
 /**
@@ -28,18 +55,29 @@ import cn.jpush.android.api.JPushInterface;
  */
 public class BaseApplication extends Application implements Thread.UncaughtExceptionHandler {
 
+<<<<<<< HEAD
     public static String PATH_DIR;
     public static String PATH_LOG;
     public static Context mContext;
     public static Toast mToast;
+=======
+    private static Context context;
+    private static Toast mToast;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     // 收集日志信息
     private static Map<String, String> infos = new HashMap<>();
     private final String TAG = this.getClass().getSimpleName();
     // 用于格式化日期,作为日志文件名的一部分
 
+<<<<<<< HEAD
     public static List<?> images = new ArrayList<>();
     public static List<String> titles = new ArrayList<>();
     public static int H, W;
+=======
+    public static List<?> images=new ArrayList<>();
+    public static List<String> titles=new ArrayList<>();
+    public static int H,W;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     public static BaseApplication app;
 
     /**
@@ -57,8 +95,13 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
      *
      * @return
      */
+<<<<<<< HEAD
     public static Context getmContext() {
         return mContext;
+=======
+    public static Context getContext() {
+        return context;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     }
 
 
@@ -69,15 +112,24 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
     @Override
     public void onCreate() {
 //      Thread.setDefaultUncaughtExceptionHandler(this);
+<<<<<<< HEAD
         mContext = getApplicationContext();
         if (mToast == null) {
             mToast = Toast.makeText(mContext, "", Toast.LENGTH_LONG);
+=======
+        context = getApplicationContext();
+        if (mToast == null) {
+            mToast = Toast.makeText(context, "", Toast.LENGTH_LONG);
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         }
         // 极光推送初始化
         initPush();
 
+<<<<<<< HEAD
         // 添加下面这个
         MultiDex.install(this);
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 
         // 极光推送初始化
@@ -92,6 +144,7 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
 
 
     }
+<<<<<<< HEAD
 
     private void initDatabase() {
         //初始化数据库
@@ -148,6 +201,23 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
         DisplayMetrics dm = aty.getResources().getDisplayMetrics();
         H = dm.heightPixels;
         W = dm.widthPixels;
+=======
+    private void initDatabase() {
+        //初始化数据库
+        daoSession = DbManager.getDaoSession(context);
+
+    }
+    private void initApp() {
+        app=this;
+        getScreen(this);
+
+    }
+
+    public void getScreen(Context aty) {
+        DisplayMetrics dm = aty.getResources().getDisplayMetrics();
+        H=dm.heightPixels;
+        W=dm.widthPixels;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     }
 
     /**
@@ -160,11 +230,20 @@ public class BaseApplication extends Application implements Thread.UncaughtExcep
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     /**
      * 极光推送初始化
      */
     private void initPush() {
+<<<<<<< HEAD
         SPUtils.put(Constant.MSG_OPEN, true);
+=======
+        SPUtils.put(Constant.MSG_OPEN,true);
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
         JPushInterface.init(this);            // 初始化 JPush
         if ((Boolean) SPUtils.get(Constant.MSG_OPEN, true)) {

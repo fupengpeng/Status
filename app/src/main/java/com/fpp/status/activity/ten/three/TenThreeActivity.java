@@ -2,6 +2,12 @@ package com.fpp.status.activity.ten.three;
 
 import android.content.Context;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -22,9 +28,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -36,10 +45,15 @@ import butterknife.ButterKnife;
 
 public class TenThreeActivity extends AppCompatActivity implements OnBannerListener {
     Banner bannerFragmentExamSubjectOne;
+<<<<<<< HEAD
 
     @BindView(R.id.bvp_atvt_ten_three)
     ViewPager bvpAtvtTenThree;
 
+=======
+    @BindView(R.id.bvp_atvt_ten_three)
+    ViewPager bvpAtvtTenThree;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     @BindView(R.id.riv)
     RoundImageView riv;
 
@@ -49,6 +63,7 @@ public class TenThreeActivity extends AppCompatActivity implements OnBannerListe
         setContentView(R.layout.activity_ten_three);
         ButterKnife.bind(this);
 
+<<<<<<< HEAD
         initBanner();
 
         // TODO: 2018/7/16 viewpager实现
@@ -59,6 +74,9 @@ public class TenThreeActivity extends AppCompatActivity implements OnBannerListe
     private void initBanner() {
         bannerFragmentExamSubjectOne = (Banner) findViewById(R.id.banner);
 
+=======
+        bannerFragmentExamSubjectOne = (Banner) findViewById(R.id.banner);
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         List<String> images = new ArrayList<>();
         images.add("https://yun.xiaojiangjiakao.com/upload/admin/20180710/dff89b8512d47c57b1673d0b86017d1b.jpg");
         images.add("https://yun.xiaojiangjiakao.com/upload/admin/20180710/d4626ed0f35396945a48f4e4cece3f8a.jpg");
@@ -89,6 +107,13 @@ public class TenThreeActivity extends AppCompatActivity implements OnBannerListe
         });
         //banner设置方法全部调用完毕时最后调用
         bannerFragmentExamSubjectOne.start();
+<<<<<<< HEAD
+=======
+
+        // TODO: 2018/7/16 viewpager实现
+        initViewPager();
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     }
 
 

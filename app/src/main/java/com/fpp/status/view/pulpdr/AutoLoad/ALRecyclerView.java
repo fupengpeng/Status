@@ -2,6 +2,13 @@ package com.fpp.status.view.pulpdr.AutoLoad;
 
 import android.content.Context;
 import android.graphics.Canvas;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -9,11 +16,14 @@ import com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator.DALFooterCreator
 import com.fpp.status.view.pulpdr.PullToLoad.OnLoadListener;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
 
+<<<<<<< HEAD
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * 自动加载RV

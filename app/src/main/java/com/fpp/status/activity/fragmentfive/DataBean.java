@@ -1,6 +1,6 @@
 package com.fpp.status.activity.fragmentfive;
 
-public class DataBean {
+public class DataBean extends CheckBean{
 
 	/**
 	 * 商品id

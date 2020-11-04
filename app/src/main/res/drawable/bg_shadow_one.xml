@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:innerRadius="0dip"
+    android:thickness="70dip"
+    android:useLevel="false">
+
+
+    <!--
+     发散渐变效果的圆-->
+    <gradient
+        android:type="radial"
+        android:useLevel="false"
+        android:gradientRadius="200"
+        android:startColor="#ff0000"
+        android:endColor="#0000ff"
+        android:centerColor="#00ff00"/>
+</shape>

@@ -1,6 +1,11 @@
 package com.fpp.status.transformer;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
+import android.support.annotation.IntDef;
+import android.support.v4.view.ViewPager;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
@@ -10,9 +15,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+<<<<<<< HEAD
 import androidx.annotation.IntDef;
 import androidx.viewpager.widget.ViewPager;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * 轮播效果的{@link ViewPager}
  * <ol>

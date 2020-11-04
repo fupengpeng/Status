@@ -2,6 +2,12 @@ package com.fpp.status.activity.ten.four;
 
 import android.content.Context;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -23,9 +29,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

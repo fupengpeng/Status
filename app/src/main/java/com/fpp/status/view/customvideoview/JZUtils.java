@@ -6,6 +6,11 @@ import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.ContextThemeWrapper;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.Log;
 import android.view.Window;
 
@@ -13,9 +18,12 @@ import java.util.Formatter;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.ContextThemeWrapper;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:
  * Author: fpp

@@ -16,11 +16,18 @@
 
 package com.fpp.status.view.banner.transformer;
 
+<<<<<<< HEAD
 import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
 public abstract class ABaseTransformer implements ViewPager.PageTransformer {
+=======
+import android.support.v4.view.ViewPager.PageTransformer;
+import android.view.View;
+
+public abstract class ABaseTransformer implements PageTransformer {
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 	/**
 	 * Called each {@link #transformPage(View, float)}.

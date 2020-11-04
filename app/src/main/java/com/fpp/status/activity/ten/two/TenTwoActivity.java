@@ -1,15 +1,24 @@
 package com.fpp.status.activity.ten.two;
 
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.MenuItem;
 
 import com.fpp.status.R;
 import com.fpp.status.activity.ten.two.remote.RemoteTestFragment;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Description:
  * Author: fpp

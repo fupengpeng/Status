@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,8 +23,11 @@ import com.othershe.dutil.utils.Utils;
 import java.io.File;
 import java.util.Date;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import static com.othershe.dutil.data.Consts.NONE;
 
 /**

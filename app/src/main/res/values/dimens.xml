@@ -20,6 +20,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+    <!-- dp and sp values, must be defind in this file! -->
+    <!-- view size,you can add if there is no one -->
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     <dimen name="dp_m_60">-60dp</dimen>
     <dimen name="dp_m_30">-30dp</dimen>
     <dimen name="dp_m_20">-20dp</dimen>
@@ -396,14 +401,39 @@
     <dimen name="dp_358">358dp</dimen>
     <dimen name="dp_359">359dp</dimen>
     <dimen name="dp_360">360dp</dimen>
+<<<<<<< HEAD
     <dimen name="dp_361">361dp</dimen>
+=======
+    <dimen name="dp_365">365dp</dimen>
+    <dimen name="dp_370">370dp</dimen>
+    <dimen name="dp_372">372dp</dimen>
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     <dimen name="dp_400">400dp</dimen>
+    <dimen name="dp_410">410dp</dimen>
+    <dimen name="dp_420">420dp</dimen>
+    <dimen name="dp_422">422dp</dimen>
+    <dimen name="dp_440">440dp</dimen>
     <dimen name="dp_450">450dp</dimen>
+    <dimen name="dp_460">460dp</dimen>
+    <dimen name="dp_472">472dp</dimen>
+    <dimen name="dp_480">480dp</dimen>
     <dimen name="dp_500">500dp</dimen>
+    <dimen name="dp_523">523dp</dimen>
+    <dimen name="dp_525">525dp</dimen>
+    <dimen name="dp_526">526dp</dimen>
+    <dimen name="dp_527">527dp</dimen>
+    <dimen name="dp_528">528dp</dimen>
+    <dimen name="dp_530">530dp</dimen>
+    <dimen name="dp_550">550dp</dimen>
     <dimen name="dp_600">600dp</dimen>
+    <dimen name="dp_640">640dp</dimen>
     <dimen name="dp_700">700dp</dimen>
-    <dimen name="dp_800">800dp</dimen>
-    <dimen name="dp_900">900dp</dimen>
+
+    <dimen name="dp_720">720dp</dimen>
+    <dimen name="dp_840">840dp</dimen>
+    <dimen name="dp_1080">1080dp</dimen>
+    <dimen name="dp_5000">5000dp</dimen>
+    <!-- font size,you can add if there is no one -->
 
     <dimen name="dp_2000">2000dp</dimen>
 
@@ -433,6 +463,11 @@
     <dimen name="txt_26">26sp</dimen>
     <dimen name="txt_28">28sp</dimen>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     <!--  order  文字  -->
     <!--标题栏文字大小-->
     <dimen name="order_title_text_size">18sp</dimen>
@@ -454,6 +489,7 @@
     <dimen name="jz_start_button_w_h_fullscreen">62dp</dimen>
 
 
+<<<<<<< HEAD
     <dimen name="kb_31_6">31.6dp</dimen>
     <dimen name="kb_47_9">47.9dp</dimen>
     <dimen name="kb_127_4">127.4dp</dimen>
@@ -464,4 +500,6 @@
     <dimen name="kb_80">80dp</dimen>
     <dimen name="kb_143">143dp</dimen>
 
+=======
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 </resources>

@@ -1,5 +1,6 @@
 package com.fpp.status.activity.ten.five;
 
+<<<<<<< HEAD
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,9 @@ import com.fpp.status.utils.LogUtil;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * Description:  视频播放
@@ -20,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * Date: 2018/7/20  8:43
  */
 
+<<<<<<< HEAD
 public class VideoActivity  extends AppCompatActivity
         implements CVV.VVC{
 
@@ -185,6 +190,9 @@ public class VideoActivity  extends AppCompatActivity
             super.onBackPressed();
         }
     }
+=======
+public class VideoActivity extends AppCompatActivity {
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 }
 
