@@ -920,7 +920,7 @@
                     android:layout_weight="0.5"
                     android:background="#0055aa"
                     android:scaleType="centerCrop"
-                    android:text="测试"
+                    android:text="NFC"
                     android:textSize="@dimen/dp_10" />
 
             </LinearLayout>

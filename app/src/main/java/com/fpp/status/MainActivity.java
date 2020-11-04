@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.nfc.tech.NfcA;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,7 @@ import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
+import com.fpp.status.activity.eleven.eight.NfcActivity;
 import com.fpp.status.activity.eleven.five.KeyBoardActivity;
 import com.fpp.status.activity.eleven.four.InstallActivity;
 import com.fpp.status.activity.eleven.one.UsbCameraActivity;
@@ -526,6 +528,8 @@ public class MainActivity extends Activity {
             case R.id.btn_eleven_seven:
                 break;
             case R.id.btn_eleven_eight:
+                intent = new Intent(this, NfcActivity.class);
+                startActivity(intent);
                 break;
         }
     }
