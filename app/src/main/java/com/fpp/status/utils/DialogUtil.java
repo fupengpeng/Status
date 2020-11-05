@@ -11,7 +11,6 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +27,8 @@ import android.widget.TextView;
 import com.fpp.status.R;
 
 import java.lang.reflect.Field;
+
+import androidx.annotation.Nullable;
 
 
 /**
@@ -297,7 +298,7 @@ public class DialogUtil {
     private static Context checkDialog(Context context) {
         dismiss();
 //        WeakReference<Activity> reference = new WeakReference<>(context);
-        dialogUtil = new Dialog(context, R.style.dialog);
+        dialogUtil = new Dialog(context);
         return context;
     }
 

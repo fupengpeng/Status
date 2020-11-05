@@ -178,15 +178,6 @@ public class MainActivity extends Activity {
             R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven, R.id.btn_six_eight,
             R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three, R.id.btn_eight_four,
             R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven, R.id.btn_eight_eight
-            , R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
-            , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
-            , R.id.btn_nine_seven, R.id.btn_nine_eight
-            , R.id.btn_ten_one, R.id.btn_ten_two
-            , R.id.btn_ten_three, R.id.btn_ten_four
-            , R.id.btn_ten_five, R.id.btn_ten_six
-            , R.id.btn_ten_seven, R.id.btn_ten_eight
-            , R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three, R.id.btn_eleven_four
-            , R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven, R.id.btn_eleven_eight
 
     })
     public void onViewClicked(View view) {
@@ -410,86 +401,6 @@ public class MainActivity extends Activity {
             case R.id.btn_eight_eight:
                 intent = new Intent(this, GestureOneActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.btn_nine_one:
-                intent = new Intent(this, RVOneActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_two:
-                intent = new Intent(this, GridManagerActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_three:
-                intent = new Intent(this, PictureLargenActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_four:
-                intent = new Intent(this, WebActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_five:
-                intent = new Intent(this, JsActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_six:
-                intent = new Intent(this, AnimationActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_seven:
-                intent = new Intent(this, com.fpp.status.activity.nine.seven.RecycleViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_nine_eight:
-                intent = new Intent(this, com.fpp.status.transformer.MainActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_one:
-                intent = new Intent(this, GreenDaoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_two:
-                intent = new Intent(this, TenTwoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_three:
-                intent = new Intent(this, TenThreeActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_four:
-                intent = new Intent(this, TenFourTwoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_five:
-                intent = new Intent(this, VideoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_six:
-                intent = new Intent(this, com.fpp.status.activity.ten.six.DLActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_seven:
-                intent = new Intent(this, TenSevenActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_ten_eight:
-                intent = new Intent(this, TenEightActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_eleven_one:
-                break;
-            case R.id.btn_eleven_two:
-                break;
-            case R.id.btn_eleven_three:
-                break;
-            case R.id.btn_eleven_four:
-                break;
-            case R.id.btn_eleven_five:
-                break;
-            case R.id.btn_eleven_six:
-                break;
-            case R.id.btn_eleven_seven:
-                break;
-            case R.id.btn_eleven_eight:
                 break;
         }
     }

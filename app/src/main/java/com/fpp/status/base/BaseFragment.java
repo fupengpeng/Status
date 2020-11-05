@@ -2,8 +2,6 @@ package com.fpp.status.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +13,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import rx.Subscription;
@@ -24,7 +24,7 @@ import rx.subscriptions.CompositeSubscription;
  *
  * 详情: fragment基类
  */
-public abstract class BaseFragment extends Fragment  {
+public abstract class BaseFragment extends Fragment {
     protected static final String ARG_PARAM1 = "param1";
     protected static final String ARG_PARAM2 = "param2";
     protected static final String ARG_PARAM3 = "param3";

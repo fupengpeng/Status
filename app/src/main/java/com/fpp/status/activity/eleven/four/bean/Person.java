@@ -19,7 +19,7 @@ public class Person {
 
     public Person(String name) {
         this.name = name;
-        this.pinyin = PinYinUtils.getPinyin(name);
+        this.pinyin = getPinyin();
         headerWord = pinyin.substring(0, 1);
     }
 

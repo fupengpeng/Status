@@ -62,7 +62,7 @@
         </LinearLayout>
 
         <View
-            android:background="@color/gray_f7f7f7"
+            android:background="#f7f7f7"
             android:layout_width="@dimen/dp_1"
             android:layout_height="match_parent"/>
 
@@ -113,7 +113,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lineChart">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp">
@@ -137,9 +137,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view_mine"
                 app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_shanghai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -164,9 +164,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view_shanghai"
                 app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_shenzhen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -191,9 +191,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view_shenzhen"
                 app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_gem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view_gem"
                 app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
@@ -231,62 +231,6 @@
         app:layout_constraintTop_toBottomOf="@+id/lineChart">
         >
         <!-- 标题 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <android.support.design.widget.TabLayout
-                android:id="@+id/tl_atvt_video_title"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/white"
-                app:tabIndicatorColor="@color/black"
-                app:tabSelectedTextColor="@color/black"
-                app:tabTextAppearance="@style/tabLayout_textView_size"
-                app:tabTextColor="@color/gray_f7f7f7" />
-
-
-            <LinearLayout
-                android:id="@+id/ll_atvt_video_download"
-                android:layout_width="@dimen/dp_62"
-                android:layout_height="@dimen/dp_26"
-                android:layout_marginRight="@dimen/dp_18"
-                android:background="@drawable/bg_tv_blue_radus"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="@dimen/dp_13"
-                    android:layout_height="@dimen/dp_14"
-                    android:src="@mipmap/icon_exam_download" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp_3"
-                    android:text="下载"
-                    android:textColor="@color/blue_24A3FB"
-                    android:textSize="@dimen/sp_15" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_1"
-            android:background="@color/gray_EDEFF3" />
-
-        <!-- 内容 -->
-        <android.support.v4.view.ViewPager
-            android:id="@+id/vp_atvt_video_content"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_0"
-            android:layout_weight="1" />
 
 
     </LinearLayout>

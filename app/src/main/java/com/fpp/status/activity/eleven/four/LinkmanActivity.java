@@ -3,7 +3,6 @@ package com.fpp.status.activity.eleven.four;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ListView;
@@ -20,13 +19,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 /**
  * Description:  联系人列表
  * Author: fpp
  * Date: 2018/9/19  16:48
  */
 
-public class LinkmanActivity extends  AppCompatActivity implements
+public class LinkmanActivity extends AppCompatActivity implements
         WordsNavigation.onWordsChangeListener, AbsListView.OnScrollListener {
 
     private Handler handler;
