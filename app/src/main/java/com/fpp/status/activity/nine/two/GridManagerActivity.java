@@ -2,12 +2,6 @@ package com.fpp.status.activity.nine.two;
 
 import android.media.Image;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fpp.status.R;
 //import com.fpp.status.activity.nine.entity.ExerciseBottomBean;
@@ -34,6 +28,8 @@ import com.fpp.status.R;
 //import butterknife.BindView;
 //import butterknife.ButterKnife;
 //import okhttp3.Call;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.fpp.status.R.drawable.shilipic;
 

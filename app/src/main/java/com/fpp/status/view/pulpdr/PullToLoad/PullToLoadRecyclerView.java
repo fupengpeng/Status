@@ -4,8 +4,6 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,6 +11,9 @@ import android.view.ViewGroup;
 
 import com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator.DLFooterCreator;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
+
+import androidx.core.view.ViewCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**

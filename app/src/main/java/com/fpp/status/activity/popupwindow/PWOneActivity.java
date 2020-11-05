@@ -3,8 +3,6 @@ package com.fpp.status.activity.popupwindow;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,6 +15,8 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 
 /**
@@ -24,7 +24,7 @@ import java.util.List;
  * @author  fupengpeng
  * @date  2018/2/25 0025 16:18
  */
-public class PWOneActivity extends AppCompatActivity  implements ViewPager.OnPageChangeListener, View.OnTouchListener {
+public class PWOneActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnTouchListener {
 
     public static final int VIEW_PAGER_DELAY = 2000;
 

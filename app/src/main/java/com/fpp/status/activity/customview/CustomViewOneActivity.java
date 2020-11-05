@@ -2,7 +2,6 @@ package com.fpp.status.activity.customview;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -12,6 +11,8 @@ import com.fpp.status.utils.TimeUtils;
 
 import java.text.ParseException;
 import java.util.Date;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CustomViewOneActivity extends AppCompatActivity {
 

@@ -1,32 +1,12 @@
 package com.fpp.status.activity.four;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.fpp.status.R;
-import com.fpp.status.activity.fragmenteight.fragment.AllFragment;
-import com.fpp.status.activity.fragmenteight.fragment.AlreadyAccomplishFragment;
-import com.fpp.status.activity.fragmenteight.fragment.AlreadyCancelFragment;
-import com.fpp.status.activity.fragmenteight.fragment.UnderwayFragment;
-import com.fpp.status.activity.fragmenteight.fragment.WaitAcceptFragment;
-import com.fpp.status.entity.LoadMemberListResponseData;
-import com.fpp.status.utils.LogUtils;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by fupengpeng on 2017/12/16 0016.
@@ -42,7 +22,6 @@ public class FourFourActivity extends AppCompatActivity {
         final LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         setContentView(layout);
-
         // 生成3个Button
         final Button btn1 = new Button(this);
         btn1.setText("1");

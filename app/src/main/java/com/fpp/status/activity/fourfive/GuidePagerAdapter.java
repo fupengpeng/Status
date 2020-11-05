@@ -1,11 +1,12 @@
 package com.fpp.status.activity.fourfive;
 
-import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 /**
  * @description  引导页适配器----二

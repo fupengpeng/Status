@@ -1,10 +1,11 @@
 package com.fpp.status.view.pulpdr.HeaderAndFooter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;

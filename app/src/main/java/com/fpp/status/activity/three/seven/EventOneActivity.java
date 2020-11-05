@@ -2,13 +2,15 @@ package com.fpp.status.activity.three.seven;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.Nullable;
 
 /**
  * @author fupengpeng

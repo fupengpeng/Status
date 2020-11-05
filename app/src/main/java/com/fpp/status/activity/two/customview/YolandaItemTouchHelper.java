@@ -1,6 +1,6 @@
 package com.fpp.status.activity.two.customview;
 
-import android.support.v7.widget.helper.ItemTouchHelper;
+import androidx.recyclerview.widget.ItemTouchHelper;
 
 /**
  * @author fupengpeng

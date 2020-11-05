@@ -2,8 +2,9 @@ package com.fpp.status.transformer;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.support.v4.view.ViewPager;
 import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class RotateDownPageTransformer extends BasePageTransformer
 {

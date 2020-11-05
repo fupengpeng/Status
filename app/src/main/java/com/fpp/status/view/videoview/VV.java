@@ -9,8 +9,6 @@ import android.media.MediaFormat;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Looper;
-import android.support.v4.util.Pair;
-import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;

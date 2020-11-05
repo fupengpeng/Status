@@ -21,7 +21,9 @@ public class TestActivity extends Activity {
             String title = null;
             String content = null;
             if(bundle!=null){
+                // 通知标题
                 title = bundle.getString(JPushInterface.EXTRA_NOTIFICATION_TITLE);
+                // 通知内容
                 content = bundle.getString(JPushInterface.EXTRA_ALERT);
             }
             tv.setText("Title : " + title + "  " + "Content : " + content);

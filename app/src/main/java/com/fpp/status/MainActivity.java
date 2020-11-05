@@ -1,11 +1,10 @@
 package com.fpp.status;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -49,7 +48,6 @@ import com.fpp.status.activity.move.MoveFourActivity;
 import com.fpp.status.activity.move.MoveOneActivity;
 import com.fpp.status.activity.move.MoveThreeActivity;
 import com.fpp.status.activity.move.MoveTwoActivity;
-import com.fpp.status.activity.nine.eight.DialogFragmentActivity;
 import com.fpp.status.activity.nine.five.JsActivity;
 import com.fpp.status.activity.nine.four.WebActivity;
 import com.fpp.status.activity.nine.one.RVOneActivity;
@@ -76,165 +74,19 @@ import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends Activity {
 
 
-    private static final String TAG = "MainActivity";
+
     Intent intent;
-    @BindView(R.id.btn_one_one)
-    Button btnOneOne;
-    @BindView(R.id.btn_one_two)
-    Button btnOneTwo;
-    @BindView(R.id.btn_one_three)
-    Button btnOneThree;
-    @BindView(R.id.btn_one_four)
-    Button btnOneFour;
-    @BindView(R.id.btn_one_five)
-    Button btnOneFive;
-    @BindView(R.id.btn_one_six)
-    Button btnOneSix;
-    @BindView(R.id.btn_one_seven)
-    Button btnOneSeven;
-    @BindView(R.id.btn_two_one)
-    Button btnTwoOne;
-    @BindView(R.id.btn_two_two)
-    Button btnTwoTwo;
-    @BindView(R.id.btn_two_three)
-    Button btnTwoThree;
-    @BindView(R.id.btn_two_four)
-    Button btnTwoFour;
-    @BindView(R.id.btn_two_five)
-    Button btnTwoFive;
-    @BindView(R.id.btn_two_six)
-    Button btnTwoSix;
-    @BindView(R.id.btn_two_seven)
-    Button btnTwoSeven;
-    @BindView(R.id.btn_two_eight)
-    Button btnTwoEight;
-    @BindView(R.id.btn_three_one)
-    Button btnThreeOne;
-    @BindView(R.id.btn_three_two)
-    Button btnThreeTwo;
-    @BindView(R.id.btn_three_three)
-    Button btnThreeThree;
-    @BindView(R.id.btn_three_four)
-    Button btnThreeFour;
-    @BindView(R.id.btn_three_five)
-    Button btnThreeFive;
-    @BindView(R.id.btn_three_six)
-    Button btnThreeSix;
-    @BindView(R.id.btn_three_seven)
-    Button btnThreeSeven;
-    @BindView(R.id.btn_three_eight)
-    Button btnThreeEight;
-    @BindView(R.id.btn_four_one)
-    Button btnFourOne;
-    @BindView(R.id.btn_four_two)
-    Button btnFourTwo;
-    @BindView(R.id.btn_four_three)
-    Button btnFourThree;
-    @BindView(R.id.btn_four_four)
-    Button btnFourFour;
-    @BindView(R.id.btn_four_five)
-    Button btnFourFive;
-    @BindView(R.id.btn_four_six)
-    Button btnFourSix;
-    @BindView(R.id.btn_four_seven)
-    Button btnFourSeven;
-    @BindView(R.id.btn_four_eight)
-    Button btnFourEight;
-    @BindView(R.id.btn_five_one)
-    Button btnFiveOne;
-    @BindView(R.id.btn_five_two)
-    Button btnFiveTwo;
-    @BindView(R.id.btn_five_three)
-    Button btnFiveThree;
-    @BindView(R.id.btn_five_four)
-    Button btnFiveFour;
-    @BindView(R.id.btn_five_five)
-    Button btnFiveFive;
-    @BindView(R.id.btn_five_six)
-    Button btnFiveSix;
-    @BindView(R.id.btn_five_seven)
-    Button btnFiveSeven;
-    @BindView(R.id.btn_five_eight)
-    Button btnFiveEight;
-    @BindView(R.id.btn_six_one)
-    Button btnSixOne;
-    @BindView(R.id.btn_six_two)
-    Button btnSixTwo;
-    @BindView(R.id.btn_six_three)
-    Button btnSixThree;
-    @BindView(R.id.btn_six_four)
-    Button btnSixFour;
-    @BindView(R.id.btn_six_five)
-    Button btnSixFive;
-    @BindView(R.id.btn_six_six)
-    Button btnSixSix;
-    @BindView(R.id.btn_six_seven)
-    Button btnSixSeven;
-    @BindView(R.id.btn_six_eight)
-    Button btnSixEight;
-    @BindView(R.id.btn_eight_one)
-    Button btnEightOne;
-    @BindView(R.id.btn_eight_two)
-    Button btnEightTwo;
-    @BindView(R.id.btn_eight_three)
-    Button btnEightThree;
-    @BindView(R.id.btn_eight_four)
-    Button btnEightFour;
-    @BindView(R.id.btn_eight_five)
-    Button btnEightFive;
-    @BindView(R.id.btn_eight_six)
-    Button btnEightSix;
-    @BindView(R.id.btn_eight_seven)
-    Button btnEightSeven;
-    @BindView(R.id.btn_eight_eight)
-    Button btnEightEight;
-    @BindView(R.id.btn_nine_one)
-    Button btnNineOne;
-    @BindView(R.id.btn_nine_two)
-    Button btnNineTwo;
-    @BindView(R.id.btn_nine_three)
-    Button btnNineThree;
-    @BindView(R.id.btn_nine_four)
-    Button btnNineFour;
-    @BindView(R.id.btn_nine_five)
-    Button btnNineFive;
-    @BindView(R.id.btn_nine_six)
-    Button btnNineSix;
-    @BindView(R.id.btn_nine_seven)
-    Button btnNineSeven;
-    @BindView(R.id.btn_nine_eight)
-    Button btnNineEight;
-    @BindView(R.id.btn_ten_one)
-    Button btnTenOne;
-    @BindView(R.id.btn_ten_two)
-    Button btnTenTwo;
-    @BindView(R.id.btn_ten_three)
-    Button btnTenThree;
-    @BindView(R.id.btn_ten_four)
-    Button btnTenFour;
-    @BindView(R.id.btn_ten_five)
-    Button btnTenFive;
-    @BindView(R.id.btn_ten_six)
-    Button btnTenSix;
-    @BindView(R.id.btn_ten_seven)
-    Button btnTenSeven;
-    @BindView(R.id.btn_ten_eight)
-    Button btnTenEight;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -329,10 +181,12 @@ public class MainActivity extends AppCompatActivity {
             , R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
             , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six
             , R.id.btn_nine_seven, R.id.btn_nine_eight
-            ,R.id.btn_ten_one, R.id.btn_ten_two
+            , R.id.btn_ten_one, R.id.btn_ten_two
             , R.id.btn_ten_three, R.id.btn_ten_four
             , R.id.btn_ten_five, R.id.btn_ten_six
             , R.id.btn_ten_seven, R.id.btn_ten_eight
+            , R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three, R.id.btn_eleven_four
+            , R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven, R.id.btn_eleven_eight
 
     })
     public void onViewClicked(View view) {
@@ -420,8 +274,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_three_six:
                 intent = new Intent(this, MoveDeleteRecycleViewItemActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_three_seven:
                 intent = new Intent(this, ConfigurationActivity.class);
@@ -434,7 +286,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_four_one:
                 intent = new Intent(this, PWOneActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_four_two:
                 intent = new Intent(this, LoginActivity.class);
@@ -451,13 +302,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_four_five:
                 intent = new Intent(this, GuideTwoActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_four_six:
                 intent = new Intent(this, GuideThreeActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_four_seven:
                 intent = new Intent(this, GuideFourActivity.class);
@@ -534,8 +382,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_eight_one:
                 intent = new Intent(this, AllSelectListActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_eight_two:
                 intent = new Intent(this, ResourceActivity.class);
@@ -548,12 +394,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_eight_four:
                 intent = new Intent(this, PermissionManageOneActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_eight_five:
                 intent = new Intent(this, SharePreferencesActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_eight_six:
                 intent = new Intent(this, SharePreferencesExampleActivity.class);
@@ -562,7 +406,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_eight_seven:
                 intent = new Intent(this, SQLiteActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_eight_eight:
                 intent = new Intent(this, GestureOneActivity.class);
@@ -591,19 +434,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_nine_six:
                 intent = new Intent(this, AnimationActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.btn_nine_seven:
                 intent = new Intent(this, com.fpp.status.activity.nine.seven.RecycleViewActivity.class);
                 startActivity(intent);
-
-
                 break;
             case R.id.btn_nine_eight:
                 intent = new Intent(this, com.fpp.status.transformer.MainActivity.class);
                 startActivity(intent);
                 break;
-
             case R.id.btn_ten_one:
                 intent = new Intent(this, GreenDaoActivity.class);
                 startActivity(intent);
@@ -625,7 +464,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_six:
-
                 intent = new Intent(this, com.fpp.status.activity.ten.six.DLActivity.class);
                 startActivity(intent);
                 break;
@@ -634,12 +472,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_eight:
-
                 intent = new Intent(this, TenEightActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_eleven_one:
+                break;
+            case R.id.btn_eleven_two:
+                break;
+            case R.id.btn_eleven_three:
+                break;
+            case R.id.btn_eleven_four:
+                break;
+            case R.id.btn_eleven_five:
+                break;
+            case R.id.btn_eleven_six:
+                break;
+            case R.id.btn_eleven_seven:
+                break;
+            case R.id.btn_eleven_eight:
+                break;
         }
     }
+
+
 
 
 

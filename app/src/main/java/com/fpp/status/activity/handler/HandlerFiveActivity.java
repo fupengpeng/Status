@@ -1,7 +1,6 @@
 package com.fpp.status.activity.handler;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.fpp.status.R;

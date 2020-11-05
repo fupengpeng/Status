@@ -1,8 +1,6 @@
 package com.fpp.status.activity.three.six;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.widget.Toast;
 
 import com.fpp.status.R;
@@ -13,6 +11,8 @@ import com.fpp.status.activity.three.six.entity.Message;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -42,7 +42,7 @@ public class MoveDeleteRecycleViewItemActivity extends AppCompatActivity {
 
         datas = getDatas();
         // 初始化布局管理器
-        LeftSwipeMenuRecyclerView.LayoutManager layoutManager=new GridLayoutManager(this,1,GridLayoutManager.VERTICAL,false);
+        LeftSwipeMenuRecyclerView.LayoutManager layoutManager=new GridLayoutManager(this,1, GridLayoutManager.VERTICAL,false);
         // 设置布局管理器
         commodityList.setLayoutManager(layoutManager);
         // 初始化适配器

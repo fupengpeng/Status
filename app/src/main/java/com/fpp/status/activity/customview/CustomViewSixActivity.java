@@ -2,7 +2,6 @@ package com.fpp.status.activity.customview;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.SparseArray;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -16,6 +15,7 @@ import com.fpp.status.utils.LogUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.widget.Toolbar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

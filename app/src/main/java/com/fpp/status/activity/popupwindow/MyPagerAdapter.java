@@ -1,7 +1,6 @@
 package com.fpp.status.activity.popupwindow;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.view.ViewParent;
 import android.widget.ImageView;
 
 import java.util.List;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 /**
  * @description  轮播适配器

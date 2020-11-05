@@ -2,7 +2,6 @@ package com.fpp.status.activity.ten.five;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -11,6 +10,9 @@ import com.fpp.status.R;
 import com.fpp.status.activity.ten.five.costom.CMC;
 import com.fpp.status.activity.ten.five.costom.CVV;
 import com.fpp.status.utils.LogUtil;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Description:  视频播放
@@ -140,7 +142,7 @@ public class VideoActivity  extends AppCompatActivity
     }
 
     private void switchTitleBar(boolean show) {
-        android.support.v7.app.ActionBar supportActionBar = getSupportActionBar();
+        ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
             if (show) {
                 supportActionBar.show();

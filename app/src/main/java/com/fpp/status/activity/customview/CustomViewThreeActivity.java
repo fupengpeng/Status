@@ -1,6 +1,5 @@
 package com.fpp.status.activity.customview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -13,6 +12,8 @@ import com.fpp.status.view.CustomViewThree;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CustomViewThreeActivity extends AppCompatActivity {
 

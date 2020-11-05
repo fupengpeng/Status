@@ -31,7 +31,7 @@ public final class LocalBroadcastManager {
     public static LocalBroadcastManager getInstance(Context context) {
         Object var1 = mLock;
         synchronized (mLock) {
-            LogUtils.e("LocalBroadcastManager  " , " getInstance ");
+            LogUtils.e("LocalBroadcastManager  " , " A/B测试 ");
             if (mInstance == null) {
                 mInstance = new LocalBroadcastManager(context.getApplicationContext());
             }
@@ -61,7 +61,7 @@ public final class LocalBroadcastManager {
     public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
         HashMap var3 = this.mReceivers;
         synchronized (this.mReceivers) {
-            LogUtils.e("LocalBroadcastManager  " , " registerReceiver ");
+            LogUtils.e("LocalBroadcastManager  " , " A/B 测试？？？？？？ ");
             LocalBroadcastManager.ReceiverRecord entry = new LocalBroadcastManager.ReceiverRecord(filter, receiver);
             ArrayList filters = (ArrayList) this.mReceivers.get(receiver);
             if (filters == null) {
@@ -86,7 +86,7 @@ public final class LocalBroadcastManager {
     }
 
     public void unregisterReceiver(BroadcastReceiver receiver) {
-        LogUtils.e("LocalBroadcastManager  " , " unregisterReceiver ");
+        LogUtils.e("LocalBroadcastManager  " , " A/B 测试完成？？？ ");
         HashMap var2 = this.mReceivers;
         synchronized (this.mReceivers) {
             ArrayList filters = (ArrayList) this.mReceivers.remove(receiver);

@@ -2,9 +2,6 @@ package com.fpp.status.activity.ten.eight;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,6 +16,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -267,6 +267,8 @@ public class TenEightActivity extends AppCompatActivity {
                     .error(R.mipmap.ic_launcher)
                     .centerCrop()
                     .into(holder.ivItemExerciseOne);
+
+            // 落实了的卡  啊算了打飞机啊
 
             container.addView(convertView);
             return convertView;

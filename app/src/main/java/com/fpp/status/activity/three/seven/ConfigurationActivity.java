@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
@@ -16,6 +15,7 @@ import android.widget.TextView;
 import com.fpp.status.R;
 import com.fpp.status.utils.LogUtils;
 
+import androidx.annotation.Nullable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
