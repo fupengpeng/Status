@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import com.fpp.status.R;
 
+import androidx.fragment.app.Fragment;
+
 
 public class MsgFragment extends Fragment {
 
