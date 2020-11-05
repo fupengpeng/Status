@@ -144,7 +144,7 @@ public class FragmentTwoActivity extends AppCompatActivity implements View.OnCli
                 Log.i("tuzi", arg0 + "," + arg1 + "," + arg2);
 
                 // 取得该控件的实例
-                LinearLayout.LayoutParams ll = (android.widget.LinearLayout.LayoutParams) tabline
+                LinearLayout.LayoutParams ll = (LinearLayout.LayoutParams) tabline
                         .getLayoutParams();
 
                 if (currentPage == 0 && arg0 == 0) { // 0->1移动(第一页到第二页)

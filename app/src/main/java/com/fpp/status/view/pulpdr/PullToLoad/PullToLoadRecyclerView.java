@@ -4,11 +4,6 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
-<<<<<<< HEAD
-=======
-import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.RecyclerView;
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,12 +12,9 @@ import android.view.ViewGroup;
 import com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator.DLFooterCreator;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
 
-<<<<<<< HEAD
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-=======
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 /**
  * Created by Administrator on 2016/9/21.
@@ -78,10 +70,10 @@ public class PullToLoadRecyclerView extends PullToRefreshRecyclerView {
 
 
     private PullToLoadAdapter mAdapter;
-    private RecyclerView.Adapter mRealAdapter;
+    private Adapter mRealAdapter;
 
     @Override
-    public void setAdapter(RecyclerView.Adapter adapter) {
+    public void setAdapter(Adapter adapter) {
         mRealAdapter = adapter;
         if (adapter instanceof PullToLoadAdapter) {
             mAdapter = (PullToLoadAdapter) adapter;
@@ -99,7 +91,7 @@ public class PullToLoadRecyclerView extends PullToRefreshRecyclerView {
         if (bottomView == null) {
             bottomView = new View(context);
 //            该view的高度不能为0，否则将无法判断是否已滑动到底部
-            bottomView.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, 1));
+            bottomView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, 1));
 //            初始化默认的刷新头部
             mLoadFooterCreator = new DLFooterCreator();
             mLoadView = mLoadFooterCreator.getLoadView(context, this);
@@ -112,7 +104,7 @@ public class PullToLoadRecyclerView extends PullToRefreshRecyclerView {
         if (mLoadView != null && mLoadViewHeight == 0) {
             mLoadView.measure(0,0);
             mLoadViewHeight = mLoadView.getLayoutParams().height;
-            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) getLayoutParams();
+            MarginLayoutParams marginLayoutParams = (MarginLayoutParams) getLayoutParams();
             marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin, marginLayoutParams.bottomMargin - mLoadViewHeight - 1);
             setLayoutParams(marginLayoutParams);
         }
@@ -280,7 +272,7 @@ public class PullToLoadRecyclerView extends PullToRefreshRecyclerView {
             mState = STATE_DEFAULT;
         }
 
-        RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) bottomView.getLayoutParams();
+        LayoutParams layoutParams = (LayoutParams) bottomView.getLayoutParams();
         float distance = layoutParams.height;
         if (distance <= 0) return;
 
@@ -341,14 +333,14 @@ public class PullToLoadRecyclerView extends PullToRefreshRecyclerView {
                 mAdapter.setLoadView(mNoMoreView);
 //                重新测量底部
                 mNoMoreView.measure(0, 0);
-                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) getLayoutParams();
+                MarginLayoutParams marginLayoutParams = (MarginLayoutParams) getLayoutParams();
                 marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin,-mNoMoreView.getLayoutParams().height-1);
                 setLayoutParams(marginLayoutParams);
             }
         }
         else if (mLoadView != null) {
             mAdapter.setLoadView(mLoadView);
-            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) getLayoutParams();
+            MarginLayoutParams marginLayoutParams = (MarginLayoutParams) getLayoutParams();
             marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin,-mLoadViewHeight-1);
             setLayoutParams(marginLayoutParams);
         }
@@ -367,7 +359,7 @@ public class PullToLoadRecyclerView extends PullToRefreshRecyclerView {
 
     /**获得真正的adapter*/
     @Override
-    public RecyclerView.Adapter getRealAdapter() {
+    public Adapter getRealAdapter() {
         return mRealAdapter;
     }
 

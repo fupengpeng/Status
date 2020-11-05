@@ -1,19 +1,12 @@
 package com.fpp.status.view.pulpdr.HeaderAndFooter;
 
-<<<<<<< HEAD
-=======
-import android.support.v7.widget.RecyclerView;
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import android.view.View;
 
 
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
 
-<<<<<<< HEAD
 import androidx.recyclerview.widget.RecyclerView;
 
-=======
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;

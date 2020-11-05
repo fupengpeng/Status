@@ -1,16 +1,10 @@
 package com.fpp.status.view.pulpdr.LayoutManager;
 
 import android.content.Context;
-<<<<<<< HEAD
 import android.util.AttributeSet;
 
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-=======
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.util.AttributeSet;
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by Administrator on 2016/11/2.
  */

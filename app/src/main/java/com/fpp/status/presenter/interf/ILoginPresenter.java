@@ -8,5 +8,5 @@ package com.fpp.status.presenter.interf;
 
 public interface ILoginPresenter {
 
-    void login(String name , String password);
+    void login(String name, String password);
 }

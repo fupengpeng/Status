@@ -2,17 +2,11 @@ package com.fpp.status.transformer;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-<<<<<<< HEAD
 import android.view.View;
 
 
 import androidx.viewpager.widget.ViewPager;
 
-=======
-import android.support.v4.view.ViewPager;
-import android.view.View;
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 public class RotateDownPageTransformer extends BasePageTransformer
 {
     private static final float DEFAULT_MAX_ROTATE = 15.0f;

@@ -101,7 +101,7 @@ public class LeftSwipeMenuRecyclerView extends RecyclerView {
                     mMaxLength = tvDelete.getWidth();
 
                     //设置所有按钮的点击事件
-                    tvDelete.setOnClickListener(new View.OnClickListener() {
+                    tvDelete.setOnClickListener(new OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             mItemLayout.scrollTo(0, 0);

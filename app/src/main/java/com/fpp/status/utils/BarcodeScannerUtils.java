@@ -13,7 +13,7 @@ public class BarcodeScannerUtils {
     private boolean mCaps;                                     //大小写区分
     private Handler mHandler;
     private Runnable mScanningFishedRunnable;
-    private BarcodeScannerUtils.OnScanSuccessListener mOnScanSuccessListener;
+    private OnScanSuccessListener mOnScanSuccessListener;
 
     private BarcodeScannerUtils() {
         mStringBufferResult = new StringBuffer();
@@ -60,7 +60,7 @@ public class BarcodeScannerUtils {
     /**
      * 扫码枪事件解析
      */
-    public void analysisKeyEvent(KeyEvent event, BarcodeScannerUtils.OnScanSuccessListener listener) {
+    public void analysisKeyEvent(KeyEvent event, OnScanSuccessListener listener) {
         if (!isScanGunEvent(event)) {
             return;
         }

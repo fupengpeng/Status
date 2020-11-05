@@ -25,7 +25,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MoveOneActivity extends AppCompatActivity implements
-        android.view.GestureDetector.OnGestureListener {
+        GestureDetector.OnGestureListener {
 
     private int[] imgs = { R.drawable.meinv02, R.drawable.meinv03, R.drawable.meinv04,
             R.drawable.meinv05, R.drawable.meinv06 };

@@ -38,7 +38,7 @@ public class ALRecyclerView extends PullToRefreshRecyclerView {
 
     private View mLoadView;
     private ALAdapter mAdapter;
-    private RecyclerView.Adapter mRealAdapter;
+    private Adapter mRealAdapter;
 
     private boolean mIsLoading = false;
     private boolean mLoadMoreEnable = true;
@@ -77,7 +77,7 @@ public class ALRecyclerView extends PullToRefreshRecyclerView {
 
 
     @Override
-    public void setAdapter(RecyclerView.Adapter adapter) {
+    public void setAdapter(Adapter adapter) {
         mRealAdapter = adapter;
         if (adapter instanceof ALAdapter) {
             mAdapter = (ALAdapter) adapter;
@@ -104,7 +104,7 @@ public class ALRecyclerView extends PullToRefreshRecyclerView {
     public void onScrollStateChanged(int state) {
         super.onScrollStateChanged(state);
         if (state == RecyclerView.SCROLL_STATE_IDLE  && !mIsLoading && mLoadMoreEnable && mLoadView != null) {
-            RecyclerView.LayoutManager layoutManager = getLayoutManager();
+            LayoutManager layoutManager = getLayoutManager();
             int lastVisibleItemPosition;
             if (layoutManager instanceof GridLayoutManager) {
                 lastVisibleItemPosition = ((GridLayoutManager) layoutManager).findLastVisibleItemPosition();
@@ -170,7 +170,7 @@ public class ALRecyclerView extends PullToRefreshRecyclerView {
 
     /**获得真正的adapter*/
     @Override
-    public RecyclerView.Adapter getRealAdapter() {
+    public Adapter getRealAdapter() {
         return mRealAdapter;
     }
 

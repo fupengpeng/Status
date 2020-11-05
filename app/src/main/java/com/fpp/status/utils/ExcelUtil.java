@@ -43,18 +43,18 @@ public class ExcelUtil {
             //
             WritableFont arial14font = new WritableFont(WritableFont.ARIAL, 30, WritableFont.BOLD,
                     false, UnderlineStyle.SINGLE, Colour.BLUE, ScriptStyle.SUBSCRIPT);
-            arial14font.setColour(jxl.format.Colour.RED);
+            arial14font.setColour(Colour.RED);
 
             arial14format = new WritableCellFormat(arial14font);
-            arial14format.setAlignment(jxl.format.Alignment.CENTRE);
+            arial14format.setAlignment(Alignment.CENTRE);
             arial14format.setBorder(jxl.format.Border.ALL, jxl.format.BorderLineStyle.THIN);
-            arial14format.setBackground(jxl.format.Colour.LIGHT_BLUE);
+            arial14format.setBackground(Colour.LIGHT_BLUE);
 
             // 标题栏格式设置
             WritableFont arial10font = new WritableFont(WritableFont.ARIAL, 12, WritableFont.BOLD);
             arial10format = new WritableCellFormat(arial10font);
 
-            arial10format.setAlignment(jxl.format.Alignment.CENTRE);
+            arial10format.setAlignment(Alignment.CENTRE);
             arial10format.setBorder(jxl.format.Border.ALL, jxl.format.BorderLineStyle.THIN);
             arial10format.setBackground(Colour.GRAY_25);
 
@@ -65,8 +65,8 @@ public class ExcelUtil {
                     false, UnderlineStyle.NO_UNDERLINE, Colour.BLUE, ScriptStyle.NORMAL_SCRIPT);
 
             arial12format = new WritableCellFormat(arial12font);
-            arial12format.setBorder(jxl.format.Border.ALL, jxl.format.BorderLineStyle.THIN,jxl.format.Colour.YELLOW2);    // 设置边框
-            arial12format.setBackground(jxl.format.Colour.BRIGHT_GREEN);                    // 设置背景
+            arial12format.setBorder(jxl.format.Border.ALL, jxl.format.BorderLineStyle.THIN, Colour.YELLOW2);    // 设置边框
+            arial12format.setBackground(Colour.BRIGHT_GREEN);                    // 设置背景
             arial12format.setAlignment(Alignment.CENTRE);                                        // 水平对齐格式
             arial12format.setVerticalAlignment(VerticalAlignment.CENTRE);
 

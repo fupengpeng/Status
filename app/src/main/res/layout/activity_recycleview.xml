@@ -4,11 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <!-- 最外层的RecyclerView -->
-<<<<<<< HEAD
     <androidx.recyclerview.widget.RecyclerView
-=======
-    <android.support.v7.widget.RecyclerView
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         android:id="@+id/rv_atvt_section"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

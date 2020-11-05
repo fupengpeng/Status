@@ -10,5 +10,5 @@ import com.fpp.status.model.RequestListener;
 
 public interface ILoginModel {
 
-    void login(String name , String password , RequestListener<String> requestListener);
+    void login(String name, String password, RequestListener<String> requestListener);
 }

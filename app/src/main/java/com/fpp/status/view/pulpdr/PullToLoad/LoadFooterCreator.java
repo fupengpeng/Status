@@ -1,16 +1,10 @@
 package com.fpp.status.view.pulpdr.PullToLoad;
 
 import android.content.Context;
-<<<<<<< HEAD
 import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-=======
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by Administrator on 2016/9/28.
  */

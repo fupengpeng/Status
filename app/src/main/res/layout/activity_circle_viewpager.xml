@@ -8,11 +8,7 @@
         android:layout_centerInParent="true"
         android:background="#aadc71ff">
 
-<<<<<<< HEAD
         <androidx.viewpager.widget.ViewPager
-=======
-        <android.support.v4.view.ViewPager
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
             android:id="@+id/id_viewpager"
             android:layout_width="match_parent"
             android:layout_height="120dp"

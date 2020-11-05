@@ -184,7 +184,7 @@ public abstract class JZVideoPlayer
             Constructor<JZVideoPlayer> constructor = _class.getConstructor(Context.class);
             final JZVideoPlayer jzVideoPlayer = constructor.newInstance(context);
             jzVideoPlayer.setId(R.id.jz_fullscreen_id);
-            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+            LayoutParams lp = new LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             vp.addView(jzVideoPlayer, lp);
 //            final Animation ra = AnimationUtils.loadAnimation(context, R.anim.start_fullscreen);
@@ -829,8 +829,8 @@ public abstract class JZVideoPlayer
 
     public void addTextureView() {
         LogUtil.d(TAG, "addTextureView [" + this.hashCode() + "] ");
-        FrameLayout.LayoutParams layoutParams =
-                new FrameLayout.LayoutParams(
+        LayoutParams layoutParams =
+                new LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         Gravity.CENTER);
@@ -1006,7 +1006,7 @@ public abstract class JZVideoPlayer
             Constructor<JZVideoPlayer> constructor = (Constructor<JZVideoPlayer>) JZVideoPlayer.this.getClass().getConstructor(Context.class);
             JZVideoPlayer jzVideoPlayer = constructor.newInstance(getContext());
             jzVideoPlayer.setId(R.id.jz_fullscreen_id);
-            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+            LayoutParams lp = new LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             vp.addView(jzVideoPlayer, lp);
             jzVideoPlayer.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -1048,7 +1048,7 @@ public abstract class JZVideoPlayer
             Constructor<JZVideoPlayer> constructor = (Constructor<JZVideoPlayer>) JZVideoPlayer.this.getClass().getConstructor(Context.class);
             JZVideoPlayer jzVideoPlayer = constructor.newInstance(getContext());
             jzVideoPlayer.setId(R.id.jz_tiny_id);
-            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(400, 400);
+            LayoutParams lp = new LayoutParams(400, 400);
             lp.gravity = Gravity.RIGHT | Gravity.BOTTOM;
             vp.addView(jzVideoPlayer, lp);
             jzVideoPlayer.setUp(dataSourceObjects, currentUrlMapIndex, JZVideoPlayerStandard.SCREEN_WINDOW_TINY, objects);

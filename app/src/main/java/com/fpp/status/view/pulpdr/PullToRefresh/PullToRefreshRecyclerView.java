@@ -73,7 +73,7 @@ public class PullToRefreshRecyclerView extends HAFRecyclerView {
     private RefreshHeaderCreator mRefreshHeaderCreator;
 
     @Override
-    public void setAdapter(RecyclerView.Adapter adapter) {
+    public void setAdapter(Adapter adapter) {
         super.setAdapter(adapter);
         if (mRefreshView != null) {
             addHeaderView(topView);
@@ -85,7 +85,7 @@ public class PullToRefreshRecyclerView extends HAFRecyclerView {
         if (topView == null) {
             topView = new View(context);
 //            该view的高度不能为0，否则将无法判断是否已滑动到顶部
-            topView.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, 1));
+            topView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, 1));
 //            设置默认LayoutManager
             setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
 //            初始化默认的刷新头部
@@ -99,7 +99,7 @@ public class PullToRefreshRecyclerView extends HAFRecyclerView {
         if (mRefreshView != null && mRefreshViewHeight == 0) {
             mRefreshView.measure(0,0);
             mRefreshViewHeight = mRefreshView.getLayoutParams().height;
-            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) getLayoutParams();
+            MarginLayoutParams marginLayoutParams = (MarginLayoutParams) getLayoutParams();
             marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin-mRefreshViewHeight-1, marginLayoutParams.rightMargin, marginLayoutParams.bottomMargin);
             setLayoutParams(marginLayoutParams);
         }
@@ -210,7 +210,7 @@ public class PullToRefreshRecyclerView extends HAFRecyclerView {
         if (distance < 1)
             distance = 1;
         if (topView != null) {
-            RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) topView.getLayoutParams();
+            LayoutParams layoutParams = (LayoutParams) topView.getLayoutParams();
             layoutParams.height = (int) distance;
             topView.setLayoutParams(layoutParams);
         }
@@ -244,7 +244,7 @@ public class PullToRefreshRecyclerView extends HAFRecyclerView {
             mState = STATE_DEFAULT;
         }
 
-        RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) topView.getLayoutParams();
+        LayoutParams layoutParams = (LayoutParams) topView.getLayoutParams();
         float distance = layoutParams.height;
         if (distance <= 0) return;
 
