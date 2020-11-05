@@ -50,8 +50,7 @@
     <color name="uvv_light_gray">#ffF0F0F0</color>
     <color name="uvv_gray">#ffbbbbbb</color>
     <color name="uvv_titlebar_bg">#7f000000</color>
-<<<<<<< HEAD
-=======
+
 
     <color name="black">#000000</color>
 
@@ -197,7 +196,6 @@
     <color name="theme_title_text">#333333</color>
     <color name="theme_title_text_night">#999999</color>
 
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
     <color name="colorPrimary">#FF3F51B5</color>
     <color name="colorPrimary_dark">#AA3F51B5</color>

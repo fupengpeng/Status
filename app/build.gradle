@@ -1,24 +1,13 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.neenbedankt.android-apt'
 // TODO greenDao 使用第一步
 apply plugin: 'org.greenrobot.greendao'
-<<<<<<< HEAD
 apply plugin: 'com.jakewharton.butterknife'
-
 
 android {
     compileSdkVersion 29
-=======
-
-
-android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
-
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
-
     defaultConfig {
         applicationId "com.fpp.status"
         minSdkVersion 21
@@ -26,24 +15,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-<<<<<<< HEAD
         multiDexEnabled true
-
 
         ndk {
             //选择要添加的对应cpu类型的.so库。
             abiFilters 'armeabi', 'armeabi-v7a', 'mips64'
-//            , 'arm64-v8a', 'x86', 'x86_64'
-            // 还可以添加 'x86', 'x86_64', 'mips'
-
-=======
-
-        ndk {
-            //选择要添加的对应cpu类型的.so库。
-            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
         }
 
         manifestPlaceholders = [
@@ -52,13 +28,11 @@ android {
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
 
-<<<<<<< HEAD
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [eventBusIndex: 'org.greenrobot.eventbus.EventBusTestsIndex']
             }
         }
-
     }
 
     // To use deprecated test classes on SDK 28+. https://developer.android.com/training/testing/set-up-project
@@ -69,12 +43,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-=======
-
-    }
-
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
     buildTypes {
         release {
             minifyEnabled false
@@ -87,7 +55,6 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
-
 }
 
 // TODO greenDao 使用第二步
@@ -100,16 +67,13 @@ greendao {
 }
 
 // TODO greenDao 使用第四步
-
-
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //butterknife
-<<<<<<< HEAD
     implementation 'com.android.support.constraint:constraint-layout:2.0.2'
     testImplementation 'junit:junit:4.13'
     implementation 'org.greenrobot:eventbus:3.2.0'
@@ -147,63 +111,13 @@ dependencies {
     implementation 'com.serenegiant:common:4.1.1'
     implementation 'com.android.support:multidex:1.0.3'
     // excel
-    //    implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
     implementation files('libs/jxl-2.6.12.jar')
     implementation files('libs/usbSerialForAndroid.jar')
 
     implementation 'com.zhy.base:fileprovider:1.0.0'
-=======
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.jakewharton:butterknife:8.1.0'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
-    compile 'org.greenrobot:eventbus:3.0.0'
-    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    // TODO greenDao 使用第三步
-    compile 'org.greenrobot:greendao:3.2.2'
-    // add library
-    compile 'org.greenrobot:greendao-generator:3.2.2'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-    compile 'com.google.code.gson:gson:2.8.5'
-    // 极光推送
-    compile 'cn.jiguang.sdk:jpush:3.1.1'
-    // 此处以JPush 3.1.1 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.1.9'
-    // 此处以JCore 1.1.9 版本为例。
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'io.reactivex:rxjava:1.1.0'
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.anrwatchdog:anrwatchdog:1.3.0'
-    compile 'com.github.Othershe:DUtil:1.1.1'
-    compile 'com.othershe:BaseAdapter:1.1.0'
-    //  图表使用
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
-    //    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
-    //    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
-    // required, enough for most devices.
-    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
-    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
-    //    // Other ABIs: optional
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'
-    //
-    //    // ExoPlayer as IMediaPlayer: optional, experimental
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
-    /*汉字转拼音*/
-    compile 'com.github.promeg:tinypinyin:2.0.3'
-    compile 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
-    implementation files('lib/pinyin4j-2.5.0.jar')
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
 }
 
 //apt {

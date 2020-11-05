@@ -2,26 +2,16 @@
 
 buildscript {
     repositories {
+        maven { url 'https://jitpack.io' }
         jcenter()
         mavenCentral() // add repository
         google()
-<<<<<<< HEAD
-
     }
-
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.4'
 //        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
         classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.0'
-=======
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.0'
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
     }
 }
@@ -30,15 +20,11 @@ allprojects {
     repositories {
         jcenter()
         google()
-<<<<<<< HEAD
 //        maven { url 'https://raw.githubusercontent.com/saki4510t/libcommon/master/repository/' }
 //        maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
         maven { url 'https://gitee.com/liuchaoya/libcommon/raw/master/repository/' }
         maven { url "https://jitpack.io" }
-
-=======
-        maven { url "https://jitpack.io" }
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
+        
     }
 }
 

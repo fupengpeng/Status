@@ -1,6 +1,5 @@
 package com.fpp.status.activity.eleven.two;
 
-import androidx.annotation.RequiresApi;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,7 +13,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fpp.status.R;
 import com.fpp.status.base.BaseApplication;
 import com.fpp.status.entity.CardBean;
 import com.fpp.status.utils.DateTimeUtil;
@@ -24,6 +22,8 @@ import com.fpp.status.utils.ExcelUtil;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.RequiresApi;
 
 public class ExcelActivity extends Activity implements View.OnClickListener {
 

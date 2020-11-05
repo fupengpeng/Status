@@ -106,8 +106,7 @@
 
 
 
-<<<<<<< HEAD
-=======
+
     <style name="dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowFrame">@null</item>
@@ -128,9 +127,6 @@
     <style name="tabLayout_textView_size">
         <item name="android:textSize">@dimen/sp_15</item>
     </style>
-
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 
 

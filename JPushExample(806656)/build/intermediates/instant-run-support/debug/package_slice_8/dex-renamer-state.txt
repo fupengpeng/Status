@@ -1,4 +1,0 @@
-#Tue May 08 16:27:49 GMT+08:00 2018
-base.0=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8
-renamed.0=classes.dex
-file.0=D\:\\sutudioworkspace\\Status\\JPushExample(806656)\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8\\classes.dex

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.nfc.tech.NfcA;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +27,6 @@ import com.fpp.status.activity.eight.one.AllSelectListActivity;
 import com.fpp.status.activity.eight.three.PermissionManageActivity;
 import com.fpp.status.activity.eight.three.PermissionManageOneActivity;
 import com.fpp.status.activity.eight.two.ResourceActivity;
-<<<<<<< HEAD
 import com.fpp.status.activity.eleven.eight.NfcActivity;
 import com.fpp.status.activity.eleven.five.KeyBoardActivity;
 import com.fpp.status.activity.eleven.four.InstallActivity;
@@ -36,11 +34,6 @@ import com.fpp.status.activity.eleven.one.UsbCameraActivity;
 import com.fpp.status.activity.eleven.six.BarcodeScannerActivity;
 import com.fpp.status.activity.eleven.three.SerialPortActivity;
 import com.fpp.status.activity.eleven.two.ExcelActivity;
-=======
-import com.fpp.status.activity.eleven.four.LinkmanActivity;
-import com.fpp.status.activity.eleven.one.ElevenOneActivity;
-import com.fpp.status.activity.eleven.three.ChartActivity;
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import com.fpp.status.activity.four.FourFourActivity;
 import com.fpp.status.activity.four.FourThreeActivity;
 import com.fpp.status.activity.four.eight.HandlerActivity;
@@ -73,10 +66,7 @@ import com.fpp.status.activity.nine.three.PictureLargenActivity;
 import com.fpp.status.activity.nine.two.GridManagerActivity;
 import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
-<<<<<<< HEAD
 import com.fpp.status.activity.ten.eight.TenEightActivity;
-=======
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 import com.fpp.status.activity.ten.five.VideoActivity;
 import com.fpp.status.activity.ten.four.TenFourTwoActivity;
 import com.fpp.status.activity.ten.one.GreenDaoActivity;
@@ -94,12 +84,11 @@ import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
 import com.fpp.status.receiver.UpdateReceiver;
-import com.fpp.status.utils.LogUtil;
+import com.fpp.status.view.customvideoview.LogUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import butterknife.ButterKnife;
@@ -123,7 +112,6 @@ public class MainActivity extends Activity {
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-<<<<<<< HEAD
         //监听系统新安装程序的广播
         UpdateReceiver receiver = new UpdateReceiver();
         IntentFilter filter = new IntentFilter(Intent.ACTION_PACKAGE_ADDED);
@@ -131,8 +119,6 @@ public class MainActivity extends Activity {
         registerReceiver(receiver, filter);
 
         getPermissions();
-=======
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 
         // TODO: 2018/6/23 极光推送 --------------------------------------------------------------------
@@ -202,7 +188,6 @@ public class MainActivity extends Activity {
 
     }
 
-<<<<<<< HEAD
     @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four,
             R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one,
             R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five,
@@ -227,30 +212,6 @@ public class MainActivity extends Activity {
             , R.id.btn_ten_seven, R.id.btn_ten_eight
             , R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three, R.id.btn_eleven_four
             , R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven, R.id.btn_eleven_eight
-=======
-    @OnClick({R.id.btn_one_one, R.id.btn_one_two, R.id.btn_one_three, R.id.btn_one_four
-            , R.id.btn_one_five, R.id.btn_one_six, R.id.btn_one_seven, R.id.btn_two_one
-            , R.id.btn_two_two, R.id.btn_two_three, R.id.btn_two_four, R.id.btn_two_five
-            , R.id.btn_two_six, R.id.btn_two_seven, R.id.btn_two_eight, R.id.btn_three_one
-            , R.id.btn_three_two, R.id.btn_three_three, R.id.btn_three_four
-            , R.id.btn_three_five, R.id.btn_three_six, R.id.btn_three_seven
-            , R.id.btn_three_eight, R.id.btn_four_one, R.id.btn_four_two, R.id.btn_four_three
-            , R.id.btn_four_four, R.id.btn_four_five, R.id.btn_four_six, R.id.btn_four_seven
-            , R.id.btn_four_eight, R.id.btn_five_one, R.id.btn_five_two, R.id.btn_five_three
-            , R.id.btn_five_four, R.id.btn_five_five, R.id.btn_five_six, R.id.btn_five_seven
-            , R.id.btn_five_eight, R.id.btn_six_one, R.id.btn_six_two, R.id.btn_six_three
-            , R.id.btn_six_four, R.id.btn_six_five, R.id.btn_six_six, R.id.btn_six_seven
-            , R.id.btn_six_eight, R.id.btn_eight_one, R.id.btn_eight_two, R.id.btn_eight_three
-            , R.id.btn_eight_four, R.id.btn_eight_five, R.id.btn_eight_six, R.id.btn_eight_seven
-            , R.id.btn_eight_eight, R.id.btn_nine_one, R.id.btn_nine_two, R.id.btn_nine_three
-            , R.id.btn_nine_four, R.id.btn_nine_five, R.id.btn_nine_six, R.id.btn_nine_seven
-            , R.id.btn_nine_eight, R.id.btn_ten_one, R.id.btn_ten_two, R.id.btn_ten_three
-            , R.id.btn_ten_four, R.id.btn_ten_five, R.id.btn_ten_six, R.id.btn_ten_seven
-            , R.id.btn_ten_eight, R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three
-            , R.id.btn_eleven_four, R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven
-            , R.id.btn_eleven_eight
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
-
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -445,11 +406,6 @@ public class MainActivity extends Activity {
             case R.id.btn_eight_one:
                 intent = new Intent(this, AllSelectListActivity.class);
                 startActivity(intent);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                 break;
             case R.id.btn_eight_two:
                 intent = new Intent(this, ResourceActivity.class);
@@ -502,28 +458,15 @@ public class MainActivity extends Activity {
             case R.id.btn_nine_six:
                 intent = new Intent(this, AnimationActivity.class);
                 startActivity(intent);
-<<<<<<< HEAD
-=======
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                 break;
             case R.id.btn_nine_seven:
                 intent = new Intent(this, com.fpp.status.activity.nine.seven.RecycleViewActivity.class);
                 startActivity(intent);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                 break;
             case R.id.btn_nine_eight:
                 intent = new Intent(this, com.fpp.status.transformer.MainActivity.class);
                 startActivity(intent);
                 break;
-<<<<<<< HEAD
-=======
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
             case R.id.btn_ten_one:
                 intent = new Intent(this, GreenDaoActivity.class);
                 startActivity(intent);
@@ -545,10 +488,6 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_six:
-<<<<<<< HEAD
-=======
-
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
                 intent = new Intent(this, com.fpp.status.activity.ten.six.DLActivity.class);
                 startActivity(intent);
                 break;
@@ -557,7 +496,6 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 break;
             case R.id.btn_ten_eight:
-<<<<<<< HEAD
                 intent = new Intent(this, TenEightActivity.class);
                 startActivity(intent);
                 break;
@@ -584,40 +522,18 @@ public class MainActivity extends Activity {
             case R.id.btn_eleven_six:
                 intent = new Intent(this, BarcodeScannerActivity.class);
                 startActivity(intent);
-=======
                 break;
-            case R.id.btn_eleven_one:
-                intent = new Intent(this, ElevenOneActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_eleven_two:
-
-
-                break;
-            case R.id.btn_eleven_three:
+            case R.id.btn_eleven_seven:
                 intent = new Intent(this, ChartActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.btn_eleven_four:
-                intent = new Intent(this, LinkmanActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_eleven_five:
-
-                intent = new Intent(this, CheckActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_eleven_six:
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
-                break;
-            case R.id.btn_eleven_seven:
-                break;
             case R.id.btn_eleven_eight:
-<<<<<<< HEAD
                 intent = new Intent(this, NfcActivity.class);
                 startActivity(intent);
-=======
->>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
+//                intent = new Intent(this, LinkmanActivity.class);
+//                startActivity(intent);
+//                intent = new Intent(this, CheckActivity.class);
+//                startActivity(intent);
                 break;
         }
     }
@@ -834,7 +750,7 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,  int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1) {
             if (hasAllPermissionsGranted(grantResults)) {
@@ -850,7 +766,7 @@ public class MainActivity extends Activity {
      * @param grantResults 授权响应集合
      * @return 响应
      */
-    private boolean hasAllPermissionsGranted(@NonNull int[] grantResults) {
+    private boolean hasAllPermissionsGranted( int[] grantResults) {
         for (int grantResult : grantResults) {
             if (grantResult == PackageManager.PERMISSION_DENIED) {
                 return false;
