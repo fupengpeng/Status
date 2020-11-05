@@ -102,9 +102,4 @@ dependencies {
 
 }
 
-//apt {
-//    arguments {
-//        eventBusIndex "com.whoislcj.eventbus.MyEventBusIndex"
-//    }
-//}
 
