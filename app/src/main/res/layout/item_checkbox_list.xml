@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90">
+        <CheckBox
+            android:id="@id/cb"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="@dimen/dp_40"
+            style="@style/circlecheckbox"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/iv_item_fragment_shopping_cart_commodity_list_pic"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/nvshengtouxiang" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_item_fragment_shopping_cart_commodity_list_name"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="0dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_item_fragment_shopping_cart_commodity_list_name"
+                    android:text="商品名"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="其他"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_item_fragment_shopping_cart_commodity_list_standard"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="0dp" >
+                <TextView
+                    android:id="@+id/tv_item_fragment_shopping_cart_commodity_list_standard"
+                    android:text="商品规格"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="其他"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="0dp" >
+                <TextView
+                    android:id="@+id/tv_item_fragment_shopping_cart_commodity_list_price"
+                    android:text="￥35.15"
+                    android:gravity="center|left"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

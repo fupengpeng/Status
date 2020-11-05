@@ -150,790 +150,502 @@
                     android:text="版本2.0"
                     android:textSize="@dimen/dp_10" />
 
-                <Button
-                    android:id="@+id/btn_two_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffcccc"
-                    android:scaleType="centerCrop"
-                    android:text="自定义移动控件"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_two_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="rcv滑动删除子条目"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_three_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:scaleType="centerCrop"
-                    android:text="fragment"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="版本3.0"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="版本4.0"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="checkbox样式大小改变"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aa95ff"
-                    android:scaleType="centerCrop"
-                    android:text="项目历史版本"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="rcv滑动显示删除按钮"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="响应系统设置事件"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_three_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#0055aa"
-                    android:scaleType="centerCrop"
-                    android:text="基于回调事件处理"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5">
-
-                <Button
-                    android:id="@+id/btn_four_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:text="viewpager实现轮播"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="登录模块"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="动态添加viewpager"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="控件移动"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="引导页模块二"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ccffff"
-                    android:scaleType="centerCrop"
-                    android:text="引导页模块三"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffcccc"
-                    android:scaleType="centerCrop"
-                    android:text="引导页模块四（使用中）"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_four_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="自定义view研究"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_five_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:scaleType="centerCrop"
-                    android:text="Time处理"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="点击自增view"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="listview（无分割线）"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="计时器"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aa95ff"
-                    android:scaleType="centerCrop"
-                    android:text="竖向listview"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="listview多布局配合全选"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="横向listview"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_five_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#0055aa"
-                    android:scaleType="centerCrop"
-                    android:text="竖向listview嵌套"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5">
-
-                <Button
-                    android:id="@+id/btn_six_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:text="fragment"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="侧滑菜单"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="无用"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="listview嵌套横向"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="购物车全选模块"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ccffff"
-                    android:scaleType="centerCrop"
-                    android:text="listview嵌套横向"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffcccc"
-                    android:scaleType="centerCrop"
-                    android:text="listview嵌套竖向"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_six_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="viewpager配合fragment实现侧滑"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_eight_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:scaleType="centerCrop"
-                    android:text="全选RV实现"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="android资源使用"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="权限管理"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="权限总结"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aa95ff"
-                    android:scaleType="centerCrop"
-                    android:text="数据处理"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="sd卡文件浏览器"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="SQLite使用"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eight_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#0055aa"
-                    android:scaleType="centerCrop"
-                    android:text="手势处理"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_nine_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:scaleType="centerCrop"
-                    android:text="普通RV"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="grid  PRV"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="权限管理"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="WEB与Android交互"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aa95ff"
-                    android:scaleType="centerCrop"
-                    android:text="Android与WEB交互"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="动画处理"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="RecycleView嵌套"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_nine_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#0055aa"
-                    android:scaleType="centerCrop"
-                    android:text="DialogFragment应用"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_ten_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:scaleType="centerCrop"
-                    android:text="greendao"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="轮播广告"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="自定义轮播广告"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="ijk视频播放"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aa95ff"
-                    android:scaleType="centerCrop"
-                    android:text="视频播放"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="下载文件"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="SurfaceView播放视频"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_ten_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#0055aa"
-                    android:scaleType="centerCrop"
-                    android:text="自动轮播"
-                    android:textSize="@dimen/dp_10" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_55"
-                android:layout_marginBottom="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_5"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btn_eleven_one"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aaff00"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_two"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffffff"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_three"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffff00"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_four"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffff"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_five"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#aa95ff"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_six"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ff00ff"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_seven"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#ffaaaa"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-                <Button
-                    android:id="@+id/btn_eleven_eight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#0055aa"
-                    android:scaleType="centerCrop"
-                    android:text="测试"
-                    android:textSize="@dimen/dp_10" />
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_5"
-                android:background="@color/colorAccent" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-
+        <Button
+            android:id="@+id/btn_two_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffcccc"
+            android:scaleType="centerCrop"
+            android:text="自定义移动控件"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_two_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="rcv滑动删除子条目"
+            android:textSize="@dimen/dp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_three_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:scaleType="centerCrop"
+            android:text="fragment"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="版本3.0"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="版本4.0"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="checkbox样式大小改变"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aa95ff"
+            android:scaleType="centerCrop"
+            android:text="项目历史版本"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="rcv滑动显示删除按钮"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="响应系统设置事件"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_three_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#0055aa"
+            android:scaleType="centerCrop"
+            android:text="基于回调事件处理"
+            android:textSize="@dimen/dp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <Button
+            android:id="@+id/btn_four_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:text="viewpager实现轮播"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="登录模块"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="动态添加viewpager"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="控件移动"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="引导页模块二"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ccffff"
+            android:scaleType="centerCrop"
+            android:text="引导页模块三"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffcccc"
+            android:scaleType="centerCrop"
+            android:text="引导页模块四（使用中）"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_four_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="自定义view研究"
+            android:textSize="@dimen/dp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_five_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:scaleType="centerCrop"
+            android:text="Time处理"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="点击自增view"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="listview（无分割线）"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="计时器"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aa95ff"
+            android:scaleType="centerCrop"
+            android:text="竖向listview"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="listview多布局配合全选"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="横向listview"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_five_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#0055aa"
+            android:scaleType="centerCrop"
+            android:text="竖向listview嵌套"
+            android:textSize="@dimen/dp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <Button
+            android:id="@+id/btn_six_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:text="fragment"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="侧滑菜单"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="无用"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="listview嵌套横向"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="购物车全选模块"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ccffff"
+            android:scaleType="centerCrop"
+            android:text="listview嵌套横向"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffcccc"
+            android:scaleType="centerCrop"
+            android:text="listview嵌套竖向"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_six_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="viewpager配合fragment实现侧滑"
+            android:textSize="@dimen/dp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/colorAccent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_eight_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aaff00"
+            android:scaleType="centerCrop"
+            android:text="==="
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:scaleType="centerCrop"
+            android:text="android资源使用"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffff00"
+            android:scaleType="centerCrop"
+            android:text="权限管理"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffff"
+            android:scaleType="centerCrop"
+            android:text="权限总结"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#aa95ff"
+            android:scaleType="centerCrop"
+            android:text="数据处理"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ff00ff"
+            android:scaleType="centerCrop"
+            android:text="sd卡文件浏览器"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffaaaa"
+            android:scaleType="centerCrop"
+            android:text="SQLite使用"
+            android:textSize="@dimen/dp_10" />
+
+        <Button
+            android:id="@+id/btn_eight_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#0055aa"
+            android:scaleType="centerCrop"
+            android:text="手势处理"
+            android:textSize="@dimen/dp_10" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/colorAccent" />
 
 </LinearLayout>

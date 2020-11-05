@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_45"
+        android:layout_marginBottom="@dimen/dp_45"
+        android:text="点击查看button效果" />
+
+
+    <TextView
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/bg_shadow"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="点击查看"
+        android:translationZ="@dimen/dp_15" />
+
+    <com.fpp.status.activity.eleven.one.CTextView
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="背景测试"
+        android:textColor="@color/white" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.fpp.status.activity.eleven.one.CV
+            android:layout_gravity="center"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

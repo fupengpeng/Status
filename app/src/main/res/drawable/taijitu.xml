@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="800dp"
+    android:height="800dp"
+    android:viewportHeight="800.0"
+    android:viewportWidth="800.0">
+    <!--左边的是两个四分之一圆-->
+    <!--<path-->
+    <!--android:fillColor="#ff0000"-->
+    <!--android:name="梯形"-->
+    <!--android:pathData="-->
+    <!--  m 起点坐标，l 顺时针第一个点坐标，l 顺时针第二个点坐标 -->
+    <!--M 20 20 L 40 20 L 40 40  L 20 60 z"-->
+    <!--/>-->
+
+    <!--<path-->
+    <!--android:name="梯形"-->
+    <!--android:fillColor="#ff0000"-->
+    <!--android:pathData="-->
+    <!--M 10 50-->
+    <!--A 20 20 0 0 1 10 100 Z" />-->
+
+    <!--左边的是两个四分之一圆-->
+    <!--<path-->
+        <!--android:name="梯形"-->
+        <!--android:fillColor="#ff0000"-->
+        <!--android:pathData="-->
+
+    <!--M 20 20 L 80 20 L 80 40  L 20 40 z" />-->
+    <!-- 起点坐标  顺次点坐标 -->
+
+    <!--<path-->
+        <!--android:name="梯形"-->
+        <!--android:fillColor="#ff0000"-->
+        <!--android:pathData="-->
+        <!--M 80 20-->
+        <!--A 10 10 0 0 1 80 40 Z" />-->
+    <!--  起点坐标  x轴方向圆半径  y轴方向圆半径  x轴方向圆倾斜角度  y轴方向圆倾斜角度  顺逆时针 终点坐标  -->
+    <!--<path-->
+        <!--android:name="梯形"-->
+        <!--android:fillColor="#ff0000"-->
+        <!--android:pathData="-->
+        <!--M 20 20-->
+        <!--A 10 10 0 0 0 20 40 Z" />-->
+
+
+    <!--<path-->
+        <!--android:name="梯形"-->
+        <!--android:fillColor="#55ff0000"-->
+        <!--android:pathData="-->
+    <!--M 30 25 L 70 25 L 70 45  L 30 45 z" />-->
+    <!--<path-->
+        <!--android:name="梯形"-->
+        <!--android:fillColor="#55ff0000"-->
+        <!--android:pathData="-->
+        <!--M 70 25-->
+        <!--A 10 10 0 0 1 70 45 Z" />-->
+    <!--<path-->
+        <!--android:name="梯形"-->
+        <!--android:fillColor="#55ff0000"-->
+        <!--android:pathData="-->
+        <!--M 30 25-->
+        <!--A 10 10 0 0 0 30 45 Z" />-->
+
+
+    <!--<path-->
+        <!--android:name="贝塞尔曲线"-->
+        <!--android:fillColor="#55ff0000"-->
+        <!--android:pathData="-->
+        <!--M 10 60-->
+        <!--C 30 30 50 90 70 60" />-->
+
+    <!--<path-->
+        <!--android:name="贝塞尔曲线"-->
+        <!--android:fillColor="#55ff0000"-->
+        <!--android:pathData="-->
+        <!--M 100 100 C 200 0 300 0 400 100 S 600 200  700 100" />-->
+    <path
+    android:fillColor="#000000"
+    android:name="黑鱼"
+    android:pathData="
+    M0 50,
+    A50 50 0 0 1 50 0,
+    A25 25 0 0 0 50 50,
+    A25 25 0 0 1 50 100,
+    A50 50 0 0 1 0 50"/>
+    <path
+    android:fillColor="#ffffff"
+    android:name="白眼"
+    android:pathData="
+    M43 75,
+    A7 7 0 1 1 57 75,
+    A7 7 0 1 1 43 75"/>
+    右边画一个半圆
+    <path
+    android:fillColor="#FFFFFF"
+    android:name="白鱼"
+    android:pathData="
+    M50 0,
+    A50 50 0 1 1 50 100,
+    A25 25 0 1 0 50 50,
+    A25 25 0 1 1 50 0"/>
+    <path
+    android:fillColor="#000000"
+    android:name="黑眼"
+    android:pathData="
+    M43 25,
+    A7 7 0 1 1 57 25,
+    A7 7 0 1 1 43 25"/>
+</vector>

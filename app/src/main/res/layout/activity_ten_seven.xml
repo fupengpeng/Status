@@ -34,5 +34,22 @@
             android:text="停止" />
     </LinearLayout>
 
+<<<<<<< HEAD
+=======
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+
+    <com.fpp.status.view.videoview.SimpleVideoView
+        android:id="@+id/svv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1" />
+
+>>>>>>> origin/master
 
 </LinearLayout>

@@ -91,6 +91,7 @@
                     android:layout_height="match_parent" />
 
                 <LinearLayout
+                    android:id="@+id/ll_add_delete"
                     android:layout_width="@dimen/dp_80"
                     android:layout_marginTop="@dimen/dp_3"
                     android:layout_marginBottom="@dimen/dp_3"
