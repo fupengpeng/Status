@@ -14,7 +14,9 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * 获取当前的系統時間
+ * @Description 获取当前的系統時間
+ * @Author fpp
+ * @Date 2020/8/14 0014 16:36
  */
 public class TimeUtils {
 
@@ -782,10 +784,6 @@ public class TimeUtils {
 
         return sb.toString();
     }
-
-
-
-
 
 
     /**

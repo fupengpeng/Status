@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
+
 public class RotateYTransformer extends BasePageTransformer
 {
     private static final float DEFAULT_MAX_ROTATE = 35f;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/dp_230"  android:layout_height="wrap_content"
+    android:layout_width="@dimen/dp_230"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:gravity="center_horizontal"
     android:minWidth="@dimen/dp_230"
@@ -11,22 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:minWidth="@dimen/dp_230"
         android:background="@color/white"
-        />
+        android:minWidth="@dimen/dp_230" />
 
     <TextView
         android:id="@+id/tv"
-        android:width="@dimen/jz_start_button_w_h_fullscreen"
-        android:height="@dimen/jz_start_button_w_h_fullscreen"
-        android:layout_marginBottom="@dimen/dp_30"
+        style="@style/tv_gray_28px"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginRight="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_30"
         android:gravity="center"
-        android:lineSpacingMultiplier="1.3"
-        />
+        android:lineSpacingMultiplier="1.3" />
 
+    <include layout="@layout/line_h" />
 
     <LinearLayout
         android:id="@+id/button_group"
@@ -35,5 +34,13 @@
         android:orientation="horizontal"
         android:visibility="gone">
 
+        <include layout="@layout/dialog_button" />
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/lighter_gray" />
+
+        <include layout="@layout/dialog_button" />
     </LinearLayout>
 </LinearLayout>

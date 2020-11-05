@@ -3,7 +3,6 @@ package com.fpp.status.activity.fragmentfive;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -134,6 +133,7 @@ public class CheckActivity extends AppCompatActivity {
             if (convertView == null) {
                 convertView = LayoutInflater.from(mContext).inflate(getConvertView(), null);
                 holder = new ViewHolder();
+                holder.checkBox = (CheckBox) convertView.findViewById(mCheckBox.getResources().getInteger(R.id.cb));
 
                 convertView.setTag(holder);
             } else {
@@ -142,7 +142,12 @@ public class CheckActivity extends AppCompatActivity {
 
             setData();
 
-
+            // 判断是否选择
+            if (list.get(position).isSelect()) {
+                holder.checkBox.setChecked(true);
+            } else {
+                holder.checkBox.setChecked(false);
+            }
 
             // 选中操作
             holder.checkBox.setOnClickListener(new CheckBoxOnClick(position));

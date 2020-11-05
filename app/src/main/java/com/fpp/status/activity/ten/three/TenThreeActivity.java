@@ -2,6 +2,7 @@ package com.fpp.status.activity.ten.three;
 
 import android.content.Context;
 import android.os.Bundle;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,8 +26,10 @@ import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.http.HEAD;
 
 /**
  * Description:
@@ -36,10 +39,8 @@ import butterknife.ButterKnife;
 
 public class TenThreeActivity extends AppCompatActivity implements OnBannerListener {
     Banner bannerFragmentExamSubjectOne;
-
     @BindView(R.id.bvp_atvt_ten_three)
     ViewPager bvpAtvtTenThree;
-
     @BindView(R.id.riv)
     RoundImageView riv;
 
@@ -58,7 +59,6 @@ public class TenThreeActivity extends AppCompatActivity implements OnBannerListe
 
     private void initBanner() {
         bannerFragmentExamSubjectOne = (Banner) findViewById(R.id.banner);
-
         List<String> images = new ArrayList<>();
         images.add("https://yun.xiaojiangjiakao.com/upload/admin/20180710/dff89b8512d47c57b1673d0b86017d1b.jpg");
         images.add("https://yun.xiaojiangjiakao.com/upload/admin/20180710/d4626ed0f35396945a48f4e4cece3f8a.jpg");
@@ -89,6 +89,10 @@ public class TenThreeActivity extends AppCompatActivity implements OnBannerListe
         });
         //banner设置方法全部调用完毕时最后调用
         bannerFragmentExamSubjectOne.start();
+
+        // TODO: 2018/7/16 viewpager实现
+        initViewPager();
+
     }
 
 

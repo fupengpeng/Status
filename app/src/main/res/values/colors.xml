@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="white">#FFffff</color>
-
-
-    <color name="transparent">#00ffffff</color>
     <color name="text_color_hint">#3d4245</color>
     <color name="recycler_bg">#000000</color>
     <color name="bg_page">#ebebeb</color>
@@ -59,4 +52,256 @@
     <color name="uvv_titlebar_bg">#7f000000</color>
 
 
+    <color name="tv_gray">#999999</color>
+
+
+    <color name="lighter_gray">#99999999</color>
+
+
+    <color name="gray_f7f7f7">#f7f7f7</color>
+
+    <color name="PointerColor">#C9DEEE</color>
+    <color name="Yellow">#FFFFFF00</color>
+
+    <color name="series_not_end">#fffec500</color>
+    <color name="sienna">#ffa0522d</color>
+    <color name="silver">#ffc0c0c0</color>
+    <color name="skyblue">#ff87ceeb</color>
+    <color name="slateblue">#ff6a5acd</color>
+    <color name="slategray">#ff708090</color>
+    <color name="slategrey">#ff708090</color>
+    <color name="textColor">#666666</color>
+    <color name="shadow">#dfdfdf</color>
+    <color name="scale">#58000000</color>
+    <color name="leftRight">#e1dcd6</color>
+    <color name="rightRight">#f4efe9</color>
+    <color name="outsideBlue">#2690f8</color>
+    <color name="insideBlue">#58ade5</color>
+
+    <color name="insideCircle">#c2b9b0</color>
+
+
+    <color name="blue">#2A8EE3</color>
+    <color name="transparent_gray">#90000000</color>
+    <color name="orange">#FFE8A140</color>
+
+
+
+    <color name="pink">#FF4683</color>
+    <color name="pink_p">#ee4683</color>
+    <color name="pink_text">#FC7D69</color>
+
+
+    <color name="red_xieyi">#FF001D</color>
+    <color name="blackmost">#000000</color>
+    <color name="green_down">#00C06E</color>
+
+
+    <color name="green_notice">#00C06E</color>
+    <color name="red_notice">#D81E06</color>
+
+
+
+    <color name="start_blue">#01E2E6</color>
+    <color name="end_blue">#0089FF</color>
+
+
+    <color name="title_blue">#008BFF</color>
+
+
+    <color name="car_type_blue">#75A8E4</color>
+    <color name="car_type_pink">#FD907C</color>
+
+    <color name="blue_cancle">#3296FA</color>
+    <color name="blue_riduce">#3EA9D9</color>
+
+    <color name="blue_button">#008AFF</color>
+    <color name="yellow">#ff5722</color>
+    <color name="yellow_gray">#c49b62</color>
+    <color name="btn_yellow">#FFAA2B</color>
+    <color name="hint_">#999999</color>
+    <color name="_6">#666666</color>
+    <color name="_3">#333333</color>
+    <color name="_line">#EDEFF3</color>
+
+    <color name="bg_et">#F9F9F9</color>
+    <color name="grey_button">#8A8A8A</color>
+    <color name="bg_grayF8">#F8F8F8</color>
+
+
+    <color name="color_line_gray">#eaeaea</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="title_color">#333333</color>
+
+    <color name="cp_colorPrimary">#3F51B5</color>
+    <color name="cp_colorPrimaryDark">#303F9F</color>
+    <color name="cp_colorAccent">#3F51B5</color>
+
+    <color name="cp_color_gray_light">#cdcdcd</color>
+    <color name="cp_color_gray">#999999</color>
+    <color name="cp_color_gray_deep">#666666</color>
+    <color name="cp_color_gray_dark">#333333</color>
+    <color name="cp_color_section_bg">#EDEDED</color>
+    <color name="cp_color_grid_item_bg">#f5f5f5</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+
+    <color name="btn_pay_cancel">#F5F5F5</color>
+
+    <color name="text_pay">#ECECEC</color>
+
+    <color name="gray_unselected">#DDDDDD</color>
+    <color name="blue_undetermined">#0078D7</color>
+    <color name="green_exercise_radio_button">#0CAD6C</color>
+
+
+    <color name="green_1CC104">#1CC104</color>
+    <color name="green_2AC414">#2AC414</color>
+    <color name="green_1D7018">#1D7018</color>
+    <color name="red_F93636">#F93636</color>
+    <color name="red_FF575C">#FF575C</color>
+    <color name="red_8A3A3B">#8A3A3B</color>
+    <color name="gray_666666">#666666</color>
+    <color name="black_333333">#333333</color>
+    <color name="gray_F7F7F7">#F7F7F7</color>
+    <color name="blue_188ED2">#188ED2</color>
+    <color name="gray_EDEFF3">#EDEFF3</color>
+    <color name="gray_A0A3A4">#A0A3A4</color>
+    <color name="gray_D0D1D2">#D0D1D2</color>
+    <color name="blue_24A3FB">#24A3FB</color>
+
+
+
+    <color name="blue_188de2">#188de2</color>
+    <color name="grey_686b7e">#686b7e</color>
+
+    <color name="theme_title_window">#ffffff</color>
+    <color name="theme_title_window_night">#999999</color>
+    <color name="theme_dialog_bg">#ffffff</color>
+    <color name="theme_dialog_bg_night">#151617</color>
+    <color name="theme_dialog_text">#333333</color>
+    <color name="theme_dialog_text_night">#a1a2a2</color>
+    <color name="theme_dialog_line">#edeff3</color>
+    <color name="theme_dialog_line_night">#1e2223</color>
+    <color name="theme_title_text">#333333</color>
+    <color name="theme_title_text_night">#999999</color>
+
+
+    <color name="colorPrimary">#FF3F51B5</color>
+    <color name="colorPrimary_dark">#AA3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FFFF4081</color>
+    <color name="colorAccent_dark_ee">#EEFF4081</color>
+    <color name="colorAccent_dark_dd">#DDFF4081</color>
+    <color name="colorAccent_dark_cc">#CCFF4081</color>
+    <color name="colorAccent_dark_bb">#BBFF4081</color>
+    <color name="colorAccent_dark_aa">#AAFF4081</color>
+    <color name="colorAccent_dark_99">#99FF4081</color>
+    <color name="colorAccent_dark_88">#88FF4081</color>
+    <color name="colorAccent_dark_77">#77FF4081</color>
+    <color name="colorAccent_dark_66">#66FF4081</color>
+    <color name="colorAccent_dark_55">#55FF4081</color>
+    <color name="colorAccent_dark_44">#44FF4081</color>
+    <color name="colorAccent_dark_33">#33FF4081</color>
+    <color name="colorAccent_dark_22">#22FF4081</color>
+    <color name="colorAccent_dark_11">#11FF4081</color>
+    <color name="colorAccent_dark_00">#00FF4081</color>
+
+    <color name="base_color">#FF3789D2</color>
+    <color name="base_color_dark">#AA3789D2</color>
+    <color name="title_pressed">#f0f0f0</color>
+    <color name="layout_pressed_color">#e3e3e3</color>
+    <color name="btn_press">#FF0859DA</color><!--  -->
+    <color name="btn_default">#FF1CACE2</color><!--  -->
+    <color name="transparent">#00000000</color><!--  -->
+    <color name="lv_row_bg_gray_default">#D1D1D1</color>
+    <color name="RED">#FF0000</color>
+
+    <color name="BLUE">#0000FF</color>
+    <color name="BLACK">#000000</color>
+    <color name="black">#000000</color>
+    <color name="sale_pressed">#313131</color>
+    <color name="white">#ffffff</color>
+    <color name="presale_transparent">#50000000</color>
+    <color name="del_normal">#FF5534</color>
+    <color name="del_pressed">#27408B</color>
+    <color name="color_414141">#414141</color>
+
+    <color name="white_transparent_55">#55FFFFFF</color>
+
+    <color name="text_gray">#3C3C3C</color>
+
+
+    <color name="line">#C5C5C5</color>
+
+    <color name="bg_gray">#99000000</color>
+    <color name="gray">#ddF7F7F7</color>
+    <color name="gray_light">#88F7F7F7</color>
+    <color name="red">#FF0000</color>
+
+    <color name="red_transparent">#33FF0000</color>
+
+    <color name="red_dark">#AA0000</color>
+
+    <color name="red_light">#EE166B</color>
+
+    <color name="cut_off_rule">#B8B8B8</color>
+
+
+    <color name="blue_grey_ff">#FF76898F</color>
+    <color name="blue_grey_99">#9976898F</color>
+
+    <color name="orange_ff">#FFF68713</color>
+    <color name="orange_66">#66F68713</color>
+
+    <color name="darkorchid_66">#667E2484</color>
+    <color name="cyan_66">#6600ADEF</color>
+
+    <color name="cyan">#FF00ADEF</color>
+    <color name="cyan_dark_aa">#AA00ADEF</color>
+    <color name="cyan_dark_55">#5500ADEF</color>
+
+    <color name="Blue_700">#ff3367d6</color>
+    <color name="Blue_800">#ff2a56c6</color>
+
+    <color name="gray_999999">#999999</color>
+
+
+
+    <color name="green_ff00a660">#FF00A650</color>
+    <color name="green_ee00a660">#EE00A650</color>
+    <color name="green_dd00a660">#DD00A650</color>
+    <color name="green_cc00a660">#CC00A650</color>
+    <color name="green_bb00a660">#BB00A650</color>
+    <color name="green_aa00a660">#AA00A650</color>
+    <color name="green_9900a660">#9900A650</color>
+    <color name="green_8800a660">#8800A650</color>
+    <color name="green_7700a660">#7700A650</color>
+    <color name="green_6600a660">#6600A650</color>
+    <color name="green_5500a660">#5500A650</color>
+    <color name="green_4400a660">#4400A650</color>
+    <color name="green_3300a660">#3300A650</color>
+    <color name="green_2200a660">#2200A650</color>
+    <color name="green_1100a660">#1100A650</color>
+    <color name="green_0000a660">#0000A650</color>
+
+
+    <color name="green_ff40bb6a">#FF40BB6A</color>
+    <color name="green_ee40bb6a">#EE40BB6A</color>
+    <color name="green_dd40bb6a">#DD40BB6A</color>
+    <color name="green_cc40bb6a">#CC40BB6A</color>
+    <color name="green_bb40bb6a">#BB40BB6A</color>
+    <color name="green_aa40bb6a">#AA40BB6A</color>
+    <color name="green_9940bb6a">#9940BB6A</color>
+    <color name="green_8840bb6a">#8840BB6A</color>
+    <color name="green_7740bb6a">#7740BB6A</color>
+    <color name="green_6640bb6a">#6640BB6A</color>
+    <color name="green_5540bb6a">#5540BB6A</color>
+    <color name="green_4440bb6a">#4440BB6A</color>
+    <color name="green_3340bb6a">#3340BB6A</color>
+    <color name="green_2240bb6a">#2240BB6A</color>
+    <color name="green_1140bb6a">#1140BB6A</color>
+    <color name="green_0040bb6a">#0040BB6A</color>
 </resources>

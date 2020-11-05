@@ -1,6 +1,11 @@
 package com.fpp.status.activity.move;
 
-
+import android.graphics.Color;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Scroller;
+import android.widget.TextView;
 
 import android.app.Activity;
 import android.os.Bundle;

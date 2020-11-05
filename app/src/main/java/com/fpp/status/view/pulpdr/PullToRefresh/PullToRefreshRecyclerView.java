@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
+
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -16,7 +17,6 @@ import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFRecyclerView;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 /**
  * Created by Administrator on 2016/9/19.

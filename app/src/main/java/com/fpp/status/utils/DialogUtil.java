@@ -298,7 +298,7 @@ public class DialogUtil {
     private static Context checkDialog(Context context) {
         dismiss();
 //        WeakReference<Activity> reference = new WeakReference<>(context);
-        dialogUtil = new Dialog(context);
+        dialogUtil = new Dialog(context, R.style.dialog);
         return context;
     }
 

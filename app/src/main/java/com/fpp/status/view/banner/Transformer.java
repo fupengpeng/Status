@@ -39,4 +39,5 @@ public class Transformer {
     public static Class<? extends ViewPager.PageTransformer> ZoomIn = ZoomInTransformer.class;
     public static Class<? extends ViewPager.PageTransformer> ZoomOut = ZoomOutTranformer.class;
     public static Class<? extends ViewPager.PageTransformer> ZoomOutSlide = ZoomOutSlideTransformer.class;
+
 }

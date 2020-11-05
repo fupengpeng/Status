@@ -2,7 +2,6 @@ package com.fpp.status.activity.three.seven;
 
 import android.app.Activity;
 import android.os.Bundle;
-
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.KeyEvent;

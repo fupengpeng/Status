@@ -2,6 +2,7 @@ package com.fpp.status.view.pulpdr.AutoLoad;
 
 import android.content.Context;
 import android.graphics.Canvas;
+
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -9,11 +10,11 @@ import com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator.DALFooterCreator
 import com.fpp.status.view.pulpdr.PullToLoad.OnLoadListener;
 import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
 
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 
 /**
  * 自动加载RV

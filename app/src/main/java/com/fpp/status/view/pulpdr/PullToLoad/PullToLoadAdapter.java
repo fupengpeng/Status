@@ -8,7 +8,6 @@ import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFAdapter;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-
 /**
  * Created by Administrator on 2016/9/23.
  */

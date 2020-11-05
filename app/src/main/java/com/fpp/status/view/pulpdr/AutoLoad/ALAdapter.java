@@ -1,6 +1,7 @@
 package com.fpp.status.view.pulpdr.AutoLoad;
 
 import android.content.Context;
+
 import android.view.View;
 import android.view.ViewGroup;
 

@@ -1,5 +1,6 @@
 package com.fpp.status.activity.two.customview;
 
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;

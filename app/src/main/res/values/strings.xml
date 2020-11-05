@@ -26,6 +26,8 @@
 
     <!--  ==========  导航页模块结束  ==========  -->
 
+
+
     <string-array name="magic_effect">
         <item>RotateDown</item>
         <item>RotateUp</item>
@@ -38,6 +40,7 @@
     </string-array>
 
 
+
     <string name="tips_not_wifi">You are currently using the mobile network, the player will continue to consume traffic</string>
     <string name="tips_not_wifi_confirm">Resume</string>
     <string name="tips_not_wifi_cancel">Stop play</string>
@@ -45,6 +48,12 @@
     <string name="replay">Replay</string>
     <string name="click_to_restart">Click to try again</string>
     <string name="video_loading_faild">Video loading failed</string>
+
+
+    <string name="VideoView_error_button">8787</string>
+    <string name="VideoView_error_text_unknown">8887</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">899987</string>
+
 
 
 </resources>

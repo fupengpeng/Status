@@ -4,7 +4,9 @@ import android.content.Context;
 import android.widget.Toast;
 
 /**
- * Toast统一管理类
+ * @Description Toast统一管理类
+ * @Author fpp
+ * @Date 2020/8/14 0014 16:36
  */
 public class ToastUtils {
 

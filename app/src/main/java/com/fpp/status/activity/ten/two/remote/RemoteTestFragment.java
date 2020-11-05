@@ -3,6 +3,12 @@ package com.fpp.status.activity.ten.two.remote;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,9 +26,6 @@ import com.fpp.status.activity.ten.two.holder.MZViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 import rx.functions.Action1;
 
 

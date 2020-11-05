@@ -1,6 +1,7 @@
 package com.fpp.status.activity.fragmentsix;
 
 import android.os.Bundle;
+
 import android.widget.LinearLayout;
 
 import com.fpp.status.R;

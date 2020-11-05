@@ -6,6 +6,7 @@ import com.fpp.status.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

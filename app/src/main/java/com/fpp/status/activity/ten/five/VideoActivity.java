@@ -14,14 +14,14 @@ import com.fpp.status.utils.LogUtil;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 /**
  * Description:  视频播放
  * Author: fpp
  * Date: 2018/7/20  8:43
  */
-
 public class VideoActivity  extends AppCompatActivity
-        implements CVV.VVC{
+        implements CVV.VVC {
 
     private static final String TAG = "MainActivity";
     private static final String SEEK_POSITION_KEY = "SEEK_POSITION_KEY";

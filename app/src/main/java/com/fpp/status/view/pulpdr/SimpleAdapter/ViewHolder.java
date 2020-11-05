@@ -1,5 +1,6 @@
 package com.fpp.status.view.pulpdr.SimpleAdapter;
 
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -30,7 +31,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     private View mConvertView;
     private Context mContext;
 
-    public ViewHolder(Context context,View itemView,ViewGroup parent) {
+    public ViewHolder(Context context, View itemView, ViewGroup parent) {
         super(itemView);
         mContext = context;
         mConvertView = itemView;

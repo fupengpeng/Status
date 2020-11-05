@@ -9,6 +9,16 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_90">
+        <CheckBox
+            android:id="@id/cb"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="@dimen/dp_40"
+            style="@style/circlecheckbox"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            />
 
         <ImageView
             android:id="@+id/iv_item_fragment_shopping_cart_commodity_list_pic"

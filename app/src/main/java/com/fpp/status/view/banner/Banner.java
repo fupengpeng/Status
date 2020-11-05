@@ -2,6 +2,7 @@ package com.fpp.status.view.banner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -34,9 +35,11 @@ import java.util.List;
 import androidx.annotation.RequiresApi;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import retrofit2.http.HEAD;
 
 
 public class Banner extends FrameLayout implements ViewPager.OnPageChangeListener {
+
     public String tag = "banner";
     private int mIndicatorMargin = BannerConfig.PADDING_SIZE;
     private int mIndicatorWidth;
@@ -224,6 +227,7 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
      * @return
      */
     public Banner setBannerAnimation(Class<? extends ViewPager.PageTransformer> transformer) {
+
         try {
             setPageTransformer(true, transformer.newInstance());
         } catch (Exception e) {
@@ -248,7 +252,7 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
     }
 
     /**
-     * Set a {@link PageTransformer} that will be called for each attached page whenever
+     * Set a {@link ViewPager.PageTransformer} that will be called for each attached page whenever
      * the scroll position is changed. This allows the application to apply custom property
      * transformations to each page, overriding the default sliding look and feel.
      *
@@ -811,6 +815,7 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
     }
 
     public void setOnPageChangeListener(ViewPager.OnPageChangeListener onPageChangeListener) {
+
         mOnPageChangeListener = onPageChangeListener;
     }
 

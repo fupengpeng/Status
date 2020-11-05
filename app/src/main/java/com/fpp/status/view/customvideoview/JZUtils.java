@@ -6,6 +6,7 @@ import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
 import android.util.Log;
 import android.view.Window;
 
@@ -15,6 +16,7 @@ import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.ContextThemeWrapper;
+
 
 /**
  * Description:

@@ -1,5 +1,6 @@
 package com.fpp.status.activity.fourfive;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,7 +15,6 @@ import com.fpp.status.activity.popupwindow.DepthPageTransformer;
 
 import java.util.ArrayList;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 /**
@@ -22,7 +22,7 @@ import androidx.viewpager.widget.ViewPager;
  * @author  fupengpeng
  * @date  2018/2/25 0025 15:20
  */
-public class GuideTwoActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
+public class GuideTwoActivity extends Activity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
     /**
      * 图片资源id

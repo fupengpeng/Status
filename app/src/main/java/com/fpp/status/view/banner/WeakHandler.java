@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
+
 import com.fpp.status.utils.LogUtil;
 
 import java.lang.ref.WeakReference;
@@ -13,7 +14,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-
 @SuppressWarnings("unused")
 public class WeakHandler {
     private final Handler.Callback mCallback; // hard reference to Callback. We need to keep callback in memory

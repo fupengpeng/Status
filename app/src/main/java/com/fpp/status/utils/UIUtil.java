@@ -9,6 +9,13 @@ import android.graphics.Color;
 import android.hardware.Camera;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import retrofit2.http.HEAD;
+
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -25,24 +32,23 @@ import java.security.InvalidParameterException;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 /**
- * <P>  <P>  <P>  <P>
- * Created by Jelly on 2015/8/4.
+<<<<<<< HEAD
+ * @Description
+ * @Author fpp
+ * @Date 2020/8/14 0014 16:31
  */
 public class UIUtil {
 
-//        private static Context context = BaseActivity.getContext();
 //    private static Toast mToast = SuperApplication.mToast;
     private static Context context = null;
     private static Toast mToast = null;
 
     /**
      * 非空校验
+     *
+     * @param o o
+     * @return true
      */
     public static boolean isEmpty(Object o) {
         if (null == o) return true;
@@ -59,30 +65,44 @@ public class UIUtil {
 
     /**
      * dp值转化成px（纯代码中使用）
+     *
+     * @param dipValue dp
+     * @return int
      */
-    public static int dip2px(float dipValue) {
+    static int dip2px(float dipValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
     }
 
 
-
+    /**
+     * 网络是否连接
+     *
+     * @param context context
+     * @return true
+     */
     public static boolean isConnected(Context context) {
         ConnectivityManager conn = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert conn != null;
         NetworkInfo info = conn.getActiveNetworkInfo();
         return (info != null && info.isConnected());
     }
+
     /**
-     * 校验手机
+     * 校验手机号
+     *
+     * @param mobiles 手机号
+     * @return true
      */
     public static boolean isMobileNum(String mobiles) {
         /*
-06.    移动：134、135、136、137、138、139、150、151、157(TD)、158、159、187、188
-07.    联通：130、131、132、152、155、156、185、186
-08.    电信：133、153、180、189、（1349卫通）
-09.    总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
-10.    */
-        String telRegex = ("^[1][3,4,5,7,8][0-9]{9}$"); //"[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。
+        06.    移动：134、135、136、137、138、139、150、151、157(TD)、158、159、187、188
+        07.    联通：130、131、132、152、155、156、185、186
+        08.    电信：133、153、180、189、（1349卫通）
+        09.    总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
+        10.    */
+        //"[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。
+        String telRegex = ("^[1][3,4,5,7,8,9][0-9]{9}$");
         if (TextUtils.isEmpty(mobiles)) {
             toast("手机号码不能为空");
             return false;
@@ -103,7 +123,7 @@ public class UIUtil {
     /**
      * 获取手机IMEI  需要READ_PHONE_STATE 权限
      *
-     * @return
+     * @return str
      */
     @SuppressLint("MissingPermission")
     public static String getIMEI() {
@@ -114,7 +134,8 @@ public class UIUtil {
     /**
      * 获取隐藏姓名和手机号
      *
-     * @param s
+     * @param s w
+     * @return str
      */
     public static String getHideName(String s) {
         String replaceAll = null;
@@ -151,13 +172,6 @@ public class UIUtil {
     public static View inflate(int resId) {
         return View.inflate(context, resId, null);
     }
-    ///////////////////////////////////////////查找子view\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-//    public <T extends View> T $(int resId) {
-//
-//       return  (T) (this.findViewById(resId));
-//    }
-
 
     public static <T extends View> T $(View view, int resId) {
         return (T) (view.findViewById(resId));
@@ -166,8 +180,8 @@ public class UIUtil {
     /**
      * 设置圆角图片
      *
-     * @param bitmap
-     * @param imageView
+     * @param bitmap    bitmap
+     * @param imageView iv
      */
     public static void setRoundBitmap(Bitmap bitmap, ImageView imageView) {
         RoundedBitmapDrawable drawable = RoundedBitmapDrawableFactory.create(context.getResources(), bitmap);
@@ -181,8 +195,8 @@ public class UIUtil {
     /**
      * 获取 textview   spinner  值
      *
-     * @param o
-     * @return
+     * @param o o
+     * @return str
      */
     public static String getText(Object o) {
         if (o instanceof TextView) {
@@ -199,10 +213,9 @@ public class UIUtil {
     /**
      * 校验相机可用
      *
-     * @return
+     * @return true
      */
     public static boolean hardwareSupportCheck() {
-
         // Camera needs to open
         Camera c = null;
         try {
@@ -231,7 +244,12 @@ public class UIUtil {
     /**
      * 校验中国名字
      *
+<<<<<<< HEAD
+     * @param tv tv
+     * @return true
+=======
      * @return
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
      */
     public static boolean isRequiredName(TextView tv) {
         String input = getText(tv);
@@ -258,9 +276,15 @@ public class UIUtil {
     /**
      * 替换fragment
      *
+<<<<<<< HEAD
+     * @param manager  manager
+     * @param layoutId layoutId
+     * @param fragment fragment
+=======
      * @param manager
      * @param layoutId
      * @param fragment
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
      */
     public static void replace(FragmentManager manager, int layoutId, Fragment fragment) {
         manager.beginTransaction().replace(layoutId, fragment).commitAllowingStateLoss();
@@ -323,7 +347,4 @@ public class UIUtil {
 
         return Double.parseDouble(format);
     }
-
-
-
 }

@@ -1,6 +1,7 @@
 package com.fpp.status.view.pulpdr.SimpleAdapter;
 
 import android.content.Context;
+
 import android.view.ViewGroup;
 
 import java.util.ArrayList;

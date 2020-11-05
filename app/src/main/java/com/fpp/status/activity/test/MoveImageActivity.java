@@ -1,6 +1,5 @@
 package com.fpp.status.activity.test;
 
-
 import android.os.Bundle;
 
 import com.fpp.status.R;

@@ -3,23 +3,36 @@ package com.fpp.status.activity.ten.seven;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.app.Application;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+
 import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.fpp.status.R;
+import com.fpp.status.view.videoview.SimpleVideoView;
 
 import java.io.IOError;
 import java.io.IOException;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.http.HEAD;
 
 /**
  * Description:
@@ -42,6 +55,10 @@ public class TenSevenActivity extends AppCompatActivity {
     Button zanting;
     @BindView(R.id.tingzhi)
     Button tingzhi;
+    @BindView(R.id.videoView)
+    VideoView videoView;
+    @BindView(R.id.svv)
+    SimpleVideoView svv;
 
 
     @Override
@@ -55,6 +72,29 @@ public class TenSevenActivity extends AppCompatActivity {
         surfaceView.getHolder().setKeepScreenOn(true);
         surfaceView.getHolder().addCallback(new SurfaceListener());
 
+
+//        String path = "/storage/emulated/0/Download/烟花易冷---周杰伦.mp4";
+        String path = "/storage/emulated/0/Android/data/com.huazhong.car.drivingjiang/files/Download/注意积水.mp4";
+        this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
+
+//        String url =  "http://img.xiaojiangjiakao.com/20180627/7podaodingdiantingchejiaocheng.mp4";
+//
+//        vv.setVideoURI(uri);
+//        vv.setMediaController(mc);
+//        mc.setMediaPlayer(vv);
+//        vv.start();
+
+        MediaController mc = new MediaController(this);
+        Uri uri = Uri.parse(path);
+        videoView.setVideoURI(uri);
+        videoView.setMediaController(mc);
+        mc.setMediaPlayer(videoView);
+        videoView.requestFocus();
+
+
+
+        svv.setInitPicture(getResources().getDrawable(R.drawable.shilipic,null));
+        svv.setVideoUri(Uri.parse(path));
     }
 
     @Override
@@ -68,6 +108,14 @@ public class TenSevenActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed(){
+        if(svv.isFullScreen()){
+            svv.setNoFullScreen();
+        }else{
+            super.onBackPressed();
+        }
+    }
+    @Override
     protected void onDestroy() {
         // 停止播放
         if (mediaPlayer.isPlaying()) {
@@ -75,6 +123,10 @@ public class TenSevenActivity extends AppCompatActivity {
         }
         // 释放资源
         mediaPlayer.release();
+
+        if (svv.isPlaying()){
+            svv.suspend();
+        }
 
 
         super.onDestroy();
@@ -96,6 +148,7 @@ public class TenSevenActivity extends AppCompatActivity {
                     }
                     break;
                 case R.id.tingzhi:
+
                     if (mediaPlayer.isPlaying()){
                         mediaPlayer.stop();
                     }

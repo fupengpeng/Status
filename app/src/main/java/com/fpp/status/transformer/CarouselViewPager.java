@@ -1,6 +1,7 @@
 package com.fpp.status.transformer;
 
 import android.content.Context;
+
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
@@ -12,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.IntDef;
 import androidx.viewpager.widget.ViewPager;
-
 /**
  * 轮播效果的{@link ViewPager}
  * <ol>

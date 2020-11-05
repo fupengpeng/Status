@@ -5,7 +5,6 @@ import android.os.Build;
 import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
-
 public class RotateUpPageTransformer extends BasePageTransformer
 {
 

@@ -2,7 +2,9 @@ package com.fpp.status.basemvp;
 
 import android.os.Bundle;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public abstract class BaseMvpActivity<V,T extends BasePresenter<V>> extends AppCompatActivity {
 

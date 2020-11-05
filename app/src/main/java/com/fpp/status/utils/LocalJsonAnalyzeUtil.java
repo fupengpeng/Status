@@ -3,7 +3,6 @@ package com.fpp.status.utils;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-import com.fpp.status.activity.eleven.three.ChartOneFragment;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;

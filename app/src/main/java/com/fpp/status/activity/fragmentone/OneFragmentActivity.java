@@ -1,6 +1,12 @@
 package com.fpp.status.activity.fragmentone;
 
 import android.os.Bundle;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -13,11 +19,6 @@ import com.fpp.status.activity.fragmentone.fragment.FriendFragment;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager.widget.ViewPager;
 
 /**
  * Fragment   viewpager 联合使用

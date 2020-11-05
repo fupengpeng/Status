@@ -4,34 +4,9 @@ import android.media.Image;
 import android.os.Bundle;
 
 import com.fpp.status.R;
-//import com.fpp.status.activity.nine.entity.ExerciseBottomBean;
-//import com.fpp.status.entity.ExerciseTopBean;
-//import com.fpp.status.okhttp.CallBackUtil;
-//import com.fpp.status.okhttp.OkHttpUtil;
-//import com.fpp.status.utils.LogUtils;
-//import com.fpp.status.view.pulpdr.Divider.BaseDecoration;
-//import com.fpp.status.view.pulpdr.HeaderAndFooter.HAFAdapter;
-//import com.fpp.status.view.pulpdr.HeaderAndFooter.OnItemClickListener;
-//import com.fpp.status.view.pulpdr.LayoutManager.GridLayoutManager;
-//import com.fpp.status.view.pulpdr.PullToLoad.OnLoadListener;
-//import com.fpp.status.view.pulpdr.PullToLoad.PullToLoadRecyclerView;
-//import com.fpp.status.view.pulpdr.PullToRefresh.OnRefreshListener;
-//import com.fpp.status.view.pulpdr.PullToRefresh.PullToRefreshRecyclerView;
-//import com.fpp.status.view.pulpdr.SimpleAdapter.SimpleAdapter;
-//import com.fpp.status.view.pulpdr.SimpleAdapter.ViewHolder;
-//import com.google.gson.Gson;
-//
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//import java.util.List;
-//
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
-//import okhttp3.Call;
+
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import static com.fpp.status.R.drawable.shilipic;
 
 /**
  * Created by Administrator on 2016/9/30.

@@ -34,7 +34,6 @@
             android:text="停止" />
     </LinearLayout>
 
-
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
@@ -49,6 +48,6 @@
         android:layout_height="@dimen/dp_0"
         android:layout_weight="1" />
 
-
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
 </LinearLayout>

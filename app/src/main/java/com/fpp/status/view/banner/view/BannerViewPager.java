@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 import androidx.viewpager.widget.ViewPager;
 
 
+
 public class BannerViewPager extends ViewPager {
     private boolean scrollable = true;
 

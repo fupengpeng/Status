@@ -1,6 +1,7 @@
 package com.fpp.status.activity.nine.one;
 
 import android.content.Context;
+
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import com.fpp.status.R;
 
 import androidx.annotation.Nullable;
+
 
 /**
  * Description:

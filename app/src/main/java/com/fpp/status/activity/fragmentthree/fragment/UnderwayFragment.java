@@ -1,15 +1,14 @@
 package com.fpp.status.activity.fragmentthree.fragment;
 
 import android.os.Bundle;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.fpp.status.R;
-
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 /**
  * Created by fupengpeng on 2017/12/11 0011.

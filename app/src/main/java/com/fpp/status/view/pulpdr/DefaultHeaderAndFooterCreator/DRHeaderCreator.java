@@ -3,6 +3,7 @@ package com.fpp.status.view.pulpdr.DefaultHeaderAndFooterCreator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.LinearInterpolator;

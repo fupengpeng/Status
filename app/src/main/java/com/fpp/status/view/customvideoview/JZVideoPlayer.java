@@ -9,6 +9,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.provider.Settings;
+
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -34,6 +35,7 @@ import java.util.TimerTask;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 /**
  * Description:

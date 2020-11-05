@@ -22,6 +22,7 @@ import androidx.viewpager.widget.ViewPager;
 
 public abstract class ABaseTransformer implements ViewPager.PageTransformer {
 
+
 	/**
 	 * Called each {@link #transformPage(View, float)}.
 	 *
