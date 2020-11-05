@@ -27,7 +27,6 @@
     <!--  ==========  导航页模块结束  ==========  -->
 
 
-
     <string-array name="magic_effect">
         <item>RotateDown</item>
         <item>RotateUp</item>
@@ -38,7 +37,6 @@
         <item>RotateDown and Alpha</item>
         <item>RotateDown and Alpha And ScaleIn</item>
     </string-array>
-
 
 
     <string name="tips_not_wifi">You are currently using the mobile network, the player will continue to consume traffic</string>
@@ -54,6 +52,8 @@
     <string name="VideoView_error_text_unknown">8887</string>
     <string name="VideoView_error_text_invalid_progressive_playback">899987</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -23,7 +23,7 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mView == null) {
-            mView = inflater.inflate(R.layout.fragment_chat, null);
+            mView = inflater.inflate(R.layout.fragment_wechat, null);
         }
         ((TextView) mView.findViewById(R.id.mTextView)).setText("聊天界面");
         return mView;
