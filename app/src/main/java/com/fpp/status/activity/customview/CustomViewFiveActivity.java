@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.fpp.status.R;
+import com.fpp.status.view.HorizontalListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;

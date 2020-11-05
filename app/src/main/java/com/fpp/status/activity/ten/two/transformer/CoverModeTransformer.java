@@ -1,9 +1,15 @@
 package com.fpp.status.activity.ten.two.transformer;
 
+<<<<<<< HEAD
 import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
+=======
+import android.support.v4.view.ViewPager;
+import android.view.View;
+
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 /**
  * Created by zhouwei on 17/8/20.
  */

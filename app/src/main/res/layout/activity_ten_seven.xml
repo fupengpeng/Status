@@ -7,12 +7,22 @@
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="@dimen/dp_300" />
+=======
+        android:layout_height="@dimen/dp_300"
+        android:visibility="gone" />
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45"
+<<<<<<< HEAD
         android:orientation="horizontal">
+=======
+        android:orientation="horizontal"
+        android:visibility="gone">
+>>>>>>> d4f24dd797a144b906a813cb89a6a7717fd0ec9c
 
         <Button
             android:id="@+id/bofang"
