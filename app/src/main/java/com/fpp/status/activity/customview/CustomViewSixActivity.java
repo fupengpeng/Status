@@ -48,7 +48,6 @@ public class CustomViewSixActivity extends Activity {
     TextView tvAtvtUserListDelete;
 
 
-
     /**
      * listview适配器
      */
@@ -141,9 +140,9 @@ public class CustomViewSixActivity extends Activity {
         user1.setId("10");
         user1.setSelect(false);
         user1.setEnable(false);
-        user1.setName("name 10" );
-        user1.setLevel("level  10 " );
-        user1.setNickName("nick  10 " );
+        user1.setName("name 10");
+        user1.setLevel("level  10 ");
+        user1.setNickName("nick  10 ");
         user1.setGender("0");
         userList.add(user1);
 

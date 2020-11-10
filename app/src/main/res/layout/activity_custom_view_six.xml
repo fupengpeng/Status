@@ -1,144 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <!-- 标题栏 -->
-            <include layout="@layout/title_atvt"/>
+            <include layout="@layout/title_atvt" />
             <!-- 搜索栏 -->
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_35">
-                <TextView
-                    android:id="@+id/tv_atvt_user_list_state"
-                    android:layout_gravity="center"
-                    android:textColor="#818181"
-                    android:textSize="@dimen/dp_13"
-                    android:gravity="center"
-                    android:text="全部"
-                    android:layout_weight="0.3"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="wrap_content" />
-                <View
-                    android:background="#818181"
-                    android:layout_width="@dimen/dp_1"
-                    android:layout_height="match_parent"/>
-                <EditText
-                    android:id="@+id/et_atvt_user_list_job_number_name"
-                    android:textSize="@dimen/dp_13"
-                    android:textColor="#818181"
-                    android:layout_marginLeft="@dimen/dp_5"
-                    android:layout_marginRight="@dimen/dp_5"
-                    android:layout_gravity="center"
-                    android:gravity="center|left"
-                    android:background="@null"
-                    android:hint="输入工号/姓名"
-                    android:layout_weight="1"
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="wrap_content" />
-                <View
-                    android:background="#818181"
-                    android:layout_width="@dimen/dp_1"
-                    android:layout_height="match_parent"/>
+                android:layout_height="@dimen/dp_35"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_atvt_user_list_search"
+                    android:id="@+id/tv_atvt_user_list_state"
                     android:layout_width="@dimen/dp_0"
-                    android:textSize="@dimen/dp_13"
-                    android:textColor="#818181"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.3"
                     android:gravity="center"
-                    android:text="搜索" />
+                    android:text="全部"
+                    android:textColor="#818181"
+                    android:textSize="@dimen/dp_13" />
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#818181" />
+
+                <EditText
+                    android:id="@+id/et_atvt_user_list_job_number_name"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:hint="输入工号/姓名"
+                    android:textColor="#818181"
+                    android:textSize="@dimen/dp_13" />
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#818181" />
+
+                <TextView
+                    android:id="@+id/tv_atvt_user_list_search"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text="搜索"
+                    android:textColor="#818181"
+                    android:textSize="@dimen/dp_13" />
             </LinearLayout>
+
             <View
-                android:background="#818181"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_1"/>
+                android:layout_height="@dimen/dp_1"
+                android:background="#818181" />
             <!-- 店员列表 -->
             <ListView
                 android:id="@+id/lv_atvt_user_list"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
         <!-- 操作栏 -->
         <LinearLayout
-            android:layout_marginLeft="@dimen/dp_15"
-            android:layout_marginRight="@dimen/dp_15"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_35"
             android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
             android:layout_marginBottom="@dimen/dp_10"
             android:background="@drawable/user_list_ll_operation_style"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/tv_atvt_user_list_update"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
                 android:gravity="center"
-                android:textSize="@dimen/dp_13"
-                android:textColor="#818181"
                 android:text="修改"
-                android:layout_weight="0.1"
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="match_parent" />
+                android:textColor="#818181"
+                android:textSize="@dimen/dp_13" />
+
             <View
-                android:background="#818181"
                 android:layout_width="@dimen/dp_1"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:background="#818181" />
+
             <LinearLayout
-                android:paddingLeft="@dimen/dp_5"
-                android:paddingRight="@dimen/dp_5"
-                android:orientation="vertical"
-                android:layout_weight="0.1"
                 android:layout_width="@dimen/dp_0"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5">
+
                 <CheckBox
                     android:id="@+id/cb_atvt_select_worker"
-                    android:gravity="center"
-                    android:text="全选"
-                    android:textColor="#818181"
-                    android:layout_width="wrap_content"
                     style="@style/circlecheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:scaleX="0.6"
                     android:scaleY="0.6"
-                    android:layout_height="match_parent" />
+                    android:text="全选"
+                    android:textColor="#818181" />
             </LinearLayout>
+
             <View
-                android:background="#818181"
                 android:layout_width="@dimen/dp_1"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:background="#818181" />
+
             <TextView
                 android:id="@+id/tv_atvt_user_list_delete"
-                android:gravity="center"
-                android:textSize="@dimen/dp_13"
-                android:textColor="#818181"
-                android:text="删除"
-                android:layout_weight="0.1"
                 android:layout_width="@dimen/dp_0"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#818181"
+                android:textSize="@dimen/dp_13" />
         </LinearLayout>
     </RelativeLayout>
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:visibility="gone"
-        android:background="#ffaa00"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
         android:layout_margin="@dimen/dp_10"
+        android:background="#ffaa00"
+        android:visibility="gone"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </LinearLayout>

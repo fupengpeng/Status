@@ -40,6 +40,7 @@ public class UserListAdapter extends BaseAdapter implements AdapterView.OnItemCl
 
     /**
      * 子条目布局样式数量
+     *
      * @return
      */
     @Override
@@ -49,6 +50,7 @@ public class UserListAdapter extends BaseAdapter implements AdapterView.OnItemCl
 
     /**
      * 设置那些个条目使用那些布局：根据position确定
+     *
      * @param position
      * @return
      */
@@ -80,6 +82,7 @@ public class UserListAdapter extends BaseAdapter implements AdapterView.OnItemCl
 
     ViewHolder1 holder1 = null;
     ViewHolder2 holder2 = null;
+
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         int type = getItemViewType(position);

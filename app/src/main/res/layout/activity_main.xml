@@ -67,7 +67,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:padding="@dimen/dp_5"
-                    android:text="one"
+                    android:text="RV"
                     android:textSize="@dimen/dp_10" />
 
                 <Button

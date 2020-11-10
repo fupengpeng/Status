@@ -62,6 +62,7 @@ import com.fpp.status.activity.nine.one.RVOneActivity;
 import com.fpp.status.activity.nine.six.AnimationActivity;
 import com.fpp.status.activity.nine.three.PictureLargenActivity;
 import com.fpp.status.activity.nine.two.GridManagerActivity;
+import com.fpp.status.activity.one.OneActivity;
 import com.fpp.status.activity.popupwindow.LoginActivity;
 import com.fpp.status.activity.popupwindow.PWOneActivity;
 import com.fpp.status.activity.ten.eight.TenEightActivity;
@@ -237,7 +238,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 break;
             case R.id.btn_one_seven:
-                intent = new Intent(this, MoveViewGroupActivity.class);
+                intent = new Intent(this, OneActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_two_one:

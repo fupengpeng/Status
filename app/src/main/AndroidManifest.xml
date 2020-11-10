@@ -51,9 +51,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="icon,label,theme"
-        >
-        <activity android:name=".activity.eleven.eight.NfcActivity"/>
+        tools:replace="icon,label,theme">
+        <activity android:name=".activity.one.OneActivity"></activity>
+        <activity android:name=".activity.eleven.eight.NfcActivity" />
         <activity android:name=".activity.eleven.six.BarcodeScannerActivity" />
         <activity android:name=".activity.eleven.five.KeyBoardActivity" />
         <activity android:name=".activity.eleven.four.InstallActivity" />
@@ -115,7 +115,6 @@
         <activity android:name=".activity.fourfive.GuideTwoActivity" />
         <activity android:name=".activity.foursix.GuideThreeActivity" />
         <activity android:name=".activity.fourseven.GuideFourActivity" />
-
         <activity
             android:name=".activity.three.seven.ConfigurationActivity"
             android:configChanges="orientation|screenSize" /> <!-- 设置Activity可以监听屏幕方向改变的事件 -->
