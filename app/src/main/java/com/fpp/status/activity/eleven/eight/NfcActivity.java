@@ -222,7 +222,7 @@ public class NfcActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_aty_nfc, R.id.btn_aty_nfc_3F00, R.id.btn_aty_nfc_0x05, R.id.btn_aty_nfc_random, R.id.btn_aty_nfc_0x15, R.id.btn_aty_nfc_balance, R.id.btn_aty_nfc_5202, R.id.btn_aty_nfc_5302, R.id.btn_aty_nfc_5402, R.id.btn_aty_nfc_5502, R.id.btn_aty_nfc_clear})
+    @OnClick({R.id.btn_aty_nfc_zjb, R.id.btn_aty_nfc_jtb, R.id.btn_aty_nfc_0x16, R.id.btn_aty_nfc_0x17, R.id.btn_aty_nfc_fci,R.id.btn_aty_nfc, R.id.btn_aty_nfc_3F00, R.id.btn_aty_nfc_0x05, R.id.btn_aty_nfc_random, R.id.btn_aty_nfc_0x15, R.id.btn_aty_nfc_balance, R.id.btn_aty_nfc_5202, R.id.btn_aty_nfc_5302, R.id.btn_aty_nfc_5402, R.id.btn_aty_nfc_5502, R.id.btn_aty_nfc_clear})
     public void onViewClicked(View view) {
         String resp = "";
         switch (view.getId()) {
@@ -317,6 +317,20 @@ public class NfcActivity extends AppCompatActivity {
                 sb.delete(0, sb.length());
                 tvAtyNfcLog.setText(sb.toString());
                 break;
+            case R.id.btn_aty_nfc_zjb:
+                sendApdu("00A4040009A00000000386980701", true);
+                break;
+            case R.id.btn_aty_nfc_jtb:
+                sendApdu("00A4040008A000000632010105", true);
+                break;
+            case R.id.btn_aty_nfc_0x16:
+                sendApdu("00B0960000", true);
+                break;
+            case R.id.btn_aty_nfc_0x17:
+                sendApdu("00B0970000", true);
+                break;
+            case R.id.btn_aty_nfc_fci:
+                break;
         }
     }
 
@@ -338,6 +352,5 @@ public class NfcActivity extends AppCompatActivity {
         }
         return resp;
     }
-
 
 }

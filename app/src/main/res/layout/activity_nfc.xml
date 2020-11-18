@@ -76,6 +76,50 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/btn_aty_nfc_zjb"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="ZJB钱包" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_jtb"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="JTB钱包" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_0x16"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="0x16" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_0x17"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="0x17" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_fci"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="预留" />
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"

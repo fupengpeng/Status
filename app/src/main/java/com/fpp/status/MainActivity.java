@@ -228,7 +228,7 @@ public class MainActivity extends Activity {
             case R.id.btn_one_four:
                 intent = new Intent(this, HandlerFourActivity.class);
                 startActivity(intent);
-                break;
+                break;                                                                                                
             case R.id.btn_one_five:
                 intent = new Intent(this, HandlerFiveActivity.class);
                 startActivity(intent);
