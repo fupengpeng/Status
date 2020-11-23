@@ -41,6 +41,7 @@ import com.fpp.status.activity.fourseven.GuideFourActivity;
 import com.fpp.status.activity.foursix.GuideThreeActivity;
 import com.fpp.status.activity.fragmenteight.FragmentEightActivity;
 import com.fpp.status.activity.fragmentfive.AllSelectActivity;
+import com.fpp.status.activity.fragmentfive.CheckActivity;
 import com.fpp.status.activity.fragmentfour.ListViewNestListViewActivity;
 import com.fpp.status.activity.fragmentone.OneFragmentActivity;
 import com.fpp.status.activity.fragmentseven.FragmentSevenActivity;
@@ -79,6 +80,8 @@ import com.fpp.status.activity.test.TestActivity;
 import com.fpp.status.activity.three.eight.EventTwoActivity;
 import com.fpp.status.activity.three.seven.ConfigurationActivity;
 import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
+import com.fpp.status.activity.twelve.one.Oss2Activity;
+import com.fpp.status.activity.twelve.one.OssActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
 import com.fpp.status.receiver.UpdateReceiver;
@@ -209,7 +212,9 @@ public class MainActivity extends Activity {
             , R.id.btn_ten_five, R.id.btn_ten_six
             , R.id.btn_ten_seven, R.id.btn_ten_eight
             , R.id.btn_eleven_one, R.id.btn_eleven_two, R.id.btn_eleven_three, R.id.btn_eleven_four
-            , R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven, R.id.btn_eleven_eight
+            , R.id.btn_eleven_five, R.id.btn_eleven_six, R.id.btn_eleven_seven, R.id.btn_eleven_eight,
+            R.id.btn_twelve_one, R.id.btn_twelve_two, R.id.btn_twelve_three, R.id.btn_twelve_four,
+            R.id.btn_twelve_five, R.id.btn_twelve_six, R.id.btn_twelve_seven, R.id.btn_twelve_eight, R.id.btn_eleven_eight2
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -228,7 +233,7 @@ public class MainActivity extends Activity {
             case R.id.btn_one_four:
                 intent = new Intent(this, HandlerFourActivity.class);
                 startActivity(intent);
-                break;                                                                                                
+                break;
             case R.id.btn_one_five:
                 intent = new Intent(this, HandlerFiveActivity.class);
                 startActivity(intent);
@@ -533,6 +538,30 @@ public class MainActivity extends Activity {
 //                intent = new Intent(this, CheckActivity.class);
 //                startActivity(intent);
                 break;
+            case R.id.btn_twelve_one:
+                intent = new Intent(this, OssActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_twelve_two:
+                intent = new Intent(this, Oss2Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_twelve_three:
+                break;
+            case R.id.btn_twelve_four:
+                break;
+            case R.id.btn_twelve_five:
+                break;
+            case R.id.btn_twelve_six:
+                break;
+            case R.id.btn_twelve_seven:
+                break;
+            case R.id.btn_twelve_eight:
+                break;
+            case R.id.btn_eleven_eight2:
+                intent = new Intent(this, NfcActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
@@ -748,7 +777,7 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions,  int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1) {
             if (hasAllPermissionsGranted(grantResults)) {
@@ -764,7 +793,7 @@ public class MainActivity extends Activity {
      * @param grantResults 授权响应集合
      * @return 响应
      */
-    private boolean hasAllPermissionsGranted( int[] grantResults) {
+    private boolean hasAllPermissionsGranted(int[] grantResults) {
         for (int grantResult : grantResults) {
             if (grantResult == PackageManager.PERMISSION_DENIED) {
                 return false;
@@ -772,6 +801,8 @@ public class MainActivity extends Activity {
         }
         return true;
     }
+
+
 
 
 

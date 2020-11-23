@@ -30,7 +30,7 @@ public class LoginPresenter implements ILoginPresenter {
             }
 
             @Override
-            public void failure(Exception e) {
+            public void fail(Exception e) {
                 loginView.failure(e);
             }
         });

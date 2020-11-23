@@ -26,7 +26,7 @@ public class LoginModel implements ILoginModel {
         OkHttpUtil.okHttpPost(url, paramsMap, new CallBackUtil.CallBackString() {
             @Override
             public void onFailure(Call call, Exception e) {
-                requestListener.failure(e);
+                requestListener.fail(e);
             }
 
             @Override

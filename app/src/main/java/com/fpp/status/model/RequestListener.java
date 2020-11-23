@@ -12,7 +12,7 @@ public interface RequestListener<T> {
 
     void success(T data);
 
-    void failure(Exception e);
+    void fail(Exception e);
 
 
 }

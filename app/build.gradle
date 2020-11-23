@@ -106,4 +106,10 @@ dependencies {
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'org.greenrobot:eventbus:3.2.0'
+
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.5'
+    //本地照片库
+    implementation 'com.library.tangxiaolv:telegramgallery:1.0.3'
+    //material dialog
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.4'
 }
