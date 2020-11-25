@@ -21,8 +21,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="7"
-            android:text="04D6950C0820201204"
-            android:hint="请输入APDU指令" />
+            android:hint="请输入APDU指令"
+            android:text="04D6950C0820201204" />
 
         <Button
             android:id="@+id/btn_aty_nfc"
@@ -32,6 +32,7 @@
             android:text="发送" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="90dp"
@@ -46,8 +47,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="7"
-            android:text="04D695020E201801332020123301C2"
-            android:hint="请输入APDU指令" />
+            android:hint="请输入APDU指令"
+            android:text="04D695020E201801332020123301C2" />
 
         <Button
             android:id="@+id/btn_aty_nfc_2"
@@ -57,6 +58,7 @@
             android:text="发送" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45"
@@ -108,6 +110,50 @@
         android:weightSum="5">
 
         <Button
+            android:id="@+id/btn_aty_nfc_001"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="DF01" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_002"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="UID" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_003"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="003" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_004"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="004" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_005"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="005" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
             android:id="@+id/btn_aty_nfc_zjb"
             android:layout_width="0dp"
             android:layout_height="45dp"
@@ -140,7 +186,7 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="预留" />
+            android:text="3F02" />
 
 
     </LinearLayout>
@@ -208,7 +254,8 @@
             <TextView
                 android:id="@+id/tv_aty_nfc_log"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true" />
 
         </LinearLayout>
     </ScrollView>

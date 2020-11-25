@@ -25,7 +25,10 @@ import com.fpp.status.nfc.NFC;
 import com.fpp.status.utils.LogUtil;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
@@ -48,6 +51,8 @@ public class NfcActivity extends AppCompatActivity {
     Button btnAtyNfc5402;
     @BindView(R.id.btn_aty_nfc_5502)
     Button btnAtyNfc5502;
+    @BindView(R.id.et_aty_nfc_2)
+    EditText etAtyNfc2;
     private NfcAdapter nfcAdapter;
     private String[][] mTechLists;
     private PendingIntent pendingIntent;
@@ -222,12 +227,34 @@ public class NfcActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_aty_nfc_zjb, R.id.btn_aty_nfc_jtb, R.id.btn_aty_nfc_0x16, R.id.btn_aty_nfc_0x17, R.id.btn_aty_nfc_fci,R.id.btn_aty_nfc, R.id.btn_aty_nfc_3F00, R.id.btn_aty_nfc_0x05, R.id.btn_aty_nfc_random, R.id.btn_aty_nfc_0x15, R.id.btn_aty_nfc_balance, R.id.btn_aty_nfc_5202, R.id.btn_aty_nfc_5302, R.id.btn_aty_nfc_5402, R.id.btn_aty_nfc_5502, R.id.btn_aty_nfc_clear})
+    @OnClick({R.id.btn_aty_nfc_zjb, R.id.btn_aty_nfc_jtb, R.id.btn_aty_nfc_0x16, R.id.btn_aty_nfc_0x17,
+            R.id.btn_aty_nfc_fci, R.id.btn_aty_nfc, R.id.btn_aty_nfc_3F00, R.id.btn_aty_nfc_0x05,
+            R.id.btn_aty_nfc_random, R.id.btn_aty_nfc_0x15, R.id.btn_aty_nfc_balance, R.id.btn_aty_nfc_5202,
+            R.id.btn_aty_nfc_5302, R.id.btn_aty_nfc_5402, R.id.btn_aty_nfc_5502, R.id.btn_aty_nfc_clear,
+            R.id.btn_aty_nfc_2, R.id.btn_aty_nfc_001, R.id.btn_aty_nfc_002, R.id.btn_aty_nfc_003,
+            R.id.btn_aty_nfc_004, R.id.btn_aty_nfc_005
+    })
     public void onViewClicked(View view) {
         String resp = "";
         switch (view.getId()) {
+            case R.id.btn_aty_nfc_001:
+                sendApdu("00A404000B535558494E2E4444463031", true);
+                break;
+            case R.id.btn_aty_nfc_002:
+//                sendApdu("FFCA000000", true);
+                break;
+            case R.id.btn_aty_nfc_003:
+//                sendApdu(true);
+                break;
+            case R.id.btn_aty_nfc_004:
+                break;
+            case R.id.btn_aty_nfc_005:
+                break;
             case R.id.btn_aty_nfc:
                 sendApdu(etAtyNfc.getText().toString(), true);
+                break;
+            case R.id.btn_aty_nfc_2:
+                sendApdu(etAtyNfc2.getText().toString(), true);
                 break;
             case R.id.btn_aty_nfc_3F00:
                 resp = sendApdu("00A40000023F00", false);
@@ -330,6 +357,9 @@ public class NfcActivity extends AppCompatActivity {
                 sendApdu("00B0970000", true);
                 break;
             case R.id.btn_aty_nfc_fci:
+                resp = sendApdu("00A40000023F02", false);
+                sb.append("\n选择应用响应:" + resp.substring(resp.length() - 4));
+                tvAtyNfcLog.setText(sb.toString());
                 break;
         }
     }
@@ -351,6 +381,26 @@ public class NfcActivity extends AppCompatActivity {
             sb.append("\nRESP:" + "卡片交互失败");
         }
         return resp;
+    }
+
+    public void sendApdu(boolean isPrint) {
+
+        if (isPrint) {
+            sb.append("\nSSSS:" + getFormatDate("20200205"));
+            tvAtyNfcLog.setText(sb.toString());
+        }
+    }
+
+    public static String getFormatDate(String dateStr) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        Date date = null;
+        try {
+            date = sdf.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日");
+        return dateFormat.format(date);
     }
 
 }
