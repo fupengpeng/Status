@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fpp.status"
     tools:ignore="ProtectedPermissions,ExportedReceiver,ManifestOrder,ExportedService">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" /> <!-- 添加访问手机位置的权限 -->
+
     <!-- ******************** 通讯录相关权限 ******************** -->
     <!-- ******************** 位置相关权限 ******************** -->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -55,7 +60,8 @@
         android:usesCleartextTraffic="true"
         tools:replace="icon,label,theme"
         tools:targetApi="n">
-        <activity android:name=".activity.twelve.one.Oss2Activity"></activity>
+        <activity android:name=".activity.twelve.three.AlarmManagerActivity"></activity>
+        <activity android:name=".activity.twelve.one.Oss2Activity" />
         <activity android:name=".activity.twelve.one.OssActivity" />
         <activity android:name=".activity.one.OneActivity" />
         <activity android:name=".activity.eleven.eight.NfcActivity" />

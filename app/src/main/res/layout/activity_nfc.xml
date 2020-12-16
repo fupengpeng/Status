@@ -114,35 +114,35 @@
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="DF01" />
+            android:text="SZDF01" />
 
         <Button
             android:id="@+id/btn_aty_nfc_002"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="UID" />
+            android:text="SZRandom" />
 
         <Button
             android:id="@+id/btn_aty_nfc_003"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="003" />
+            android:text="选择0039" />
 
         <Button
             android:id="@+id/btn_aty_nfc_004"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="004" />
+            android:text="读取0039" />
 
         <Button
             android:id="@+id/btn_aty_nfc_005"
             android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="005" />
+            android:text="读取00392" />
 
 
     </LinearLayout>
@@ -191,6 +191,49 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/btn_aty_nfc_SZ_001"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="SZ001" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_SZ_002"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="SZ002" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_SZ_003"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="SZ003" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_SZ_004"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="SZ004" />
+
+        <Button
+            android:id="@+id/btn_aty_nfc_SZ_005"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="SZ005" />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

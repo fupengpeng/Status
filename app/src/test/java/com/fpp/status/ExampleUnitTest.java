@@ -1,9 +1,17 @@
 package com.fpp.status;
 
+import android.widget.LinearLayout;
+
+import com.fpp.status.utils.DateTimeUtil;
+
 import org.junit.Test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -24,6 +32,7 @@ public class ExampleUnitTest {
         System.err.println(" " + a);
         System.err.println(" " + sys + "\n" + date + "\n" + calendar);
     }
+
     @Test
     public void addition_isCorrect() throws Exception {
         long sys = System.currentTimeMillis();
@@ -31,5 +40,53 @@ public class ExampleUnitTest {
         long calendar = Calendar.getInstance().getTimeInMillis();
         // TimeZone.getDefault().getRawOffset()
         System.err.println(" " + sys + "\n" + date + "\n" + calendar);
+    }
+
+    @Test
+    public void yearMonthLastDate() throws Exception {
+        List<Integer> yearList = new ArrayList();
+        for (int i = 0; i < 4000; i++) {
+            int year = 0;
+            yearList.add(year + i);
+        }
+        List<Integer> monthList = new ArrayList();
+        for (int i = 1; i <= 12; i++) {
+            monthList.add(i);
+        }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        for (int i = 0; i < yearList.size(); i++) {
+            for (int j = 0; j < monthList.size(); j++) {
+                Date date = DateTimeUtil.getEndMonthDate(yearList.get(i), monthList.get(j));
+                String dateStr = dateFormat.format(date);
+                System.err.println("----" + yearList.get(i) + "年" + monthList.get(j) + "月最后一天" + "----  " + dateStr + " ----" + (yearList.get(i) % 4 == 0 ? "闰年" : "平年"));
+            }
+        }
+    }
+
+    @Test
+    public void zengXiaoRiQi() throws Exception {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        List<String> currentDayList = DateTimeUtil.getDays("20200101", "20211231", "yyyyMMdd");
+        for (int i = 1; i <= currentDayList.size(); i++) {
+            String dateStr = DateTimeUtil.zengXiaoRiQi();
+            System.err.println("----" + "----  增效日期：" + dateStr + " ----");
+        }
+    }
+
+    @Test
+    public void yuepiaochongzhiyuefen() throws Exception {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMM");
+        Calendar calendar = Calendar.getInstance();
+        String month = "";
+        String[] strings = new String[4];
+        strings[0] = sdf.format(calendar.getTime());
+        for (int i = 1; i < 4; i++) {
+            calendar.add(Calendar.MONTH, 1);
+            month = sdf.format(calendar.getTime());
+            strings[i] = month;
+        }
+        for (int i = 0; i < strings.length; i++) {
+            System.out.println("增加后的月份：" + strings[i]);
+        }
     }
 }

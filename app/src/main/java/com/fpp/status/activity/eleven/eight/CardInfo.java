@@ -87,6 +87,35 @@ public class CardInfo implements Serializable {
 
     private String orderType;
 
+
+    private String card_id;
+    private String card_asn;
+    private String uid;
+
+    public String getCard_id() {
+        return card_id;
+    }
+
+    public void setCard_id(String card_id) {
+        this.card_id = card_id;
+    }
+
+    public String getCard_asn() {
+        return card_asn;
+    }
+
+    public void setCard_asn(String card_asn) {
+        this.card_asn = card_asn;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
     public String getYearCheck62() {
         return yearCheck62;
     }

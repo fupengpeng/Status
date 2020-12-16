@@ -15,27 +15,41 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fpp.status.R;
+import com.fpp.status.http.http.CallBackUtil;
+import com.fpp.status.http.http.UrlHttpUtil;
 import com.fpp.status.nfc.NFC;
+import com.fpp.status.utils.Constant;
+import com.fpp.status.utils.DateTimeUtil;
+import com.fpp.status.utils.EncryptUtil;
 import com.fpp.status.utils.LogUtil;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.LinkedHashMap;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.Call;
+import retrofit2.http.Url;
 
 public class NfcActivity extends AppCompatActivity {
+
 
     @BindView(R.id.et_aty_nfc)
     EditText etAtyNfc;
@@ -190,7 +204,6 @@ public class NfcActivity extends AppCompatActivity {
         }
     }
 
-
     // TODO: 2020/2/18 重庆
     private void NFCChongQing(Tag tag) {
         try {
@@ -210,6 +223,18 @@ public class NfcActivity extends AppCompatActivity {
             switch (msg.what) {
                 case VIEW_HOME:
                     showView(VIEW_HOME, 0, "", "", "");
+                    break;
+                case 0:
+                    ValDateApplyResp valDateApplyResp = (ValDateApplyResp) msg.obj;
+                    String resp = sendApdu("0082008308" + valDateApplyResp.getEnrndnumber1(), true);
+                    if (!TextUtils.isEmpty(resp) && resp.endsWith("9000")) {
+                        Toast.makeText(NfcActivity.this, "验证成功", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(NfcActivity.this, "验证失败", Toast.LENGTH_LONG).show();
+                    }
+                    break;
+                default:
+
                     break;
             }
         }
@@ -241,14 +266,26 @@ public class NfcActivity extends AppCompatActivity {
                 sendApdu("00A404000B535558494E2E4444463031", true);
                 break;
             case R.id.btn_aty_nfc_002:
-//                sendApdu("FFCA000000", true);
+                resp = sendApdu("0084000008", true);
+                if (!TextUtils.isEmpty(resp) && resp.length() > 16 && resp.endsWith("9000")) {
+                    LogUtil.e("valDateApply ----------随机数获取成功-------------" + resp);
+                    ValDateApplyReq valDateApplyReq = new ValDateApplyReq();
+                    valDateApplyReq.setCardId("2150999999990091");
+                    valDateApplyReq.setMessageDateTime("20201209094500");
+                    valDateApplyReq.setAsn("86000021500099990091");
+                    valDateApplyReq.setUid("0CE2AD8B");
+                    valDateApplyReq.setRandom(resp.substring(0, 16));
+                    valDateApply(valDateApplyReq, mHandler);
+                }
                 break;
             case R.id.btn_aty_nfc_003:
-//                sendApdu(true);
+                resp = sendApdu("00A40000020039", true);
                 break;
             case R.id.btn_aty_nfc_004:
+                resp = sendApdu("00B0000000", true);
                 break;
             case R.id.btn_aty_nfc_005:
+                resp = sendApdu("00B0000020", true);
                 break;
             case R.id.btn_aty_nfc:
                 sendApdu(etAtyNfc.getText().toString(), true);
@@ -402,5 +439,50 @@ public class NfcActivity extends AppCompatActivity {
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日");
         return dateFormat.format(date);
     }
+
+    private static String ORDER_KEY = "096473137898B5B133B86F33AF8AD498";
+
+    public static void valDateApply(ValDateApplyReq req, Handler handler) {
+        LinkedHashMap<String, String> paramsMap = new LinkedHashMap<>();
+        paramsMap.put("cardId", req.getCardId());
+        paramsMap.put("messageDateTime", DateTimeUtil.getDateTime("yyyyMMddhhmmss"));
+        paramsMap.put("deviceId", "2222EF0AF07A");
+        paramsMap.put("asn", req.getAsn());
+        paramsMap.put("uid", req.getUid());
+        paramsMap.put("random", req.getRandom());
+        String macCode = EncryptUtil.calculateMac(paramsMap, ORDER_KEY);
+        paramsMap.put("macCode", macCode);
+        String url = "http://192.168.10.163:9011/recharge_service_sz/api/val-educard/apply-valDate";
+        LogUtil.e("valDateApply ---------获取mac-----------------");
+        UrlHttpUtil.post(url, paramsMap, new CallBackUtil.CallBackString() {
+            @Override
+            public void onFailure(int code, String errorMessage) {
+                LogUtil.e("valDateApply fail " + errorMessage);
+            }
+
+            @Override
+            public void onResponse(String response) {
+                Message msg = handler.obtainMessage();
+                LogUtil.e("valDateApply success " + response);
+                BaseObject<ValDateApplyResp> baseObject = new Gson().fromJson(response, new TypeToken<BaseObject<ValDateApplyResp>>() {
+                }.getType());
+                if (baseObject.getCode() != null && baseObject.getCode().equals("0")) {
+                    ValDateApplyResp valDateApplyResp = baseObject.getContent();
+                    if ("0".equals(valDateApplyResp.getErrorcode())) {
+                        msg.what = 0;
+                        msg.obj = baseObject.getContent();
+                    } else {
+                        msg.what = 1;
+                        msg.obj = baseObject.getContent().getErrormsg();
+                    }
+                } else {
+                    msg.what = 2;
+                    msg.obj = baseObject.getMessage();
+                }
+                handler.sendMessage(msg);
+            }
+        });
+    }
+
 
 }

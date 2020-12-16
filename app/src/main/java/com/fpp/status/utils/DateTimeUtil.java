@@ -5,6 +5,7 @@ import android.os.CountDownTimer;
 import android.widget.TextView;
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -601,7 +602,7 @@ public class DateTimeUtil {
         }
         return formatStr;
     }
-/* ---------------------------------------- 测试分界 ---------------------------------------- */
+    /* ---------------------------------------- 测试分界 ---------------------------------------- */
 
 
     /**
@@ -903,7 +904,6 @@ public class DateTimeUtil {
         if (beginYear == endYear) {
             for (int j = beginMonth; j <= endMonth; j++) {
                 list.add(getTimeList(beginYear, j, k));
-
             }
         } else {
             {
@@ -948,7 +948,7 @@ public class DateTimeUtil {
     public static Date getEndMonthDate(int year, int month) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, 1);
-        int day = calendar.getActualMaximum(5);
+        int day = calendar.getActualMaximum(Calendar.DATE);
         calendar.set(year, month - 1, day);
         return calendar.getTime();
     }
@@ -994,6 +994,98 @@ public class DateTimeUtil {
         c1.add(Calendar.DATE, -dow - 7 * (week - 1) + 1);
         String d1 = new SimpleDateFormat("yyyy-MM-dd").format(c1.getTime());
         return d1 + " 23:59:59";
+    }
+
+    /**
+     * 获取间隔日期之间的日期集合
+     *
+     * @param start 开始日期
+     * @param end   结束日期
+     * @return 日期集合
+     */
+    private List<Date> getDateIntervalDates(Date start, Date end) {
+        List<Date> result = new ArrayList<Date>();
+        Calendar tempStart = Calendar.getInstance();
+        tempStart.setTime(start);
+        tempStart.add(Calendar.DAY_OF_YEAR, 1);
+
+        Calendar tempEnd = Calendar.getInstance();
+        tempEnd.setTime(end);
+        while (tempStart.before(tempEnd)) {
+            result.add(tempStart.getTime());
+            tempStart.add(Calendar.DAY_OF_YEAR, 1);
+        }
+        return result;
+    }
+
+
+    /**
+     * 获取两个format格式日期字符串之间的format格式日期字符串集合
+     *
+     * @param startTime 开始日期
+     * @param endTime   结束日期
+     * @param format    输入与输出日期字符串格式
+     * @return format格式日期字符串集合
+     */
+    public static List<String> getDays(String startTime, String endTime, String format) throws ParseException {
+        List<String> days = new ArrayList<String>();
+        DateFormat dateFormat = new SimpleDateFormat(format);
+        Date start = dateFormat.parse(startTime);
+        Date end = dateFormat.parse(endTime);
+        Calendar tempStart = Calendar.getInstance();
+        tempStart.setTime(start);
+        Calendar tempEnd = Calendar.getInstance();
+        tempEnd.setTime(end);
+        tempEnd.add(Calendar.DATE, +1);// 日期加1(包含结束)
+        while (tempStart.before(tempEnd)) {
+            days.add(dateFormat.format(tempStart.getTime()));
+            tempStart.add(Calendar.DAY_OF_YEAR, 1);
+        }
+        return days;
+    }
+
+    public static String zengXiaoRiQi() throws Exception {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        String currentDateStr = dateFormat.format(new Date());
+        String isBeforeDateStr = currentDateStr.substring(0, 6) + "21";
+        Date beforeDate = dateFormat.parse(isBeforeDateStr);
+        Date currentDate = dateFormat.parse(currentDateStr);
+        int currentYear = Integer.parseInt(currentDateStr.substring(0, 4));
+        int currentMonth = Integer.parseInt(currentDateStr.substring(4, 6));
+        int currentDay = Integer.parseInt(currentDateStr.substring(6, 8));
+        if (currentDate.before(beforeDate)) {
+            Date date = DateTimeUtil.getEndMonthDate(currentYear, currentMonth);
+            String dateStr = dateFormat.format(date);
+            System.err.println("----" + currentYear + "年" + currentMonth + "月" + currentDay + "日" + "----  增效日期：" + dateStr + " ----");
+            return dateStr;
+        } else {
+            if (currentMonth == 12) {
+                Date date = DateTimeUtil.getEndMonthDate(currentYear + 1, 1);
+                String dateStr = dateFormat.format(date);
+                System.err.println("----" + currentYear + "年" + currentMonth + "月" + currentDay + "日" + "----  增效日期：" + dateStr + " ----");
+                return dateStr;
+            } else {
+                Date date = DateTimeUtil.getEndMonthDate(currentYear, currentMonth + 1);
+                String dateStr = dateFormat.format(date);
+                System.err.println("----" + currentYear + "年" + currentMonth + "月" + currentDay + "日" + "----  增效日期：" + dateStr + " ----");
+                return dateStr;
+            }
+        }
+
+    }
+
+    public static Date getMonth(int num) {
+
+        Calendar calendar = Calendar.getInstance();
+        for (int i = 1; i <= num; i++) {
+            int month = calendar.get(Calendar.MONTH) + 1 + i;
+            System.err.println("----" + month + "月" + " ----");
+            int year = calendar.get(Calendar.YEAR);
+            System.err.println("----" + year + "年" + " ----");
+        }
+        int month = calendar.get(Calendar.MONTH) + 1;
+        System.err.println("----" + month + "月" + " ----");
+        return calendar.getTime();
     }
 
 
