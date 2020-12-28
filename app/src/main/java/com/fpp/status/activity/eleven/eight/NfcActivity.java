@@ -421,7 +421,6 @@ public class NfcActivity extends AppCompatActivity {
     }
 
     public void sendApdu(boolean isPrint) {
-
         if (isPrint) {
             sb.append("\nSSSS:" + getFormatDate("20200205"));
             tvAtyNfcLog.setText(sb.toString());
@@ -483,6 +482,4 @@ public class NfcActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

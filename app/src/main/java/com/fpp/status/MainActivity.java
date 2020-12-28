@@ -82,6 +82,7 @@ import com.fpp.status.activity.three.seven.ConfigurationActivity;
 import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
 import com.fpp.status.activity.twelve.one.Oss2Activity;
 import com.fpp.status.activity.twelve.one.OssActivity;
+import com.fpp.status.activity.twelve.two.SSActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
 import com.fpp.status.receiver.UpdateReceiver;
@@ -547,6 +548,8 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 break;
             case R.id.btn_twelve_three:
+                intent = new Intent(this, SSActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_twelve_four:
                 break;

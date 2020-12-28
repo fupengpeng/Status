@@ -23,6 +23,30 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
 
     @Test
+    public void splitApdu2() throws Exception {
+        String str = ":6C17";
+        System.err.println("--" + "" + "--:" + str.contains("6C"));
+    }
+
+    @Test
+    public void splitApdu() throws Exception {
+        String str = "00A40000025202||00B201C400|00B202C400|00B203C400|00B204C400|00B205C400|00B206C400|00B207C400|00B208C400|00B209C400|00B20AC400||805C000204||00B0950000||";
+        String[] strings = str.split("\\|\\|");
+        for (int i = 0; i < strings.length; i++) {
+            System.err.println("--" + i + "--:" + strings[i]);
+        }
+        for (int i = 0; i < strings.length; i++) {
+            System.err.println("--" + i + "--:" + strings[i]);
+        }
+        String[] recordApdus = strings[1].split("\\|");
+        for (int i = 0; i < recordApdus.length; i++) {
+            System.err.println("-recordApdus-" + i + "--:" + recordApdus[i]);
+        }
+
+
+    }
+
+    @Test
     public void booleanTest() throws Exception {
         long sys = System.currentTimeMillis();
         long date = new Date().getTime();

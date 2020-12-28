@@ -977,7 +977,7 @@
                         android:layout_weight="0.5"
                         android:background="#ffff00"
                         android:scaleType="centerCrop"
-                        android:text="测试"
+                        android:text="相机测试"
                         android:textSize="@dimen/dp_10" />
 
                     <Button
