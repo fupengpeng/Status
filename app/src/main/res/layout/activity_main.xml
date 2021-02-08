@@ -987,7 +987,7 @@
                         android:layout_weight="0.5"
                         android:background="#00ffff"
                         android:scaleType="centerCrop"
-                        android:text="测试"
+                        android:text="设置"
                         android:textSize="@dimen/dp_10" />
 
                     <Button

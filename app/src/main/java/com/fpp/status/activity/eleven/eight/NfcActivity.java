@@ -99,7 +99,6 @@ public class NfcActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nfc);
         ButterKnife.bind(this);
         initNFC();
-
     }
 
 

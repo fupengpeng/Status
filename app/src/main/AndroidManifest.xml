@@ -60,7 +60,10 @@
         android:usesCleartextTraffic="true"
         tools:replace="icon,label,theme"
         tools:targetApi="n">
-        <activity android:name=".activity.twelve.two.SSActivity"/>
+        <activity
+            android:name=".activity.twelve.four.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".activity.twelve.two.SSActivity" />
         <activity android:name=".activity.twelve.three.AlarmManagerActivity" />
         <activity android:name=".activity.twelve.one.Oss2Activity" />
         <activity android:name=".activity.twelve.one.OssActivity" />

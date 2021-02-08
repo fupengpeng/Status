@@ -1,0 +1,80 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header"  app:icon="@drawable/ic_search_clear_normal" >
+
+        <EditTextPreference
+            app:icon="@drawable/jz_brightness_video"
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="reply"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:icon="@drawable/jz_restart_pressed"
+            app:key="reply"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header" app:icon="@drawable/order_item_select">
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/beforehand_appoint_particulars_self_motion"
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/check"
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+        <SwitchPreferenceCompat
+            app:icon="@drawable/check"
+            app:dependency="sync"
+            app:key="attachment2"
+            app:summaryOff="@string/attachment_summary_off2"
+            app:summaryOn="@string/attachment_summary_on2"
+            app:title="@string/attachment_title2" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="显示一排偏好">
+
+        <CheckBoxPreference
+            app:key="checkbox_preference"
+            app:title="开关"
+            app:summary="pppppppp" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="这是对画框偏好">
+
+        <EditTextPreference
+            app:key="edittext_preference"
+            app:title="title"
+            app:summary="summary"
+            app:dialogTitle="dialogTitle" />
+
+        <ListPreference
+            app:key="list_preference"
+            app:title="title"
+            app:summary="summary"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:dialogTitle="dialogTitle" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+
+
+
+
