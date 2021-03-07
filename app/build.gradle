@@ -113,4 +113,7 @@ dependencies {
     implementation 'com.library.tangxiaolv:telegramgallery:1.0.3'
     //material dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.4.4'
+
+    // 图表设计
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
