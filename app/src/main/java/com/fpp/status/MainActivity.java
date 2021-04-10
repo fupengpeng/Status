@@ -10,6 +10,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.fpp.status.activity.DHActivity;
 import com.fpp.status.activity.customview.CustomViewEightActivity;
 import com.fpp.status.activity.customview.CustomViewFiveActivity;
@@ -41,7 +44,6 @@ import com.fpp.status.activity.fourseven.GuideFourActivity;
 import com.fpp.status.activity.foursix.GuideThreeActivity;
 import com.fpp.status.activity.fragmenteight.FragmentEightActivity;
 import com.fpp.status.activity.fragmentfive.AllSelectActivity;
-import com.fpp.status.activity.fragmentfive.CheckActivity;
 import com.fpp.status.activity.fragmentfour.ListViewNestListViewActivity;
 import com.fpp.status.activity.fragmentone.OneFragmentActivity;
 import com.fpp.status.activity.fragmentseven.FragmentSevenActivity;
@@ -80,9 +82,11 @@ import com.fpp.status.activity.test.TestActivity;
 import com.fpp.status.activity.three.eight.EventTwoActivity;
 import com.fpp.status.activity.three.seven.ConfigurationActivity;
 import com.fpp.status.activity.three.six.MoveDeleteRecycleViewItemActivity;
+import com.fpp.status.activity.twelve.five.ChartActivity;
 import com.fpp.status.activity.twelve.four.SettingsActivity;
 import com.fpp.status.activity.twelve.one.Oss2Activity;
 import com.fpp.status.activity.twelve.one.OssActivity;
+import com.fpp.status.activity.twelve.six.ScanActivity;
 import com.fpp.status.activity.twelve.two.SSActivity;
 import com.fpp.status.activity.two.RecycleViewActivity;
 import com.fpp.status.activity.twotwo.PWActivity;
@@ -92,8 +96,6 @@ import com.fpp.status.view.customvideoview.LogUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -557,8 +559,12 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 break;
             case R.id.btn_twelve_five:
+                intent = new Intent(this, ChartActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_twelve_six:
+                intent = new Intent(this, ScanActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_twelve_seven:
                 break;

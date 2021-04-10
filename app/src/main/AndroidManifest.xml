@@ -60,7 +60,9 @@
         android:usesCleartextTraffic="true"
         tools:replace="icon,label,theme"
         tools:targetApi="n">
-        <activity android:name=".activity.twelve.five.ChartActivity"></activity>
+        <activity android:name=".activity.twelve.six.ScanActivity"></activity>
+        <activity android:name=".activity.twelve.seven.FaceActivity" />
+        <activity android:name=".activity.twelve.five.ChartActivity" />
         <activity
             android:name=".activity.twelve.four.SettingsActivity"
             android:label="@string/title_activity_settings" />

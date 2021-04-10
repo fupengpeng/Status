@@ -102,6 +102,7 @@ dependencies {
     // excel
     implementation files('libs/jxl-2.6.12.jar')
     implementation files('libs/usbSerialForAndroid.jar')
+    implementation project(path: ':zxing')
 
     implementation 'com.zhy.base:fileprovider:1.0.0'
 

@@ -997,7 +997,7 @@
                         android:layout_weight="0.5"
                         android:background="#aa95ff"
                         android:scaleType="centerCrop"
-                        android:text="测试"
+                        android:text="图表"
                         android:textSize="@dimen/dp_10" />
 
                     <Button
@@ -1007,7 +1007,7 @@
                         android:layout_weight="0.5"
                         android:background="#ff00ff"
                         android:scaleType="centerCrop"
-                        android:text="测试"
+                        android:text="二维码"
                         android:textSize="@dimen/dp_10" />
 
                     <Button
